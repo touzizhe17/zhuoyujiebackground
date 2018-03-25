@@ -15,11 +15,11 @@ return [
     // 服务器地址
     'hostname'        => 'localhost',
     // 数据库名
-    'database'        => 'demo_658',
+    'database'        => 'jewelry',
     // 用户名
-    'username'        => 'sucaishui',
+    'username'        => 'root',
     // 密码
-    'password'        => '123456',
+    'password'        => '8632E3204655F8#c5*3632',
     // 端口
     'hostport'        => '',
     // 连接dsn
