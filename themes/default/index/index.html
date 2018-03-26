@@ -1,155 +1,112 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Open Source BMS</title>
-    <meta name="description" content="Open Source BMS，全称Open Source Background System，基于ThinkPHP5开发的开源后台管理系统">
-    <link rel="stylesheet" href="__JS__/layui/css/layui.css">
-    <style>
-        .header {
-            width: 100%;
-            height: 400px;
-            background: url(__STATIC__/images/login-bg.png) #56bc94;
-            text-align: center;
-        }
-
-        .header .top-nav {
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .header .top-nav h1 {
-            display: inline-block;
-            width: 300px;color: #fff;
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 24px;
-            line-height: 60px;
-            text-align: left;
-        }
-
-        .header .top-nav .layui-nav {
-            position: absolute;
-            top: 0;right: 0;
-            width: 600px;
-            text-align: right;
-            background: none;
-        }
-        .header .top-nav .layui-nav a {color: #fff;}
-        .header .download-btn {
-            display: inline-block;
-            width: 200px;
-            height: 60px;
-            line-height: 60px;
-            margin-top: 150px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-            font-size: 18px;
-            transition: all .3s;
-        }
-        .header .download-btn:hover {
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .header .description {
-            width: 200px;
-            margin: 30px auto;
-            text-align: left;
-            color: #fff;
-        }
-
-        .content {margin-top: 50px;}
-    </style>
-</head>
-<body>
-<div class="header">
-    <div class="top-nav">
-        <div class="layui-main">
-            <h1>Open Source BMS</h1>
-            <ul class="layui-nav">
-                <li class="layui-nav-item"><a href="">首页</a></li>
-                <li class="layui-nav-item"><a href="http://opensourcebms.com/admin" target="_blank">后台演示</a></li>
-                <li class="layui-nav-item"><a href="https://github.com/xiayulei/open_source_bms" target="_blank">GitHub</a></li>
-            </ul>
+<!--轮播图-->
+<div class="count">
+    <div class="yfocus">
+        <div class="yfocusl">
+            <div class="wrapper">
+                <div id="focus">
+                    <!--焦点图-->
+                    <ul>
+                        <li>
+                            <a title="10周年——琢玉界分会场pc" href="https://apps.jaadee.com/Home/Tenyear/ydj.html"
+                               target="_blank">
+                                <img src="{$Think.config.static}/picture/9be1e7857f959f0a203431f9566e5add.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="10周年" href="https://apps.jaadee.com/Home/Tenyear/index.html" target="_blank">
+                                <img src="{$Think.config.static}/picture/3be64d1c3f72b09f21d19ea7bab11a21.jpg"></a>
+                        </li>
+                        <li>
+                            <a title="琢玉界南红定制专题" href="https://apps.jaadee.com/Ydj/Qdnh/index.html" target="_blank">
+                                <img src="{$Think.config.static}/picture/d96a6a0386980f01281b9b57186df725.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="直播PC端" href="https://www.jaadee.com/Live/tj.html" target="_blank">
+                                <img src="{$Think.config.static}/picture/3a7d95a8ee29fd21ea702c63116fe352.jpg"></a>
+                        </li>
+                        <li>
+                            <a title="专家委员会" href="https://yd.jaadee.com/Article/Detail.html?id=96" target="_blank">
+                                <img src="{$Think.config.static}/picture/d81740c9f57.jpg"></a>
+                        </li>
+                        <li><a title="闲置" href="https://idle.jaadee.com/web/Index/index.html" target="_blank">
+                            <img src="{$Think.config.static}/picture/858b888dc2695e555ec9baec29c1c6df.png"></a>
+                        </li>
+                        <li>
+                            <a title="民间巧匠" href="https://yd.jaadee.com/Mjqj/index.html" target="_blank">
+                                <img src="{$Think.config.static}/picture/d8174065b83.png"></a>
+                        </li>
+                        <li>
+                            <a title="金榜题名" href="https://yd.jaadee.com/Prize/index.html" target="_blank">
+                                <img src="{$Think.config.static}/picture/d8173f0ca8d.jpg"></a>
+                        </li>
+                        <li><a title="王朝阳" href="http://wcy.jaadee.com/" target="_blank"><img
+                                src="{$Think.config.static}/picture/159becc5d08.png"></a>
+                        </li>
+                        <li><a title="玉石原料" href="https://yd.jaadee.com/Wool/index/p/1.html" target="_blank"><img
+                                src="{$Think.config.static}/picture/d9634b21bb6.jpg"></a></li>
+                        <li><a title="匠心品牌" href="https://yd.jaadee.com/Article/Detail.html?id=229" target="_blank"><img
+                                src="{$Think.config.static}/picture/159becf3384.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+<div class="clear"></div>
+<div class="count">
+    <div class="tith">
+        <h3>玉雕作品</h3>
+        <a href="/Goods/" target="_blank">更多&gt;&gt;</a>
+        <div style="clear:both;"></div>
+    </div>
+    <!--玉雕作品list，保留一个，从后台加载数据渲染-->
+    <ul class="shiydsw">
+        <!--item-->
+        {for start='0' end='16'}
+        <li class="" id="goods_32034">
+            <a href="index/index/detail.html" target="_blank" class="daaimg" target="_blank">
+                <img class="lazyimg"src="{$Think.config.static}/picture/imghold.gif"data-original="https://ydjimg.jaadee.net/uploads/ydj/images/2018/03/22-09-dd6f1e686b7.jpg"/>
+            </a>
+            <div class="zuozinfo">
+                <a href="/Graver/91.html" target="_blank" class="zzimgaw">
+                    <img src="{$Think.config.static}/picture/37ed61d23c8f93cec2da6d3ea9871cd0.jpg"/>
+                </a>
+                <div class="zzzpw">
+                    <div class="zzup">
+                        <a href="/Goods/32034.html" target="_blank">舒安龙</a>
+                        <a href="/Graver/91.html" target="_blank">作者：何亚波</a></div>
+                    <div class="zzupb">
+                        <span class="jiage">￥10800元</span>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="/Goods/32034.html" class="yybut huis">查看作品详细 </a>
+            <i>翡翠</i>
+        </li>
 
-    <a href="https://github.com/xiayulei/open_source_bms/releases/download/v1.1.1/open_source_bms_full_v1.1.1.zip" target="_blank" class="download-btn">下 载 （v1.1.1）</a>
-
-    <div class="description">
-        <iframe frameborder="0" src="http://ghbtns.com/github-btn.html?user=xiayulei&amp;repo=think_admin&amp;type=star&amp;count=true" width="90" height="20"></iframe>
-        <iframe frameborder="0" src="http://ghbtns.com/github-btn.html?user=xiayulei&amp;repo=think_admin&amp;type=fork&amp;count=true" width="90" height="20"></iframe>
+        {/for}
+    </ul>
+</div>
+<div class="clear"></div>
+<div class="count">
+    <div class="tith">
+        <h3>玉雕名家</h3>
+        <a href="pc.php?m=Graver&a=index" target="_blank">更多&gt;&gt;</a>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="graverlist">
+        <ul class="zjul">
+            <!--item-->
+            {for start='0' end='6'}
+            <li>
+                <a href="" target="_blank">
+                    <img class="lazyimg" src="{$Think.config.static}/picture/imghold.gif" data-original="https://ydjimg.jaadee.net/uploads/2016/11/17/d747286ed4e.jpg"/>
+                </a>
+                <span>刘东</span>
+            </li>
+            {/for}
+        </ul>
+        <div class="clear"></div>
     </div>
 </div>
-
-<div class="layui-main content">
-    <fieldset class="layui-elem-field">
-        <legend>Open Source BMS</legend>
-        <div class="layui-field-box">
-            <h3 style="font-weight: bold;">Open Source BMS?</h3>
-            <br />
-            <p>全称Open Source Background Manager System，开源后台管理系统</p>
-            <p>一个节省开发时间的后台管理系统，程序基于ThinkPHP 5开发，后台UI使用LayUI搭建。</p>
-            <br />
-            <br />
-
-            <h3 style="font-weight: bold;">安装使用：</h3>
-            <br />
-            <p>
-                * 方式一：git克隆下载，请执行`composer install`命令进行完整安装<br />
-                * 方式二：非git用户请点击页面上方下载按钮下载完整版，完整版无须执行`composer install`命令<br />
-                * 数据库文件为`open_source_bms.sql`<br />
-                * 下载程序至本地，请搭建虚拟域名，并开启URL重写（必须）<br />
-                * 站点开发前，建议修改`application`目录下的`config`配置文件，找到`salt`项，此项为全站加密公用盐值，请先修改，然后使用`md5('新密码' . config('salt'))`生成新密码，替换`admin_user`表中的默认管理员密码<br />
-                * 默认后台账号 `admin`，密码`admin`<br />
-            </p>
-            <br />
-            <br />
-
-            <h3 style="font-weight: bold;">2017.4.19更新（v1.1.1)：</h3>
-            <br />
-            <p>
-                * 核心框架同步更新为官方5.0.7<br />
-                * 后台UI同步更新为官方1.0.9_rls<br />
-                * 更换后台富文本编辑器为Ueditor 1.4.3.3<br />
-                * 调整后台模板目录至themes目录下<br />
-                * 入口文件移至根目录<br />
-                * 重命名项目名为Open Source BMS<br />
-                * 增加composer.lock文件<br />
-                * 此版本功能方向无大变动，目的为修复BUG，下一版本会进行功能方向调整<br />
-                * 修复一些BUG<br />
-            </p>
-            <br />
-            <br />
-
-            <h3 style="font-weight: bold;">2016.12.29更新（v1.1）：</h3>
-            <br />
-            <p>
-                * 核心框架同步更新为官方5.0.4<br />
-                * 后台UI同步更新为官方1.0.7<br />
-                * 调整`model`模型目录至`common`公共目录<br />
-                * 统一上传接口为`api`模块下`Upload`控制器<br />
-                * 分类表增加path字段，优化子分类查询<br />
-                * 增加单独密码修改功能，防止低权管理员随意修改自己权限组<br />
-                * 更换后台富文本编辑器为KindEditor<br />
-                * 恢复入口文件至public目录，减少整体结构调整<br />
-                * 修复一些BUG<br />
-            </p>
-            <br />
-            <br />
-        </div>
-    </fieldset>
-
-    <p>2016-2017 © opensourcebms.com</p>
-</div>
-
-<script src="__JS__/layui/lay/dest/layui.all.js"></script>
-<script>
-    var element = layui.element();
-</script>
-</body>
-</html>
