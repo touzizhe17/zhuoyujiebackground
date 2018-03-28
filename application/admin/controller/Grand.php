@@ -1,12 +1,12 @@
 <?php
 namespace app\admin\controller;
 
-use app\common\model\Article as ArticleModel;
+use app\common\model\Grand as GrandModel;
 use app\common\model\Category as CategoryModel;
 use app\common\controller\AdminBase;
 
 /**
- * 文章管理
+ * 产品管理
  * Class Article
  * @package app\admin\controller
  */
@@ -18,7 +18,7 @@ class Grand extends AdminBase
     protected function _initialize()
     {
         parent::_initialize();
-        $this->article_model  = new ArticleModel();
+        $this->article_model  = new GrandModel();
         $this->category_model = new CategoryModel();
 
         $category_level_list = $this->category_model->getLevelList();
@@ -26,7 +26,7 @@ class Grand extends AdminBase
     }
 
     /**
-     * 文章管理
+     * 产品管理
      * @param int    $cid     分类ID
      * @param string $keyword 关键词
      * @param int    $page
@@ -35,7 +35,7 @@ class Grand extends AdminBase
     public function index($cid = 0, $keyword = '', $page = 1)
     {
         $map   = [];
-        $field = 'id,title,cid,author,reading,status,publish_time,sort';
+        $field = 'id,name,cid,status,publish_time,sort';
 
         if ($cid > 0) {
             $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
@@ -44,7 +44,7 @@ class Grand extends AdminBase
         }
 
         if (!empty($keyword)) {
-            $map['title'] = ['like', "%{$keyword}%"];
+            $map['name'] = ['like', "%{$keyword}%"];
         }
 
         $article_list  = $this->article_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
@@ -54,7 +54,7 @@ class Grand extends AdminBase
     }
 
     /**
-     * 添加文章
+     * 添加产品
      * @return mixed
      */
     public function add()
@@ -63,7 +63,7 @@ class Grand extends AdminBase
     }
 
     /**
-     * 保存文章
+     * 保存产品
      */
     public function save()
     {
@@ -84,7 +84,7 @@ class Grand extends AdminBase
     }
 
     /**
-     * 编辑文章
+     * 编辑产品
      * @param $id
      * @return mixed
      */
@@ -96,7 +96,7 @@ class Grand extends AdminBase
     }
 
     /**
-     * 更新文章
+     * 更新产品
      * @param $id
      */
     public function update($id)
@@ -118,7 +118,7 @@ class Grand extends AdminBase
     }
 
     /**
-     * 删除文章
+     * 删除产品
      * @param int   $id
      * @param array $ids
      */
@@ -137,7 +137,7 @@ class Grand extends AdminBase
     }
 
     /**
-     * 文章审核状态切换
+     * 产品审核状态切换
      * @param array  $ids
      * @param string $type 操作类型
      */

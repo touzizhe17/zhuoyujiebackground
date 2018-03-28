@@ -9,7 +9,7 @@ class Grand extends Model
     protected $insert = ['create_time'];
 
     /**
-     * 文章作者
+     * 产品作者
      * @param $value
      * @return mixed
      */
