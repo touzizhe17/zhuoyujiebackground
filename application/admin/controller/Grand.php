@@ -68,7 +68,8 @@ class Grand extends AdminBase
 //        if (!empty($keyword)) {
 //            $map['name'] = ['like', "%{$keyword}%"];
 //        }
-         $grand_list=$this->where('id',2)->find();
+        $field = 'id,name,cid,status,publish_time,sort';
+         $grand_list=$this->grand_model->field($field)->where('id',2)->find();
 //        $grand_list  = $this->grand_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
 //        $category_list = $this->category_model->column('name', 'id');
 
