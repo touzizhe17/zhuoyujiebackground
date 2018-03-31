@@ -2,8 +2,10 @@
 composer.lock
 *.log
 thinkphp
-runtime
+runtime/*
+runtime/
+/runtime
 *._
 ._*
 ._*/*
-
+/public/uploads
