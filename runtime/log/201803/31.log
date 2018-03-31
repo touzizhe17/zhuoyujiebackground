@@ -20398,3 +20398,3040 @@
 [ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000372s ]
 
 ---------------------------------------------------------------
+[ 2018-03-31T21:40:41+08:00 ] ::1 ::1 GET /index.php/admin
+[ log ] test.zhuoyujie.com:8888/index.php/admin [运行时间：0.072254s][吞吐率：13.84req/s] [内存消耗：3,097.70kb] [文件加载：48]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; CNZZDATA1273007180=875523425-1522498058-%7C1522498058; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] ./themes/admin/index/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000428s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005540s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.004278s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000358s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:40:42+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.044443s][吞吐率：22.50req/s] [内存消耗：2,230.60kb] [文件加载：41]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; CNZZDATA1273007180=875523425-1522498058-%7C1522498058; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:40:42+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.125826s][吞吐率：7.95req/s] [内存消耗：1,581.63kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; CNZZDATA1273007180=875523425-1522498058-%7C1522498058; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:40:42+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.097215s][吞吐率：10.29req/s] [内存消耗：1,581.65kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; CNZZDATA1273007180=875523425-1522498058-%7C1522498058; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:41:13+08:00 ] ::1 ::1 GET /
+[ log ] test.zhuoyujie.com:8888/ [运行时间：0.082530s][吞吐率：12.12req/s] [内存消耗：2,000.36kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503642',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:41:13+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.076291s][吞吐率：13.11req/s] [内存消耗：1,581.47kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503642',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:41:13+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.085704s][吞吐率：11.67req/s] [内存消耗：1,581.52kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503642',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:41:18+08:00 ] ::1 ::1 GET /index.php/admin/change_password/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/change_password/index.html [运行时间：0.110440s][吞吐率：9.05req/s] [内存消耗：3,285.40kb] [文件加载：50]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'change_password',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503673',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ChangePassword->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/ChangePassword.php ]
+[ info ] [ VIEW ] ./themes/admin/system/change_password.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000669s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005966s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005179s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001089s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000470s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:25+08:00 ] ::1 ::1 GET /index.php/admin/change_password/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/change_password/index.html [运行时间：0.218488s][吞吐率：4.58req/s] [内存消耗：3,156.17kb] [文件加载：51]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'change_password',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503673',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ChangePassword->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/ChangePassword.php ]
+[ info ] [ VIEW ] ./themes/admin/system/change_password.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.006135s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.004467s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000479s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:26+08:00 ] ::1 ::1 GET /index.php/admin/change_password/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/change_password/index.html [运行时间：0.071927s][吞吐率：13.90req/s] [内存消耗：3,156.17kb] [文件加载：51]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'change_password',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503673',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ChangePassword->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/ChangePassword.php ]
+[ info ] [ VIEW ] ./themes/admin/system/change_password.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000486s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005020s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005754s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001199s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000581s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:27+08:00 ] ::1 ::1 POST /index.php/admin/system/clear.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/system/clear.html [运行时间：0.149234s][吞吐率：6.70req/s] [内存消耗：3,119.53kb] [文件加载：49]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.zhuoyujie.com:8888',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503673',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->clear[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/System.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000471s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.004770s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005528s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001360s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:28+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.054614s][吞吐率：18.31req/s] [内存消耗：2,230.66kb] [文件加载：41]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503673',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:28+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.079991s][吞吐率：12.50req/s] [内存消耗：1,581.65kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503673',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:28+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.077976s][吞吐率：12.82req/s] [内存消耗：1,581.63kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503673',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:29+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.036570s][吞吐率：27.34req/s] [内存消耗：2,000.69kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503869',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:29+08:00 ] ::1 ::1 GET /index.php/admin/change_password/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/change_password/index.html [运行时间：0.130881s][吞吐率：7.64req/s] [内存消耗：3,365.01kb] [文件加载：53]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'change_password',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503869',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ChangePassword->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/ChangePassword.php ]
+[ info ] [ VIEW ] ./themes/admin/system/change_password.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000498s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005191s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005520s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001604s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000471s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:29+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.100412s][吞吐率：9.96req/s] [内存消耗：1,581.63kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503869',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:44:29+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.102626s][吞吐率：9.74req/s] [内存消耗：1,581.65kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503869',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:00+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.048983s][吞吐率：20.42req/s] [内存消耗：2,000.99kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503870',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:00+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.087374s][吞吐率：11.45req/s] [内存消耗：1,582.09kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503870',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:00+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.104885s][吞吐率：9.53req/s] [内存消耗：1,582.10kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503870',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:09+08:00 ] ::1 ::1 GET /index.php/admin/change_password/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/change_password/index.html [运行时间：0.120619s][吞吐率：8.29req/s] [内存消耗：3,156.17kb] [文件加载：51]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'change_password',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ChangePassword->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/ChangePassword.php ]
+[ info ] [ VIEW ] ./themes/admin/system/change_password.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000596s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.006596s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.003186s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.007890s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001883s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000789s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:11+08:00 ] ::1 ::1 GET /index.php/index/world/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/index.html [运行时间：0.063319s][吞吐率：15.79req/s] [内存消耗：2,135.41kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\World->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/World.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/world/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:11+08:00 ] ::1 ::1 GET /index/images/yuyu.png
+[ log ] test.zhuoyujie.com:8888/index/images/yuyu.png [运行时间：0.125462s][吞吐率：7.97req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'yuyu.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:11+08:00 ] ::1 ::1 GET /index/images/zhezhao.png
+[ log ] test.zhuoyujie.com:8888/index/images/zhezhao.png [运行时间：0.154896s][吞吐率：6.46req/s] [内存消耗：1,581.69kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'zhezhao.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:11+08:00 ] ::1 ::1 GET /index/images/yjzhong.png
+[ log ] test.zhuoyujie.com:8888/index/images/yjzhong.png [运行时间：0.183410s][吞吐率：5.45req/s] [内存消耗：1,581.69kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'yjzhong.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:11+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d7472edc942.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d7472edc942.jpg [运行时间：0.127763s][吞吐率：7.83req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:11+08:00 ] ::1 ::1 GET /index.php/index/world/js/tj.js
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/js/tj.js [运行时间：0.226201s][吞吐率：4.42req/s] [内存消耗：1,947.89kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:11+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/97e1551e0dc5.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/97e1551e0dc5.jpg [运行时间：0.209599s][吞吐率：4.77req/s] [内存消耗：1,948.88kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/70b155961c19.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/70b155961c19.jpg [运行时间：0.166812s][吞吐率：5.99req/s] [内存消耗：1,948.88kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/7606548abc3a.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/7606548abc3a.jpg [运行时间：0.140578s][吞吐率：7.11req/s] [内存消耗：1,948.88kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d747286ed4e.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d747286ed4e.jpg [运行时间：0.195410s][吞吐率：5.12req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/15871bb9bfd.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/15871bb9bfd.jpg [运行时间：0.100558s][吞吐率：9.94req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index/images/more.png
+[ log ] test.zhuoyujie.com:8888/index/images/more.png [运行时间：0.048653s][吞吐率：20.55req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'more.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index/images/load.gif
+[ log ] test.zhuoyujie.com:8888/index/images/load.gif [运行时间：0.069604s][吞吐率：14.37req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'load.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d86b71dad1f.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d86b71dad1f.jpg [运行时间：0.269451s][吞吐率：3.71req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d6d25e66eb2.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d6d25e66eb2.jpg [运行时间：0.277140s][吞吐率：3.61req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /public/index/picture/d747286ed4e.jpg
+[ log ] test.zhuoyujie.com:8888/public/index/picture/d747286ed4e.jpg [运行时间：0.128954s][吞吐率：7.75req/s] [内存消耗：1,579.67kb] [文件加载：32]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'index',
+    2 => 'picture',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index/images/coico.png
+[ log ] test.zhuoyujie.com:8888/index/images/coico.png [运行时间：0.124013s][吞吐率：8.06req/s] [内存消耗：1,581.55kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'coico.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index/images/hsxt.jpg
+[ log ] test.zhuoyujie.com:8888/index/images/hsxt.jpg [运行时间：0.125774s][吞吐率：7.95req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'hsxt.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:45:12+08:00 ] ::1 ::1 GET /index/images/hsjb.png
+[ log ] test.zhuoyujie.com:8888/index/images/hsjb.png [运行时间：0.137354s][吞吐率：7.28req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'hsjb.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:18+08:00 ] ::1 ::1 GET /World/flei.html
+[ log ] test.zhuoyujie.com:8888/World/flei.html [运行时间：0.076437s][吞吐率：13.08req/s] [内存消耗：1,579.88kb] [文件加载：32]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'World',
+    1 => 'flei',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:24+08:00 ] ::1 ::1 GET /
+[ log ] test.zhuoyujie.com:8888/ [运行时间：0.049636s][吞吐率：20.15req/s] [内存消耗：2,000.26kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:24+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.071624s][吞吐率：13.96req/s] [内存消耗：1,581.47kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:24+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.080122s][吞吐率：12.48req/s] [内存消耗：1,581.52kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503901',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:29+08:00 ] ::1 ::1 GET /index.php/index/index/goods.html
+[ log ] test.zhuoyujie.com:8888/index.php/index/index/goods.html [运行时间：0.049003s][吞吐率：20.41req/s] [内存消耗：2,233.77kb] [文件加载：41]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503985',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->goods[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/goods.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:29+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.067576s][吞吐率：14.80req/s] [内存消耗：1,581.59kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/index/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503985',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:29+08:00 ] ::1 ::1 GET /index.php/index/index/picture/imghold_2.gif
+[ log ] test.zhuoyujie.com:8888/index.php/index/index/picture/imghold_2.gif [运行时间：0.121004s][吞吐率：8.26req/s] [内存消耗：1,954.45kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'picture',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/index/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503985',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:32+08:00 ] ::1 ::1 GET /index.php/index/index/yuanliao.html
+[ log ] test.zhuoyujie.com:8888/index.php/index/index/yuanliao.html [运行时间：0.042954s][吞吐率：23.28req/s] [内存消耗：2,226.85kb] [文件加载：41]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'yuanliao',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/index/goods.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503990',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->yuanliao[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/yuanliao.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:46:32+08:00 ] ::1 ::1 GET /index.php/index/index/picture/imghold_3.gif
+[ log ] test.zhuoyujie.com:8888/index.php/index/index/picture/imghold_3.gif [运行时间：0.073708s][吞吐率：13.57req/s] [内存消耗：1,954.43kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'picture',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/index/yuanliao.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503990',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:03+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.041369s][吞吐率：24.17req/s] [内存消耗：2,000.69kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:03+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.069933s][吞吐率：14.30req/s] [内存消耗：1,581.65kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:03+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.078502s][吞吐率：12.74req/s] [内存消耗：1,581.63kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522503992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:29+08:00 ] ::1 ::1 GET /index.php/admin/system/siteconfig.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html [运行时间：0.145010s][吞吐率：6.90req/s] [内存消耗：3,369.63kb] [文件加载：53]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/System.php ]
+[ info ] [ VIEW ] ./themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'site_config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000694s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005962s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005940s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.002186s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_system` [ RunTime:0.007606s ]
+[ sql ] [ SQL ] SELECT `value` FROM `os_system` WHERE  `name` = 'site_config' LIMIT 1 [ RunTime:0.001713s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:30+08:00 ] ::1 ::1 GET /index.php/admin/change_password/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/change_password/index.html [运行时间：0.098007s][吞吐率：10.20req/s] [内存消耗：3,155.97kb] [文件加载：51]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'change_password',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ChangePassword->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/ChangePassword.php ]
+[ info ] [ VIEW ] ./themes/admin/system/change_password.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000491s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.004726s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.001091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005963s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001685s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000428s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:31+08:00 ] ::1 ::1 GET /index.php/admin/system/siteconfig.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html [运行时间：0.103527s][吞吐率：9.66req/s] [内存消耗：3,151.40kb] [文件加载：51]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/System.php ]
+[ info ] [ VIEW ] ./themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'site_config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000440s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.004904s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.006371s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001512s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_system` [ RunTime:0.005182s ]
+[ sql ] [ SQL ] SELECT `value` FROM `os_system` WHERE  `name` = 'site_config' LIMIT 1 [ RunTime:0.000378s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:31+08:00 ] ::1 ::1 GET /index.php/admin/change_password/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/change_password/index.html [运行时间：0.099659s][吞吐率：10.03req/s] [内存消耗：3,155.97kb] [文件加载：51]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'change_password',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/system/siteconfig.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\ChangePassword->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/ChangePassword.php ]
+[ info ] [ VIEW ] ./themes/admin/system/change_password.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000933s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005913s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005540s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000861s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:33+08:00 ] ::1 ::1 GET /index.php/admin/category/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/category/index.html [运行时间：0.107609s][吞吐率：9.29req/s] [内存消耗：3,808.63kb] [文件加载：56]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] ./themes/admin/category/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'category_level_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000439s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005190s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005595s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001070s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_category` [ RunTime:0.007046s ]
+[ sql ] [ SQL ] SELECT * FROM `os_category` ORDER BY `sort`  DESC [ RunTime:0.001684s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:34+08:00 ] ::1 ::1 GET /index.php/admin/category/edit/id/1.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/category/edit/id/1.html [运行时间：0.095578s][吞吐率：10.46req/s] [内存消耗：3,834.59kb] [文件加载：56]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->edit[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] ./themes/admin/category/edit.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'category_level_list',
+  3 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000404s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005122s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005386s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001063s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_category` [ RunTime:0.005533s ]
+[ sql ] [ SQL ] SELECT * FROM `os_category` ORDER BY `sort`  DESC [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT * FROM `os_category` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000621s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:35+08:00 ] ::1 ::1 GET /index.php/api/ueditor/index?action=config&&noCache=1522504055139
+[ log ] test.zhuoyujie.com:8888/index.php/api/ueditor/index?action=config&&noCache=1522504055139 [运行时间：0.052943s][吞吐率：18.89req/s] [内存消耗：1,951.80kb] [文件加载：37]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'ueditor',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/category/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1522504055139',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ RUN ] app\api\controller\Ueditor->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/api/controller/Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:36+08:00 ] ::1 ::1 POST /index.php/admin/category/update.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/category/update.html [运行时间：0.108109s][吞吐率：9.25req/s] [内存消耗：3,624.69kb] [文件加载：56]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'update',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'content-length' => '118',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.zhuoyujie.com:8888',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/category/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+  'pid' => '0',
+  'name' => '分类一',
+  'alias' => '',
+  'icon' => '',
+  'thumb' => '',
+  'content' => '',
+  'type' => '1',
+  'sort' => '0',
+  'list_template' => '',
+  'detail_template' => '',
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->update[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/Category.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000438s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.004288s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.004211s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001149s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_category` [ RunTime:0.005826s ]
+[ sql ] [ SQL ] SELECT * FROM `os_category` ORDER BY `sort`  DESC [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT `id` FROM `os_category` WHERE  `path` LIKE '%,1,%' [ RunTime:0.000536s ]
+[ sql ] [ SQL ] UPDATE `os_category`  SET `pid`=0,`name`='分类一',`alias`='',`icon`='',`thumb`='',`content`='',`type`=1,`sort`=0,`list_template`='',`detail_template`=''  WHERE  `id` = 1 [ RunTime:0.001100s ]
+[ sql ] [ SQL ] UPDATE `os_category`  SET `path`='0,'  WHERE  `id` = 1 [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT * FROM `os_category` WHERE  `path` LIKE '%1,%' [ RunTime:0.000998s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:37+08:00 ] ::1 ::1 GET /index.php/admin/category/edit/id/1.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/category/edit/id/1.html [运行时间：0.115032s][吞吐率：8.69req/s] [内存消耗：3,605.66kb] [文件加载：54]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/category/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->edit[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] ./themes/admin/category/edit.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'category_level_list',
+  3 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000582s ] mysql:dbname=jewelry;host=localhost;port=8889;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_group_access` [ RunTime:0.005365s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `os_auth_group_access` `AuthGroupAccess` LEFT JOIN `os_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_auth_rule` [ RunTime:0.005448s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `os_auth_rule` WHERE  `id` IN (1,2,3,73,74,5,6,7,8,9,10,11,12,39,40,41,42,43,14,13,20,21,22,23,24,15,25,26,27,28,29,30,16,17,44,45,46,47,48,18,49,50,51,52,53,19,31,32,33,34,35,36,37,54,55,58,59,60,61,62,56,63,64,65,66,67,57,68,69,70,71,72)  AND `type` = 1 [ RunTime:0.001179s ]
+[ sql ] [ SQL ] SELECT * FROM `os_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000864s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `os_category` [ RunTime:0.006367s ]
+[ sql ] [ SQL ] SELECT * FROM `os_category` ORDER BY `sort`  DESC [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT * FROM `os_category` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000489s ]
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:37+08:00 ] ::1 ::1 GET /index.php/api/ueditor/index?action=config&&noCache=1522504057545
+[ log ] test.zhuoyujie.com:8888/index.php/api/ueditor/index?action=config&&noCache=1522504057545 [运行时间：0.035497s][吞吐率：28.17req/s] [内存消耗：1,951.80kb] [文件加载：37]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'ueditor',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/category/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1522504057545',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ RUN ] app\api\controller\Ueditor->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/api/controller/Ueditor.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:40+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.041408s][吞吐率：24.15req/s] [内存消耗：2,000.69kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:40+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.066363s][吞吐率：15.07req/s] [内存消耗：1,581.63kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:40+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.071619s][吞吐率：13.96req/s] [内存消耗：1,581.65kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:40+08:00 ] ::1 ::1 GET /index.php/index/world/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/index.html [运行时间：0.080065s][吞吐率：12.49req/s] [内存消耗：1,915.27kb] [文件加载：38]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\World->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/World.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/world/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/yuyu.png
+[ log ] test.zhuoyujie.com:8888/index/images/yuyu.png [运行时间：0.067297s][吞吐率：14.86req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'yuyu.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/yjzhong.png
+[ log ] test.zhuoyujie.com:8888/index/images/yjzhong.png [运行时间：0.064904s][吞吐率：15.41req/s] [内存消耗：1,581.69kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'yjzhong.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/zhezhao.png
+[ log ] test.zhuoyujie.com:8888/index/images/zhezhao.png [运行时间：0.069016s][吞吐率：14.49req/s] [内存消耗：1,581.69kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'zhezhao.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/js/tj.js
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/js/tj.js [运行时间：0.100043s][吞吐率：10.00req/s] [内存消耗：1,947.89kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/97e1551e0dc5.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/97e1551e0dc5.jpg [运行时间：0.123236s][吞吐率：8.11req/s] [内存消耗：1,948.88kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/70b155961c19.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/70b155961c19.jpg [运行时间：0.115823s][吞吐率：8.63req/s] [内存消耗：1,948.88kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/7606548abc3a.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/7606548abc3a.jpg [运行时间：0.110215s][吞吐率：9.07req/s] [内存消耗：1,948.88kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d7472edc942.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d7472edc942.jpg [运行时间：0.137848s][吞吐率：7.25req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d747286ed4e.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d747286ed4e.jpg [运行时间：0.150742s][吞吐率：6.63req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d86b71dad1f.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d86b71dad1f.jpg [运行时间：0.169072s][吞吐率：5.91req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/d6d25e66eb2.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/d6d25e66eb2.jpg [运行时间：0.122333s][吞吐率：8.17req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/load.gif
+[ log ] test.zhuoyujie.com:8888/index/images/load.gif [运行时间：0.060612s][吞吐率：16.50req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'load.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index.php/index/world/public/index/picture/15871bb9bfd.jpg
+[ log ] test.zhuoyujie.com:8888/index.php/index/world/public/index/picture/15871bb9bfd.jpg [运行时间：0.133251s][吞吐率：7.50req/s] [内存消耗：1,948.81kb] [文件加载：40]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'world',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'picture',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /public/index/picture/d747286ed4e.jpg
+[ log ] test.zhuoyujie.com:8888/public/index/picture/d747286ed4e.jpg [运行时间：0.108054s][吞吐率：9.25req/s] [内存消耗：1,579.67kb] [文件加载：32]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'index',
+    2 => 'picture',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/hsjb.png
+[ log ] test.zhuoyujie.com:8888/index/images/hsjb.png [运行时间：0.073364s][吞吐率：13.63req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'hsjb.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/more.png
+[ log ] test.zhuoyujie.com:8888/index/images/more.png [运行时间：0.117556s][吞吐率：8.51req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'more.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/coico.png
+[ log ] test.zhuoyujie.com:8888/index/images/coico.png [运行时间：0.060224s][吞吐率：16.60req/s] [内存消耗：1,581.55kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'coico.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:41+08:00 ] ::1 ::1 GET /index/images/hsxt.jpg
+[ log ] test.zhuoyujie.com:8888/index/images/hsxt.jpg [运行时间：0.064216s][吞吐率：15.57req/s] [内存消耗：1,581.56kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'images',
+    2 => 'hsxt.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/public/index/css/world.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:47+08:00 ] ::1 ::1 GET /World/flei.html
+[ log ] test.zhuoyujie.com:8888/World/flei.html [运行时间：0.027655s][吞吐率：36.16req/s] [内存消耗：1,579.88kb] [文件加载：32]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'World',
+    1 => 'flei',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:50+08:00 ] ::1 ::1 GET /World/mjjy.html
+[ log ] test.zhuoyujie.com:8888/World/mjjy.html [运行时间：0.032769s][吞吐率：30.52req/s] [内存消耗：1,579.88kb] [文件加载：32]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'World',
+    1 => 'mjjy',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/index/world/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:57+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.039279s][吞吐率：25.46req/s] [内存消耗：2,000.45kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/change_password/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:58+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.061077s][吞吐率：16.37req/s] [内存消耗：1,581.65kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:58+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.065819s][吞吐率：15.19req/s] [内存消耗：1,581.63kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504060',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:58+08:00 ] ::1 ::1 GET /index.php/admin/login/index.html
+[ log ] test.zhuoyujie.com:8888/index.php/admin/login/index.html [运行时间：0.049678s][吞吐率：20.13req/s] [内存消耗：2,322.38kb] [文件加载：46]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504078',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] ./themes/admin/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:47:58+08:00 ] ::1 ::1 GET /index.php/captcha.html
+[ log ] test.zhuoyujie.com:8888/index.php/captcha.html [运行时间：0.054237s][吞吐率：18.44req/s] [内存消耗：1,610.26kb] [文件加载：31]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504078',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Volumes/PROJECT/he/zhuoyujiebackground/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:49:05+08:00 ] ::1 ::1 GET /index.php/
+[ log ] test.zhuoyujie.com:8888/index.php/ [运行时间：0.045235s][吞吐率：22.11req/s] [内存消耗：2,000.45kb] [文件加载：39]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Volumes/PROJECT/he/zhuoyujiebackground/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Volumes/PROJECT/he/zhuoyujiebackground/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:49:06+08:00 ] ::1 ::1 GET /index/picture/yudiaoshi.jpg
+[ log ] test.zhuoyujie.com:8888/index/picture/yudiaoshi.jpg [运行时间：0.046591s][吞吐率：21.46req/s] [内存消耗：1,581.65kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'yudiaoshi.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-31T21:49:06+08:00 ] ::1 ::1 GET /index/picture/imghold.gif
+[ log ] test.zhuoyujie.com:8888/index/picture/imghold.gif [运行时间：0.047188s][吞吐率：21.19req/s] [内存消耗：1,581.63kb] [文件加载：33]
+[ info ] [ LANG ] /Volumes/PROJECT/he/zhuoyujiebackground/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'picture',
+    2 => 'imghold.gif',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.zhuoyujie.com:8888',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://test.zhuoyujie.com:8888/index.php/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=e5a7a401545b6876301ceb1e7864dc65; UM_distinctid=1627c2a597f20f-0fad5055ebcfef-33697b04-13c680-1627c2a5980768; Hm_lvt_c2906e20f9c36821c90523eff59d2c90=1522501573; CNZZDATA1273007180=875523425-1522498058-%7C1522503471; Hm_lpvt_c2906e20f9c36821c90523eff59d2c90=1522504081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
