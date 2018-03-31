@@ -56,23 +56,24 @@ class Grand extends AdminBase
     }
     public function index1($cid = 0, $keyword = '', $page = 1)
     {
-        $map   = [];
+//        $map   = [];
+//        $field = 'id,name,cid,status,publish_time,sort';
+//
+//        if ($cid > 0) {
+//            $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
+//            $category_children_ids = (!empty($category_children_ids) && is_array($category_children_ids)) ? implode(',', $category_children_ids) . ',' . $cid : $cid;
+//            $map['cid']            = ['IN', $category_children_ids];
+//        }
+//
+//        if (!empty($keyword)) {
+//            $map['name'] = ['like', "%{$keyword}%"];
+//        }
         $field = 'id,name,cid,status,publish_time,sort';
+         $grand_list=$this->grand_model->field($field)->where('id',2)->find();
+//        $grand_list  = $this->grand_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+//        $category_list = $this->category_model->column('name', 'id');
 
-        if ($cid > 0) {
-            $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
-            $category_children_ids = (!empty($category_children_ids) && is_array($category_children_ids)) ? implode(',', $category_children_ids) . ',' . $cid : $cid;
-            $map['cid']            = ['IN', $category_children_ids];
-        }
-
-        if (!empty($keyword)) {
-            $map['name'] = ['like', "%{$keyword}%"];
-        }
-
-        $grand_list  = $this->grand_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
-        $category_list = $this->category_model->column('name', 'id');
-
-        return $this->fetch('index', ['grand_list' => $grand_list, 'category_list' => $category_list, 'cid' => $cid, 'keyword' => $keyword]);
+        return $this->fetch('index', ['grand_list' => $grand_list]);
     }
 
     /**
