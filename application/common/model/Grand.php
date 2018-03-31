@@ -13,10 +13,10 @@ class Grand extends Model
      * @param $value
      * @return mixed
      */
-    protected function setAuthorAttr($value)
-    {
-        return $value ? $value : Session::get('admin_name');
-    }
+//    protected function setAuthorAttr($value)
+//    {
+//        return $value ? $value : Session::get('admin_name');
+//    }
 
     /**
      * 反转义HTML实体标签
