@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99dcad13-b07e-4167-bf5c-4ed3e7c49bb2" name="Default" comment="前后台整合">
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/._autoload.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/._composer" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/._topthink" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/topthink/._think-captcha" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/topthink/._think-installer" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="99dcad13-b07e-4167-bf5c-4ed3e7c49bb2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/application/config.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/runtime/log/201803/31.log" afterPath="$PROJECT_DIR$/runtime/log/201803/31.log" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/8d2aa25d28d86613dead2975f1f06662.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -645,11 +636,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522503292174</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="前后台整合">
+      <created>1522503581068</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1522503581068</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8481000" />
+    <option name="totallyTimeSpent" value="8504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1412" height="799" extended-state="0" />
