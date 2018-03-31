@@ -1,0 +1,36 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:33:"./themes/default/index/index.html";i:1522415392;}*/ ?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>琢玉界前台演示地址</title>
+    <meta name="description" content="琢玉界前台演示地址">
+    <link rel="stylesheet" href="__JS__/layui/css/layui.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="top-nav">
+        <div class="layui-main">
+            <h1>琢玉界前台演示地址</h1>
+            <ul class="layui-nav">
+                <li class="layui-nav-item"><a href="">首页</a></li>
+                <li class="layui-nav-item"><a href="/index.php/admin" target="_blank">后台演示</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="layui-main content">
+</div>
+
+<script src="__JS__/layui/lay/dest/layui.all.js"></script>
+<script>
+    var element = layui.element();
+</script>
+</body>
+</html>
