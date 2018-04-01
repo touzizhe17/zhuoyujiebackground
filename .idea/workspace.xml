@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99dcad13-b07e-4167-bf5c-4ed3e7c49bb2" name="Default" comment="">
+    <list default="true" id="99dcad13-b07e-4167-bf5c-4ed3e7c49bb2" name="Default" comment="前后台整合">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/application/admin/config.php" afterPath="$PROJECT_DIR$/application/admin/config.php" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Grand.php" afterPath="$PROJECT_DIR$/application/admin/controller/Grand.php" />
       <change beforePath="$PROJECT_DIR$/runtime/log/201803/31.log" afterPath="$PROJECT_DIR$/runtime/log/201803/31.log" />
+      <change beforePath="$PROJECT_DIR$/themes/admin/grand/edit.html" afterPath="$PROJECT_DIR$/themes/admin/grand/edit.html" />
+      <change beforePath="$PROJECT_DIR$/themes/admin/grand/index.html" afterPath="$PROJECT_DIR$/themes/admin/grand/index.html" />
+      <change beforePath="$PROJECT_DIR$/themes/admin/grand/index1.html" afterPath="$PROJECT_DIR$/themes/admin/grand/index1.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,101 +21,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+      <file leaf-file-name="Grand.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/admin/controller/Grand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="46" column="66" lean-forward="false" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
+            <state relative-caret-position="384">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mjqj.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/index/mjqj.html">
+      <file leaf-file-name="index1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/admin/grand/index1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="siren.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/index/siren.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="103" column="41" lean-forward="false" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yuanliao.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/index/yuanliao.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/layout/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../jewelry/application/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/admin/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="145" column="35" lean-forward="false" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
+            <state relative-caret-position="1095">
+              <caret line="73" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/world/index.html">
+        <entry file="file://$PROJECT_DIR$/themes/admin/grand/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="450">
+              <caret line="62" column="49" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/admin/grand/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="341">
+              <caret line="96" column="26" lean-forward="true" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graverDetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/index/graverDetail.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/admin/article/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-657">
+            <state relative-caret-position="1140">
+              <caret line="76" column="20" lean-forward="false" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.config" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinkphp/start.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinkphp/base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminBase.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/common/controller/AdminBase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -148,8 +151,12 @@
         <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
         <option value="$PROJECT_DIR$/application/index/view/index/siren.html" />
         <option value="$PROJECT_DIR$/application/index/view/world/index.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/admin/config.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/themes/admin/grand/index1.html" />
+        <option value="$PROJECT_DIR$/themes/admin/grand/edit.html" />
+        <option value="$PROJECT_DIR$/themes/admin/grand/index.html" />
+        <option value="$PROJECT_DIR$/application/admin/controller/Grand.php" />
       </list>
     </option>
   </component>
@@ -160,11 +167,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1412" />
+    <option name="height" value="799" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -182,7 +188,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,10 +206,93 @@
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="validate" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="article" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="grand" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="thinkphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,378 +303,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\wampserver\azlj\www\zhuoyujiebackground\application" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/config.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/config.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/controller/Index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/router.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/controller/About.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/controller/World.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/about/aftersale.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/about/contact.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/about/howbuy.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/about/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/collect.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/dongtai.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/goods.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/goodsDetail.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/graver.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/graverDetail.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/mjqj.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/siren.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/index/yuanliao.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/layout/layout.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/view/world/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/css/about.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/css/main.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/css/nzdc.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/css/personal.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/css/ssy.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/css/world.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/4.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/5.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/6.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/7.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/8.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/anbj.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/anbj_h.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/bb8419c20588a9cf09e95c1ae54db9f2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/bq.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/btmh.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/cahng.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/click-max.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/close.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/closeprize.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/coico.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/dhtb.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/downimg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/duan.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/ewm.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/genduo.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/genduo1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/genduu.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/genduu1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/gwc_.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/gwc_hover.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/gzwm.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/hot.gif</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/hsjdl.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/hsjtd.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/hsjtdasc.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/huise.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/jtdownimg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/jtupimg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/kf-close1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/kf-off.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/kf-on.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/list.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/load.gif</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/mbfz.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/mjqj-banner.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/navbg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/pr-linkbg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/rwu.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/sc_.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/sc_hover.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/sm2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/sm3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/sm6.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/smy.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/smy2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/time-pic.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/topimg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/topimg2017.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/totop.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/tp_.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/tp_hover.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/upimg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/videotag.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/xx.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/xxb.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/yjzhong.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/images/yuyu.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/js/jquery-1.10.2.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/js/jquery-1.9.1.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/js/jquery-2.1.0.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/js/jquery.downcount.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/js/jquery.lazyload.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/js/jquery.mousewheel.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/14c70566678ee.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/17f54867a3c.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/1ce5548abe7a.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/23bd33c46cd1af5c723bccf1cdfd4a80.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/4c94548abf22.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/70b155961c19.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/7606548abc3a.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/858b888dc2695e555ec9baec29c1c6df.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/97e1551e0dc5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/9be1e7857f959f0a203431f9566e5add.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/a62a5684cded.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/appbig2017.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/appbig2017.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b27856010888.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b4.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b5.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b6.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b7.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b8.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/b9254867944.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/baa155e7cf75.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/bimg1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/bimg2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/bimg3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/c1d754bf49b3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city7.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/city8.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo7.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/cityinfo8.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d6d25e66eb2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d8173f0ca8d.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d8174065b83.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d8174065b83.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d81740c9f57.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d86b71dad1f.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d9634b21bb6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/d96a6a0386980f01281b9b57186df725.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/de1a54867a56.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/de3b5670d7a5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/dz1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/dz2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/dz3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl10.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl11.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl12.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl7.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl8.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/fl9.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/ggao1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/icon-fcwc.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/icon-nhzm.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/icon-ns.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/icon-ydj.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/icon-zbly.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/imghold.gif</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/j1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/j2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/j3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/j4.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/j5.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/kf-min02.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/kf-pic01.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/kf-ydj.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/topimg.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/xz-topbanner.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/xzlogo.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/ydj-list1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/ydj-list2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/ydj-list3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/yhtop.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/yjfooter.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/yudiaoshi.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/index/picture/zuoping.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/think</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._application</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._build.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._extend</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._public</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._robots.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._router.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._runtime</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._themes</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._thinkphp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._vendor</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._web.config</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/._琢玉界web项目要求.docx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._.htaccess</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._admin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._api</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._common</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._common.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._config.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._index</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._route.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/._tags.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/._config.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/._controller</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/._validate</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._AdminUser.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Article.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._AuthGroup.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Category.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._ChangePassword.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Link.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Login.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Menu.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Nav.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._Slide.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._SlideCategory.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._System.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/controller/._User.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._AdminUser.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._Article.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._Category.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._Link.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._Login.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._Menu.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._Nav.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._Slide.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/admin/validate/._User.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/._config.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/._controller</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/controller/._Article.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/controller/._Index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/application/index/controller/._ShowList.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/._log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/log/._201803</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/log/201803/._19.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/log/201803/19.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/log/201803/31.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/0e97ef40faf7ec8c0ea9d60c34b7ec4e.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/2b6dcb650c47e47b9cb3a3189e7d6bd6.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/332d36cb291535e762c015fe5305b32d.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/5d90142efe05443eec40ead53c86639b.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/8d2aa25d28d86613dead2975f1f06662.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/94f9cd4832f8671052d2d5f3d7eab875.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/d689e11207536030a98723f16d028e78.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/efaa1e2057a14cb30744f99b1fdf330f.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtime/temp/fdb04d5260ed23be00c1d8a32c229f94.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -608,13 +324,15 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c3193666-6866-4dfd-9ca3-9af81e42303c" name="Default" comment="" />
+      <changelist id="99dcad13-b07e-4167-bf5c-4ed3e7c49bb2" name="Default" comment="前后台整合" />
       <created>1522489945015</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522489945015</updated>
       <workItem from="1522489958942" duration="6205000" />
       <workItem from="1522498685689" duration="28000" />
+      <workItem from="1522553319216" duration="1225000" />
+      <workItem from="1522560177120" duration="243000" />
     </task>
     <task id="LOCAL-00001" summary="前后台整合">
       <created>1522503292174</created>
@@ -637,47 +355,56 @@
       <option name="project" value="LOCAL" />
       <updated>1522503599803</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="前后台整合">
+      <created>1522504161728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1522504161728</updated>
+    </task>
+    <task id="LOCAL-00005" summary="前后台整合">
+      <created>1522504373967</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1522504373967</updated>
+    </task>
+    <task id="LOCAL-00006" summary="前后台整合">
+      <created>1522505515881</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1522505515881</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9029000" />
+    <option name="totallyTimeSpent" value="12638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1412" height="799" extended-state="0" />
+    <frame x="0" y="26" width="1440" height="807" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24787535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,126 +419,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/ChangePassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/model/Grand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="58" column="1" lean-forward="false" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-          <folding>
-            <element signature="e#35#51#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/world/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="61" lean-forward="false" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/think">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/default/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/layout/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="85" lean-forward="false" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/World.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zhuoyujiewebsite/application/index/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zhuoyujiewebsite/application/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-603">
-          <caret line="115" column="10" lean-forward="true" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../zhuoyujiewebsite/public/router.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -823,27 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/About.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -863,13 +454,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/layout/layout_world.html" />
     <entry file="file://$PROJECT_DIR$/application/index/view/world/zuoping.html" />
-    <entry file="file://$PROJECT_DIR$/application/index/controller/World.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/default/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -881,7 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,21 +475,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin/login/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1522459586000" expanded="true" signature="412:473" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,33 +486,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Grand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#39#80#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="176" column="4" lean-forward="false" selection-start-line="176" selection-start-column="4" selection-end-line="183" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config.php" />
     <entry file="file://$PROJECT_DIR$/application/index/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,7 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-808">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-537">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-867">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-657">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
           <caret line="46" column="66" lean-forward="false" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1545">
           <caret line="103" column="41" lean-forward="false" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,15 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1068,14 +599,176 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="145" column="35" lean-forward="false" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
+        <state relative-caret-position="195">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/About.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/ShowList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/World.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/tags.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/validate/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/controller/AdminBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/article/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="20" lean-forward="false" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/grand/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/grand/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="96" column="26" lean-forward="true" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/grand/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="62" column="49" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/controller/Grand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding />
         </state>
       </provider>
