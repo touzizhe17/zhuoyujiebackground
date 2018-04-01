@@ -132,7 +132,7 @@ INSERT INTO `os_auth_rule` VALUES ('12', 'admin/Nav/index', '导航管理', '1',
 INSERT INTO `os_auth_rule` VALUES ('13', 'admin/Category/index', '栏目管理', '1', '1', '14', 'fa fa-sitemap', '0', '');
 INSERT INTO `os_auth_rule` VALUES ('38', 'admin/Grand/index', '玉雕大师管理', '1', '1', '14', 'fa fa-sitemap', '0', '');
 INSERT INTO `os_auth_rule` VALUES ('14', 'admin/Content/default', '内容管理', '1', '1', '0', 'fa fa-file-text', '0', '');
-INSERT INTO `os_auth_rule` VALUES ('15', 'admin/Article/index', '文章管理', '1', '1', '14', '', '0', '');
+INSERT INTO `os_auth_rule` VALUES ('15', 'admin/Article/index', '产品管理', '1', '1', '14', '', '0', '');
 INSERT INTO `os_auth_rule` VALUES ('16', 'admin/User/default', '用户管理', '1', '1', '0', 'fa fa-users', '0', '');
 INSERT INTO `os_auth_rule` VALUES ('17', 'admin/User/index', '普通用户', '1', '1', '16', '', '0', '');
 INSERT INTO `os_auth_rule` VALUES ('18', 'admin/AdminUser/index', '管理员', '1', '1', '16', '', '0', '');
