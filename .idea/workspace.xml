@@ -3,58 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="99dcad13-b07e-4167-bf5c-4ed3e7c49bb2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/themes/._admin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/._default" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/._mobile" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._admin_user" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._article" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._auth_group" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._category" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._link" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._login" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._menu" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._nav" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._slide" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._slide_category" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._system" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/admin/._user" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/mobile/._index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._.htaccess" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._.travis.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._CONTRIBUTING.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._base.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._codecov.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._composer.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._convention.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._helper.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._lang" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._library" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._phpunit.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._start.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/._tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/._autoload.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/._composer" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/._topthink" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._ClassLoader.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._autoload_classmap.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._autoload_files.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._autoload_namespaces.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._autoload_psr4.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._autoload_real.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/._autoload_static.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/topthink/._think-captcha" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/topthink/._think-installer" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/topthink/think-captcha/._.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/topthink/think-captcha/._LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/topthink/think-captcha/._README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/topthink/think-captcha/._assets" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/topthink/think-captcha/._src" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/api/._controller" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/._controller" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/._model" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/controller/._AdminBase.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/controller/._HomeBase.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._AdminUser.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._Article.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._AuthGroup.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._AuthGroupAccess.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._AuthRule.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._Category.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._Link.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._Nav.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._Slide.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._SlideCategory.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/application/common/model/._User.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/extend/._org" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/extend/org/._Auth.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/extend/org/._UeditorUpload.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/default/._index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/lang/._zh-cn.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/library/._think" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/library/._traits" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/tpl/._default_index.tpl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/tpl/._dispatch_jump.tpl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/tpl/._page_trace.tpl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/tpl/._think_exception.tpl" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -235,7 +210,108 @@
             <path>
               <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="about" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="world" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="extend" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="extend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="org" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhuoyujiebackground" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="zhuoyujiebackground" type="b2602c69:ProjectViewProjectNode" />
@@ -331,7 +407,7 @@
       <workItem from="1522489958942" duration="6205000" />
       <workItem from="1522498685689" duration="28000" />
       <workItem from="1522553319216" duration="1225000" />
-      <workItem from="1522560177120" duration="1308000" />
+      <workItem from="1522560177120" duration="1625000" />
     </task>
     <task id="LOCAL-00001" summary="前后台整合">
       <created>1522503292174</created>
@@ -424,16 +500,24 @@
       <option name="project" value="LOCAL" />
       <updated>1522561405855</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="玉雕大师">
+      <created>1522561581568</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1522561581568</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13703000" />
+    <option name="totallyTimeSpent" value="14020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1440" height="807" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
