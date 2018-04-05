@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>玉雕界全国巡展-昆明站首页</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/world.css">
+    <script src="__STATIC__/js/jquery-1.9.1.min.js"></script>
+</head>
+<body style="background:#F4F4F2; margin:0; padding:0;">
+<!--头部ing-->
+<div style="width:100%; height:auto;float:left;">
+    <a href="/World/local.html?id=19">
+        <img style="width:100%; height:auto;"src="__STATIC__/picture/xz-topbanner.jpg"/>
+    </a>
+</div>
+<div class="navw">
+    <div class="count">
+        <ul class="nav">
+            <li><a href="/" >玉雕界</a></li>
+            <li><a class="current" href="{:url('world/index')}" >巡展首页</a></li>
+            <li><a href="{:url('world/zuoping')}" >参展作品</a></li>
+            <li><a href="{:url('world/mjjy')}" >名家寄语</a></li>
+            <li><a href="{:url('world/xianchang')}" >现场花絮</a></li>
+            <form method="GET" action="/index.php" class="ssf">
+                <input type="hidden" name="m" value="Search">
+                <input type="hidden" name="a" value="index">
+                <input class="keyword" name="keyword" type="text"
+                                                                onfocus="if(this.value=='输入关键字，点击搜索'){this.value='';}"
+                                                                onblur="if(this.value==''){this.value='输入关键字，点击搜索';}"
+                                                                value="输入关键字，点击搜索"/><input class="button" type="submit"
+                                                                                           value="搜索"/></form>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="clear"></div><!--头部end--><!--主体ing-->
+
+<!--抽取-->
+{__CONTENT__}
+<!--主体end--><!--尾部ing-->
+
+<div class="footer">
+    <div class="count">
+        <ul class="footnav">
+            <li><a href="http://www.jaadee.com/Help/about.html" target="_blank">关于我们</a></li>
+            <span>|</span>
+            <li><a href="http://www.jaadee.com/Help/contactus.html" target="_blank">联系我们</a></li>
+            <span>|</span>
+            <li><a href="http://www.jaadee.com/Help/sale_service.html" target="_blank">售后服务</a></li>
+            <span>|</span>
+            <li><a href="http://www.jaadee.com/Help/howbuy.html" target="_blank">如何购买</a></li>
+            <span>|</span>
+            <li><a href="https://yd.jaadee.com/ArticleCat/" target="_blank">最新动态</a></li>
+            <span>|</span>
+            <li>
+                <a href="http://mp.weixin.qq.com/s?__biz=MzA3ODAwMTMwNA==&mid=202540906&idx=1&sn=ce14f00cf000ea3e3808d6e4208bb33f&scene=1&from=singlemessage&isappinstalled=0#rd"
+                   target="_blank">加入我们</a></li>
+        </ul>
+        <p> © 2008-2015 翡翠王朝(www.jaadee.com)版权所有 所属公司：云南牧仁者商贸有限公司<br> ICP备案号:滇ICP备12006083号-1 / 公安备案号: 53010203502103 /
+            工商注册号: 533102100010883<br> 公司地址：云南省瑞丽市金星石木文化城15栋1号 / 云南省昆明市人民中路169号(移动大厦17A) / 广东省佛山市平洲翠宝园3栋46/47A<br>
+            客服电话：400-629-1314 / 0692-6991717 / 0692-6991818 售后咨询：0692-4668077 批发/货源协同请加微信：yangmuren456VC
+        </p></div>
+</div><!--弹出二维码-->
+<div class="outm" id="ewmid"><a class="xxbut" id="closeewm" href="javascript:return void(0);"></a>
+    <div class="ewmw"></div>
+    <a class="kfzy" href="#">巡展客服专员</a>
+    <p>提前预约您心仪的玉雕小品！</p></div><!--尾部end-->
+<script>$(function () {
+    $("#citylist li a").mousemove(function () {
+        var cityid = "#" + $(this).attr("class");
+        $("#citylist li .cityzzhao").show();
+        $(this).children('.cityzzhao').hide();
+        $('.ciinfo').hide();
+        $(cityid).show();
+    });
+
+    $('#outewm').click(function () {
+        $("#ewmid").fadeIn();
+    });
+
+    $('#closeewm').click(function () {
+        $("#ewmid").fadeOut();
+    });
+});
+</script>
+<script type="text/javascript">var id = '11000';
+document.write("<script type=\"text/javascript\" src='js/tj.js'><\/script>");</script>
+</body>
+</html>
