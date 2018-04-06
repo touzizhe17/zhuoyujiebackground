@@ -7,9 +7,12 @@ ul, li { list-style: none; }
   width: 1200px;
   height: 450px;
   position: relative;
-  margin: 50px auto;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
   border-radius: 10px;
-  
+
 }
 .shutter-img {
   z-index: 1;
