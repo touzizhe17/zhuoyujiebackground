@@ -8,8 +8,7 @@ ul, li { list-style: none; }
   height: 450px;
   position: relative;
   margin: 50px auto;
-  border-radius: 10px;
-  
+  margin-bottom:30px;
 }
 .shutter-img {
   z-index: 1;

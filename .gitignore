@@ -3,7 +3,7 @@ composer.lock
 *.log
 thinkphp
 runtime
-
+database.php
 *._
 *._*
 ._*
