@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : localhost
 Source Server Version : 50505
 Source Host           : localhost:3306
-Source Database       : open_source_bms
+Source Database       :
 
 Target Server Type    : MYSQL
 Target Server Version : 50505
@@ -44,6 +44,17 @@ CREATE TABLE `os_article` (
   `cid` smallint(5) unsigned NOT NULL COMMENT '分类ID',
   `title` varchar(255) NOT NULL DEFAULT '' COMMENT '标题',
   `introduction` varchar(255) DEFAULT '' COMMENT '简介',
+  `materials` varchar(255) DEFAULT '' COMMENT '材质',
+  `wanningtip` varchar(255) DEFAULT '' COMMENT '温馨提示',
+  `jmoney` varchar(255) DEFAULT '' COMMENT '结缘价',
+  `pro_size` varchar(255) DEFAULT '' COMMENT '尺寸',
+  `pro_weight` varchar(255) DEFAULT '' COMMENT '重量',
+  `pro_color` varchar(255) DEFAULT '' COMMENT '颜色',
+  `pro_structure` varchar(255) DEFAULT '' COMMENT '结构',
+  `pro_oiliness` varchar(255) DEFAULT '' COMMENT '油性',
+  `pro_fat` varchar(255) DEFAULT '' COMMENT '脂份',
+  `pro_defect` varchar(255) DEFAULT '' COMMENT '瑕疵',
+  `word_meaning` varchar(255) DEFAULT '' COMMENT '文字寓意',
   `content` longtext COMMENT '内容',
   `author` varchar(20) DEFAULT '' COMMENT '作者',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '状态 0 待审核  1 审核',
@@ -61,7 +72,7 @@ CREATE TABLE `os_article` (
 -- ----------------------------
 -- Records of os_article
 -- ----------------------------
-INSERT INTO `os_article` VALUES ('1', '1', '测试产品内容', '', '<p>测试内容</p>', 'admin', '1', '0', '', null, '0', '0', '0', '2017-04-11 14:10:10', '2017-04-11 14:09:45');
+INSERT INTO `os_article` VALUES ('1', '1', '测试产品内容', '','','','','','','','','','','','','<p>测试内容</p>', 'admin', '1', '0', '', null, '0', '0', '0', '2017-04-11 14:10:10', '2017-04-11 14:09:45');
 
 -- ----------------------------
 -- Table structure for os_auth_group
