@@ -1,37 +1,40 @@
-<!--轮播图-->
-<div class="count">
-    <div class="yfocus">
-        <div class="yfocusl">
-            <div class="wrapper">
-                <div id="focus">
-                    <!--焦点图-->
-                    <ul>
-                        <li>
-                            <a title="私人定制" href="siren.html"
-                               target="_blank">
-                                <img src="__STATIC__/picture/9be1e7857f959f0a203431f9566e5add.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a title="民间巧匠" href="mjqj.html" target="_blank">
-                                <img src="__STATIC__/picture/d8174065b83.png"></a>
-                        </li>
-                        <li><a title="玉石原料" href="yuanliao.html" target="_blank"><img
-                                src="__STATIC__/picture/d9634b21bb6.jpg"></a>
-                        </li>
-                        <li><a title="收藏推荐" href="index/index/yuanliao.html" target="_blank"><img
-                                src="__STATIC__/picture/d8173f0ca8d.jpg"></a>
-                        </li>
-                        <li>
-                            <a title="动态" href="dongtai.html" target="_blank">
-                                <img src="__STATIC__/picture/d81740c9f57.jpg"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+<!--百叶窗切换-->
+<link rel="stylesheet" href="__STATIC__/css/shutter.css">
+<div class="shutter">
+    <div class="shutter-img">
+        <a title="私人定制" href="{:url('index/siren')}" data-shutter-title="私人定制"><img src="__STATIC__/picture/9be1e7857f959f0a203431f9566e5add.jpg" alt="#"></a>
+        <a title="民间巧匠" href="{:url('index/mjqj')}" data-shutter-title="民间巧匠"><img src="__STATIC__/picture/d8174065b83.png" alt="#"></a>
+        <a title="玉石原料" href="{:url('index/yuanliao')}" data-shutter-title="玉石原料"><img src="__STATIC__/picture/d9634b21bb6.jpg" alt="#"></a>
+        <a title="收藏推荐" href="{:url('index/collect')}" data-shutter-title="收藏推荐"><img src="__STATIC__/picture/d8173f0ca8d.jpg" alt="#"></a>
+        <a title="动态" href="{:url('index/dongtai')}" data-shutter-title="动态"><img src="__STATIC__/picture/d81740c9f57.jpg" alt="#"></a>
+    </div>
+    <ul class="shutter-btn">
+        <li class="prev"></li>
+        <li class="next"></li>
+    </ul>
+    <div class="shutter-desc">
+        <p>Iron Man</p>
     </div>
 </div>
+<script src="__STATIC__/js/jquery.min.js"></script>
+<script src="__STATIC__/js/velocity.js"></script>
+<script src="__STATIC__/js/shutter.js"></script>
+<script>
+    $(function () {
+        $('.shutter').shutter({
+            shutterW: 1200, // 容器宽度
+            shutterH: 450, // 容器高度
+            isAutoPlay: true, // 是否自动播放
+            playInterval: 3000, // 自动播放时间
+            curDisplay: 3, // 当前显示页
+            fullPage: false // 是否全屏展示
+        });
+    });
+</script>
+
+<!--百叶窗切换-->
+
 
 <div class="clear"></div>
 <div class="count">
@@ -45,12 +48,12 @@
         <!--item-->
         <li class="" id="goods_32034">
             <a href="/index/index/goodsDetail.html" target="_blank" class="daaimg" target="_blank">
-                <img class="lazyimg" src="__STATIC__/picture/imghold.gif"
-                     data-original="https://ydjimg.jaadee.net/uploads/ydj/images/2018/03/22-09-dd6f1e686b7.jpg"/>
+                <img class="lazyimg" src="__STATIC__/picture/zuoping.jpg"
+                     data-original=""/>
             </a>
             <div class="zuozinfo">
                 <a href="/index/index/graverDetail.html" target="_blank" class="zzimgaw">
-                    <img src="/index/picture/yudiaoshi.jpg"/>
+                    <img src="__IMAGES__/picture/yudiaoshi.jpg"/>
                 </a>
                 <div class="zzzpw">
                     <div class="zzup">
@@ -80,8 +83,8 @@
             <!--item-->
             <li>
                 <a href="/index/index/graverDetail.html" target="_blank">
-                    <img class="lazyimg" src="/index/picture/imghold.gif"
-                         data-original="https://ydjimg.jaadee.net/uploads/2016/11/17/d747286ed4e.jpg"/>
+                    <img class="lazyimg" src="__IMAGES__/picture/yudiaoshi.jpg"
+                         />
                 </a>
                 <span>刘东</span>
             </li>

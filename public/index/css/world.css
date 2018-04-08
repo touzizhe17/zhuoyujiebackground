@@ -5,7 +5,7 @@ li{ list-style: none;}
 .count{ width:1200px; height:auto; margin:0 auto;}
 body{ font-family:"å¾®è½¯é›…é»‘"; margin:0; padding:0;}
 .clear{ clear:both;}
-.toper{ width:100%; height:auto; background:url(/index/images/topimg.jpg); background-size:100% 100%;}
+.toper{ width:100%; height:auto; background:url(/public/index/images/topimg.jpg); background-size:100% 100%;}
 .leftlogo{ width:769px; height:450px;}
 .leftlogo img{ width:769px; height:450px; float:left;}
 .vodew{ width:410px; height:270px; background:#fff; float:right; margin:85px 0 75px 0; padding:10px 10px;}
@@ -26,14 +26,14 @@ body{ font-family:"å¾®è½¯é›…é»‘"; margin:0; padding:0;}
 
 
 .yjfooter img{ width:100%; height:20px;}
-.yjzhong{ width:100%; height:auto; background:url(/index/images/yjzhong.png) repeat-y; float:left; margin-top:-5px;}
+.yjzhong{ width:100%; height:auto; background:url(/public/index/images/yjzhong.png) repeat-y; float:left; margin-top:-5px;}
 .xzbw{ width:100%; height:auto; background:#fff;}
 .yjzhong .left{ width:400px; float:left; height:auto; padding-left:40px;}
 .yjzhong .left h3{ width:100%; height:40px; line-height:40px; color:#8A0013; margin-top:30px;}
 .yjzhong .left h3 .tit1{ font-size:32px; font-weight:bold;}
 .yjzhong .left h3 .yspa{ height:20px; line-height:20px; margin-top:20px; font-size:12px; padding-left:5px;}
 .yjzhong .left p{ width:100%; height:auto; line-height:25px; color:#333333; margin:20px 0;}
-.djck{ width:200px; line-height:45px; margin-top:10px; text-align:center; height:45px;background:url(/index/images/yuyu.png) no-repeat top left; color:#000; display:block;}
+.djck{ width:200px; line-height:45px; margin-top:10px; text-align:center; height:45px;background:url(/public/index/images/yuyu.png) no-repeat top left; color:#000; display:block;}
 .djck:hover{ font-weight:bold;}
 
 .djck span{ color:#FFF; font-size:24px; font-size:20px; font-weight:100; padding-left:5px;}
@@ -41,14 +41,14 @@ body{ font-family:"å¾®è½¯é›…é»‘"; margin:0; padding:0;}
 .ddimg li{ width:178px; height:auto; height:120px; overflow:hidden; float:left; margin:4px 4px;}
 .ddimg li a{ display:block; position:relative; height:120px;}
 .ddimg li a img{ width:100%; height:auto; float:left;}
-.cityzzhao{ width:100%; height:120px; background:url(/index/images/zhezhao.png) repeat; position:absolute; top:0; z-index:10;}
+.cityzzhao{ width:100%; height:120px; background:url(/public/index/images/zhezhao.png) repeat; position:absolute; top:0; z-index:10;}
 
 .cityinfo{ width:100%; height:120px; position:absolute; top:0; text-align:center; color:#FFF; font-size:18px; padding:30px 0;}
 .cityinfo .zwen{ font-size:24px; display:block; line-height:30px;}
 .cityinfo .ywen{ font-size:16px; display:block; line-height:30px;}
 .ciinfo{ display:none;}
 .cptit{ width:100%; height:48px; line-height:48px; background: #000000; margin-top:15px;}
-.cptit .more{ width:184px; height:48px; float:right; background:url(/index/images/more.png) center right no-repeat; text-align:center; color:#FFF;}
+.cptit .more{ width:184px; height:48px; float:right; background:url(/public/index/images/more.png) center right no-repeat; text-align:center; color:#FFF;}
 .cptit .more:hover{ color:#CCC;}
 .cptit .tita{ width:auto; float:left; color:#FFF; padding-left:15px; font-size:24px;}
 .cptit .tita span{ height:40px; line-height:40px; margin-top:8px; float:right; font-size:16px; padding-left:3px;}
@@ -56,7 +56,7 @@ body{ font-family:"å¾®è½¯é›…é»‘"; margin:0; padding:0;}
 .shiydsw {width: 1220px;height: auto;margin-top: 15px;}
 .shiydsw li { width: 289px; height: auto; position: relative; overflow: hidden; display: inline-block; float: left; margin-right: 15px;
     margin-bottom: 20px; background:#CCC;}
-.daaimg {width: 289px;height: 289px;display: block;background: url(/index/images/load.gif) no-repeat scroll center center transparent;
+.daaimg {width: 289px;height: 289px;display: block;background: url(/public/index/images/load.gif) no-repeat scroll center center transparent;
     overflow: hidden;cursor: pointer;}
 .daaimg img {width: 100%; height: auto;}
 .zuozinfo {width: 270px; height:85px; margin-top: -4px; padding: 10px;}
@@ -69,22 +69,22 @@ body{ font-family:"å¾®è½¯é›…é»‘"; margin:0; padding:0;}
 .zzupb span {display: block;}
 .yybut { width: 289px; height: 40px; text-align: center; line-height: 40px; display: block; color: #FFF; font-size: 16px;}
 .shiydsw li i { width: 60px; height: 60px; text-align: center; color: #FFF; font-size: 16px; line-height: 45px; font-family: "å¾®è½¯é›…é»‘";
-    font-style: normal; display: block; position: absolute; right: 0px; top: 0px;background: url(/index/images/coico.png) no-repeat scroll left top transparent;}
+    font-style: normal; display: block; position: absolute; right: 0px; top: 0px;background: url(/public/index/images/coico.png) no-repeat scroll left top transparent;}
 .huis { background: none repeat scroll 0% 0% #353535;}
-.allcp{ width:100%; height:80px; background:url(/index/images/hsxt.jpg) center repeat-x; text-align:center;}
+.allcp{ width:100%; height:80px; background:url(/public/index/images/hsxt.jpg) center repeat-x; text-align:center;}
 .allcptxt{ width:180px; height:60px; background:#F4F4F2; margin:0 auto; padding-top:10px; font-size:18px;}
 
 .alllist{ width:1218px; height:auto;}
 .alllist li{ width:185px; height:185px; overflow:hidden; margin:5px 9px; float:left;}
 .alllist li a{ width:185px; height:185px; position:relative; float:left;}
 .alllist li a img{ width:185px; height:auto;  float:left;}
-.alllist li a span{ width:185px; height:40px; position:absolute; left:0; bottom:0; line-height:40px; background:url(/index/images/hsjb.png) right;
+.alllist li a span{ width:185px; height:40px; position:absolute; left:0; bottom:0; line-height:40px; background:url(/public/index/images/hsjb.png) right;
     display:block; text-align:center; color:#FFF;}
 .alllist li a:hover img{ width:189px; height:189px; margin-left:-2px; margin-top:-2px;}
 
 .dastuij { width: 1208px; height: auto; float: left; margin-top:15px;}
 .dastuij li {width: 141px;height: 155px;margin-right: 10px;background:#FFF;float: left;margin-bottom: 10px;display: inline-block;}
-.dastuij li .aimg {width: 141px;height: 141px;float: left;overflow: hidden;background: url(/index/images/load.gif) center no-repeat;}
+.dastuij li .aimg {width: 141px;height: 141px;float: left;overflow: hidden;background: url(/public/index/images/load.gif) center no-repeat;}
 .dastuij li .aimg img {width: 141px; height: 141px;float: left;}
 .dastuij h4 {background:#4D4240;width: 100%;float: left;}
 .dastuij h4 a {width: 100%;height: 35px;line-height: 35px;color: #FFF;text-align: center;float: left;}
@@ -92,7 +92,7 @@ body{ font-family:"å¾®è½¯é›…é»‘"; margin:0; padding:0;}
 
 .yjzhonggg{ width:1160px; height:auto; padding:0 20px; position:relative;}
 .yjzhonggg img{ width:100%; height:auto;}
-.yjzhonggg a span{ width:200px; height:44px; line-height:44px; color:#FFF; background:url(/index/images/ckangze.png); position:absolute; top:180px;
+.yjzhonggg a span{ width:200px; height:44px; line-height:44px; color:#FFF; background:url(/public/index/images/ckangze.png); position:absolute; top:180px;
     left:570px; text-indent:50px;}
 .yjzhonggg a span:hover{ color:#F60;}
 
@@ -120,11 +120,11 @@ body{ font-family:"å¾®è½¯é›…é»‘"; margin:0; padding:0;}
 .syright h3{ width:640px; height:40px; line-height:40px; color:#3E3E3E; font-size:24px; font-weight:normal; margin:30px 0 10px 0;}
 .syright ul{ width:640px; height:auto;}
 .syright ul li{ width:600px; height:auto; line-height:25px; font-size:14px; color:#333; padding-left:15px;
-    background:url(/index/images/yd.png) left 10px  no-repeat;}
+    background:url(/public/index/images/yd.png) left 10px  no-repeat;}
 
 .outm{ width:200px; height:auto; border:4px solid #D8D8D8; position:fixed; top:30%; left:0; background:#FFF; display:none;}
-.xxbut{ width:40px; background:#000; height:40px; width:40px; margin-left:160px; background:url(/index/images/xxb.png) center no-repeat; display:block;}
-.ewmw{ width:200px;; height:200px; background:url(/index/images/ewm.png) center no-repeat;}
+.xxbut{ width:40px; background:#000; height:40px; width:40px; margin-left:160px; background:url(/public/index/images/xxb.png) center no-repeat; display:block;}
+.ewmw{ width:200px;; height:200px; background:url(/public/index/images/ewm.png) center no-repeat;}
 .kfzy{ width:160px; height:30px; line-height:30px; margin:0 20px; background:#7D0618; color:#FFF; display:block;
     text-align:center; font-size:12px;}
 .outm p{ width:200px; height:auto; padding-bottom:20px; text-align:center; line-height:25px; color:#333333; font-size:12px; margin-top:10px;}
