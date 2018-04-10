@@ -1,19 +1,19 @@
 <?php
+/**
+ * 玉雕名家
+ */
 namespace app\index\controller;
-
 use think\Controller;
 use think\Request;
 
-class Index extends Controller
+class Graver extends Controller
 {
     public function index()
     {
-        return $this->fetch();
+        return $this->fetch('graver');
     }
-
-    public function dongtai()
+    public function graverDetail()
     {
         return $this->fetch();
     }
-
 }

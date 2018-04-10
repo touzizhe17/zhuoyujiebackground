@@ -1,19 +1,19 @@
 <?php
+/**
+ * 作品
+ */
 namespace app\index\controller;
-
 use think\Controller;
 use think\Request;
 
-class Index extends Controller
+class Goods extends Controller
 {
     public function index()
     {
-        return $this->fetch();
+        return $this->fetch('goods');
     }
-
-    public function dongtai()
+    public function goodsDetail()
     {
         return $this->fetch();
     }
-
 }
