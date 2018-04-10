@@ -1,14 +1,14 @@
 * { margin: 0; padding: 0; }
 img { border: 0; vertical-align: top; }
 ul, li { list-style: none; }
-
 .shutter {
   overflow: hidden;
   width: 1200px;
   height: 450px;
   position: relative;
-  margin: 50px auto;
-  margin-bottom:30px;
+  margin: 0 auto;
+  margin-top: 40px;
+
 }
 .shutter-img {
   z-index: 1;
