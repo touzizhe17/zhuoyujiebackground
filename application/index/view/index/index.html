@@ -65,6 +65,7 @@
     </div>
     <!--玉雕作品list，保留一个，从后台加载数据渲染-->
     <ul class="shiydsw">
+        {foreach name="article_list" item="vo"}
         <!--item-->
         <li class="" id="goods_32034">
             <a href="{:url('index/goods/goodsDetail')}" target="_blank" class="daaimg" target="_blank">
@@ -77,11 +78,11 @@
                 </a>
                 <div class="zzzpw">
                     <div class="zzup">
-                        <a href="{:url('index/goods/goodsDetail')}" target="_blank">莲花冠以</a>
-                        <a href="{:url('index/graver/index')}" target="_blank">作者：何亚波</a>
+                        <a href="graverDetail.html" target="_blank">{$vo.title}</a>
+                        <a href="graverDetail.html" target="_blank">作者：{$vo.author}</a>
                     </div>
                     <div class="zzupb">
-                        <span class="jiage">￥10800元</span>
+                        <span class="jiage">{$vo.jmoney}</span>
                     </div>
                 </div>
             </div>
@@ -96,6 +97,7 @@
             </div>
             <i>翡翠</i>
         </li>
+        {/foreach}
 
     </ul>
 </div>
@@ -108,13 +110,14 @@
     <div class="graverlist">
         <ul class="zjul">
             <!--item-->
+            {foreach name="grand_list" item="gd"}
             <li>
-                <a href="{:url('index/graver/graverdetail')}" target="_blank">
-                    <img class="lazyimg" src="__IMAGES__/picture/yudiaoshi.jpg"
-                         />
+                <a href="/index/index/graverDetail.html?id={$gd.id}" target="_blank">
+                    <img class="lazyimg" src="__UPLOAD__{$gd.thumb}" />
                 </a>
-                <span>刘东</span>
+                <span>{$gd.name}</span>
             </li>
+            {/foreach}
         </ul>
         <div class="clear"></div>
     </div>

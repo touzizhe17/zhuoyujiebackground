@@ -6,7 +6,7 @@ return [
 
     'index'=>'./public/index',
     'view_replace_str'      => [
-        '__UPLOAD__' => '/public/uploads',
+        '__UPLOAD__' => '/public',
         '__STATIC__' => '/public/index',
         '__IMAGES__' => '/public/index',
         '__JS__'     => '/public/index',
