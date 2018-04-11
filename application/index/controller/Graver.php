@@ -14,6 +14,6 @@ class Graver extends Controller
     }
     public function graverDetail()
     {
-        return $this->fetch();
+        return $this->fetch('graverdetail');
     }
 }

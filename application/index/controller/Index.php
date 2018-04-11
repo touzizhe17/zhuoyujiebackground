@@ -29,19 +29,21 @@ class Index extends  Controller
     public function index($cid = 0, $keyword = '', $page = 1)
     {
         $map   = [];
-        $field = 'id,title,cid,author,reading,jmoney,status,publish_time,sort';
+        $field = 'id,title,cid,author,reading,thumb,jmoney,status,publish_time,sort';
+//
+//        if ($cid > 0) {
+//            $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
+//            $category_children_ids = (!empty($category_children_ids) && is_array($category_children_ids)) ? implode(',', $category_children_ids) . ',' . $cid : $cid;
+//            $map['cid']            = ['IN', $category_children_ids];
+//        }
 
-        if ($cid > 0) {
-            $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
-            $category_children_ids = (!empty($category_children_ids) && is_array($category_children_ids)) ? implode(',', $category_children_ids) . ',' . $cid : $cid;
-            $map['cid']            = ['IN', $category_children_ids];
-        }
-
-        if (!empty($keyword)) {
-            $map['title'] = ['like', "%{$keyword}%"];
-        }
+//        if (!empty($keyword)) {
+//            $map['title'] = ['like', "%{$keyword}%"];
+//        }
+        $article_list = $this->article_model->alias('a')->field('a.*,g.thumb c')->join('grand g','a.author=g.name','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
         $pgrand=[];
-        $article_list  = $this->article_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+//        $article_list  = $this->article_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+
         $category_list = $this->category_model->column('name', 'id');
 
         //玉雕大师
