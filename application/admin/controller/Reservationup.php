@@ -10,7 +10,7 @@ use app\common\controller\AdminBase;
  * Class Article
  * @package app\admin\controller
  */
-class Reservation extends AdminBase
+class Reservationup extends AdminBase
 {
     protected $reservation_model;
     protected $Reservationup_model;
@@ -63,12 +63,12 @@ class Reservation extends AdminBase
     {
         if ($this->request->isPost()) {
             $data            = $this->request->param();
-            $validate_result = $this->validate($data, 'Reservation');
+            $validate_result = $this->validate($data, 'Reservationup');
 
             if ($validate_result !== true) {
                 $this->error($validate_result);
             } else {
-                if ($this->reservation_model->allowField(true)->save($data, $id) !== false) {
+                if ($this->Reservationup_model->allowField(true)->save($data, $id) !== false) {
                     $this->success('更新成功');
                 } else {
                     $this->error('更新失败');
@@ -83,18 +83,18 @@ class Reservation extends AdminBase
     {
         if ($this->request->isPost()) {
             $data            = $this->request->param();
-                    //成功验证
-                    $validate_result = $this->validate($data, 'Reservation');
+            //成功验证
+            $validate_result = $this->validate($data, 'Reservation');
 
-                    if ($validate_result !== true) {
-                        $this->error($validate_result);
-                    } else {
-                        if ($this->reservation_model->allowField(true)->save($data)) {
-                            return json(['data'=>[],'code'=>1,'message'=>'操作完成']);
-                        } else {
-                            $this->error('保存失败');
-                        }
-                    }
+            if ($validate_result !== true) {
+                $this->error($validate_result);
+            } else {
+                if ($this->reservation_model->allowField(true)->save($data)) {
+                    return json(['data'=>[],'code'=>1,'message'=>'操作完成']);
+                } else {
+                    $this->error('保存失败');
+                }
+            }
 
 
 

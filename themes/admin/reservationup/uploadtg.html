@@ -3,48 +3,30 @@
 <div class="layui-body">
     <!--tab标签-->
     <div class="layui-tab layui-tab-brief">
-        <ul class="layui-tab-title">
-            <li class=""><a href="{:url('admin/reservation/index')}">产品管理</a></li>
-            <li class=""><a href="{:url('admin/reservation/add')}">添加产品</a></li>
-        </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
-                <form class="layui-form form-container" action="{:url('admin/reservation/update')}" method="post">
+                <form class="layui-form form-container" action="{:url('admin/reservationup/updateimg')}" method="post">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">姓名</label>
+                        <label class="layui-form-label">缩略图</label>
                         <div class="layui-input-block">
-                            <input type="text" name="name" value="{$article.name}"    placeholder="请输入姓名" class="layui-input">
+                            <input type="text" name="thumb" value="{$article.thumb}" class="layui-input layui-input-inline" id="thumb">
+                            <input type="file" name="file" class="layui-upload-file">
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">方式</label>
+                        <label class="layui-form-label">图集</label>
                         <div class="layui-input-block">
-                            <input type="text" name="re_way" value="{$article.re_way}" placeholder="请输入方式" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">地址</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="re_local" value="{$article.re_local}" placeholder="请输入地址" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">简介</label>
-                        <div class="layui-input-block">
-                            <textarea name="re_introduction" placeholder="（选填）请输入简介" class="layui-textarea">{$article.re_introduction}</textarea>
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">内容</label>
-                        <div class="layui-input-block">
-                            <textarea name="re_cont" placeholder="" class="layui-textarea" id="content">{$article.re_cont}</textarea>
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">状态</label>
-                        <div class="layui-input-block">
-                            <input type="radio" name="status" value="1" title="已审核" {if condition="$article.status==1"} checked="checked"{/if}>
-                            <input type="radio" name="status" value="0" title="未审核" {if condition="$article.status==0"} checked="checked"{/if}>
+                            <button type="button" id="upload-photo-btn" class="layui-btn">上传图集</button>
+                            <div id="photo-container">
+                                {if condition="!empty($article['photo'])"}
+                                {foreach name="$article['photo']" item="vo"}
+                                <div class="photo-list">
+                                    <input type="text" name="photo[]" value="{$vo}" class="layui-input layui-input-inline">
+                                    <button type="button" class="layui-btn layui-btn-danger remove-photo-btn">移除</button>
+                                </div>
+                                {/foreach}
+                                {/if}
+                            </div>
                         </div>
                     </div>
                     <div class="layui-form-item">
