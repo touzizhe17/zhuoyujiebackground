@@ -25,7 +25,7 @@ ul,li{ list-style: none;}
 .aboutbox .navlist li p{text-indent: 60px; font-weight: normal;}
 
 .aboutbox .box-r{float:right; width: 900px;}
-.aboutbox .title{ float: left; width: 100%; height: 50px; line-height: 50px; font-size: 18px; color: #3f1320; border-bottom: 1px solid #3f1320;}
+.aboutbox .title{ float: left; width: 100%; height: 50px; line-height: 50px; font-size: 18px; color: #000000; border-bottom: 1px solid #000000;}
 .aboutbox .title h3{float: left; font-size:20px;}
 .aboutbox .title p{float: left; margin-left: 10px; font-size:22px;}
 .aboutbox .textbox{float: left; width: 100%;}
@@ -37,7 +37,7 @@ ul,li{ list-style: none;}
 .aboutbox .textbox .box h3{color: #000; text-align: center; border-top: 1px dashed #ddd;}
 .aboutbox .textbox .box p{ margin-top: 10px;text-indent: 2em;}
 .aboutbox .textbox .box p i{ display: block; width: 100%; font-style: normal; margin-top: -10px;}
-.aboutbox .min-title{float: left; width: 100%; height: 40px; line-height: 40px; font-size: 18px; color: #3f1320; font-weight: bold;}
+.aboutbox .min-title{float: left; width: 100%; height: 40px; line-height: 40px; font-size: 18px; color: #000000; font-weight: bold;}
 .aboutbox .min-title b{ float: left; font-size: 20px;}
 .aboutbox .min-title em{width:18px; height:40px; transform:rotate(30deg); border-right:1px solid #3f1320; float:left; margin:0 20px 0 -8px}
 .aboutbox .textul{float: left; width: 100%; margin-top:10px;}
