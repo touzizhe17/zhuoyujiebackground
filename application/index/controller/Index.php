@@ -29,7 +29,7 @@ class Index extends  Controller
     public function index($cid = 0, $keyword = '', $page = 1)
     {
         $map   = [];
-        $field = 'id,title,cid,author,reading,thumb,jmoney,status,publish_time,sort';
+        $field = 'id,title,cid,author,reading,thumb,jmoney,status,publish_time,sort,materials';
 //
 //        if ($cid > 0) {
 //            $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');

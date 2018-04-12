@@ -73,13 +73,14 @@
                      data-original=""/>
             </a>
             <div class="zuozinfo">
-                <a href="{:url('index/graver/index')}" target="_blank" class="zzimgaw">
+                <!-- 添加一个作者的id，方便跳转到对应的作者详情页面-->
+                <a href="{:url('index/graver/graverDetail',['id'=>1])}" target="_blank" class="zzimgaw">
                     <img src="__UPLOAD__/{$vo.c}"/>
                 </a>
                 <div class="zzzpw">
                     <div class="zzup">
-                        <a href="graverDetail.html" target="_blank">{$vo.title}</a>
-                        <a href="graverDetail.html" target="_blank">作者：{$vo.author}</a>
+                        <a href="{:url('index/goods/goodsDetail',['id'=>1])}" target="_blank">{$vo.title}</a>
+                        <a href="{:url('index/graver/graverDetail',['id'=>1])}" target="_blank">作者：{$vo.author}</a>
                     </div>
                     <div class="zzupb">
                         <span class="jiage">{$vo.jmoney}</span>
@@ -95,7 +96,7 @@
                     <img src="__STATIC__/images/bad.png" alt="">
                 </a>1000
             </div>
-            <i>翡翠</i>
+            <i>{$vo.materials}</i>
         </li>
         {/foreach}
 
@@ -112,7 +113,8 @@
             <!--item-->
             {foreach name="grand_list" item="gd"}
             <li>
-                <a href="index/graver/graverdetail/id/{$gd.id}" target="_blank">
+
+                <a href="{:url('graver/graverDetail',['id'=>$gd.id])}" target="_blank">
                     <img class="lazyimg" src="__UPLOAD__{$gd.thumb}" />
                 </a>
                 <span>{$gd.name}</span>
