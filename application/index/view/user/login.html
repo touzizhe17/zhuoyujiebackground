@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>琢玉界-登录</title>
+</head>
+<style>
+    a{
+        cursor: pointer;
+    }
+    .login-box {
+        width: 540px;
+        height: 320px;
+        margin: 100px auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+
+    .left {
+        float: left;
+        width: 225px;
+        height: 319px;
+        background: url(/public/index/picture/fl8.jpg) no-repeat;
+        background-size: cover;
+    }
+    .right {
+        width: 315px;
+        float: left;
+    }
+    .right .title-box{
+        box-sizing: border-box;
+        width: 100%;
+        padding:15px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .right .title{
+        color: #5ecfba;
+        font-size: 18px;
+    }
+    .right .check-tip{
+        font-size: 0px;
+        box-sizing: border-box;
+    }
+    .check-tip .disabled{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        margin-top: 4px;
+        vertical-align: top;
+        background: url(/public/index/images/disabled.png) no-repeat;
+    }
+    .check-tip .text{
+        color: #ff2222;
+        font-size: 16px;
+        vertical-align: top;
+    }
+    .form-box{
+        padding:10px 20px;
+    }
+    .input-box{
+        padding-bottom: 10px;
+    }
+    .input-box input{
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 100%;
+        line-height: 24px;
+        font-size: 18px;
+        padding:10px 10px;
+    }
+    .tip{
+        padding:10px 0;
+        color: #b2b2b2;
+    }
+    .tip .wang{
+        float: right;
+        color: #01c26f;
+    }
+    .tip a{
+        color: #ff9600;
+        cursor: pointer;
+    }
+    .btn{
+        display: block;
+        width: 100%;
+        height: 47px;
+        background: #01c26f;
+        color: #fff;
+        font-size: 14px;
+        background: -webkit-linear-gradient(#1fd783,#1fd06b);
+        background: -o-linear-gradient(#1fd783,#1fd06b);
+        background: -moz-linear-gradient(#1fd783,#1fd06b);
+        background: linear-gradient(#1fd783,#1fd06b);
+    }
+    .qit{
+        padding-top: 20px;
+        color: #b2b2b2;
+    }
+    .qit .icon{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(/public/index/images/login_img.png) no-repeat;
+        vertical-align: middle;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    .qit qq{
+        background-position:  0 0px;
+    }
+    .qit .qq:hover{
+        background-position:  0 -20px;
+    }
+    .qit .wx{
+        background-position: -20px 0;
+    }
+    .qit .wx:hover{
+        background-position: -20px -20px;
+    }
+    .hidden{
+        display: none;
+    }
+</style>
+<body>
+<div class="login-box">
+    <div class="left"></div>
+    <div class="right" id="login-box">
+        <div class="title-box">
+            <h2 class="title">登录 </h2>
+            <div class="check-tip hidden">
+                <span class="disabled"></span>
+                <span class="text"></span>
+            </div>
+        </div>
+        <form action="" method="post" onsubmit="return check()" >
+            <div class="form-box">
+                <div class="input-box">
+                    <input type="text" placeholder="用户名/邮箱/手机号" name="user" id="phone" autocomplete="false">
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="密码" name="pwd" id="pwd" autocomplete="false" >
+
+                </div>
+                <p class="tip">
+                    <span>还没有账号？</span>
+                    <a onclick="show(0)">立即注册</a>
+                    <a class="wang">忘记密码？</a>
+                </p>
+                <input class="btn" type="submit" value="登录" >
+                <p class="qit">
+                    <span>其他方式登录</span>
+                    <a class="icon qq"></a>
+                    <a class="icon wx"></a>
+                </p>
+
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script>
+    //登录检查
+    function check() {
+
+        var phone=$('#phone').val();
+        var pwd=$('#pwd').val();
+        console.log(phone)
+
+        var reg=/^[1][3,4,5,7,8][0-9]{9}$/;
+        var text='';
+        if(phone==''){
+            text='手机号码不能为空';
+            opt(text);
+            return false;
+        }
+//        if(!reg.test(phone)){
+//            text='手机号码不合法';
+//            opt(text);
+//            return false;
+//        }
+
+        if(pwd==''){
+            text='密码不能为空';
+            opt(text);
+            return false;
+        }
+//        if(pwd.length<6){
+//            text='密码长度小于6位';
+//            opt(text);
+//            return false;
+//        }
+        return true;
+
+    }
+    function opt(text) {
+        $('.text').html(text);
+        $('.title').addClass('hidden');
+        $('.check-tip').removeClass('hidden')
+
+    }
+
+</script>
+
+</html>

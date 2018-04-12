@@ -4,6 +4,7 @@ composer.lock
 thinkphp
 runtime
 database.php
+Connection.php
 *._
 *._*
 ._*
