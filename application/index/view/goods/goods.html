@@ -86,16 +86,15 @@
         </div>
         <ul class="glistul">
             <li class="" id="goods_32049">
-                <a href="/Goods/32049.html" target="_blank" class="daaimg" target="_blank"><img class="lazyimg"
-                                                                                                src="picture/imghold_2.gif"
-                                                                                                data-original="https://ydjimg.jaadee.net/uploads/ydj/images/2018/03/22-09-dd6f0bb8d9f.jpg"/></a>
+                <a href="{:url('index/goods/goodsDetail')}" target="_blank" class="daaimg" target="_blank">
+                    <img class="lazyimg" src="__STATIC__/picture/imghold.gif"data-original="__STATIC__/picture/zuoping.jpg"/></a>
                 <div class="zuozinfo">
-                    <a href="/Graver/0.html" target="_blank" class="zzimgaw"><img
+                    <a href="{:url('index/graver/graverDetail')}" target="_blank" class="zzimgaw"><img
                             src="__STATIC__/picture/yudiaoshi.jpg"/></a>
                     <div class="zzzpw">
                         <div class="zzup">
-                            <a href="/Goods/32049.html" target="_blank">吉祥如意</a>
-                            <a href="/Graver/0.html" target="_blank">作者：民间巧匠</a>
+                            <a href="{:url('index/goods/goodsDetail')}" target="_blank">吉祥如意</a>
+                            <a href="{:url('index/graver/graverDetail')}" target="_blank">作者：民间巧匠</a>
                         </div>
                         <div class="zzupb">
                             <span class="jiage">￥45000元</span>
@@ -103,7 +102,7 @@
                     </div>
                 </div>
                 <div class="yybut huis">
-                    <a target="_blank" href="/index/index/goodsDetail.html" class="detail">作品详情 </a>
+                    <a target="_blank" href="{:url('index/graver/graverDetail')}" class="detail">作品详情 </a>
                     <a onclick="goods(this,1)" class="icon-box">
                         <img src="__STATIC__/images/good.png" alt="">
                     </a>10
@@ -132,30 +131,31 @@
     function goods(dom, flag) {
         var img = $(dom).children();
         var src = img.attr('src');
+        var path='__STATIC__/images/'
         //是否点赞
         var isGood = false;
         var isBad = false;
         if (flag) {
             //赞
-            if (src === '/public__STATIC__/images/good.png') {
+            if (src === path+'good.png') {
                 //点赞
                 isGood = true;
-                img.attr('src', '/public__STATIC__/images/good_red.png')
+                img.attr('src', path+'good_red.png')
             } else {
                 //取消点赞
                 isGood = false;
-                img.attr('src', '/public__STATIC__/images/good.png')
+                img.attr('src', path+'good.png')
             }
 
         } else {
-            if (src === '/public__STATIC__/images/bad.png') {
+            if (src === path+'bad.png') {
                 //踩
                 isBad = false;
-                img.attr('src', '/public__STATIC__/images/bad_red.png')
+                img.attr('src', path+'bad_red.png')
             } else {
                 //取消踩
                 isBad = true;
-                img.attr('src', '/public__STATIC__/images/bad.png')
+                img.attr('src', path+'bad.png')
             }
         }
 
