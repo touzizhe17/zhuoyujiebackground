@@ -6,6 +6,7 @@ use think\Loader;
 use think\Cache;
 use think\Controller;
 use think\Db;
+use think\Config;
 use think\Session;
 
 /**
@@ -33,9 +34,46 @@ class AdminBase extends Controller
     protected function checkAuth()
     {
 
+        //
+        if ($this->request->isPost()) {
+            $data            = $this->request->only(['username', 'password','type']);
+            $validate_result = $this->validate($data, 'Wxlogin');
+
+            if($data['type']=="wx"){
+                if ($validate_result !== true) {
+                    $this->error($validate_result);
+                } else {
+                    $where['username'] = $data['username'];
+                    $where['password'] = md5($data['password'] . Config::get('salt'));
+
+                    $admin_user = Db::name('admin_user')->field('id,username,status')->where($where)->find();
+
+                    if (!empty($admin_user)) {
+                        if ($admin_user['status'] != 1) {
+                            $this->error('当前用户已禁用');
+                        } else {
+                            Session::set('admin_id', $admin_user['id']);
+                            Session::set('admin_name', $admin_user['username']);
+                            Db::name('admin_user')->update(
+                                [
+                                    'last_login_time' => date('Y-m-d H:i:s', time()),
+                                    'last_login_ip'   => $this->request->ip(),
+                                    'id'              => $admin_user['id']
+                                ]
+                            );
+                        }
+                    } else {
+                        $this->error('用户名或密码错误');
+                    }
+                }
+            }
+        }
+        //
+
         if (!Session::has('admin_id')) {
             $this->redirect('admin/login/index');
         }
+
 
         $module     = $this->request->module();
         $controller = $this->request->controller();

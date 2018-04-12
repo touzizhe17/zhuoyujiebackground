@@ -437,6 +437,24 @@ CREATE TABLE IF NOT EXISTS `os_user` (
 INSERT INTO `os_user` (`id`, `username`, `password`, `mobile`, `email`, `status`, `create_time`, `last_login_time`, `last_login_ip`) VALUES
 (1, 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '', '', 1, '2018-04-11 13:03:21', NULL, '');
 
+
+
+--
+-- 表的结构 `os_article`
+--
+
+CREATE TABLE IF NOT EXISTS `os_Reservationup` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `thumb` varchar(255) DEFAULT '' COMMENT '缩略图',
+  `photo` text COMMENT '图集',
+  `create_time` datetime NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='图集表' AUTO_INCREMENT=2 ;
+
+
+INSERT INTO `os_Reservationup` (`id`, `thumb`, `photo`, `create_time`) VALUES
+  (4, '/uploads/20180412/a0e7022745d781a756a0e2a1fda24f64.png', NULL, '2018-04-12 20:34:53');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
