@@ -28,6 +28,7 @@ class Login extends Controller
      */
     public function login()
     {
+
         if ($this->request->isPost()) {
             $data            = $this->request->only(['username', 'password', 'verify']);
             $validate_result = $this->validate($data, 'Login');

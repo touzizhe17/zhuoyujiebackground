@@ -417,7 +417,12 @@
         bottom: 10px;
     }
     .log-box a{
-        margin-right: 10px;
+        padding:10px;
+        color: #333333;
+        
+    }
+    .log-box a:hover{
+        background-color: #eee;
     }
 </style>
 
@@ -433,8 +438,9 @@
     <div class="count">
         <div class="loright">
             <div class="log-box">
-                <a href="{:url('admin/login/index')}">登录</a>
+                <a href="{:url('index/user/login')}">登录</a>
                 <a href="">注册</a>
+
             </div>
         </div>
         <div class="clear"></div>
