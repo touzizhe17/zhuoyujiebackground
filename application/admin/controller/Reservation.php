@@ -2,7 +2,6 @@
 namespace app\admin\controller;
 
 use app\common\model\Reservation as ReservationModel;
-use app\common\model\Category as CategoryModel;
 use app\common\controller\AdminBase;
 
 /**
@@ -12,15 +11,11 @@ use app\common\controller\AdminBase;
  */
 class Reservation extends AdminBase
 {
-    protected $article_model;
-    protected $category_model;
     protected $reservation_model;
 
     protected function _initialize()
     {
         parent::_initialize();
-        $this->article_model  = new ReservationModel();
-        $this->category_model = new CategoryModel();
         $this->reservation_model = new ReservationModel();
 //
 //        $category_level_list = $this->category_model->getLevelList();
@@ -59,17 +54,21 @@ class Reservation extends AdminBase
     {
         if ($this->request->isPost()) {
             $data            = $this->request->param();
-            $validate_result = $this->validate($data, 'Reservation');
+                    //成功验证
+                    $validate_result = $this->validate($data, 'Reservation');
 
-            if ($validate_result !== true) {
-                $this->error($validate_result);
-            } else {
-                if ($this->reservation_model->allowField(true)->save($data)) {
-                    $this->success('保存成功');
-                } else {
-                    $this->error('保存失败');
-                }
-            }
+                    if ($validate_result !== true) {
+                        $this->error($validate_result);
+                    } else {
+                        if ($this->reservation_model->allowField(true)->save($data)) {
+                            $this->success('保存成功');
+                        } else {
+                            $this->error('保存失败');
+                        }
+                    }
+
+
+
         }
     }
 
