@@ -29,4 +29,4 @@ gradlew.bat
 *.bak
 *.tem
 *.temp
-database.php
+/application/database.php
