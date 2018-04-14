@@ -11,13 +11,13 @@
     .w1200{
         width: 1200px;
         margin:0 auto;
-        padding-top: 140px;
+        padding-top: 50px;
     }
 
     .login-box {
         background-color: #fff;
         width: 350px;
-        /*height: 320px;*/
+        height: 500px;
         float: right;
         margin-right: 100px;
         border-radius: 5px;
@@ -72,6 +72,13 @@
         font-size: 18px;
         padding:10px 10px;
     }
+    #yzm{
+        width: 45%;
+        margin-right: 5px;
+    }
+    #yzm_btn{
+        width: 50%;
+    }
     .tip{
         padding:10px 0;
         color: #b2b2b2;
@@ -91,36 +98,13 @@
         background: #01c26f;
         color: #fff;
         font-size: 14px;
+        /*margin-top: 50px;*/
         background: -webkit-linear-gradient(#1fd783,#1fd06b);
         background: -o-linear-gradient(#1fd783,#1fd06b);
         background: -moz-linear-gradient(#1fd783,#1fd06b);
         background: linear-gradient(#1fd783,#1fd06b);
     }
-    .qit{
-        padding-top: 20px;
-        color: #b2b2b2;
-    }
-    .qit .icon{
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background: url(/public/index/images/login_img.png) no-repeat;
-        vertical-align: middle;
-        margin-left: 15px;
-        cursor: pointer;
-    }
-    .qit qq{
-        background-position:  0 0px;
-    }
-    .qit .qq:hover{
-        background-position:  0 -20px;
-    }
-    .qit .wx{
-        background-position: -20px 0;
-    }
-    .qit .wx:hover{
-        background-position: -20px -20px;
-    }
+
     .hidden{
         display: none;
     }
@@ -131,7 +115,7 @@
         <div class="login-box">
             <div class="right" id="login-box">
                 <div class="title-box">
-                    <h2 class="title">用户登录 </h2>
+                    <h2 class="title">用户注册 </h2>
                     <div class="check-tip hidden">
                         <span class="disabled"></span>
                         <span class="text"></span>
@@ -140,23 +124,28 @@
                 <form action="" method="post" onsubmit="return check()" >
                     <div class="form-box">
                         <div class="input-box">
-                            <input type="text" placeholder="用户名/邮箱/手机号" name="user" id="phone" autocomplete="false">
+                            <input type="text" placeholder="用户名" name="user" id="user" autocomplete="false">
                         </div>
                         <div class="input-box">
                             <input type="password" placeholder="密码" name="pwd" id="pwd" autocomplete="false" >
 
                         </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="确认密码" name="pwd" id="pwd2" autocomplete="false" >
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="手机号" name="pwd" id="phone" autocomplete="false" >
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="验证码" name="pwd" id="yzm" autocomplete="false" >
+                            <input type="button" value="点击发送验证码" id="yzm_btn">
+                        </div>
                         <p class="tip">
-                            <span>还没有账号？</span>
-                            <a href="{:url('index/user/register')}">立即注册</a>
-                            <a class="wang">忘记密码？</a>
+                            <span>已有账号</span>
+                            <a href="{:url('index/user/login')}">立即登陆</a>
                         </p>
-                        <input class="btn" type="submit" value="登录" >
-                        <p class="qit">
-                            <span>其他方式登录</span>
-                            <a class="icon qq"></a>
-                            <a class="icon wx"></a>
-                        </p>
+
+                        <input class="btn" type="submit" value="注册" >
 
                     </div>
                 </form>
