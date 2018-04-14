@@ -3,12 +3,15 @@
     <div class="azpw" style="margin-top:10px;">
         <div class="azimw">
             <img class="loading" src="picture/loader.gif"/>
-            <img id="bigshowimages" src="__UPLOAD__/{$vo.thumb}"/>
+            <img id="bigshowimages" src="__UPLOAD__{$vo.thumb}"/>
             <ul id="silist">
+                {if condition="!empty($vo['photo'])"}
+                {foreach name="$vo['photo']" item="imgs"}
                 <li class="action">
-                    <img big-src="picture/23-15-dd7321dbc9a.jpg"
-                         src="https://ydjimg.jaadee.net/uploads/ydj/images/2018/03/23-15-dd7321dbc9a.jpg"/>
+                    <img big-src="{$imgs}" src="{$imgs}"/>
                 </li>
+                {/foreach}
+                {/if}
             </ul>
         </div>
         <div class="azimw-r" id="goods_32191">
