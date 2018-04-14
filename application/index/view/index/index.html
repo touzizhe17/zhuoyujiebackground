@@ -17,7 +17,6 @@
         <p>Iron Man</p>
     </div>
 </div>
-<script src="__STATIC__/js/jquery.min.js"></script>
 <script src="__STATIC__/js/velocity.js"></script>
 <script src="__STATIC__/js/shutter.js"></script>
 <script>
@@ -70,7 +69,8 @@
         <li class="" id="goods_32034">
             <a href="{:url('index/goods/goodsDetail')}" target="_blank" class="daaimg" target="_blank">
                 <img class="lazyimg" src="__UPLOAD__/{$vo.thumb}"
-                     data-original=""/>
+                     data-original="__UPLOAD__/{$vo.thumb}"/>
+
             </a>
             <div class="zuozinfo">
                 <!-- 添加一个作者的id，方便跳转到对应的作者详情页面-->

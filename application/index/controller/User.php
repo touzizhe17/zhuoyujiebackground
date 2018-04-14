@@ -8,8 +8,15 @@
 namespace app\index\controller;
 
 use think\Controller;
+use think\Request;
 
 class User extends Controller {
+
+    public function __construct(Request $request = null)
+    {
+        parent::__construct($request);
+//        $this->view->engine->layout(false);
+    }
 
     public function login(){
         $request=$this->request;
