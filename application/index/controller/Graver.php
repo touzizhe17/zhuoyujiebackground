@@ -14,10 +14,11 @@ class Graver extends Controller
     {
         return $this->fetch('graver');
     }
-    public function graverDetail($id)
+    public function graverDetail($id,$page=0)
     {
         $this->grand_model  = new GrandModel();
+        $article_list = $this->grand_model->find($id)->alias('a')->field('a.*,g.title c,g.thumb t')->join('article g','a.name=g.author','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
         $grand = $this->grand_model->find($id);
-        return $this->fetch('graverdetail', ['grandDetail' => $grand]);
+        return $this->fetch('graverdetail', ['grandDetail' => $grand,'article_list'=>$article_list]);
     }
 }

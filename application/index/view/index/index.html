@@ -68,7 +68,7 @@
         {foreach name="article_list" item="vo"}
         <!--item-->
         <li class="" id="goods_32034">
-            <a href="{:url('index/goods/goodsDetail')}" target="_blank" class="daaimg" target="_blank">
+            <a href="{:url('index/goods/goodsDetail',['id'=>$vo.id])}" target="_blank" class="daaimg" target="_blank">
                 <img class="lazyimg" src="__UPLOAD__/{$vo.thumb}"
                      data-original=""/>
             </a>

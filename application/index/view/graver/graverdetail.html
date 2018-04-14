@@ -39,7 +39,7 @@
         </div>
         <div class="leftrow">
 
-            <div class="zzheimg"><img src="__UPLOAD__{$grandDetail.thumb}"/></div>
+            <div class="zzheimg"><img src="__UPLOAD__/{$grandDetail.thumb}"/></div>
 
 
         </div>
@@ -58,10 +58,15 @@
         <div class="goodslist">
             <div class="atit "><h3><span class="">玉雕作品（共1件）</span></h3></div>
             <ul class="shiydsw">
-                <li><a href="/Goods/2239.html"><img class="lazyimg" src="__STATIC__/picture/imghold.gif"
-                                                    data-original="https://ydjimg.jaadee.net/uploads/2015/07/03/70b155961c19.jpg"/></a>
-                    <div class="infows"><span class="gname">绽</span><span class="spjy">请联系客服询价</span></div>
-                    </span></li>
+                {foreach name="article_list" item="vos"}
+                <li>
+                    <a href="{:url('graver/graverDetail',['id'=>$vos.id])}">
+                        <img class="lazyimg" src="__UPLOAD__/{$vos.t}" data-original="__UPLOAD__/{$vos.t}"/>
+                    </a>
+                    <div class="infows"><span class="gname">{$vos.c}</span><span class="spjy">请联系客服询价</span></div>
+                    </span>
+                </li>
+                {/foreach}
             </ul>
             <div class="clear"></div>
             <a class="atit" href="/Goods/?masterid=13" class="artljgm">点击查看更多(1件)玉雕作品</a>
