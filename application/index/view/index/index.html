@@ -74,13 +74,13 @@
             </a>
             <div class="zuozinfo">
                 <!-- 添加一个作者的id，方便跳转到对应的作者详情页面-->
-                <a href="{:url('index/graver/graverDetail',['id'=>1])}" target="_blank" class="zzimgaw">
+                <a href="{:url('index/graver/graverDetail',['id'=>$vo.aid])}" target="_blank" class="zzimgaw">
                     <img src="__UPLOAD__/{$vo.c}"/>
                 </a>
                 <div class="zzzpw">
                     <div class="zzup">
-                        <a href="{:url('index/goods/goodsDetail',['id'=>1])}" target="_blank">{$vo.title}</a>
-                        <a href="{:url('index/graver/graverDetail',['id'=>1])}" target="_blank">作者：{$vo.author}</a>
+                        <a href="{:url('index/goods/goodsDetail',['id'=>$vo.id])}" target="_blank">{$vo.title}</a>
+                        <a href="{:url('index/graver/graverDetail',['id'=>$vo.aid])}" target="_blank">作者：{$vo.author}</a>
                     </div>
                     <div class="zzupb">
                         <span class="jiage">{$vo.jmoney}</span>
