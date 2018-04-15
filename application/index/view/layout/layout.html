@@ -488,7 +488,8 @@
     <!--footer start-->
     <style>
         .footer{ width:100%; height:auto; background: #000000; margin-top:20px; color:#FFF; padding:15px 0;
-            margin: 0;}
+            margin-bottom: 0;
+            margin-top: 10px;}
         .footer p{ text-align:center; font-size:12px; line-height:23px;}
 
         .footnav{ width:100%; text-align:center; margin:10px 0; line-height:25px;}
@@ -564,6 +565,9 @@
      */
     function navActive() {
         var path=location.pathname;
+        if(path=='/'){
+            path+='index/index/index.html'
+        }
         $('.ydjnavw li a').each(function (i,item) {
             var item=$(item);
             var href=item.attr('href');
@@ -574,9 +578,7 @@
         })
     }
     function lazyload() {
-
         var dom=$(".lazyimg");
-
         $(".lazyimg").lazyload({
             effect: "fadeIn",
             threshold: 200
