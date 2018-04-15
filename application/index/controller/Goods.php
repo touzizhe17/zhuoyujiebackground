@@ -6,6 +6,7 @@ namespace app\index\controller;
 use think\Controller;
 use think\Request;
 use app\common\model\Article as ArticleModel;
+use app\common\model\Grand as GrandModel;
 
 class Goods extends Controller
 {
@@ -13,6 +14,8 @@ class Goods extends Controller
     {
         parent::_initialize();
         $this->article_model  = new ArticleModel();
+
+        $this->grand  = new GrandModel();
     }
 
     public function index()
@@ -21,7 +24,23 @@ class Goods extends Controller
     }
     public function goodsDetail($id,$page=0)
     {
-        $article_list = $this->article_model->find($id)->alias('a')->field('a.*,g.thumb c,g.name n')->join('grand g','a.author=g.name','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
-        return $this->fetch('goodsdetail',['article_list'=>$article_list]);
+        //根据传入的id,查找当前这件作品
+        $zuoping = $this->article_model->find($id);
+        //查找找到作者信息
+        $authName=$zuoping['author'];
+        $authinfo=$this->grand->where('name', $authName)->find();
+        // 查找到该作者的其他相关作品
+
+        $zuoping_list = $this->article_model->where('author', $authName)->limit(4)->select();
+
+
+
+
+//        dump($zuoping_list);die;
+        $this->assign('zuoping',$zuoping);
+        $this->assign('authinfo',$authinfo);
+        $this->assign('zuoping_list',$zuoping_list);
+
+        return $this->fetch('goodsdetail');
     }
 }

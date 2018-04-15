@@ -16,8 +16,8 @@
 <div class="navw">
     <div class="count">
         <ul class="nav">
-            <li><a href="/" >琢玉界</a></li>
-            <li><a class="current" href="{:url('world/index')}" >巡展首页</a></li>
+            <li><a href="{:url('index/index/index')}" >琢玉界</a></li>
+            <li><a href="{:url('world/index')}" >巡展首页</a></li>
             <li><a href="{:url('world/zuoping')}" >参展作品</a></li>
             <li><a href="{:url('world/mjjy')}" >名家寄语</a></li>
             <li><a href="{:url('world/xianchang')}" >现场花絮</a></li>
@@ -84,7 +84,30 @@
     });
 });
 </script>
-<script type="text/javascript">var id = '11000';
-document.write("<script type=\"text/javascript\" src='js/tj.js'><\/script>");</script>
 </body>
+<script>
+    $(function () {
+        navActive();
+    });
+    /**
+     * 导航条active
+     */
+    function navActive() {
+        var path=location.pathname;
+//        console.log(path);
+        if(path=='/'){
+            path+='index/index/index.html'
+        }
+        console.log('path='+path);
+        $('.nav li a').each(function (i,item) {
+            var item=$(item);
+//            var href=item.attr('href');
+            console.log(href)
+            if(path===href){
+                item.addClass('current');
+            }
+
+        })
+    }
+</script>
 </html>

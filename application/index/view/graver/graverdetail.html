@@ -1,7 +1,12 @@
 ﻿<style>
     .intro{float:right;width:880px;}
-    .shiydsw li a{ width:100%;float:left;background:url(/static/ydj/images/load.gif) center no-repeat;}
-    .shiydsw li a img{float: left; width: 100%;}
+    .shiydsw li a{ width:100%;
+        height: 289px;background:url(/public/index/images/load.gif) center no-repeat;}
+    .shiydsw li a img{
+        vertical-align: top;
+        width: 289px;
+        height: 289px;
+    }
 
     .leftrow{width:300px;float:left;}
     .leftrow .zzheimg{border:1px solid #ccc;width:298px;}
@@ -58,18 +63,18 @@
         <div class="goodslist">
             <div class="atit "><h3><span class="">玉雕作品（共1件）</span></h3></div>
             <ul class="shiydsw">
-                {foreach name="article_list" item="vos"}
                 <li>
-                    <a href="{:url('graver/graverDetail',['id'=>$vos.id])}">
-                        <img class="lazyimg" src="__UPLOAD__/{$vos.t}" data-original="__UPLOAD__/{$vos.t}"/>
+                    <a href="{:url('graver/graverDetail',['id'=>1])}">
+                        <img class="lazyimg" src="" data-original=""/>
                     </a>
-                    <div class="infows"><span class="gname">{$vos.c}</span><span class="spjy">请联系客服询价</span></div>
+                    <div class="infows">
+                        <p class="gname">xxx</p>
+                        <span class="spjy">xxx</span></div>
                     </span>
                 </li>
-                {/foreach}
             </ul>
             <div class="clear"></div>
-            <a class="atit" href="/Goods/?masterid=13" class="artljgm">点击查看更多(1件)玉雕作品</a>
+
             <div class="clear"></div>
         </div>
     </div>

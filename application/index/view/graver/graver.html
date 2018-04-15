@@ -11,13 +11,18 @@
 <div class="clear"></div>
 <div class="count">
         <ul class="dastuij" style="margin-top:10px;">
+            <!--作者列表-->
+   {foreach name="authList" item='auth'}
     <li>
-        <a class="aimg" target="_blank" href="{:url('index/graver/graverDetail')}">
-            <img class="lazyimg" src="__STATIC__/picture/imghold.gif" data-original="https://ydjimg.jaadee.net/uploads/2016/11/17/d747286ed4e.jpg" />
+        <a class="aimg" target="_blank" href="{:url('index/graver/graverDetail',['id'=>$auth.id])}">
+            <img class="lazyimg" src="__STATIC__/picture/imghold.gif"
+                 data-original="__UPLOAD__/{$auth.thumb}" />
         </a>
-        <h4><a href="{:url('index/graver/graverDetail')}">刘东</a></h4>
+        <!--点击传入作者的id-->
+        <h4><a href="{:url('index/graver/graverDetail',['id'=>$auth.id])}">{$auth.name}</a></h4>
         <div class="clear"></div>
     </li>
+     {/foreach}
     </ul>
 
     </div>

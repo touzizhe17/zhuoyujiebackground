@@ -1,13 +1,13 @@
 ﻿<div class="count">
-    {foreach name="article_list" item="vo"}
+    <!--该作品 信息 -->
     <div class="azpw" style="margin-top:10px;">
         <div class="azimw">
-            <img class="loading" src="picture/loader.gif"/>
-            <img id="bigshowimages" src="__UPLOAD__{$vo.thumb}"/>
+            <img id="bigshowimages" src="__UPLOAD__{$zuoping.thumb}"/>
+            <!--缩略图显示-->
             <ul id="silist">
-                {if condition="!empty($vo['photo'])"}
-                {foreach name="$vo['photo']" item="imgs"}
-                <li class="action">
+                {if condition="!empty($zuoping['photo'])"}
+                {foreach name="$zuoping['photo']" item="imgs"}
+                <li >
                     <img big-src="{$imgs}" src="{$imgs}"/>
                 </li>
                 {/foreach}
@@ -16,27 +16,30 @@
         </div>
         <div class="azimw-r" id="goods_32191">
             <div class="inforbox1">
-                <h3>{$vo.title}</h3>
-                <p>作者：{$vo.author}</p>
-                <p>编号：{$vo.materials}</p>
-                <p>材质：{$vo.materials}</p>
+                <h3>{$zuoping.title}</h3>
+                <p>作者：{$zuoping.author}</p>
+                <p>编号：{$zuoping.id}</p>
+                <p>材质：{$zuoping.materials}</p>
+
             </div>
             <!--获奖信息  若无获奖信息，则不显示此段-->
             <div class="inforbox3">
                 <h3>作品介绍：</h3>
                 <div class="inforcont" style="max-height: 495px; height: auto;">
-                    <!-- 尺　　寸：-->
-                     <!--高:{$vo.pro_size}mm-->
-                    <!--宽:{$vo.pro_size}mm-->
-                    <!--厚:{$vo.pro_size}mm-->
-                    <!--<br>重　　量：约{$vo.pro_weight}g-->
-                    <!--<br>描　　述：{$vo.introduction}-->
-                    <!--<br>颜　　色：{$vo.pro_color}-->
-                    <!--<br>结　　构：{$vo.pro_structure}-->
-                    <!--<br>油　　性：{$vo.pro_oiliness}-->
-                    <!--<br>脂　　份：{$vo.pro_fat}-->
-                    <!--<br>瑕　　疵：{$vo.pro_defect}-->
-                    <br>{$vo.content}
+
+                    尺　　寸：
+                    高:{$zuoping.pro_size}mm
+                    宽:{$zuoping.pro_size}mm
+                    厚:{$zuoping.pro_size}mm
+                    <br>重　　量：约{$zuoping.pro_weight}g
+                    <br>描　　述：{$zuoping.introduction}
+                    <br>颜　　色：{$zuoping.pro_color}
+                    <br>结　　构：{$zuoping.pro_structure}
+                    <br>油　　性：{$zuoping.pro_oiliness}
+                    <br>脂　　份：{$zuoping.pro_fat}
+                    <br>瑕　　疵：{$zuoping.pro_defect}
+                    <br>{$zuoping.content}
+
                     <br>作　　者：玉雕界签约玉雕名家白骑通作品，提供玉雕师签名（或盖章）收藏证书。
                     <br>配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。
                     <br>售后承诺：签收之时起7日内自由退换货，提供完美售后服务。
@@ -44,52 +47,99 @@
                     <br>
                 </div>
                 <div style="float: left; width: 100%; color: #E44841; line-height: 1.4; margin-top: 6px;">
-                    温馨提示：{$vo.wanningtip}
+                    温馨提示：该作品只有一件
                 </div>
             </div>
             <!--价格 zone -->
             <div class="pricebox">
-                <p>结缘价：￥{$vo.jmoney}元</p>
-                <!-- p>APP专享价：￥26730元</p -->
+                <p>结缘价：￥{$zuoping.jmoney}元</p>
             </div>
-            <!--<a style=" float: left; color: #CC0000; width: 100%; text-align: center; font-size: 14px; padding-top: 2%;" href="https://hd.jaadee.com/Home/Index/index.html">收藏玉雕精品，即赠名家墨宝</a>-->
+            <!--如果有视频则显示视频，此处后面再调整-->
+
+
         </div>
     </div>
-    {/foreach}
+    <!--该作品 信息 -->
     <div class="clear"></div>
 
-    <div class="atit" id="btit1" style="margin-top:10px;" onClick="artsh('#artcw1','#btit1')"><h3><span>{$vo.n}介绍</span>
-    </h3></div>
-    <div class="dsinw dsinwn" id="artcw1">
-        <div class="dsimgw"><img src="__UPLOAD__/{$vo.c}"></div>
-        <div class="danw">
-            <h3>{$vo.n}</h3>
-        </div>
-        <p class="dsjj" style="padding:0;">
-         {$vo.introduction}
-        </p>
+    <div class="atit" id="btit1" style="margin-top:10px;">
+        <h3><span>{$authinfo.name}简介</span></h3>
     </div>
-    <div class="clear"></div>
-    <div class="atit" id="btit2" onClick="artsh('#artcw2','#btit2')"><h3><span class="showart">{$vo.n}更多作品</span></h3></div>
+
+    <div class="dsinw dsinwn" id="artcw1">
+        <div class="dsimgw">
+            <a href="{:url('index/graver/graverDetail',['id'=>$authinfo.id])}"><img src="__UPLOAD__/{$authinfo.thumb}"></a>
+        </div>
+
+        <div class="dsjj" style="padding:0;">
+            <p>简介：{$authinfo.introduction}</p>
+        </div>
+    </div>
+    <div class="atit" id="btit2"><a onclick="loadMore()" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
     <div class="goodslist">
         <ul class="shiydsw">
+            {foreach name='zuoping_list' item='zuoping'}
             <li>
+                <!--如果有视频则显示此图片-->
                 <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
-                <a href="/Goods/12370.html"><img class="lazyimg" src="__STATIC__/picture/imghold.gif"
-                                                 data-original="https://ydjimg.jaadee.net/uploads/2017/04/26/d949ba14491.jpg"/></a>
+
+                <a href="{:url('index/goods/goodsDetail',['id'=>$zuoping.id])}">
+                    <img class="lazyimg" src="__STATIC__/picture/imghold.gif"
+                      data-original="__UPLOAD__{$zuoping.thumb}" width="289px" height="289px" style="vertical-align: top;"/>
+                </a>
                 <div class="infows">
-                    <span class="gname">鱼趣</span>
-                    <div style="line-height:1.5em;text-align:center;"><span style="color:#F60" class="jiage">已结缘</span>
+                    <p class="gname">鱼趣</p>
+                    <div style="line-height:1.5em;text-align:center;">
+                        <!--如果是已经出售了，就显示已结缘，否则显示价格-->
+                        {if condition="true"}
+                        <span style="color:#F60" class="jiage">已结缘</span>
+                        {else/}
+                        <span>{$zuoping.jmoney}</span>
+                        {/if}
+
+
                     </div>
                 </div>
-                <i style="width:60px; height:60px; position:absolute; top:0; right:0;">玛瑙</i>
+                <i style="width:60px; height:60px; position:absolute; top:0; right:0;">{$zuoping.materials}</i>
             </li>
+            {/foreach}
         </ul>
         <div class="clear"></div>
-        <a class="atit" href="/Goods/?masterid=173" class="artljgm">点击查看更多{$vo.n}玉雕作品</a>
+
         <div class="clear"></div>
     </div>
 
 </div>
 </div>
+<script>
+   $(function () {
+       imgShow()
+
+   })
+
+   /**
+    * 缩略图片hover，点击事件处理
+    */
+    function imgShow() {
+        $('#silist li:first-child').addClass('action')
+        var dom=$('#silist li');
+        dom.on('click mouseover',function (e) {
+            dom.removeClass('action');
+            $(this).addClass('action')
+            dom.removeClass('action');
+            $(this).addClass('action')
+            //获取当前缩略图的img src
+            var src=$(this).children('img').attr('src');
+            $('#bigshowimages').attr('src',src);
+
+        })
+    }
+
+   /**
+    * 点击更多作品，发送ajax请求，返回更多作品信息
+    */
+   function loadMore() {
+
+    }
+</script>
 
