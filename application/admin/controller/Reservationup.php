@@ -32,13 +32,10 @@ class Reservationup extends AdminBase
      * @param int    $page
      * @return mixed
      */
-    public function index($page = 1)
+    public function index($id)
     {
-        $map   = [];
-        $field = 'id,name,status,re_introduction,re_local,re_way,re_cont,create_time';
-        $reservation  = $this->reservation_model->field($field)->paginate(15, false, ['page' => $page]);
-
-        return $this->fetch('index', ['reservation' => $reservation]);
+        $articles = $this->Reservationup_model->find($id);
+        return json(['data'=>$articles,'code'=>1,'message'=>'操作完成']);
     }
 
     /**

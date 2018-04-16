@@ -40,7 +40,7 @@ class Index extends  Controller
 //        if (!empty($keyword)) {
 //            $map['title'] = ['like', "%{$keyword}%"];
 //        }
-        $article_list = $this->article_model->alias('a')->field('a.*,g.thumb c')->join('grand g','a.author=g.name','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+        $article_list = $this->article_model->alias('a')->field('a.*,g.thumb c,g.id aid')->join('grand g','a.author=g.name','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
         $pgrand=[];
 //        $article_list  = $this->article_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
 

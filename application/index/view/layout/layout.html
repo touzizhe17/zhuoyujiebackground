@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=2,user-scalable=yes">
-    <title>琢玉界-中华民族玉雕文化的守护者</title>
+    <title>琢玉界--致力于守护中华民族的玉魂</title>
     <meta name="keywords" content="琢玉界,王朝阳,刘东,李少飞,翡翠王朝,玉雕大师,雕刻大师"/>
     <meta name="description" content="玉雕大师推介及玉雕艺术品展销，专为玉雕大师、收藏家、经销商，提供最具行业特色的服务。"/>
     <link rel="stylesheet" type="text/css" href="__CSS__/css/main.css">
@@ -424,13 +424,22 @@
     .log-box a:hover{
         background-color: #eee;
     }
+    .footer {
+        width: 100%;
+        height: auto;
+        background: #000000;
+        margin-top: 20px;
+        color: #FFF;
+        padding: 15px 0;
+    }
 </style>
 
 <body>
 <div class="wrap">
+    <!-- header部分 start-->
     <div class="topnavw topnavwb">
         <div class="count">
-            <span class="welws">琢玉界-中华民族玉雕文化的守护者</span>
+            <span class="welws">琢玉界——致力于守护中华民族的玉魂</span>
             <div class="clear"></div>
         </div>
     </div>
@@ -439,7 +448,7 @@
         <div class="loright">
             <div class="log-box">
                 <a href="{:url('index/user/login')}">登录</a>
-                <a href="">注册</a>
+                <a href="{:url('index/user/register')}">注册</a>
 
             </div>
         </div>
@@ -467,37 +476,54 @@
             </form>
         </div>
     </div>
+    <div class="clear"></div>
+    <!-- header部分 end-->
+
+
     <!--抽取-->
         {__CONTENT__}
     <!--抽取-->
-    <div class="count">
-        <a target="_blank" href="https://www.jaadee.com/Page/appdown.html" style="display:block;">
-            <img style="width:100%; height:auto; margin-top:10px;" src="__STATIC__/picture/appbig2017.jpg"/>
-        </a>
+
+
+    <!--footer start-->
+    <style>
+        .footer{ width:100%; height:auto; background: #000000; margin-top:20px; color:#FFF; padding:15px 0;
+            margin-bottom: 0;
+            margin-top: 10px;}
+        .footer p{ text-align:center; font-size:12px; line-height:23px;}
+
+        .footnav{ width:100%; text-align:center; margin:10px 0; line-height:25px;}
+        .footnav li{ display:inline-block; font-size:12px;}
+        .footnav li a{ color:#FFF; margin:0 5px;}
+        .footnav span{ width:auto; font-size:12px;}
+
+    </style>
+    <div class="footer">
         <div class="count">
-            <ul class="fmainfoot">
-                <li><a href="{:url('about/index')}" target="_blank">关于我们</a></li>
+            <ul class="footnav">
+                <li><a href="http://www.zhuoyujie.com/Help/about.html" target="_blank">关于我们</a></li>
                 <span>|</span>
-                <li><a href="{:url('about/contact')}" target="_blank">联系我们</a></li>
+                <li><a href="http://www.zhuoyujie.com/Help/contactus.html" target="_blank">联系我们</a></li>
                 <span>|</span>
-                <li><a href="{:url('about/aftersale')}" target="_blank">售后服务</a></li>
+                <li><a href="http://www.zhuoyujie.com/Help/sale_service.html" target="_blank">售后服务</a></li>
                 <span>|</span>
-                <li><a href="{:url('about/howbuy')}" target="_blank">如何购买</a></li>
+                <li><a href="http://www.zhuoyujie.com/Help/howbuy.html" target="_blank">如何购买</a></li>
                 <span>|</span>
-                <li><a href="{:url('index/dongtai')}" target="_blank">最新动态</a></li>
+                <li><a href="http://www.zhuoyujie.com/ArticleCat/" target="_blank">最新动态</a></li>
                 <span>|</span>
-                <li><a href="" target="_blank">加入我们</a></li>
+                <li>
+                    <a href="http://www.zhuoyujie.com"
+                       target="_blank">加入我们</a></li>
             </ul>
-
-            <div class="footer">
-                玉雕行业从业人员素质良莠不齐，谨防受骗，请认准琢玉界全国统一查询电话13760153380<br/>
-                2018-2050 缘石玉雕(www.zhuoyujie.com)版权所有<br>
-                ICP备案号:xxxx / 公安备案号: xxxx / 工商注册号: xxxx<br>
-                公司地址：深圳市宝安区创业二路一巷27号（缘石玉雕责任有限公司）<br>
-            </div>
-
-        </div>
+            <p> 琢玉界(www.zhuoyujie.com)版权所有 所属公司：深圳市缘石玉雕责任有限公司<br> ICP备案号: / 公安备案号:  /
+                工商注册号:91440300349746796G<br> 公司地址：深圳市宝安区创业二路一巷27号<br>
+                客服电话： 售后咨询： 批发/货源协同请加微信：
+            </p></div>
     </div>
+    <!--footer end-->
+
+
+    <!--客服 start-->
     <div class="kf_list">
         <div class="max-kf kf_ydj">
             <div class="kf_top">
@@ -526,6 +552,7 @@
         </a>
     </div>
 </div>
+<!--客服 end-->
 </body>
 <script type="text/javascript">
     $(function () {
@@ -538,6 +565,9 @@
      */
     function navActive() {
         var path=location.pathname;
+        if(path=='/'){
+            path+='index/index/index.html'
+        }
         $('.ydjnavw li a').each(function (i,item) {
             var item=$(item);
             var href=item.attr('href');
@@ -548,6 +578,7 @@
         })
     }
     function lazyload() {
+        var dom=$(".lazyimg");
         $(".lazyimg").lazyload({
             effect: "fadeIn",
             threshold: 200

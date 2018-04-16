@@ -16,8 +16,8 @@
 <div class="navw">
     <div class="count">
         <ul class="nav">
-            <li><a href="/" >琢玉界</a></li>
-            <li><a class="current" href="{:url('world/index')}" >巡展首页</a></li>
+            <li><a href="{:url('index/index/index')}" >琢玉界</a></li>
+            <li><a href="{:url('world/index')}" >巡展首页</a></li>
             <li><a href="{:url('world/zuoping')}" >参展作品</a></li>
             <li><a href="{:url('world/mjjy')}" >名家寄语</a></li>
             <li><a href="{:url('world/xianchang')}" >现场花絮</a></li>
@@ -60,7 +60,8 @@
             工商注册号:91440300349746796G<br> 公司地址：深圳市宝安区创业二路一巷27号<br>
             客服电话： 售后咨询： 批发/货源协同请加微信：
         </p></div>
-</div><!--弹出二维码-->
+</div>
+<!--弹出二维码-->
 <div class="outm" id="ewmid"><a class="xxbut" id="closeewm" href="javascript:return void(0);"></a>
     <div class="ewmw"></div>
     <a class="kfzy" href="#">巡展客服专员</a>
@@ -83,7 +84,30 @@
     });
 });
 </script>
-<script type="text/javascript">var id = '11000';
-document.write("<script type=\"text/javascript\" src='js/tj.js'><\/script>");</script>
 </body>
+<script>
+    $(function () {
+        navActive();
+    });
+    /**
+     * 导航条active
+     */
+    function navActive() {
+        var path=location.pathname;
+//        console.log(path);
+        if(path=='/'){
+            path+='index/index/index.html'
+        }
+        console.log('path='+path);
+        $('.nav li a').each(function (i,item) {
+            var item=$(item);
+//            var href=item.attr('href');
+            console.log(href)
+            if(path===href){
+                item.addClass('current');
+            }
+
+        })
+    }
+</script>
 </html>

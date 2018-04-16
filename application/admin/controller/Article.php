@@ -35,7 +35,7 @@ class Article extends AdminBase
     public function index($cid = 0, $keyword = '', $page = 1)
     {
         $map   = [];
-        $field = 'id,title,cid,author,reading,status,publish_time,sort';
+        $field = 'id,title,cid,materials,author,reading,status,publish_time,sort';
 
         if ($cid > 0) {
             $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
