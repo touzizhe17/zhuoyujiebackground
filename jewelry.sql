@@ -414,3 +414,13 @@ CREATE TABLE `os_user` (
 -- Records of os_user
 -- ----------------------------
 INSERT INTO `os_user` VALUES ('1', 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '', '', '1', '2018-04-11 13:03:21', null, '');
+
+
+DROP TABLE IF EXISTS `ot_linkug`;
+CREATE TABLE `ot_linkug` (
+  `re_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '主表id',
+  `CR_time` datetime DEFAULT NULL COMMENT '添加时间',
+  `re_userID` int(11) DEFAULT '0' COMMENT '用户ID',
+  `re_goodsID` int(11) DEFAULT '0' COMMENT '商品ID',
+  PRIMARY KEY (`re_ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
