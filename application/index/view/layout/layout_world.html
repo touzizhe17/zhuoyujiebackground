@@ -94,14 +94,10 @@
      */
     function navActive() {
         var path=location.pathname;
-//        console.log(path);
-        if(path=='/'){
-            path+='index/index/index.html'
-        }
         console.log('path='+path);
         $('.nav li a').each(function (i,item) {
             var item=$(item);
-//            var href=item.attr('href');
+            var href=item.attr('href');
             console.log(href)
             if(path===href){
                 item.addClass('current');

@@ -23,7 +23,13 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">货号</label>
                         <div class="layui-input-block">
-                            <input type="text" name="materials" value="" placeholder="请输入货号" class="layui-input">
+                            <input type="text" name="goods_num" value="" placeholder="请输入货号" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">材质</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="materials" value="" placeholder="材质" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -32,10 +38,16 @@
                             <input type="text" name="title" value="" required  lay-verify="required" placeholder="请输入标题" class="layui-input">
                         </div>
                     </div>
+                    <!--修改成下拉框-->
                     <div class="layui-form-item">
                         <label class="layui-form-label">作品作者</label>
                         <div class="layui-input-block">
-                            <input type="text" name="author" value="" placeholder="(选填）请输入发布者" class="layui-input">
+                            <select name="author" lay-verify="required">
+                                <option value=" ">-请选择-</option>
+                                {foreach name="authList" item="auth"}
+                                <option value="{$auth.id}">{$auth.name}</option>
+                                {/foreach}
+                            </select>
                         </div>
                     </div>
                     <!--<div class="layui-form-item">

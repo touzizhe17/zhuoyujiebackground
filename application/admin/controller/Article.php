@@ -3,6 +3,7 @@ namespace app\admin\controller;
 
 use app\common\model\Article as ArticleModel;
 use app\common\model\Category as CategoryModel;
+use app\common\model\Grand as GrandModel;
 use app\common\controller\AdminBase;
 
 /**
@@ -59,6 +60,9 @@ class Article extends AdminBase
      */
     public function add()
     {
+        $grand=new GrandModel();
+        $authList=$grand->field('id,name')->select();
+        $this->assign('authList',$authList);
         return $this->fetch();
     }
 

@@ -27,14 +27,11 @@ class Goods extends Controller
         //根据传入的id,查找当前这件作品
         $zuoping = $this->article_model->find($id);
         //查找找到作者信息
-        $authName=$zuoping['author'];
-        $authinfo=$this->grand->where('name', $authName)->find();
+        $auth=$zuoping['author'];
+        $authinfo=$this->grand->where('id', $auth)->find();
         // 查找到该作者的其他相关作品
 
-        $zuoping_list = $this->article_model->where('author', $authName)->limit(4)->select();
-
-
-
+        $zuoping_list = $this->article_model->where('author', $auth)->limit(4)->select();
 
 //        dump($zuoping_list);die;
         $this->assign('zuoping',$zuoping);
