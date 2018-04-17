@@ -44,6 +44,7 @@ DROP TABLE IF EXISTS `os_article`;
 CREATE TABLE `os_article` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文章ID',
   `cid` smallint(5) unsigned NOT NULL COMMENT '分类ID',
+  `uid` smallint(5) unsigned NOT NULL COMMENT '大师id',
   `title` varchar(255) NOT NULL DEFAULT '' COMMENT '标题',
   `goods_num` varchar(11) DEFAULT '' COMMENT '商品货号',
   `introduction` varchar(255) DEFAULT '' COMMENT '简介',
