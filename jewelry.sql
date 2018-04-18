@@ -44,6 +44,7 @@ DROP TABLE IF EXISTS `os_article`;
 CREATE TABLE `os_article` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文章ID',
   `cid` smallint(5) unsigned NOT NULL COMMENT '分类ID',
+  `uid` smallint(5) unsigned NOT NULL COMMENT '大师id',
   `title` varchar(255) NOT NULL DEFAULT '' COMMENT '标题',
   `goods_num` varchar(11) DEFAULT '' COMMENT '商品货号',
   `introduction` varchar(255) DEFAULT '' COMMENT '简介',
@@ -75,7 +76,7 @@ CREATE TABLE `os_article` (
 -- ----------------------------
 -- Records of os_article
 -- ----------------------------
-INSERT INTO `os_article` VALUES ('1', '1', '测试产品内容', '', '', '测试', '测试', '测试', '测试', '测试', '测试', '测试', '', '', '', '', '<p>测试内容</p>', '测试', '1', '0', '', null, '0', '0', '0', '2017-04-11 14:10:10', '2017-04-11 14:09:45');
+INSERT INTO `os_article` VALUES ('1', '1','1', '测试产品内容', '', '', '测试', '测试', '测试', '测试', '测试', '测试', '测试', '', '', '', '', '<p>测试内容</p>', '测试', '1', '0', '', null, '0', '0', '0', '2017-04-11 14:10:10', '2017-04-11 14:09:45');
 
 -- ----------------------------
 -- Table structure for os_auth_group
