@@ -72,7 +72,7 @@ class Article extends AdminBase
     public function save()
     {
         if ($this->request->isPost()) {
-            $data            = $this->request->param();
+            $data= $this->request->param();
             $validate_result = $this->validate($data, 'Article');
 
             if ($validate_result !== true) {

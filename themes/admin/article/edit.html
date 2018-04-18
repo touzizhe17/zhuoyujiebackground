@@ -52,12 +52,6 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">材质</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_structure" value="{$article.pro_structure}" placeholder="请输入材质" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
                         <label class="layui-form-label">结缘价</label>
                         <div class="layui-input-block">
                             <input type="text" name="jmoney" value="{$article.jmoney}" placeholder="请输入结缘价" class="layui-input">
@@ -73,6 +67,20 @@
                         <label class="layui-form-label">作品介绍</label>
                         <div class="layui-input-block">
                             <textarea name="content" lay-verify="content" placeholder="" class="layui-textarea" id="content">{$article.content}</textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">作品视频</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="video_url" value="" class="layui-input layui-input-inline" id="">
+                            <input type="file" name="file" class="layui-upload-file" accept="video/*">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">视频截图</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="video_pic_url" value="" class="layui-input layui-input-inline" >
+                            <input type="file" name="file" class="layui-upload-file" >
                         </div>
                     </div>
                     <div class="layui-form-item">

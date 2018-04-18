@@ -31,7 +31,8 @@ class Index extends  Controller
         $map   = [];
         $field = 'id,title,cid,author,reading,thumb,jmoney,status,publish_time,sort,materials';
 
-        $article_list = $this->article_model->alias('a')->field('a.*,g.thumb c,g.id aid,g.name name')->join('grand g','a.author=g.name','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+        $article_list = $this->article_model->alias('a')->field('a.*,g.thumb c,g.id aid,g.name name')->join('grand g','a.author=g.id','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+//        dump($article_list);die;
         $pgrand=[];
         $category_list = $this->category_model->column('name', 'id');
 
