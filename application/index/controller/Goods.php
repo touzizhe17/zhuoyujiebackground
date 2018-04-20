@@ -20,23 +20,25 @@ class Goods extends Controller
 
     public function index()
     {
+        $zuopin_list = $this->article_model->alias('a')->field('a.*,g.thumb c,g.id aid,g.name name')->join('grand g','a.author=g.id','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => 1]);
+        $this->assign('zuopin_list',$zuopin_list);
         return $this->fetch('goods');
     }
     public function goodsDetail($id,$page=0)
     {
         //根据传入的id,查找当前这件作品
-        $zuoping = $this->article_model->find($id);
+        $zuopin = $this->article_model->find($id);
         //查找找到作者信息
-        $auth=$zuoping['author'];
+        $auth=$zuopin['author'];
         $authinfo=$this->grand->where('id', $auth)->find();
         // 查找到该作者的其他相关作品
 
-        $zuoping_list = $this->article_model->where('author', $auth)->limit(4)->select();
+        $zuopin_list = $this->article_model->where('author', $auth)->limit(4)->select();
 
-//        dump($zuoping_list);die;
-        $this->assign('zuoping',$zuoping);
+//        dump($zuopin_list);die;
+        $this->assign('zuopin',$zuopin);
         $this->assign('authinfo',$authinfo);
-        $this->assign('zuoping_list',$zuoping_list);
+        $this->assign('zuopin_list',$zuopin_list);
 
         return $this->fetch('goodsdetail');
     }
