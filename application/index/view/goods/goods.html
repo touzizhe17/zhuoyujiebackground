@@ -85,19 +85,22 @@
             </div>
         </div>
         <ul class="glistul">
-            <li class="" id="goods_32049">
-                <a href="{:url('index/goods/goodsDetail')}" target="_blank" class="daaimg" target="_blank">
-                    <img class="lazyimg" src="__STATIC__/picture/imghold.gif"data-original="__STATIC__/picture/zuoping.jpg"/></a>
+            {foreach name='goodsList' item='goods'}
+            <li class="" id=" ">
+                <a href="{:url('index/goods/goodsDetail',['id'=>$goods.id])}" target="_blank" class="daaimg" target="_blank">
+                    <img class="lazyimg" src="__STATIC__/picture/imghold.gif"
+                         data-original="__UPLOAD__/{$goods.thumb}"/></a>
                 <div class="zuozinfo">
-                    <a href="{:url('index/graver/graverDetail')}" target="_blank" class="zzimgaw"><img
-                            src="__STATIC__/picture/yudiaoshi.jpg"/></a>
+                    <a href="{:url('index/graver/graverDetail')}" target="_blank" class="zzimgaw">
+                        <img src="__STATIC__/picture/yudiaoshi.jpg"/></a>
+
                     <div class="zzzpw">
                         <div class="zzup">
-                            <a href="{:url('index/goods/goodsDetail')}" target="_blank">吉祥如意</a>
-                            <a href="{:url('index/graver/graverDetail')}" target="_blank">作者：民间巧匠</a>
+                            <a href="{:url('index/goods/goodsDetail')}" target="_blank">{$goods.title}</a>
+                            <a href="{:url('index/graver/graverDetail')}" target="_blank">{$goods.author}</a>
                         </div>
                         <div class="zzupb">
-                            <span class="jiage">￥45000元</span>
+                            <span class="jiage">¥{$goods.jmoney}</span>
                         </div>
                     </div>
                 </div>
@@ -110,8 +113,11 @@
                         <img src="__STATIC__/images/bad.png" alt="">
                     </a>1000
                 </div>
-                <i>翡翠</i>
+                <i>{$goods.materials}</i>
             </li>
+            {/foreach}
+
+
         </ul>
 
 

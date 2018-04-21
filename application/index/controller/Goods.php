@@ -20,6 +20,8 @@ class Goods extends Controller
 
     public function index()
     {
+        $goodsList=$this->article_model->select();
+        $this->assign('goodsList',$goodsList);
         return $this->fetch('goods');
     }
     public function goodsDetail($id,$page=0)
