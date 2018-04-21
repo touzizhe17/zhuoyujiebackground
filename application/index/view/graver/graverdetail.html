@@ -63,15 +63,18 @@
         <div class="goodslist">
             <div class="atit "><h3><span class="">玉雕作品（共1件）</span></h3></div>
             <ul class="shiydsw">
+
+                {foreach name='article' item='art'}
                 <li>
-                    <a href="{:url('graver/graverDetail',['id'=>1])}">
-                        <img class="lazyimg" src="" data-original=""/>
+                    <a href="{:url('index/goods/goodsDetail',['id'=>$art.id])}">
+                        <img class="lazyimg" src="__UPLOAD__/{$art.thumb}" data-original="__UPLOAD__/{$art.thumb}"/>
                     </a>
                     <div class="infows">
-                        <p class="gname">xxx</p>
-                        <span class="spjy">xxx</span></div>
+                        <p class="gname">{$art.title}</p>
+                        <span class="spjy">{$art.jmoney}</span></div>
                     </span>
                 </li>
+                {/foreach}
             </ul>
             <div class="clear"></div>
 
