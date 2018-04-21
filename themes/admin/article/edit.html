@@ -24,7 +24,13 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">货号</label>
                         <div class="layui-input-block">
-                            <input type="text" name="materials" value="{$article.materials}" placeholder="请输入货号" class="layui-input">
+                            <input type="text" name="goods_num" value="{$article.goods_num}" placeholder="请输入货号" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">材质</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="materials" value="{$article.materials}" placeholder="请输入材质" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -33,72 +39,24 @@
                             <input type="text" name="title" value="{$article.title}" required  lay-verify="required" placeholder="请输入标题" class="layui-input">
                         </div>
                     </div>
+                    <!--修改成下拉框-->
                     <div class="layui-form-item">
                         <label class="layui-form-label">作品作者</label>
                         <div class="layui-input-block">
-                            <input type="text" name="author" value="{$article.author}" placeholder="（选填）请输入发布者" class="layui-input">
+                            <select name="author" lay-verify="required">
+                                <option value="无">-请选择-</option>
+                                {foreach name="authList" item="auth"}
+                                <option value="{$auth.id}"{if condition="$auth.id eq $article.author"} selected {/if}>{$auth.name}</option>
+                                {/foreach}
+                            </select>
                         </div>
                     </div>
-                    <!--<div class="layui-form-item">
-                        <label class="layui-form-label">温馨提示</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="wanningtip" value="{$article.wanningtip}" placeholder="请输入温馨提示" class="layui-input">
-                        </div>
-                    </div>-->
                     <div class="layui-form-item">
                         <label class="layui-form-label">结缘价</label>
                         <div class="layui-input-block">
                             <input type="text" name="jmoney" value="{$article.jmoney}" placeholder="请输入结缘价" class="layui-input">
                         </div>
                     </div>
-                    <!--<div class="layui-form-item">
-                        <label class="layui-form-label">尺寸</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_size" value="{$article.pro_size}" placeholder="请输入尺寸" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">重量</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_weight" value="{$article.pro_weight}" placeholder="请输入重量" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">颜色</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_color" value="{$article.wanningtip}" placeholder="请输入颜色" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">结构</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_structure" value="{$article.pro_structure}" placeholder="请输入结构" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">油性</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_oiliness" value="{$article.pro_oiliness}" placeholder="请输入油性" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">脂份</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_fat" value="{$article.pro_fat}" placeholder="请输入脂份" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">瑕疵</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="pro_defect" value="{$article.pro_defect}" placeholder="请输入瑕疵" class="layui-input">
-                        </div>
-                    </div>-->
-                    <!--<div class="layui-form-item">
-                        <label class="layui-form-label">文字寓意</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="word_meaning" value="{$article.word_meaning}" placeholder="请输入文字寓意" class="layui-input">
-                        </div>
-                    </div>-->
                     <div class="layui-form-item">
                         <label class="layui-form-label">简介</label>
                         <div class="layui-input-block">
@@ -109,6 +67,20 @@
                         <label class="layui-form-label">作品介绍</label>
                         <div class="layui-input-block">
                             <textarea name="content" lay-verify="content" placeholder="" class="layui-textarea" id="content">{$article.content}</textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">作品视频</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="video_url" value="" class="layui-input layui-input-inline" id="">
+                            <input type="file" name="file" class="layui-upload-file" accept="video/*">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">视频截图</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="video_pic_url" value="" class="layui-input layui-input-inline" >
+                            <input type="file" name="file" class="layui-upload-file" >
                         </div>
                     </div>
                     <div class="layui-form-item">

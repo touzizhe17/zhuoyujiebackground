@@ -2,11 +2,11 @@
     <!--该作品 信息 -->
     <div class="azpw" style="margin-top:10px;">
         <div class="azimw">
-            <img id="bigshowimages" src="__UPLOAD__{$zuoping.thumb}"/>
+            <img id="bigshowimages" src="__UPLOAD__{$zuopin.thumb}"/>
             <!--缩略图显示-->
             <ul id="silist">
-                {if condition="!empty($zuoping['photo'])"}
-                {foreach name="$zuoping['photo']" item="imgs"}
+                {if condition="!empty($zuopin['photo'])"}
+                {foreach name="$zuopin['photo']" item="imgs"}
                 <li >
                     <img big-src="{$imgs}" src="{$imgs}"/>
                 </li>
@@ -16,30 +16,17 @@
         </div>
         <div class="azimw-r" id="goods_32191">
             <div class="inforbox1">
-                <h3>{$zuoping.title}</h3>
-                <p>作者：{$zuoping.author}</p>
-                <p>编号：{$zuoping.id}</p>
-                <p>材质：{$zuoping.materials}</p>
+                <h3>{$zuopin.title}</h3>
+                <p>作者：{$authinfo.name}</p>
+                <p>编号：{$zuopin.goods_num}</p>
+                <p>材质：{$zuopin.materials}</p>
 
             </div>
             <!--获奖信息  若无获奖信息，则不显示此段-->
             <div class="inforbox3">
                 <h3>作品介绍：</h3>
                 <div class="inforcont" style="max-height: 495px; height: auto;">
-
-                    尺　　寸：
-                    高:{$zuoping.pro_size}mm
-                    宽:{$zuoping.pro_size}mm
-                    厚:{$zuoping.pro_size}mm
-                    <br>重　　量：约{$zuoping.pro_weight}g
-                    <br>描　　述：{$zuoping.introduction}
-                    <br>颜　　色：{$zuoping.pro_color}
-                    <br>结　　构：{$zuoping.pro_structure}
-                    <br>油　　性：{$zuoping.pro_oiliness}
-                    <br>脂　　份：{$zuoping.pro_fat}
-                    <br>瑕　　疵：{$zuoping.pro_defect}
-                    <br>{$zuoping.content}
-
+                    {$zuopin.content}
                     <br>作　　者：玉雕界签约玉雕名家白骑通作品，提供玉雕师签名（或盖章）收藏证书。
                     <br>配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。
                     <br>售后承诺：签收之时起7日内自由退换货，提供完美售后服务。
@@ -52,20 +39,37 @@
             </div>
             <!--价格 zone -->
             <div class="pricebox">
-                <p>结缘价：￥{$zuoping.jmoney}元</p>
+                <p>结缘价：￥{$zuopin.jmoney}元</p>
             </div>
             <!--如果有视频则显示视频，此处后面再调整-->
-
-
+            {if condition='true'}
+            <div class="inforbox4">
+                <h3>点击查看货品小视频</h3>
+                <div class="videobox" id="video">
+                    <img class="thumb" src="http://www.w3school.com.cn/i/movie.ogg">
+                    <div class="video-icon">
+                        <img src="__STATIC__/images/video.png">
+                    </div>
+                </div>
+            </div>
+            {/if}
+            <!--视频播放框,及背景遮罩层-->
+            <div class="play_box">
+                <div class="videframebg" style="display: block;"></div>
+                <div class="videframe "style="display: block;">
+                <div id="example_video_1" class="video-js vjs-default-skin vjs-controls-enabled vjs-has-started vjs-playing vjs-user-inactive" style="width: 480px; height: 480px;">
+                    <video src="http://www.w3school.com.cn/i/movie.ogg"  controls width="480px" height="480px"></video>
+                    <a href="javascript:void(0)" class="closebtnico" onclick="closePause()"></a>
+            </div>
+            </div>
         </div>
     </div>
-    <!--该作品 信息 -->
     <div class="clear"></div>
-
+        <!--该作品 信息 -->
+        {if condition='$zuopin.cid eq 0'}
     <div class="atit" id="btit1" style="margin-top:10px;">
         <h3><span>{$authinfo.name}简介</span></h3>
     </div>
-
     <div class="dsinw dsinwn" id="artcw1">
         <div class="dsimgw">
             <a href="{:url('index/graver/graverDetail',['id'=>$authinfo.id])}"><img src="__UPLOAD__/{$authinfo.thumb}"></a>
@@ -75,32 +79,37 @@
             <p>简介：{$authinfo.introduction}</p>
         </div>
     </div>
+    {/if}
+
+
     <div class="atit" id="btit2"><a onclick="loadMore()" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
     <div class="goodslist">
         <ul class="shiydsw">
-            {foreach name='zuoping_list' item='zuoping'}
+            {foreach name='zuopin_list' item='zuopin'}
             <li>
                 <!--如果有视频则显示此图片-->
+                {if condition="true"}
                 <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
+                {/if}
 
-                <a href="{:url('index/goods/goodsDetail',['id'=>$zuoping.id])}">
+                <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}">
                     <img class="lazyimg" src="__STATIC__/picture/imghold.gif"
-                      data-original="__UPLOAD__{$zuoping.thumb}" width="289px" height="289px" style="vertical-align: top;"/>
+                      data-original="__UPLOAD__{$zuopin.thumb}" width="289px" height="289px" style="vertical-align: top;"/>
                 </a>
                 <div class="infows">
-                    <p class="gname">鱼趣</p>
+                    <p class="gname">{$zuopin.title}</p>
                     <div style="line-height:1.5em;text-align:center;">
                         <!--如果是已经出售了，就显示已结缘，否则显示价格-->
                         {if condition="true"}
                         <span style="color:#F60" class="jiage">已结缘</span>
                         {else/}
-                        <span>{$zuoping.jmoney}</span>
+                        <span style="color:#fff">¥{$zuopin.jmoney}</span>
                         {/if}
 
 
                     </div>
                 </div>
-                <i style="width:60px; height:60px; position:absolute; top:0; right:0;">{$zuoping.materials}</i>
+                <i style="width:60px; height:60px; position:absolute; top:0; right:0;">{$zuopin.materials}</i>
             </li>
             {/foreach}
         </ul>
@@ -113,10 +122,19 @@
 </div>
 <script>
    $(function () {
-       imgShow()
+       imgShow();
+       play();
 
    })
-
+   function play() {
+       $('.play_box').hide();
+       $('.videobox').on('click',function () {
+           $('.play_box').show();
+       });
+   }
+    function closePause() {
+       $('.play_box').hide();
+    }
    /**
     * 缩略图片hover，点击事件处理
     */

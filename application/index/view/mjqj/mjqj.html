@@ -16,15 +16,17 @@
 <div class="clear"></div>
 <div class="count">
     <ul class="prlist">
+        {foreach name='zuopin_list' item='zuopin'}
         <li class="list-li">
-            <div class="thumb"><a target="_blank" href="{:url('index/goods/goodsDetail')}">
-                <img class="lazyimg"data-original="__STATIC__/picture/zuoping.jpg"src="__STATIC__/picture/imghold.gif"></a>
+            <div class="thumb"><a target="_blank" href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}">
+                <img class="lazyimg"data-original="__UPLOAD__/{$zuopin.thumb}"src="__STATIC__/picture/imghold.gif"></a>
             </div>
-            <div class="title">鹿</div>
-            <div class="aside"><p>【货 号】：YDJ032508</p>
-                <P>【结缘价】<b>￥2700元</b></P></div>
-            <a class="aside-r" target="_blank" href="{:url('index/goods/goodsDetail')}">查看<br>详细</a></li>
-
+            <div class="title">{$zuopin.title}</div>
+            <div class="aside"><p>【货 号】：{$zuopin.goods_num}</p>
+                <P>【结缘价】<b>¥{$zuopin.jmoney}元</b></P></div>
+            <a class="aside-r" target="_blank" href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}">查看<br>详细</a>
+        </li>
+        {/foreach}
 
     </ul>
     <div class="mjpage"> 3902 条记录 1/66 页 <a href='/Mjqj/index/p/2.html'>下一页</a> <span class='current'>1</span><a

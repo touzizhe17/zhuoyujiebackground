@@ -1146,15 +1146,21 @@ a {
     height: auto;
     color: #FFF;
     background: #4D4240;
+    position: relative;
 }
 
 .infows .gname {
+    width: 100%;
+    height: 30px;
+    left: 0;
+    top: -30px;
+    position: absolute;
     color: #FFF;
     line-height: 30px;
     text-align: center;
-    width: 100%;
     line-height: 30px;
-    height: 30px;
+
+    background: rgba(0,0,0,0.6);
 }
 
 .infows .sp1 {
@@ -2101,13 +2107,13 @@ h4.timeboxs, div.arlock {
     float: left
 }
 
-.prlist .thumb img {
-    width: 100%;
-    height: 100%;
-    float: left;
-}
+/*.prlist .thumb img {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*float: left;*/
+/*}*/
 
-.prlist .thumb:hover img {
+.prlist .thumb img {
     width: 232px;
     height: 232px;
     margin-left: -4px;

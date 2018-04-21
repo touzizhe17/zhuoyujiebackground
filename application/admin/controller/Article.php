@@ -3,6 +3,7 @@ namespace app\admin\controller;
 
 use app\common\model\Article as ArticleModel;
 use app\common\model\Category as CategoryModel;
+use app\common\model\Grand as GrandModel;
 use app\common\controller\AdminBase;
 
 /**
@@ -47,7 +48,7 @@ class Article extends AdminBase
             $map['title'] = ['like', "%{$keyword}%"];
         }
 
-        $article_list  = $this->article_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+        $article_list  = $this->article_model->alias('a')->field('a.*,g.name')->join('grand g','a.author=g.id','LEFT')->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
         $category_list = $this->category_model->column('name', 'id');
 
         return $this->fetch('index', ['article_list' => $article_list, 'category_list' => $category_list, 'cid' => $cid, 'keyword' => $keyword]);
@@ -59,6 +60,9 @@ class Article extends AdminBase
      */
     public function add()
     {
+        $grand=new GrandModel();
+        $authList=$grand->field('id,name')->select();
+        $this->assign('authList',$authList);
         return $this->fetch();
     }
 
@@ -68,7 +72,7 @@ class Article extends AdminBase
     public function save()
     {
         if ($this->request->isPost()) {
-            $data            = $this->request->param();
+            $data= $this->request->param();
             $validate_result = $this->validate($data, 'Article');
 
             if ($validate_result !== true) {
@@ -90,7 +94,13 @@ class Article extends AdminBase
      */
     public function edit($id)
     {
+        //文章
         $article = $this->article_model->find($id);
+        //作者
+        $grand=new GrandModel();
+        $authList=$grand->field('id,name')->select();
+        $this->assign('authList',$authList);
+
 
         return $this->fetch('edit', ['article' => $article]);
     }
