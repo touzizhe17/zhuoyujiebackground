@@ -51,6 +51,7 @@ CREATE TABLE `os_article` (
   `materials` varchar(255) DEFAULT '' COMMENT '材质',
   `jmoney` varchar(255) DEFAULT '' COMMENT '结缘价',
   `content` longtext COMMENT '内容',
+  `author` varchar(20) DEFAULT '' COMMENT '作者ID',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '状态 0 待审核  1 审核',
   `reading` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '阅读量',
   `thumb` varchar(255) DEFAULT '' COMMENT '缩略图',
