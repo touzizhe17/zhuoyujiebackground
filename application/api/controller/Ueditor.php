@@ -295,12 +295,13 @@ class Ueditor extends Controller
             $file = substr($file,1);
         }
 
-        $upload_path = str_replace('\\', '/', ROOT_PATH . '/');
-        $file=$upload_path.$file;
+
 //        dump($upload_path);die();
 //        $filesd=dirname(__FILE__) . '/../../../public/uploads/20180422/1524388599524010.png';
 //        unlink($filesd);
         try {
+            $upload_path = str_replace('\\', '/', ROOT_PATH . '/');
+            $file=$upload_path.$file;
             if($file && file_exists($file)){
                 unlink($file);
                 $var['code'] = 1;

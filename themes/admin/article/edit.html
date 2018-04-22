@@ -107,6 +107,13 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
+                        <label class="layui-form-label">出售状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="isbonds" value="1" title="已出售" {if condition="$article.isbonds==1"} checked="checked"{/if}>
+                            <input type="radio" name="isbonds" value="0" title="未出售" {if condition="$article.isbonds==0"} checked="checked"{/if}>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
                         <label class="layui-form-label">状态</label>
                         <div class="layui-input-block">
                             <input type="radio" name="status" value="1" title="已审核" {if condition="$article.status==1"} checked="checked"{/if}>
