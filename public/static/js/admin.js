@@ -24,19 +24,59 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
 /**
  * 通用单图上传
  */
-layui.upload({
-    url: "/index.php/api/upload/upload",
-    type: 'image',
-    ext: 'jpg|png|gif|bmp',
-    success: function (data) {
-        if (data.error === 0) {
-            document.getElementById('thumb').value = data.url;
-        } else {
-            layer.msg(data.message);
+    layui.upload({
+        elem:"#videopicurl",
+        url: "/index.php/api/upload/upload",
+        type: 'image',
+        ext: 'jpg|png|gif|bmp',
+        success: function (data) {
+            console.log(1);
+            if (data.error === 0) {
+                document.getElementById('video_pic_url').value = data.url;
+            } else {
+                layer.msg(data.message);
+            }
         }
-    }
-});
-
+    });
+    // layui.upload({
+    //     elem:$(".videopicurl"),
+    //     url: "/index.php/api/upload/upload",
+    //     type: 'image',
+    //     ext: 'jpg|png|gif|bmp',
+    //     success: function (data) {
+    //         if (data.error === 0) {
+    //             document.getElementById('video_pic_url').value = data.url;
+    //         } else {
+    //             layer.msg(data.message);
+    //         }
+    //     }
+    // });
+    layui.upload({
+        elem:$("#picthumb"),
+        url: "/index.php/api/upload/upload",
+        type: 'image',
+        ext: 'jpg|png|gif|bmp',
+        success: function (data) {
+            if (data.error === 0) {
+                document.getElementById('thumb').value = data.url;
+            } else {
+                layer.msg(data.message);
+            }
+        }
+    });
+    layui.upload({
+        elem:$("#videourl"),
+        url: "/index.php/api/upload/upload",
+        type: 'video',
+        ext: 'video|audio|file',
+        success: function (data) {
+            if (data.error === 0) {
+                document.getElementById('video_url').value = data.url;
+            } else {
+                layer.msg(data.message);
+            }
+        }
+    });
 /**
  * 通用日期时间选择
  */

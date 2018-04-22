@@ -54,6 +54,8 @@ CREATE TABLE `os_article` (
   `author` varchar(20) DEFAULT '' COMMENT '作者ID',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '状态 0 待审核  1 审核',
   `reading` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '阅读量',
+  `video_pic_url` varchar(255) DEFAULT '' COMMENT '作品视频缩略图',
+  `video_url` varchar(255) DEFAULT '' COMMENT '作品视频',
   `thumb` varchar(255) DEFAULT '' COMMENT '缩略图',
   `photo` text COMMENT '图集',
   `is_top` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否置顶  0 不置顶  1 置顶',
