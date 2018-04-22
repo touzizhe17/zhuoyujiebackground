@@ -31,17 +31,27 @@ class Index extends  Controller
         $map   = [];
         $field = 'id,title,cid,author,reading,thumb,jmoney,status,publish_time,sort,materials';
 
-        $article_list = $this->article_model->alias('a')->field('a.*,g.thumb c,g.id aid,g.name name')->join('grand g','a.author=g.id','LEFT')->order(['a.publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+        $article_list = $this->article_model
+            ->alias('a')
+            ->where('a.cid',1)
+            ->field('a.*,g.thumb c,g.id aid,g.name name')
+            ->join('grand g','a.author=g.id','LEFT')
+            ->order(['a.publish_time' => 'DESC'])
+            ->paginate(15, false, ['page' => $page]);
+
 //        dump($article_list);die;
         $pgrand=[];
         $category_list = $this->category_model->column('name', 'id');
 
         //玉雕大师
         $map   = [];
-        $field = 'id,name,cid,introduction,thumb,status,publish_time,sort';
+        $field = 'id,name,introduction,thumb,status,publish_time,sort';
 
         if ($cid > 0) {
-            $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
+            $category_children_ids = $this->category_model
+                ->where(['path' => ['like', "%,{$cid},%"]])
+                ->column('id');
+
             $category_children_ids = (!empty($category_children_ids) && is_array($category_children_ids)) ? implode(',', $category_children_ids) . ',' . $cid : $cid;
             $map['cid']            = ['IN', $category_children_ids];
         }
@@ -50,8 +60,11 @@ class Index extends  Controller
             $map['name'] = ['like', "%{$keyword}%"];
         }
 
-        $grand_list  = $this->grand_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
-
+        $grand_list  = $this->grand_model
+            ->field($field)
+            ->where($map)
+            ->order(['publish_time' => 'DESC'])
+            ->paginate(15, false, ['page' => $page]);
 
 
         return $this->fetch('index', ['article_list' => $article_list,'grand_list' => $grand_list,  'category_list' => $category_list, 'cid' => $cid, 'keyword' => $keyword]);
