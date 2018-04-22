@@ -288,4 +288,30 @@ class Ueditor extends Controller
 
         return $files;
     }
+    public function actionAjaxDel(){
+        $file = $this->request->Param('path');
+        $firstchar = substr($file,0,1);
+        if(in_array($firstchar, array('/','\\'))){
+            $file = substr($file,1);
+        }
+
+        try {
+            if($file && file_exists($file)){
+                unlink($file);
+                $var['code'] = 1;
+                $var['state'] = 'success';
+                $var['message'] = '删除完成';
+            } else{
+                $var['code'] = 0;
+                $var['state'] = 'error';
+                $var['message'] = '删除失败，未找到'.$file;
+            }
+
+        } catch (Exception $e){
+            $var['code'] = 0;
+            $var['state'] = 'error';
+            $var['message'] = '删除失败：'.$e->getMessage();
+        }
+        return json($var);
+    }
 }
