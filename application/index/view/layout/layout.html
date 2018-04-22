@@ -566,15 +566,14 @@
         navActive();
         changeCode();
     });
-
+    // hover 名字切换微信二维码
     function changeCode() {
-
         $('.kf-on').on('mouseover',function () {
             var path='__STATIC__/images/';
             var name=$(this).data('name');
             path+=name;
             console.log(path)
-            //src 先清空而后设置值
+
             $('.wxcode img').attr('src',path)
         })
     }

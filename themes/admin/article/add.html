@@ -43,7 +43,7 @@
                         <label class="layui-form-label">作品作者</label>
                         <div class="layui-input-block">
                             <select name="author" lay-verify="required">
-                                <option value=" ">-请选择-</option>
+                                <option value="无">-请选择-</option>
                                 {foreach name="authList" item="auth"}
                                 <option value="{$auth.id}">{$auth.name}</option>
                                 {/foreach}
