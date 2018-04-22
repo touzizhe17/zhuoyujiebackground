@@ -99,7 +99,7 @@
                     <div style="line-height:1.5em;text-align:center;">
                         <!--如果是已经出售了，就显示已结缘，否则显示价格-->
                         {if condition="true"}
-                        <span style="color:#F60" class="jiage">已结缘</span>
+                        <span style="color:#F60" class="jiage">{php}echo $zuopin['isbonds']==1 ? '已出售' : '未出售';{/php}</span>
                         {else/}
                         <span style="color:#fff">¥{$zuopin.jmoney}</span>
                         {/if}
