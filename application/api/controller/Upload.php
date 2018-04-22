@@ -55,4 +55,31 @@ class Upload extends Controller
 
         return json($result);
     }
+    public function uploadvideo()
+    {
+        $config = [
+            'size' => 2097152,
+            'ext'  => 'video,file'
+        ];
+
+        $file = $this->request->file('file');
+
+        $upload_path = str_replace('\\', '/', ROOT_PATH . 'public/uploads');
+        $save_path   = '/uploads/';
+        $info        = $file->validate($config)->move($upload_path);
+
+        if ($info) {
+            $result = [
+                'error' => 0,
+                'url'   => str_replace('\\', '/', $save_path . $info->getSaveName())
+            ];
+        } else {
+            $result = [
+                'error'   => 1,
+                'message' => $file->getError()
+            ];
+        }
+
+        return json($result);
+    }
 }

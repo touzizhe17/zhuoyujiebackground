@@ -66,7 +66,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
     });
     layui.upload({
         elem:$("#videourl"),
-        url: "/index.php/api/upload/upload",
+        url: "/index.php/api/upload/uploadvideo",
         type: 'video',
         ext: 'video|audio|file',
         success: function (data) {
