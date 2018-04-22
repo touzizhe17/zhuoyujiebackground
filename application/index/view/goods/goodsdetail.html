@@ -66,7 +66,6 @@
     </div>
     <div class="clear"></div>
         <!--该作品 信息 -->
-        {if condition='$zuopin.cid eq 0'}
     <div class="atit" id="btit1" style="margin-top:10px;">
         <h3><span>{$authinfo.name}简介</span></h3>
     </div>
@@ -79,8 +78,7 @@
             <p>简介：{$authinfo.introduction}</p>
         </div>
     </div>
-    {/if}
-
+        <!--该作品 信息end -->
 
     <div class="atit" id="btit2"><a onclick="loadMore()" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
     <div class="goodslist">

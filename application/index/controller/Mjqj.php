@@ -18,7 +18,12 @@ class Mjqj extends Controller
     }
     public function index()
     {
-        $zuopin_list = $this->article_model->where('cid',3)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => 1]);
+        //根据分类ID ,属于作民间巨匠
+        $zuopin_list = $this->article_model
+            ->where('cid',3)
+            ->order(['publish_time' => 'DESC'])
+            ->paginate(15, false, ['page' => 1]);
+
         $this->assign('zuopin_list',$zuopin_list);
         return $this->fetch('mjqj');
     }

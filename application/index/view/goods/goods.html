@@ -26,8 +26,10 @@
             <h4 class="smfl"><span>玉雕师</span></h4>
             <!--玉雕师名字-->
             <ul class="cplzul">
-                <li><a class="current" href="/Goods/?meterid=0&pi=0&masterid=0">全 部</a></li>
-                <li><a href="/Goods/?meterid=0&pi=0&masterid=13">刘东</a></li>
+                <li><a class="current" href="#">全 部</a></li>
+                {foreach name='authList' item='auth'}
+                <li><a href="{:url('index/graver/graverDetail',['id'=>$auth.id])}">{$auth.name}</a></li>
+                {/foreach}
             </ul>
             <!--玉雕师作品-->
             <div class="clear"></div>
@@ -97,11 +99,12 @@
                             src="__UPLOAD__/{$zuopin.c}"/></a>
                     <div class="zzzpw">
                         <div class="zzup">
-                            <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank">吉祥如意</a>
-                            <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank">作者：民间巧匠</a>
+                            <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank">{$zuopin.title}</a>
+                            <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank">作者：{$zuopin.name}</a>
                         </div>
                         <div class="zzupb">
                             <span class="jiage">¥{$zuopin.jmoney}</span>
+
                         </div>
                     </div>
                 </div>
@@ -114,9 +117,11 @@
                         <img src="__STATIC__/images/bad.png" alt="">
                     </a>1000
                 </div>
+
                 <i>{$zuopin.materials}</i>
             </li>
             {/foreach}
+
         </ul>
 
 
