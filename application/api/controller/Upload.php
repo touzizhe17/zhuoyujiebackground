@@ -59,7 +59,7 @@ class Upload extends Controller
     {
         $config = [
             'size' => 2097152,
-            'ext'  => 'video,file'
+            'ext'  => 'flv,swf,mkv,avi,rm,rmvb,mpeg,mpg,ogg,ogv,mov,wmv,mp4,webm,mp3,wav,mid'
         ];
 
         $file = $this->request->file('file');

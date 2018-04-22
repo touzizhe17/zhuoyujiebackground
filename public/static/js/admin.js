@@ -68,7 +68,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
         elem:$("#videourl"),
         url: "/index.php/api/upload/uploadvideo",
         type: 'video',
-        ext: 'video|audio|file',
+        ext: 'flv|swf|mkv|avi|rm|rmvb|mpeg|mpg|ogg|ogv|mov|wmv|mp4|webm|mp3|wav|mid',
         success: function (data) {
             if (data.error === 0) {
                 document.getElementById('video_url').value = data.url;
