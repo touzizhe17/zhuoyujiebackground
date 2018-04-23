@@ -4,6 +4,7 @@ namespace app\api\controller;
 use think\Controller;
 use org\UeditorUpload;
 use think\Session;
+use app\common\model\Article as ArticleModel;
 
 /**
  * Ueditor编辑器统一上传接口
@@ -14,11 +15,12 @@ class Ueditor extends Controller
 {
     protected $config;
     protected $action;
+    protected $article_model;
 
     protected function _initialize()
     {
         parent::_initialize();
-
+        $this->article_model  = new ArticleModel();
         if(!Session::get('admin_id')){
             $result = [
                 'state' => 'ERROR'
@@ -287,5 +289,40 @@ class Ueditor extends Controller
         }
 
         return $files;
+    }
+    public function actionAjaxDel(){
+        $file = $this->request->Param('path');
+        $id = $this->request->Param('id');
+//        dump($id);die();
+        $firstchar = substr($file,0,1);
+        if(in_array($firstchar, array('/','\\'))){
+            $file = substr($file,1);
+        }
+
+
+//        dump($upload_path);die();
+//        $filesd=dirname(__FILE__) . '/../../../public/uploads/20180422/1524388599524010.png';
+//        unlink($filesd);
+        try {
+            $upload_path = str_replace('\\', '/', ROOT_PATH . '/');
+            $file=$upload_path.$file;
+            if($file && file_exists($file)&&$this->article_model->where('id', $id)
+                    ->update(['photo' => '']) !==false){
+                unlink($file);
+                $var['code'] = 1;
+                $var['state'] = 'success';
+                $var['message'] = '删除完成';
+            } else{
+                $var['code'] = 0;
+                $var['state'] = 'error';
+                $var['message'] = '删除失败，未找到'.$file;
+            }
+
+        } catch (Exception $e){
+            $var['code'] = 0;
+            $var['state'] = 'error';
+            $var['message'] = '删除失败：'.$e->getMessage();
+        }
+        return json($var);
     }
 }

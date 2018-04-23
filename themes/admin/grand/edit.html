@@ -6,7 +6,7 @@
         <ul class="layui-tab-title">
             <li class=""><a href="{:url('admin/grand/index')}">玉雕大师管理</a></li>
             <li class=""><a href="{:url('admin/grand/add')}">添加玉雕大师</a></li>
-            <li class="layui-this">编辑产品</li>
+            <li class="layui-this">编辑玉雕大师</li>
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
@@ -33,7 +33,7 @@
                         <label class="layui-form-label">缩略图</label>
                         <div class="layui-input-block">
                             <input type="text" name="thumb" value="{$article.thumb}" class="layui-input layui-input-inline" id="thumb">
-                            <input type="file" name="file" class="layui-upload-file">
+                            <input type="file" name="file" class="layui-upload-file" id="picthumb">
                         </div>
                     </div>
                     <div class="layui-form-item">

@@ -24,19 +24,59 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
 /**
  * 通用单图上传
  */
-layui.upload({
-    url: "/index.php/api/upload/upload",
-    type: 'image',
-    ext: 'jpg|png|gif|bmp',
-    success: function (data) {
-        if (data.error === 0) {
-            document.getElementById('thumb').value = data.url;
-        } else {
-            layer.msg(data.message);
+    layui.upload({
+        elem:"#videopicurl",
+        url: "/index.php/api/upload/upload",
+        type: 'image',
+        ext: 'jpg|png|gif|bmp',
+        success: function (data) {
+            console.log(1);
+            if (data.error === 0) {
+                document.getElementById('video_pic_url').value = data.url;
+            } else {
+                layer.msg(data.message);
+            }
         }
-    }
-});
-
+    });
+    // layui.upload({
+    //     elem:$(".videopicurl"),
+    //     url: "/index.php/api/upload/upload",
+    //     type: 'image',
+    //     ext: 'jpg|png|gif|bmp',
+    //     success: function (data) {
+    //         if (data.error === 0) {
+    //             document.getElementById('video_pic_url').value = data.url;
+    //         } else {
+    //             layer.msg(data.message);
+    //         }
+    //     }
+    // });
+    layui.upload({
+        elem:$("#picthumb"),
+        url: "/index.php/api/upload/upload",
+        type: 'image',
+        ext: 'jpg|png|gif|bmp',
+        success: function (data) {
+            if (data.error === 0) {
+                document.getElementById('thumb').value = data.url;
+            } else {
+                layer.msg(data.message);
+            }
+        }
+    });
+    layui.upload({
+        elem:$("#videourl"),
+        url: "/index.php/api/upload/uploadvideo",
+        type: 'video',
+        ext: 'flv|swf|mkv|avi|rm|rmvb|mpeg|mpg|ogg|ogv|mov|wmv|mp4|webm|mp3|wav|mid',
+        success: function (data) {
+            if (data.error === 0) {
+                document.getElementById('video_url').value = data.url;
+            } else {
+                layer.msg(data.message);
+            }
+        }
+    });
 /**
  * 通用日期时间选择
  */
@@ -117,7 +157,8 @@ $('.ajax-delete').on('click', function () {
         yes: function (index) {
             $.ajax({
                 url: _href,
-                type: "get",
+                type: "post",
+                data:{'path':'','name':''},
                 success: function (info) {
                     if (info.code === 1) {
                         setTimeout(function () {
@@ -152,6 +193,36 @@ $('#clear-cache').on('click', function () {
             }
         });
     }
+
+    return false;
+});
+$('#photo-container').on('click', '.remove-photo-btn', function () {
+    // $(this).parent('.photo-list').remove();
+    var _href = "/index.php/api/ueditor/actionAjaxDel";
+    var _this=this;
+
+    var path=$(_this).prev('input[type="text"]').val();
+    layer.open({
+        shade: false,
+        content: '确定删除？',
+        btn: ['确定', '取消'],
+        yes: function (index) {
+            $.ajax({
+                url: _href,
+                type: "post",
+                data:{"path":path,"name":'','id':$("input[name='id']").val()},
+                success: function (info) {
+                    if (info.code === 1) {
+                        setTimeout(function () {
+                            $(_this).parent('.photo-list').remove();
+                        }, 1000);
+                    }
+                    layer.msg(info.message);
+                }
+            });
+            layer.close(index);
+        }
+    });
 
     return false;
 });
