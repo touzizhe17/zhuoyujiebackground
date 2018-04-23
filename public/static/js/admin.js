@@ -35,7 +35,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
             if (data.error === 0) {
                 document.getElementById('video_pic_url').value = data.url;
             } else {
-                // layer.msg(data.message);
+                layer.msg(data.message);
             }
         }
     });
@@ -49,7 +49,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
             if (data.error === 0) {
                 document.getElementById('thumb').value = data.url;
             } else {
-                // layer.msg(data.message);
+                layer.msg(data.message);
             }
         }
     });
@@ -65,7 +65,6 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
             if (data.error === 0) {
                 document.getElementById('video_url').value = data.url;
             } else {
-                console.log(data);
                 layer.msg(data.message);
             }
         }
