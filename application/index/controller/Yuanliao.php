@@ -24,7 +24,7 @@ class Yuanliao extends Controller
         $zuopin_list = $this->article_model
             ->where('cid',2)
             ->order(['publish_time' => 'DESC'])
-            ->paginate(15, false, ['page' => 1]);
+            ->paginate(20);
 
         $this->assign('zuopin_list',$zuopin_list);
         return $this->fetch('yuanliao');

@@ -69,7 +69,7 @@
                             <td>{php}echo $vo['status']==1 ? '已审核' : '未审核';{/php}</td>
                             <td>{php}echo $vo['isbonds']==1 ? '已出售' : '未出售';{/php}</td>
                             <td>{$vo.publish_time}</td>
-                            <td>
+                            <td style="min-width: 200px">
                                 <a href="{:url('admin/article/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
                                 <a href="{:url('admin/article/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
                             </td>

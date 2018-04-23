@@ -55,21 +55,17 @@ class Upload extends Controller
 
         return json($result);
     }
-    public function uploadvideo()
+
+    public function uploadVideo()
     {
-        header('Content-Type:text/html; charset=utf-8');
-        $config = [
-            'size' => 1232097152,
-            'ext'  => 'flv,swf,mkv,avi,rm,rmvb,mpeg,mpg,ogg,ogv,mov,wmv,mp4,webm,mp3,wav,mid'
-        ];
 
         $file = $this->request->file('file');
 
-        $upload_path = str_replace('\\', '/', ROOT_PATH . 'public/uploads');
-        $save_path   = '/uploads/';
-//        dump($upload_path);
-//        dump($save_path);
-        $info        = $file->validate($config)->move($upload_path);
+        $upload_path = str_replace('\\', '/', ROOT_PATH . 'public/uploads/videos');
+
+        $save_path   = '/uploads/videos/';
+
+        $info   = $file->move($upload_path);
 
         if ($info) {
             $result = [

@@ -24,6 +24,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
 /**
  * 通用单图上传
  */
+    //视频截图
     layui.upload({
         elem:"#videopicurl",
         url: "/index.php/api/upload/upload",
@@ -34,23 +35,11 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
             if (data.error === 0) {
                 document.getElementById('video_pic_url').value = data.url;
             } else {
-                layer.msg(data.message);
+                // layer.msg(data.message);
             }
         }
     });
-    // layui.upload({
-    //     elem:$(".videopicurl"),
-    //     url: "/index.php/api/upload/upload",
-    //     type: 'image',
-    //     ext: 'jpg|png|gif|bmp',
-    //     success: function (data) {
-    //         if (data.error === 0) {
-    //             document.getElementById('video_pic_url').value = data.url;
-    //         } else {
-    //             layer.msg(data.message);
-    //         }
-    //     }
-    // });
+    //头像
     layui.upload({
         elem:$("#uploadthumb"),
         url: "/index.php/api/upload/upload",
@@ -60,15 +49,18 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
             if (data.error === 0) {
                 document.getElementById('thumb').value = data.url;
             } else {
-                layer.msg(data.message);
+                // layer.msg(data.message);
             }
         }
     });
+    //视频
     layui.upload({
-        elem:$("#videourl"),
-        url: "/index.php/api/upload/uploadvideo",
-        type: 'video',
-        ext: 'flv|swf|mkv|avi|rm|rmvb|mpeg|mpg|ogg|ogv|mov|wmv|mp4|webm|mp3|wav|mid',
+        elem:'#videourl',
+        url: "/index.php/api/upload/uploadVideo",
+        method:'post',
+        before:function (input) {
+            console.log('--------')
+        },
         success: function (data) {
             if (data.error === 0) {
                 document.getElementById('video_url').value = data.url;
