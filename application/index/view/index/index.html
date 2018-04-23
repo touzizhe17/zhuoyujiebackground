@@ -32,28 +32,6 @@
     });
 </script>
 <!--百叶窗切换-->
-<style>
-    .yybut .icon-box{
-        vertical-align: top;
-        display: inline-block;
-        box-sizing: border-box;
-        height: 40px;
-        width: 40px;
-        line-height: 40px;
-        text-align: center;
-        line-height: 40px;
-        padding-top: 12px;
-        color: #fff;
-
-    }
-    .yybut .detail{
-        vertical-align: top;
-        display: inline-block;
-        height: 40px;
-        color: #fff;
-        margin-right: 30px;
-    }
-</style>
 
 <div class="clear"></div>
 <div class="count">
@@ -67,7 +45,7 @@
         {foreach name="article_list" item="vo"}
         <!--item-->
         <li class="" id="goods_32034">
-            {if condition="true"}
+            {if condition="$vo.video_url !=''"}
             <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
             {/if}
             <a href="{:url('index/goods/goodsDetail',['id'=>$vo.id])}" target="_blank" class="daaimg" target="_blank">
@@ -127,38 +105,5 @@
     </div>
 </div>
 
-<script>
-    function goods(dom,flag) {
-        var img=$(dom).children();
-        var src=img.attr('src');
-        //是否点赞
-        var isGood=false;
-        var isBad=false;
-        if(flag){
-            //赞
-            if(src==='/public/index/images/good.png'){
-                //点赞
-                isGood=true;
-                img.attr('src','/public/index/images/good_red.png')
-            }else{
-                //取消点赞
-                isGood=false;
-                img.attr('src','/public/index/images/good.png')
-            }
+<script src="__STATIC__/js/me.js"></script>
 
-        }else{
-            if(src==='/public/index/images/bad.png'){
-                //踩
-                isBad=false;
-                img.attr('src','/public/index/images/bad_red.png')
-            }else{
-                //取消踩
-                isBad=true;
-                img.attr('src','/public/index/images/bad.png')
-            }
-        }
-
-        //TODO 发送ajax请求去后台统计用户点赞
-
-    }
-</script>

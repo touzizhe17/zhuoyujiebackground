@@ -22,7 +22,7 @@ class Graver extends Controller
 
     public function index()
     {
-        $authList=$this->grand_model->field('id,name,thumb')->select();
+        $authList=$this->grand_model->field('id,name,thumb')->paginate(30);
         $this->assign('authList',$authList);
         return $this->fetch('graver');
     }

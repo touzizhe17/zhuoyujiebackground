@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">简介</label>
+                        <label class="layui-form-label">作者简介</label>
                         <div class="layui-input-block">
                             <textarea name="introduction" placeholder="（选填）请输入简介" class="layui-textarea"></textarea>
                         </div>
@@ -75,22 +75,22 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">作品视频</label>
                         <div class="layui-input-block">
-                            <input type="text" name="video_url" value="" class="layui-input layui-input-inline" id="">
-                            <input type="file" name="file" class="layui-upload-file" accept="video/*">
+                            <input type="text" name="video_url" value="" class="layui-input layui-input-inline" id="video_url">
+                            <input type="file" name="file" class="layui-upload-file" lay-type="video" id="videourl" accept="video/*">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">视频截图</label>
                         <div class="layui-input-block">
-                            <input type="text" name="video_pic_url" value="" class="layui-input layui-input-inline" >
-                            <input type="file" name="file" class="layui-upload-file" >
+                            <input type="text" name="video_pic_url" value="" class="layui-input layui-input-inline" id="video_pic_url" >
+                            <input type="file" name="file" class="layui-upload-file " id="videopicurl">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">缩略图</label>
                         <div class="layui-input-block">
                             <input type="text" name="thumb" value="" class="layui-input layui-input-inline" id="thumb">
-                            <input type="file" name="file" class="layui-upload-file">
+                            <input type="file" name="file" class="layui-upload-file" id="picthumb">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -98,6 +98,13 @@
                         <div class="layui-input-block">
                             <button type="button" id="upload-photo-btn" class="layui-btn">上传图集</button>
                             <div id="photo-container"></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">出售状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="isbonds" value="1" title="已出售" checked="checked">
+                            <input type="radio" name="isbonds" value="0" title="未出售">
                         </div>
                     </div>
                     <div class="layui-form-item">

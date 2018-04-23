@@ -49,20 +49,14 @@ CREATE TABLE `os_article` (
   `goods_num` varchar(11) DEFAULT '' COMMENT '商品货号',
   `introduction` varchar(255) DEFAULT '' COMMENT '简介',
   `materials` varchar(255) DEFAULT '' COMMENT '材质',
-  `wanningtip` varchar(255) DEFAULT '' COMMENT '温馨提示',
   `jmoney` varchar(255) DEFAULT '' COMMENT '结缘价',
-  `pro_size` varchar(255) DEFAULT '' COMMENT '尺寸',
-  `pro_weight` varchar(255) DEFAULT '' COMMENT '重量',
-  `pro_color` varchar(255) DEFAULT '' COMMENT '颜色',
-  `pro_structure` varchar(255) DEFAULT '' COMMENT '结构',
-  `pro_oiliness` varchar(255) DEFAULT '' COMMENT '油性',
-  `pro_fat` varchar(255) DEFAULT '' COMMENT '脂份',
-  `pro_defect` varchar(255) DEFAULT '' COMMENT '瑕疵',
-  `word_meaning` varchar(255) DEFAULT '' COMMENT '文字寓意',
   `content` longtext COMMENT '内容',
   `author` varchar(20) DEFAULT '' COMMENT '作者ID',
+  `isbonds` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '结缘 0 没有结缘  1 已经结缘',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '状态 0 待审核  1 审核',
   `reading` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '阅读量',
+  `video_pic_url` varchar(255) DEFAULT '' COMMENT '作品视频缩略图',
+  `video_url` varchar(255) DEFAULT '' COMMENT '作品视频',
   `thumb` varchar(255) DEFAULT '' COMMENT '缩略图',
   `photo` text COMMENT '图集',
   `is_top` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否置顶  0 不置顶  1 置顶',
@@ -76,7 +70,6 @@ CREATE TABLE `os_article` (
 -- ----------------------------
 -- Records of os_article
 -- ----------------------------
-INSERT INTO `os_article` VALUES ('1', '1','1', '测试产品内容', '', '', '测试', '测试', '测试', '测试', '测试', '测试', '测试', '', '', '', '', '<p>测试内容</p>', '测试', '1', '0', '', null, '0', '0', '0', '2017-04-11 14:10:10', '2017-04-11 14:09:45');
 
 -- ----------------------------
 -- Table structure for os_auth_group
@@ -243,13 +236,11 @@ INSERT INTO `os_category` VALUES ('3', '民间巨匠', '', '', '', '', '', '', '
 DROP TABLE IF EXISTS `os_grand`;
 CREATE TABLE `os_grand` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '大师ID',
-  `cid` smallint(5) unsigned NOT NULL COMMENT '分类ID',
   `name` varchar(255) NOT NULL DEFAULT '' COMMENT '姓名',
   `introduction` varchar(255) DEFAULT '' COMMENT '简介',
   `content` longtext COMMENT '内容',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '状态 0 冻结  1 正常',
   `thumb` varchar(255) DEFAULT '' COMMENT '缩略图',
-  `photo` text COMMENT '图集',
   `is_top` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否置顶  0 不置顶  1 置顶',
   `is_recommend` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否推荐  0 不推荐  1 推荐',
   `sort` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
@@ -261,7 +252,7 @@ CREATE TABLE `os_grand` (
 -- ----------------------------
 -- Records of os_grand
 -- ----------------------------
-INSERT INTO `os_grand` VALUES ('2', '1', '测试', '测试', '<p>测试</p>', '1', '12321', null, '0', '0', '0', '2018-04-11 10:20:03', '2018-04-11 10:19:34');
+INSERT INTO `os_grand` VALUES ('2','测试', '测试', '<p>测试</p>', '1', '12321', '0', '0', '0', '2018-04-11 10:20:03', '2018-04-11 10:19:34');
 
 -- ----------------------------
 -- Table structure for os_link

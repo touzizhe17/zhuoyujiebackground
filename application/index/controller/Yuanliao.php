@@ -20,7 +20,12 @@ class Yuanliao extends Controller
     }
     public function index()
     {
-        $zuopin_list = $this->article_model->where('cid',2)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => 1]);
+        //根据分类ID ,属于作原石玉料
+        $zuopin_list = $this->article_model
+            ->where('cid',2)
+            ->order(['publish_time' => 'DESC'])
+            ->paginate(20);
+
         $this->assign('zuopin_list',$zuopin_list);
         return $this->fetch('yuanliao');
     }
