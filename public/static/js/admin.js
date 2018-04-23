@@ -73,6 +73,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
             if (data.error === 0) {
                 document.getElementById('video_url').value = data.url;
             } else {
+                console.log(data);
                 layer.msg(data.message);
             }
         }
@@ -217,6 +218,7 @@ $('#photo-container').on('click', '.remove-photo-btn', function () {
                             $(_this).parent('.photo-list').remove();
                         }, 1000);
                     }
+                    console.log(info.message);
                     layer.msg(info.message);
                 }
             });

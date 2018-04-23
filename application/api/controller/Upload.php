@@ -57,8 +57,9 @@ class Upload extends Controller
     }
     public function uploadvideo()
     {
+        header('Content-Type:text/html; charset=utf-8');
         $config = [
-            'size' => 2097152,
+            'size' => 1232097152,
             'ext'  => 'flv,swf,mkv,avi,rm,rmvb,mpeg,mpg,ogg,ogv,mov,wmv,mp4,webm,mp3,wav,mid'
         ];
 
@@ -66,6 +67,8 @@ class Upload extends Controller
 
         $upload_path = str_replace('\\', '/', ROOT_PATH . 'public/uploads');
         $save_path   = '/uploads/';
+//        dump($upload_path);
+//        dump($save_path);
         $info        = $file->validate($config)->move($upload_path);
 
         if ($info) {
