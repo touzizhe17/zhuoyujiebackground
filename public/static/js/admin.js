@@ -52,7 +52,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
     //     }
     // });
     layui.upload({
-        elem:$("#picthumb"),
+        elem:$("#uploadthumb"),
         url: "/index.php/api/upload/upload",
         type: 'image',
         ext: 'jpg|png|gif|bmp',
