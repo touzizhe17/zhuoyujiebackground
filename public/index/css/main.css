@@ -43,6 +43,7 @@ a {
     width: 1200px;
     height: auto;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .topinfo {
@@ -2013,7 +2014,7 @@ h4.timeboxs, div.arlock {
     background: url(../images/hsjtdasc.png) center left no-repeat;
 }
 
-.cplispage {
+.pagination {
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -2022,27 +2023,21 @@ h4.timeboxs, div.arlock {
     color: #333;
 }
 
-.cplispage a {
-    display: inline-block;
-    padding: 0px 5px;
-    border: 1px solid #CCC;
+.pagination li {
+     display: inline;
+     padding: 3px 7px;
+     border: 1px solid #CCC;
+     font-size: 12px;
+     line-height: 23px;
+     margin: 3px 2px;
+ }
+.pagination li a{
     color: #333;
-    font-size: 12px;
-    height: 23px;
-    line-height: 23px;
-    margin: 3px 2px;
 }
 
-.cplispage .current {
-    display: inline-block;
-    padding: 0px 7px;
-    border: 1px solid #CCC;
-    font-size: 12px;
-    height: 23px;
-    line-height: 23px;
-    margin: 3px 2px;
-    background: none repeat scroll 0% 0% #1E0904;
-    color: #FFF;
+.pagination .active {
+    background-color: #333;
+    color: #fff;
 }
 
 .cplzulzcz li {
@@ -2511,3 +2506,4 @@ h4.timeboxs, div.arlock {
 }
 
 /*点赞end*/
+

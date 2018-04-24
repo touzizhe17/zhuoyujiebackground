@@ -19,14 +19,17 @@ class Goods extends Controller
 
     public function index()
     {
-        //根据分类ID ,属于作品类
+        //根据分类ID ,属于作品类 ,每页20
         $zuopin_list = $this->article_model
             ->alias('a')
             ->where('a.cid',1)
             ->field('a.*,g.thumb c,g.id aid,g.name name')
             ->join('grand g','a.author=g.id','LEFT')
             ->order(['a.publish_time' => 'DESC'])
-            ->paginate(20);
+            ->paginate(2);
+        $page=$zuopin_list->render();
+
+        $this->assign('page',$page);
 
         $this->assign('zuopin_list',$zuopin_list);
         //左边栏，所有玉雕师
