@@ -36,7 +36,7 @@ class Article extends AdminBase
     public function index($cid = 0, $keyword = '', $page = 1)
     {
         $map   = [];
-        $field = 'id,title,cid,materials,isbonds,author,reading,status,publish_time,sort';
+        $field = 'id,title,cid,isbonds,author,reading,status,publish_time,sort,is_recommend';
 
         if ($cid > 0) {
             $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
@@ -48,7 +48,14 @@ class Article extends AdminBase
             $map['title'] = ['like', "%{$keyword}%"];
         }
 
-        $article_list  = $this->article_model->alias('a')->field('a.*,g.name')->join('grand g','a.author=g.id','LEFT')->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+        $article_list  = $this->article_model
+            ->alias('a')
+            ->field('a.*,g.name')
+            ->join('grand g','a.author=g.id','LEFT')
+            ->where($map)
+            ->order(['publish_time' => 'DESC'])
+            ->paginate(15, false, ['page' => $page]);
+
         $category_list = $this->category_model->column('name', 'id');
 
         return $this->fetch('index', ['article_list' => $article_list, 'category_list' => $category_list, 'cid' => $cid, 'keyword' => $keyword]);
@@ -61,8 +68,15 @@ class Article extends AdminBase
     public function add()
     {
         $grand=new GrandModel();
+        $material=db('materials')->select();
+
+        $this->assign('materials',$material);
+
+
         $authList=$grand->field('id,name')->select();
+
         $this->assign('authList',$authList);
+
         return $this->fetch();
     }
 
@@ -94,6 +108,9 @@ class Article extends AdminBase
      */
     public function edit($id)
     {
+        $material=db('materials')->select();
+
+        $this->assign('materials',$material);
         //文章
         $article = $this->article_model->find($id);
         //作者

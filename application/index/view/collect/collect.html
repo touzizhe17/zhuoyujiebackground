@@ -16,7 +16,11 @@
                             <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank">作者：{$zuopin.name}</a>
                         </div>
                         <div class="zzupb">
-                            <span class="jiage">¥{$zuopin.jmoney}</span>
+                            {if condition="$zuopin.jmoney!=''"}
+                            <span class="jiage">¥{$zuopin.jmoney}元</span>
+                            {else /}
+                            <span class="jiage">议价</span>
+                            {/if}
 
                         </div>
                     </div>

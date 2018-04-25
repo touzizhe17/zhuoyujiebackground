@@ -44,9 +44,6 @@ class Index extends  Controller
 
     }
 
-    public function dongtai()
-    {
-        return $this->fetch();
-    }
+
 
 }

@@ -7,7 +7,7 @@
         <a title="民间巧匠" href="{:url('index/mjqj/index')}" data-shutter-title="民间巧匠"><img src="__STATIC__/picture/mjqj.jpg" alt="#"></a>
         <a title="玉石原料" href="{:url('index/yuanliao/index')}" data-shutter-title="玉石原料"><img src="__STATIC__/picture/yuanliao.jpg" alt="#"></a>
         <a title="收藏推荐" href="{:url('index/collect/index')}" data-shutter-title="收藏推荐"><img src="__STATIC__/picture/collect.jpg" alt="#"></a>
-        <a title="动态" href="{:url('index/dongtai/index')}" data-shutter-title="动态"><img src="__STATIC__/picture/dongtai.jpg" alt="#"></a>
+        <a title="动态" href="{:url('index/about/dongtai')}" data-shutter-title="动态"><img src="__STATIC__/picture/dongtai.jpg" alt="#"></a>
     </div>
     <ul class="shutter-btn">
         <li class="prev"></li>
@@ -63,7 +63,11 @@
                         <a href="{:url('index/graver/graverDetail',['id'=>$vo.aid])}" target="_blank">作者：{$vo.name}</a>
                     </div>
                     <div class="zzupb">
-                        <span class="jiage">{$vo.jmoney}</span>
+                        {if condition="$vo.jmoney!=''"}
+                        <span class="jiage">¥{$vo.jmoney}元</span>
+                        {else /}
+                        <span class="jiage">议价</span>
+                        {/if}
                     </div>
                 </div>
             </div>

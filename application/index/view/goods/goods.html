@@ -1,6 +1,6 @@
 ﻿<div class="count">
     <div class="cplnav">
-        <h3 class="cplqbfl"><span><a href="/Goods/">作品筛选</a></span></h3>
+        <h3 class="cplqbfl"><span>作品筛选</span></h3>
         <div class="cplulw">
             <h4 class="smfl"><span>玉雕师</span></h4>
             <!--玉雕师名字-->
@@ -13,37 +13,22 @@
             <!--玉雕师作品-->
             <div class="clear"></div>
             <h4 class="smfl"><span>价 格</span></h4>
-            <ul class="cplzul cplzulzsy">
-                <li><a class="current" href="/Goods/?meterid=0&pi=0&masterid=0">全 部</a></li>
-                <li><a href="/Goods/?meterid=0&pi=1&masterid=0">0-3000</a></li>
-                <li><a href="/Goods/?meterid=0&pi=2&masterid=0">3000-5000</a></li>
-                <li><a href="/Goods/?meterid=0&pi=3&masterid=0">5000-10000</a></li>
-                <li><a href="/Goods/?meterid=0&pi=4&masterid=0">10000-20000</a></li>
-                <li><a href="/Goods/?meterid=0&pi=5&masterid=0">20000-50000</a></li>
-                <li><a href="/Goods/?meterid=0&pi=6&masterid=0">50000-999999</a></li>
+            <ul class="cplzul cplzulzsy" id="price">
+                <li><a class="current" href="{:url('index/goods/index')}">全 部</a></li>
+                <li><a href="{:url('index/goods/index',['price'=>1])}">0-3000</a></li>
+                <li><a href="{:url('index/goods/index',['price'=>2])}">3000-5000</a></li>
+                <li><a href="{:url('index/goods/index',['price'=>3])}">5000-10000</a></li>
+                <li><a href="{:url('index/goods/index',['price'=>4])}">10000-20000</a></li>
+                <li><a href="{:url('index/goods/index',['price'=>5])}">20000-50000</a></li>
+                <li><a href="{:url('index/goods/index',['price'=>6])}">50000-999999</a></li>
             </ul>
             <div class="clear"></div>
             <h4 class="smfl"><span>材 质</span></h4>
-            <ul class="cplzul cplzulzsy cplzulzcz">
-                <li><a class="current" href="/Goods/?meterid=0&pi=0&masterid=0">全 部</a></li>
-                <li><a href="/Goods/?meterid=1&pi=0&masterid=0">翡翠</a></li>
-                <li><a href="/Goods/?meterid=2&pi=0&masterid=0">琥珀</a></li>
-                <li><a href="/Goods/?meterid=3&pi=0&masterid=0">玛瑙</a></li>
-                <li><a href="/Goods/?meterid=4&pi=0&masterid=0">黄龙玉</a></li>
-                <li><a href="/Goods/?meterid=5&pi=0&masterid=0">和田玉</a></li>
-                <li><a href="/Goods/?meterid=7&pi=0&masterid=0">南红</a></li>
-                <li><a href="/Goods/?meterid=9&pi=0&masterid=0">水晶</a></li>
-                <li><a href="/Goods/?meterid=10&pi=0&masterid=0">水沫玉</a></li>
-                <li><a href="/Goods/?meterid=11&pi=0&masterid=0">戈壁玉</a></li>
-                <li><a href="/Goods/?meterid=12&pi=0&masterid=0">战国红</a></li>
-                <li><a href="/Goods/?meterid=13&pi=0&masterid=0">三彩玉</a></li>
-                <li><a href="/Goods/?meterid=14&pi=0&masterid=0">玉髓</a></li>
-                <li><a href="/Goods/?meterid=15&pi=0&masterid=0">碧玉</a></li>
-                <li><a href="/Goods/?meterid=16&pi=0&masterid=0">金丝玉</a></li>
-                <li><a href="/Goods/?meterid=17&pi=0&masterid=0">岫玉</a></li>
-                <li><a href="/Goods/?meterid=20&pi=0&masterid=0">青金石</a></li>
-                <li><a href="/Goods/?meterid=21&pi=0&masterid=0">绿松石</a></li>
-                <li><a href="/Goods/?meterid=0&pi=0&masterid=0">其它</a></li>
+            <ul class="cplzul cplzulzsy cplzulzcz" id="mt">
+                <li><a class="current" href="{:url('index/goods/index')}">全 部</a></li>
+                {foreach name='materials' item='m'}
+                <li><a  href="{:url('index/goods/index',['mt'=>$m.id])}">{$m.name}</a></li>
+                {/foreach}
             </ul>
             <div class="clear"></div>
         </div>
@@ -54,12 +39,12 @@
     <div class="glistw">
         <div class="dqwzhi">
             <div class="dqwzhiadd">
-                <a href="/">首页</a> <span>></span> <a href="/Goods/">作品</a> <span>></span> 全部
+                <a href="/">首页</a> <span>></span> 作品
                 <ul class="cppaix">
-                    <li><a href="/Goods/?meterid=0&pi=0&masterid=0&order=0&by=0">默认排序</a></li>
-                    <li><a href="/Goods/?meterid=0&pi=0&masterid=0&order=2&by=0">按关注</a></li>
-                    <li><a href="/Goods/?meterid=0&pi=0&masterid=0&order=1&by=0">按价格</a></li>
-                    <li><a href="/Goods/?meterid=0&pi=0&masterid=0&order=3&by=0">最新上架</a></li>
+                    <li><a href="{:url('index/goods/index',['order'=>0])}">默认排序</a></li>
+                    <li><a href="{:url('index/goods/index',['order'=>1])}">按关注</a></li>
+                    <li><a href="{:url('index/goods/index',['order'=>2])}">按价格</a></li>
+                    <li><a href="{:url('index/goods/index',['order'=>3])}">最新上架</a></li>
 
 
                 </ul>
@@ -82,7 +67,11 @@
                             <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank">作者：{$zuopin.name}</a>
                         </div>
                         <div class="zzupb">
-                            <span class="jiage">¥{$zuopin.jmoney}</span>
+                            {if condition="$zuopin.jmoney!=''"}
+                            <span class="jiage">¥{$zuopin.jmoney}元</span>
+                            {else /}
+                            <span class="jiage">议价</span>
+                            {/if}
 
                         </div>
                     </div>
@@ -103,13 +92,33 @@
 
         </ul>
         <div class="clear"></div>
-        <div style="clear:both;"></div>
-
         <!--分页代码-->
         <div>
             {$page}
         </div>
+        <div style="clear:both;"></div>
     </div>
+
 </div>
 </div>
 <script src="__STATIC__/js/me.js"></script>
+<script>
+    !function () {
+        priceActive();
+        materActive();
+    }();
+    function priceActive() {
+        var p='{$price}';
+        var dom=$('#price li a');
+
+        dom.removeClass('current');
+        dom.eq(p).addClass('current')
+    }
+    function materActive() {
+        var mt='{$mt}';
+        var dom=$('#mt li a');
+
+        dom.removeClass('current');
+        dom.eq(mt).addClass('current')
+    }
+</script>

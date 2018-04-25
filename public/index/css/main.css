@@ -2025,17 +2025,25 @@ h4.timeboxs, div.arlock {
 
 .pagination li {
      display: inline;
-     padding: 3px 7px;
-     border: 1px solid #CCC;
-     font-size: 12px;
-     line-height: 23px;
-     margin: 3px 2px;
+
  }
 .pagination li a{
     color: #333;
+    padding: 3px 7px;
+    border: 1px solid #CCC;
+    font-size: 12px;
+    line-height: 23px;
+    margin: 3px 2px;
 }
 
-.pagination .active {
+.pagination  span{
+    padding: 3px 7px;
+    border: 1px solid #CCC;
+    font-size: 12px;
+    line-height: 23px;
+    margin: 3px 2px;
+}
+.pagination .active span{
     background-color: #333;
     color: #fff;
 }
@@ -2492,6 +2500,7 @@ h4.timeboxs, div.arlock {
     text-align: center;
     line-height: 40px;
     color: #fff;
+
     vertical-align: top;
 }
 .yybut .icon-box img{
@@ -2503,6 +2512,7 @@ h4.timeboxs, div.arlock {
     height: 40px;
     color: #fff;
     margin-right: 1px;
+    font-size: 14px;
 }
 
 /*点赞end*/

@@ -32,3 +32,8 @@
 .pagination li a {display: block;text-align: center;}
 
 .photo-list {margin: 5px 0;}
+
+
+.layui-form-select dl{
+    max-height:150px;
+}

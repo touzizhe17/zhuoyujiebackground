@@ -47,7 +47,11 @@
             </div>
             <!--价格 zone -->
             <div class="pricebox">
+                {if condition="$zuopin.jmoney!=''"}
                 <p>结缘价：¥{$zuopin.jmoney}元</p>
+                {else /}
+                <p>联系客服询价</p>
+                {/if}
             </div>
             <!--如果有视频则显示视频，此处后面再调整-->
             {if condition="$zuopin.video_pic_url != ''"}
@@ -94,7 +98,7 @@
 
         <!--该作品 信息end -->
 
-    <div class="atit" id="btit2"><a onclick="loadMore()" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
+    <div class="atit" id="btit2"><a href="{:url('index/goods/index',['cid'=>$zuopin.cid])}" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
     <div class="goodslist">
         <ul class="shiydsw">
             {foreach name='zuopin_list' item='zuopin'}
@@ -114,8 +118,10 @@
                         <!--如果是已经出售了，就显示已结缘，否则显示价格-->
                         {if condition="$zuopin.isbonds==1"}
                         <span style="color:#F60" class="jiage">已出售</span>
-                        {else/}
+                        {elseif condition="$zuopin.jmoney!=''"/}
                         <span style="color:#fff">¥{$zuopin.jmoney}</span>
+                        {else/}
+                        <span style="color:#fff">议价</span>
                         {/if}
 
 
@@ -167,11 +173,5 @@
         })
     }
 
-   /**
-    * 点击更多作品，发送ajax请求，返回更多作品信息
-    */
-   function loadMore() {
-
-    }
 </script>
 
