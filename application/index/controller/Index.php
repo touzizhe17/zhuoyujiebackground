@@ -4,7 +4,6 @@ namespace app\index\controller;
 use think\Controller;
 use think\Request;
 use app\common\model\Article as ArticleModel;
-use app\common\model\Category as CategoryModel;
 use app\common\model\Grand as GrandModel;
 
 class Index extends  Controller

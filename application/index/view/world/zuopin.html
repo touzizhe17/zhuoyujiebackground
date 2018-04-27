@@ -1,0 +1,102 @@
+﻿<style>
+    .page{ width:100%; height:40px; line-height:40px; text-align:center; font-size:12px; color:#333;}
+    .page a{ display:inline-block; padding:0 5px; border:1px solid #CCC; color:#333; font-size:12px; height:23px; line-height:23px; margin:3px 2px;}
+    .page .current{ display:inline-block; padding:0 7px; border:1px solid #CCC; color:#333; font-size:12px; height:23px; line-height:23px;
+        margin:3px 2px; background:#1E0904; color:#FFF;}
+    .flei{ width:1186px; border:2px solid #D3CEC9; height:auto; background:#FFF; border-radius:3px;}
+    .flei li{ width:100%; height:auto;; border-bottom:1px solid #DFDCD9;}
+    .flei li span{ height:30px; padding:4px 0; color:#B10D18; width:100%; display:inline-block; background:#EDEDE9;}
+    .flei li div{ padding:10px 10px;}
+    .flei li span i{ width:auto; display:inline-block; height:30px; line-height:30px; background:url(images/jtou.png) center left no-repeat;
+        font-style: normal; margin-left:15px; text-indent:12px;}
+    .flei li a{ color:#5E5E5E; font-size:14px; height:25px; line-height:25px; display:inline-block; padding:0 10px;}
+    .flei li a.current{background-color:#380202;color:#FFF;}
+    { color:#710404;}
+</style>
+<div class="count">
+    <ul class="flei">
+        <li>
+            <span style="display:block; float:left;"><i>材质</i></span>
+            <div id="mt">
+                <a class="current"href="{:url('index/world/zuopin',['mt'=>0])}">所有材质</a>
+                {foreach name='materials' item='m'}
+                <a  href="{:url('index/world/zuopin',['mt'=>$m.id])}">{$m.name}</a>
+                {/foreach}
+
+            </div>
+        </li>
+        <li>
+            <span><i>价格</i></span>
+            <div id="price">
+                <a class="current"href="{:url('index/world/zuopin',['price'=>0])}">所有价格</a>
+                <a href="{:url('index/world/zuopin',['price'=>1])}">0-3000</a>
+                <a href="{:url('index/world/zuopin',['price'=>2])}">3000-5000</a>
+                <a href="{:url('index/world/zuopin',['price'=>3])}">5000-10000</a>
+                <a href="{:url('index/world/zuopin',['price'=>4])}">10000-20000</a>
+                <a href="{:url('index/world/zuopin',['price'=>5])}">20000-50000</a>
+                <a href="{:url('index/world/zuopin',['price'=>6])}">50000-999999</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="clear"></div>
+<div class="count">
+    <div style=" width:100%; height:15px;"></div>
+    <ul class="shiydsw">
+        <!--翡翠-->
+        {foreach name='list' item='item'}
+        <li><a href="{:url('index/goods/goodsDetail',['id'=>$item.id])}" target="_blank" class="daaimg">
+            {if condition="$item.video_url!=''"}
+            <img style="position:absolute; top:0; left:0;width: 60px;height: 60px;" src="__STATIC__/picture/videotag.png"/>
+            {/if}
+            <img class="lazyimg"src="__UPLOAD__{$item.thumb}"></a>
+
+            <div class="zuozinfo"><a href="{:url('index/graver/graverDetail',['id'=>$item.author])}" target="_blank" class="zzimgaw">
+                <img src="__UPLOAD__{$item.head}"></a>
+                <div class="zzzpw">
+                    <div class="zzup">
+                        <a href="{:url('index/graver/graverDetail',['id'=>$item.id])}" target="_blank">{$item.title}</a>
+                        <a href="{:url('index/graver/graverDetail',['id'=>$item.author])}"target="_blank">作者：{$item.name}</a>
+                    </div>
+                    <div class="zzupb">
+                        {if condition="$item.jmoney!=''"}
+                        <span class="jiage">¥{$item.jmoney}元</span>
+                        {else /}
+                        <span class="jiage">议价</span>
+                        {/if}
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="{:url('index/graver/graverDetail',['id'=>$item.id])}" class="yybut huis">查看作品详细 </a>
+            <i>{$item.materials}</i>
+        </li>
+        {/foreach}
+
+    </ul>
+    <div class="clear"></div>
+    {$page}
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<script>
+    !function () {
+        priceActive();
+        materActive();
+    }();
+    function priceActive() {
+        var p='{$price}';
+        var dom=$('#price a');
+
+        dom.removeClass('current');
+        dom.eq(p).addClass('current')
+    }
+    function materActive() {
+        var mt='{$mt}';
+        var dom=$('#mt a');
+
+        dom.removeClass('current');
+        dom.eq(mt).addClass('current')
+    }
+</script>

@@ -51,6 +51,7 @@
                             <th>是否推荐</th>
                             <th>状态</th>
                             <th>出售状态</th>
+                            <th>是否参展</th>
                             <th>发布时间</th>
                             <th>操作</th>
                         </tr>
@@ -68,6 +69,7 @@
                             <td>{php}echo $vo['is_recommend']==1 ? '推荐' : '未推荐';{/php}</td>
                             <td>{php}echo $vo['status']==1 ? '已审核' : '未审核';{/php}</td>
                             <td>{php}echo $vo['isbonds']==1 ? '已出售' : '未出售';{/php}</td>
+                            <td>{php}echo $vo['is_world']==1 ? '参展' : '未参展';{/php}</td>
                             <td>{$vo.publish_time}</td>
                             <td style="min-width: 200px">
                                 <a href="{:url('admin/article/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
