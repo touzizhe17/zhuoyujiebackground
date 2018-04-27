@@ -37,7 +37,6 @@ class Grand extends AdminBase
     public function index($cid = 0, $keyword = '', $page = 1)
     {
         $map   = [];
-        $field = 'id,name,introduction,status,publish_time,sort';
 
         if ($cid > 0) {
             $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
@@ -49,7 +48,7 @@ class Grand extends AdminBase
             $map['name'] = ['like', "%{$keyword}%"];
         }
 
-        $grand_list  = $this->grand_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+        $grand_list  = $this->grand_model->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
         $category_list = $this->category_model->column('name', 'id');
 
         return $this->fetch('index', ['grand_list' => $grand_list, 'category_list' => $category_list, 'cid' => $cid, 'keyword' => $keyword]);
