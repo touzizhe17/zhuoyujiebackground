@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="__CSS__/css/ssy.css">
     <link rel="stylesheet" type="text/css" href="__CSS__/css/nzdc.css">
     <link rel="stylesheet" type="text/css" href="__CSS__/css/about.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/font/iconfont.css">
+    <link rel="shortcut icon" href="/favicon.ico" />
     <script type="text/javascript" src="__JS__/js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="__JS__/js/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="__JS__/js/jquery.mousewheel.min.js"></script>
@@ -261,17 +262,25 @@
     <div class="topnavw topnavwb">
         <div class="count">
             <span class="welws">琢玉界——致力于守护中华民族的玉魂</span>
+             {if condition="$Think.session.name !=''"}
+            <div class="user" >
+                欢迎  <a href="{:url('admin/index/index')}" title="用户详情"><img src="__STATIC__/picture/yudiaoshi.jpg" alt=""><span class="name">王小二</span></a> 光临！
+                <a href="{:url('index/login/logout')}" class="logout">退出登录</a>
+            </div>
+            {/if}
+
             <div class="clear"></div>
         </div>
     </div>
     <div class="clear"></div>
     <div class="count">
         <div class="loright">
+            {if condition="$Think.session.name ==''"}
             <div class="log-box">
-                <a href="{:url('index/user/login')}">登录</a>
-                <a href="{:url('index/user/register')}">注册</a>
-
+                <a href="{:url('index/login/login')}">登录</a>
+                <a href="{:url('index/login/register')}">注册</a>
             </div>
+            {/if}
         </div>
         <div class="clear"></div>
     </div>

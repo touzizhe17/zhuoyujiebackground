@@ -1,36 +1,18 @@
 /**
  * 点赞
- * @param dom
- * @param flag
+ * @param dom 当前点击dom对象
+ * @param flag 1赞，0踩
  */
-function goods(dom,flag) {
-    var img=$(dom).children();
-    var src=img.attr('src');
-    //是否点赞
-    var isGood=false;
-    var isBad=false;
-    if(flag){
-        //赞
-        if(src==='/public/index/images/good.png'){
-            //点赞
-            isGood=true;
-            img.attr('src','/public/index/images/good_red.png')
-        }else{
-            //取消点赞
-            isGood=false;
-            img.attr('src','/public/index/images/good.png')
-        }
+function click_good(dom,flag) {
+    //检查是否登录
 
+
+    var span=$(dom).children('span');
+
+    if(span.hasClass('active')){
+        span.removeClass('active')
     }else{
-        if(src==='/public/index/images/bad.png'){
-            //踩
-            isBad=false;
-            img.attr('src','/public/index/images/bad_red.png')
-        }else{
-            //取消踩
-            isBad=true;
-            img.attr('src','/public/index/images/bad.png')
-        }
+        span.addClass('active')
     }
 
     //TODO 发送ajax请求去后台统计用户点赞
