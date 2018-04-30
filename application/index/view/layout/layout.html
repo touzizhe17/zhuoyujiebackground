@@ -264,7 +264,7 @@
             <span class="welws">琢玉界——致力于守护中华民族的玉魂</span>
              {if condition="$Think.session.name !=''"}
             <div class="user" >
-                欢迎  <a href="{:url('admin/index/index')}" title="用户详情"><img src="__STATIC__/picture/yudiaoshi.jpg" alt=""><span class="name">王小二</span></a> 光临！
+                欢迎  <a href="{:url('index/user/index')}" title="用户详情"><img src="__STATIC__/picture/yudiaoshi.jpg" alt=""><span class="name">王小二</span></a> 光临！
                 <a href="{:url('index/login/logout')}" class="logout">退出登录</a>
             </div>
             {/if}
@@ -410,7 +410,7 @@
 
         .max-kf {
             float: left;
-            width: 140px;
+            width: 160px;
             position: relative;
         }
 
@@ -453,13 +453,16 @@
 
         .kf_list .list {
             float: left;
-            width: 94%;
-            margin: 3%;
+            width: 92%;
+            /*margin: 3%;*/
+            font-size: 0;
         }
 
         .kf_list .list a {
-            float: left;
-            width: 49%;
+            /*float: left;*/
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
             margin: 2% 0 0 2%;
             height: 26px;
             line-height: 26px;
@@ -472,6 +475,8 @@
 
         .kf_list .list a.kf-on {
             color: #000000;
+            background-color: #aaa;
+
         }
 
         .kf_list .list a.kf-off {
@@ -479,7 +484,6 @@
         }
 
         .kf_list .list a i {
-            float: left;
             width: 26px;
             height: 30px;
             float: left;
@@ -530,6 +534,13 @@
             font-size: 12px;
             line-height: 1.6;
         }
+        .contact{
+            box-sizing: border-box;
+            width: 50%;
+            padding:2px 1px;
+            display: inline-block;
+
+        }
     </style>
 
     <!--客服 start-->
@@ -542,17 +553,19 @@
             </div>
             <div class="list">
                 <!-- 把uin后面的QQ号，替换为对应的QQ号码, data-name后面是微信二维码图片 -->
-
-                <a class="kf-on" target="_blank" data-name="yabo.jpg"
-                   href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔</a>
-                <a class="kf-on" target="_blank" data-name="yabo.jpg"
-                   href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>波仔</a>
-                <a class="kf-on" target="_blank" data-name="yabo.jpg"
-                   href="http://wpa.qq.com/msgrd?v=3&uin=384877146&site=qq&menu=yes"><i></i>小秦</a>
-                <div class="wxcode">
-                    <img src="__STATIC__/images/yabo.jpg" alt="" width="140px">
-                    <p>加微信联系他</p>
+                <div class="contact">
+                    <a class="kf-on" target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔 </a>
+                    <img src="__STATIC__/images/yabo.jpg" alt="" width="100%">
                 </div>
+                <div class="contact">
+                    <a class="kf-on" target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔 </a>
+                    <img src="__STATIC__/images/yabo.jpg" alt="" width="100%">
+                </div>
+                <div class="contact">
+                    <a class="kf-on" target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔 </a>
+                    <img src="__STATIC__/images/yabo.jpg" alt="" width="100%">
+                </div>
+
             </div>
             <div class="text">
                 <h3>投诉与建议</h3>
@@ -573,7 +586,7 @@
     $(function () {
         lazyload();
         navActive();
-        changeCode();
+//        changeCode();
     });
     // hover 名字切换微信二维码
     function changeCode() {

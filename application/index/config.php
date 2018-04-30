@@ -10,7 +10,7 @@ return [
         '__IMAGES__' => '/public/index',
         '__JS__'     => '/public/index',
         '__CSS__'    => '/public/index',
-        '__USER__'=>'/public/index/user'
+        '__USER__'=>'/public/user'
     ],
     // 开启模板布局
     'template' => [
