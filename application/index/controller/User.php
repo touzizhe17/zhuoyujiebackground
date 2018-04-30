@@ -17,10 +17,14 @@ class User extends Controller{
     public function __construct(Request $request = null)
     {
         parent::__construct($request);
-        $this->view->engine->layout('layout/layout_user');
+        $this->view->engine->layout(false);
 
     }
     public function index(){
+
+        return $this->fetch();
+    }
+    public function main(){
 
         return $this->fetch();
     }
@@ -30,8 +34,34 @@ class User extends Controller{
         return $this->fetch();
     }
     // 安全设置，修改密码等
-    public function security(){
+    public function changepwd(){
 
         return $this->fetch();
     }
+    // 收货地址
+    public function address(){
+
+        return $this->fetch();
+    }
+    //订单
+    public function order(){
+
+        return $this->fetch();
+    }
+    //收藏
+    public function favorite(){
+
+        return $this->fetch();
+    }
+    //优惠劵
+    public function coupons(){
+
+        return $this->fetch();
+    }
+    //上传头像
+    public function uploadHead(){
+        $file=$this->request->file('head');
+        return json('123');
+    }
+
 }

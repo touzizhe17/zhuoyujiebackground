@@ -10,10 +10,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
 	<meta name="apple-mobile-web-app-capable" content="yes">	
 	<meta name="format-detection" content="telephone=no">	
-	<link rel="stylesheet" type="text/css" href="__USER__/common/layui/css/layui.css" media="all">
-	<link rel="stylesheet" type="text/css" href="__USER__/common/bootstrap/css/bootstrap.css" media="all">
-	<link rel="stylesheet" type="text/css" href="__USER__/common/global.css" media="all">
-	<link rel="stylesheet" type="text/css" href="__USER__/css/personal.css" media="all">
+	<link rel="stylesheet" type="text/css" href="common/layui/css/layui.css" media="all">
+	<link rel="stylesheet" type="text/css" href="common/bootstrap/css/bootstrap.css" media="all">
+	<link rel="stylesheet" type="text/css" href="common/global.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/personal.css" media="all">
 </head>
 <body>
 <section class="layui-larry-box">
@@ -22,11 +22,17 @@
 			<span>个人信息</span>
 		</header><!-- /header -->
 		<div class="larry-personal-body clearfix">
-			<form class="layui-form col-lg-5" action="{:url('index/user/info')}" method="post">
+			<form class="layui-form col-lg-5" action="" method="post">
 				<div class="layui-form-item">
 					<label class="layui-form-label">用户名</label>
 					<div class="layui-input-block">  
 						<input type="text" name="title"  autocomplete="off"  class="layui-input layui-disabled" value="admin" disabled="disabled" >
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">所属角色</label>
+					<div class="layui-input-block">
+						<input type="text" name="username"  autocomplete="off" class="layui-input layui-disabled" value="超级管理员" disabled="disabled">
 					</div>
 				</div>
 				<div class="layui-form-item">
@@ -50,18 +56,28 @@
 				</div>
 				<div class="layui-form-item">
 					<label class="layui-form-label">修改头像</label>
-					<div class="layui-input-inline" hidden>
-						<input type="text" name="file" class="layui-input">
+					<div class="layui-input-block">
+						<input type="file" name="file" class="layui-upload-file">
 					</div>
-					<div class="layui-input-inline">
-						<img src="" alt="" width="40px" height="40px" id="headimg">
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">界面语言</label>
+					<div class="layui-input-block">
+						<select name="interest" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0" selected="selected">中文</option>
+							<option value="1">英文</option>
+						</select>
 					</div>
-					<div class="layui-input-inline">
-						<input type="file"  name="file" class="layui-upload-file" id="headbtn">
-					</div>
-
 				</div>
 
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">座右铭</label>
+					<div class="layui-input-block">
+						<textarea placeholder="既然选择了远方，便只顾风雨兼程；路漫漫其修远兮，吾将上下而求索" value="" class="layui-textarea"></textarea>
+					</div>
+				</div>
+				
 				<div class="layui-form-item">
 					<div class="layui-input-block">
 						<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
@@ -72,20 +88,16 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="__USER__/common/layui/layui.js"></script>
+<script type="text/javascript" src="common/layui/layui.js"></script>
 <script type="text/javascript">
 	layui.use(['form','upload'],function(){
          var form = layui.form();
-         layui.upload({
-			 elem:'headbtn',
-             url: "{:url('index/user/uploadhead')}" ,//上传接口
-             done: function(res){
+         layui.upload({ 
+             url: '' ,//上传接口 
+             success: function(res){
               //上传成功后的回调 
               console.log(res) 
-            } ,
-			 error:function (res) {
-
-             }
+            } 
          });
 
 	});
