@@ -27,4 +27,8 @@ class About extends Controller{
 
         return $this->fetch();
     }
+    public function dongtai()
+    {
+        return $this->fetch();
+    }
 }

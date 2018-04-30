@@ -40,7 +40,7 @@
     .position a{color:#600;}
 </style>
 <div class="count">
-        <div class="position"><a href="/">琢玉界</a><span>>></span><a href="graver.html">玉雕名家</a><span>>></span>{$grandDetail.name}
+        <div class="position"><a href="/">琢玉界</a><span>>></span>玉雕名家<span>>></span>{$grandDetail.name}
         </div>
         <div class="leftrow">
 
@@ -61,7 +61,7 @@
         </div>
         <div class="clear"></div>
         <div class="goodslist">
-            <div class="atit "><h3><span class="">玉雕作品（共1件）</span></h3></div>
+            <div class="atit "><h3><span class="">玉雕作品</span></h3></div>
             <ul class="shiydsw">
 
                 {foreach name='article' item='art'}
@@ -71,7 +71,14 @@
                     </a>
                     <div class="infows">
                         <p class="gname">{$art.title}</p>
-                        <span class="spjy">{$art.jmoney}</span></div>
+
+                        {if condition="$art.jmoney!=''"}
+                        <span class="spjy">¥{$art.jmoney}元</span>
+                        {else /}
+                        <span class="spjy">议价</span>
+                        {/if}
+                        </div>
+
                     </span>
                 </li>
                 {/foreach}

@@ -11,6 +11,7 @@ Connection.php
 ._*/*
 
 /public/uploads
+uploads.zip
 */.DS_Store
 .DS_Store
 *.iml

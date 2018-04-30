@@ -22,8 +22,10 @@ class Mjqj extends Controller
         $zuopin_list = $this->article_model
             ->where('cid',3)
             ->order(['publish_time' => 'DESC'])
-            ->paginate(15, false, ['page' => 1]);
+            ->paginate(2);
 
+        $page=$zuopin_list->render();
+        $this->assign('page',$page);
         $this->assign('zuopin_list',$zuopin_list);
         return $this->fetch('mjqj');
     }

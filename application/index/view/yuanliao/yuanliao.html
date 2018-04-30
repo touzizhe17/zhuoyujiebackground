@@ -3,7 +3,7 @@
             <ul class="glistul">
                 {foreach name='zuopin_list' item='zuopin'}
                 <li class="" id="goods_31815"><a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank" class="daaimg">
-                    {if condition="true"}
+                    {if condition="$zuopin.video_url!=''"}
                     <img style="position:absolute; top:0; left:0; width: 60px;height: 60px;" src="__STATIC__/picture/videotag.png"/>
                     {/if}
                     <img class="lazyimg" src="__STATIC__/picture/imghold.gif" data-original="__UPLOAD__/{$zuopin.thumb}" /></a>
@@ -12,23 +12,18 @@
                             <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank">冰种飘花翡翠毛料</a>
                         </div>
                         <div class="zzupb">
-                            <span class="jiage">¥{$zuopin.jmoney}</span>
+                            {if condition="$zuopin.jmoney!=''"}
+                            <span class="jiage">¥{$zuopin.jmoney}元</span>
+                            {else /}
+                            <span class="jiage">议价</span>
+                            {/if}
                         </div>
                     </div><a target="_blank" href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" class="yybut huis">查看作品详细 </a><i>{$zuopin.materials}</i>
                 </li>
                 {/foreach}
             </ul>
             <div class="clear"></div>
-            <ul class="cplispage">
-                <span class="pageinfo">297 条记录 1/15 页 </span>
-                <span class="current">1</span>
-                <a href="/Wool/index/p/2.html">2</a>
-                <a href="/Wool/index/p/3.html">3</a>
-                <a href="/Wool/index/p/4.html">4</a>
-                <a href="/Wool/index/p/5.html">5</a>
-                <a href="/Wool/index/p/2.html">下一页</a>
-                <a href="/Wool/index/p/15.html">最后一页</a>
-            </ul>
+            {$page}
         </div>
     </div>
 </div>

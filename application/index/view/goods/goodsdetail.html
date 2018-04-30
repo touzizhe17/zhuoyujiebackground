@@ -1,4 +1,15 @@
-﻿<div class="count">
+﻿<style>
+    .inforcont{
+        max-height: 495px;
+    }
+    .inforcont-a{
+        margin-top: 5px;
+        width: 100%;
+        height: 230px;
+        overflow-y: scroll;
+    }
+</style>
+<div class="count">
     <!--该作品 信息 -->
     <div class="azpw" style="margin-top:10px;">
         <div class="azimw">
@@ -17,7 +28,9 @@
         <div class="azimw-r" id="goods_32191">
             <div class="inforbox1">
                 <h3>{$zuopin.title}</h3>
+                {if condition="$authinfo !=''"}
                 <p>作者：{$authinfo.name}</p>
+                {/if}
                 <p>编号：{$zuopin.goods_num}</p>
                 <p>材质：{$zuopin.materials}</p>
 
@@ -25,13 +38,8 @@
             <!--获奖信息  若无获奖信息，则不显示此段-->
             <div class="inforbox3">
                 <h3>作品介绍：</h3>
-                <div class="inforcont" style="max-height: 495px; height: auto;">
+                <div  {if condition="$zuopin.video_pic_url != ''"} class="inforcont-a" {/if}>
                     {$zuopin.content}
-                    <br>作　　者：玉雕界签约玉雕名家白骑通作品，提供玉雕师签名（或盖章）收藏证书。
-                    <br>配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。
-                    <br>售后承诺：签收之时起7日内自由退换货，提供完美售后服务。
-                    <br>
-                    <br>
                 </div>
                 <div style="float: left; width: 100%; color: #E44841; line-height: 1.4; margin-top: 6px;">
                     温馨提示：该作品只有一件
@@ -39,14 +47,18 @@
             </div>
             <!--价格 zone -->
             <div class="pricebox">
-                <p>结缘价：￥{$zuopin.jmoney}元</p>
+                {if condition="$zuopin.jmoney!=''"}
+                <p>结缘价：¥{$zuopin.jmoney}元</p>
+                {else /}
+                <p>联系客服询价</p>
+                {/if}
             </div>
             <!--如果有视频则显示视频，此处后面再调整-->
-            {if condition='true'}
+            {if condition="$zuopin.video_pic_url != ''"}
             <div class="inforbox4">
                 <h3>点击查看货品小视频</h3>
                 <div class="videobox" id="video">
-                    <img class="thumb" src="http://www.w3school.com.cn/i/movie.ogg">
+                    <img class="thumb" src="__UPLOAD__{$zuopin.video_pic_url}">
                     <div class="video-icon">
                         <img src="__STATIC__/images/video.png">
                     </div>
@@ -54,11 +66,15 @@
             </div>
             {/if}
             <!--视频播放框,及背景遮罩层-->
+<<<<<<< HEAD
             <div class="play_box"style="display: none;">
+=======
+            <div class="play_box" style="display: none;">
+>>>>>>> fdc94e1d96c3aa9da8fe14c87cf3a714ce008d6d
                 <div class="videframebg" style="display: block;"></div>
                 <div class="videframe "style="display: block;">
                 <div id="example_video_1" class="video-js vjs-default-skin vjs-controls-enabled vjs-has-started vjs-playing vjs-user-inactive" style="width: 480px; height: 480px;">
-                    <video src="http://www.w3school.com.cn/i/movie.ogg"  controls width="480px" height="480px"></video>
+                    <video src="__UPLOAD__{$zuopin.video_url}"  controls width="480px" height="480px" id="player"></video>
                     <a href="javascript:void(0)" class="closebtnico" onclick="closePause()"></a>
             </div>
             </div>
@@ -69,7 +85,11 @@
     <div class="atit" id="btit1" style="margin-top:10px;">
         <h3><span>{$authinfo.name}简介</span></h3>
     </div>
+
+
     <div class="dsinw dsinwn" id="artcw1">
+        <!-- 如果是作品-->
+        {if condition="$zuopin.cid==1"}
         <div class="dsimgw">
             <a href="{:url('index/graver/graverDetail',['id'=>$authinfo.id])}"><img src="__UPLOAD__/{$authinfo.thumb}"></a>
         </div>
@@ -77,16 +97,18 @@
         <div class="dsjj" style="padding:0;">
             <p>简介：{$authinfo.introduction}</p>
         </div>
+        {/if}
     </div>
+
         <!--该作品 信息end -->
 
-    <div class="atit" id="btit2"><a onclick="loadMore()" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
+    <div class="atit" id="btit2"><a href="{:url('index/goods/index',['cid'=>$zuopin.cid])}" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
     <div class="goodslist">
         <ul class="shiydsw">
             {foreach name='zuopin_list' item='zuopin'}
             <li>
                 <!--如果有视频则显示此图片-->
-                {if condition="true"}
+                {if condition="$zuopin.video_url !=''"}
                 <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
                 {/if}
 
@@ -98,10 +120,12 @@
                     <p class="gname">{$zuopin.title}</p>
                     <div style="line-height:1.5em;text-align:center;">
                         <!--如果是已经出售了，就显示已结缘，否则显示价格-->
-                        {if condition="true"}
-                        <span style="color:#F60" class="jiage">已结缘</span>
-                        {else/}
+                        {if condition="$zuopin.isbonds==1"}
+                        <span style="color:#F60" class="jiage">已出售</span>
+                        {elseif condition="$zuopin.jmoney!=''"/}
                         <span style="color:#fff">¥{$zuopin.jmoney}</span>
+                        {else/}
+                        <span style="color:#fff">议价</span>
                         {/if}
 
 
@@ -128,6 +152,8 @@
        $('.play_box').hide();
        $('.videobox').on('click',function () {
            $('.play_box').show();
+           var myVideo=document.getElementById("player");
+           myVideo.play();
        });
    }
     function closePause() {
@@ -151,11 +177,5 @@
         })
     }
 
-   /**
-    * 点击更多作品，发送ajax请求，返回更多作品信息
-    */
-   function loadMore() {
-
-    }
 </script>
 

@@ -14,20 +14,100 @@ class Goods extends Controller
     {
         parent::_initialize();
         $this->article_model  = new ArticleModel();
-
         $this->grand  = new GrandModel();
     }
 
-    public function index()
+    /**
+     * @param int $cid 分类
+     * @param int $price 价格
+     * @param int $m 材质
+     * @param int $order 排序
+     * @return mixed
+     */
+    public function index($cid=1,$price=0,$mt=0,$order=0)
     {
-        //根据分类ID ,属于作品类
+        $material=db('materials')->select();
+
+        $this->assign('materials',$material);
+
+        switch ($price){
+            case 0:
+                $p1=['>',0];
+                $p2=['<=',999999];
+                break;
+            case 1:
+                $p1=['>',0];
+                $p2=['<=',3000];
+                break;
+            case 2:
+                $p1=['>',3000];
+                $p2=['<=',5000];
+                break;
+            case 3:
+                $p1=['>',5000];
+                $p2=['<=',10000];
+                break;
+            case 4:
+                $p1=['>',10000];
+                $p2=['<=',20000];
+                break;
+            case 5:
+                $p1=['>',20000];
+                $p2=['<=',50000];
+                break;
+            case 6:
+                $p1=['>',50000];
+                $p2=['<=',999999];
+                break;
+        }
+        switch ($order){
+            case 0:
+                $or='a.publish_time DESC';
+            break;
+            case 1:
+                $or='a.reading DESC';
+            break;
+            case 2:
+                $or='a.jmoney DESC';
+            break;
+            case 3:
+                $or='a.publish_time DESC';
+            break;
+        }
+        if($mt!=0){
+            $material=db('materials')->find($mt);
+            $name=$material['name'];
+            $m1='a.materials';
+            $m2=$name;
+        }else{
+            $m1=null;
+            $m2=null;
+        }
+        //根据分类ID ,属于作品类 ,每页20
         $zuopin_list = $this->article_model
             ->alias('a')
-            ->where('a.cid',1)
+            ->where('a.cid',$cid)
+            ->where($m1,$m2)
+            ->where('a.jmoney',$p1,$p2)
             ->field('a.*,g.thumb c,g.id aid,g.name name')
             ->join('grand g','a.author=g.id','LEFT')
-            ->order(['a.publish_time' => 'DESC'])
-            ->paginate(15, false, ['page' => 1]);
+            ->order($or)
+            ->paginate(12);
+
+            $page=$zuopin_list->render();
+
+            if($page==null){
+                $page=<<<HTML
+            <div class="pagination"><span>共1页</span></div>
+HTML;
+            }
+
+
+        $this->assign('page',$page);
+
+        $this->assign('price',$price);
+
+        $this->assign('mt',$mt);
 
         $this->assign('zuopin_list',$zuopin_list);
         //左边栏，所有玉雕师
@@ -39,21 +119,28 @@ class Goods extends Controller
 
 
 
-    public function goodsDetail($id,$page=0)
+    public function goodsDetail($id)
     {
         //根据传入的id,查找当前这件作品
         $zuopin = $this->article_model->find($id);
-        //查找找到作者信息
         $auth=$zuopin['author'];
-        $authinfo=$this->grand->where('id', $auth)->find();
-        // 查找到该作者的其他相关作品
-
-        $zuopin_list = $this->article_model->where('author', $auth)->limit(4)->select();
-
-//        dump($zuopin_list);die;
         $this->assign('zuopin',$zuopin);
+        $cid=$zuopin['cid'];
+
+        //查找找到作者信息
+        $authinfo=$this->grand->where('id', $auth)->find();
         $this->assign('authinfo',$authinfo);
-        $this->assign('zuopin_list',$zuopin_list);
+
+        if($cid===1){
+
+            // 查找到该作者的其他相关作品
+            $zuopin_list = $this->article_model->where('author', $auth)->paginate(20);
+            $this->assign('zuopin_list',$zuopin_list);
+        }else{
+            $zuopin_list = $this->article_model->where('cid', $cid)->paginate(20);
+            $this->assign('zuopin_list',$zuopin_list);
+        }
+
 
         return $this->fetch('goodsdetail');
     }

@@ -23,16 +23,19 @@
             </div>
             <div class="title">{$zuopin.title}</div>
             <div class="aside"><p>【货 号】：{$zuopin.goods_num}</p>
-                <P>【结缘价】<b>¥{$zuopin.jmoney}元</b></P></div>
+                {if condition="$zuopin.jmoney!=''"}
+                <P>【结缘价】<b>¥{$zuopin.jmoney}元</b></P>
+                {else /}
+                <P>【结缘价】<b>议价</b></P>
+                {/if}
+            </div>
             <a class="aside-r" target="_blank" href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}">查看<br>详细</a>
         </li>
         {/foreach}
 
     </ul>
-    <div class="mjpage"> 3902 条记录 1/66 页 <a href='/Mjqj/index/p/2.html'>下一页</a> <span class='current'>1</span><a
-            href='/Mjqj/index/p/2.html'>2</a><a href='/Mjqj/index/p/3.html'>3</a><a
-            href='/Mjqj/index/p/4.html'>4</a><a href='/Mjqj/index/p/5.html'>5</a> <a
-            href='/Mjqj/index/p/6.html'>下5页</a> <a href='/Mjqj/index/p/66.html'>最后一页</a></div>
+    <div class="clear"></div>
+    {$page}
 </div>
 
 </div>

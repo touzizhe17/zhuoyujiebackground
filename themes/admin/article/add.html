@@ -29,7 +29,11 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">材质</label>
                         <div class="layui-input-block">
-                            <input type="text" name="materials" value="" placeholder="材质" class="layui-input">
+                            <select name="materials" lay-verify="required" style="max-height: 200px">
+                                {foreach name="materials" item="m"}
+                                <option value="{$m.name}">{$m.name}</option>
+                                {/foreach}
+                            </select>
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -42,8 +46,8 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">作品作者</label>
                         <div class="layui-input-block">
-                            <select name="author" lay-verify="required">
-                                <option value="无">-请选择-</option>
+                            <select name="author" lay-verify="required" style="max-height: 200px">
+                                <option value=""></option>
                                 {foreach name="authList" item="auth"}
                                 <option value="{$auth.id}">{$auth.name}</option>
                                 {/foreach}
@@ -76,21 +80,21 @@
                         <label class="layui-form-label">作品视频</label>
                         <div class="layui-input-block">
                             <input type="text" name="video_url" value="" class="layui-input layui-input-inline" id="video_url">
-                            <input type="file" name="file" class="layui-upload-file videourl" accept="video/*" id="videourl">
+                            <input type="file" name="file" class="layui-upload-file" lay-type="video" id="videourl" accept="video/*">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">视频截图</label>
                         <div class="layui-input-block">
                             <input type="text" name="video_pic_url" value="" class="layui-input layui-input-inline" id="video_pic_url" >
-                            <input type="file" name="file" class="layui-upload-file videopicurl" id="videopicurl">
+                            <input type="file" name="file" class="layui-upload-file " id="videopicurl">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">缩略图</label>
                         <div class="layui-input-block">
                             <input type="text" name="thumb" value="" class="layui-input layui-input-inline" id="thumb">
-                            <input type="file" name="file" class="layui-upload-file uploadthumb" id="picthumb">
+                            <input type="file" name="file" class="layui-upload-file" id="uploadthumb">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -98,6 +102,13 @@
                         <div class="layui-input-block">
                             <button type="button" id="upload-photo-btn" class="layui-btn">上传图集</button>
                             <div id="photo-container"></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">出售状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="isbonds" value="1" title="已出售" >
+                            <input type="radio" name="isbonds" value="0" title="未出售" checked="checked">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -119,6 +130,13 @@
                         <div class="layui-input-block">
                             <input type="radio" name="is_recommend" value="1" title="推荐">
                             <input type="radio" name="is_recommend" value="0" title="未推荐" checked="checked">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">参展</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="is_world" value="1" title="参展">
+                            <input type="radio" name="is_world" value="0" title="未参展" checked="checked">
                         </div>
                     </div>
                     <div class="layui-form-item">

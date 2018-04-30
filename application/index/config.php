@@ -4,13 +4,13 @@ return [
     // | 模板设置
     // +----------------------------------------------------------------------
 
-    'index'=>'./public/index',
     'view_replace_str'      => [
         '__UPLOAD__' => '/public',
         '__STATIC__' => '/public/index',
         '__IMAGES__' => '/public/index',
         '__JS__'     => '/public/index',
         '__CSS__'    => '/public/index',
+        '__USER__'=>'/public/user'
     ],
     // 开启模板布局
     'template' => [

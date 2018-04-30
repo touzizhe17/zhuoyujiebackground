@@ -11,17 +11,6 @@
 
             <form class="layui-form layui-form-pane" action="{:url('admin/grand/index')}" method="get">
                 <div class="layui-inline">
-                    <label class="layui-form-label">分类</label>
-                    <div class="layui-input-inline">
-                        <select name="cid">
-                            <option value="0">全部</option>
-                            {foreach name="category_level_list" item="vo"}
-                            <option value="{$vo.id}" {if condition="$cid==$vo.id"} selected="selected"{/if}>{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</option>
-                            {/foreach}
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-inline">
                     <label class="layui-form-label">关键词</label>
                     <div class="layui-input-inline">
                         <input type="text" name="keyword" value="{$keyword}" placeholder="请输入关键词" class="layui-input">
@@ -42,8 +31,8 @@
                         <thead>
                         <tr>
                             <th style="width: 15px;"><input type="checkbox" class="check-all"></th>
-                            <th style="width: 30px;">ID</th>
-                            <th style="width: 30px;">排序</th>
+                            <th style="width: 30px;">序号</th>
+                            <th >图片</th>
                             <th>姓名</th>
                             <th>简介</th>
                             <th>状态</th>
@@ -52,16 +41,16 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {foreach name="grand_list" item="vo"}
+                        {foreach name="grand_list" item="vo" key='key'}
                         <tr>
                             <td><input type="checkbox" name="ids[]" value="{$vo.id}"></td>
-                            <td>{$vo.id}</td>
-                            <td>{$vo.sort}</td>
-                            <td>{$vo.name}</td>
+                            <td>{$key+1}</td>
+                            <td><img src="__UPLOADS__{$vo.thumb}" alt="" width="100px"></td>
+                            <td style="min-width: 50px">{$vo.name}</td>
                             <td>{$vo.introduction}</td>
-                            <td>{php}echo $vo['status']==1 ? '已审核' : '未审核';{/php}</td>
-                            <td>{$vo.publish_time}</td>
-                            <td>
+                            <td style="min-width: 50px">{php}echo $vo['status']==1 ? '已审核' : '未审核';{/php}</td>
+                            <td style="min-width: 150px">{$vo.publish_time}</td>
+                            <td style="min-width: 100px">
                                 <a href="{:url('admin/grand/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
                                 <a href="{:url('admin/grand/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
                             </td>

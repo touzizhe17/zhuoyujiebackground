@@ -1,30 +1,48 @@
 ﻿    <div class="count">
         <ul class="shiydsw">
-            <li class="" id="goods_4398"><a href="{:url('index/goods/goodsDetail')}" target="_blank" class="daaimg"><img class="lazyimg" src="__STATIC__/picture/imghold.gif" data-original="__STATIC__/picture/zuoping.jpg" /></a>
-                {if condition="true"}
-                <img style="position:absolute; top:0; left:0;width: 60px;height: 60px;" src="__STATIC__/picture/videotag.png"/>
+            {foreach name='$zuopin_list' item='zuopin'}
+            <li class="" id="goods_32049">
+                {if condition="$zuopin.video_url !=''"}
+                <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
                 {/if}
+                <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank" class="daaimg" target="_blank">
+                    <img class="lazyimg" src="__STATIC__/picture/imghold.gif"data-original="__UPLOAD__/{$zuopin.thumb}"/></a>
                 <div class="zuozinfo">
-                    <a href="{:url('index/graver/graverDetail')}" target="_blank" class="zzimgaw"><img src="__STATIC__/picture/yudiaoshi.jpg" /></a>
+                    <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank" class="zzimgaw"><img
+                            src="__UPLOAD__/{$zuopin.c}"/></a>
                     <div class="zzzpw">
                         <div class="zzup">
-                            <a href="{:url('index/goods/goodsDetail')}" target="_blank">牧马青山</a>
-                            <a href="{:url('index/graver/graverDetail')}" target="_blank">作者：李斯</a>
+                            <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank">{$zuopin.title}</a>
+                            <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank">作者：{$zuopin.name}</a>
                         </div>
                         <div class="zzupb">
-                            <span style="color:#F60" class="jiage">已结缘</span>
+                            {if condition="$zuopin.jmoney!=''"}
+                            <span class="jiage">¥{$zuopin.jmoney}元</span>
+                            {else /}
+                            <span class="jiage">议价</span>
+                            {/if}
+
                         </div>
                     </div>
-                </div><a target="_blank" href="{:url('index/goods/goodsDetail')}" class="yybut huis">查看作品详细 </a><i>玛瑙</i></li>
+                </div>
+                <div class="yybut huis">
+                    <a target="_blank" href="{:url('index/graver/graverDetail',['id'=>$zuopin.id])}" class="detail">作品详情 </a>
+                    <a onclick="click_good(this,1)" class="icon-box">
+                        <span class="iconfont icon-zan" ></span>
+                    </a>10
+                    <a onclick="click_good(this,0)" class="icon-box">
+                        <span class="iconfont icon-cai" ></span>
+                    </a>1000
+                </div>
+
+                <i>{$zuopin.materials}</i>
+            </li>
+            {/foreach}
         </ul>
         <!--分页-->
         <div class="clear"></div>
-        <ul class="cplispage">
-            <span class="pageinfo">76 条记录 2 页 </span>
-            <span class="current">1</span>
-            <a href="/Collection/index/p/2.html">2</a>
-            <a href="/Collection/index/p/2.html">下一页</a>
-        </ul>
+        {$page}
         <div style="clear:both;"></div>
     </div>
 </div>
+<script src="__STATIC__/js/me.js"></script>

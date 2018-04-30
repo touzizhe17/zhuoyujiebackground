@@ -4,8 +4,44 @@
     <meta charset="utf-8">
     <title>琢玉界全国巡展-昆明站首页</title>
     <link rel="stylesheet" type="text/css" href="__STATIC__/css/world.css">
-    <script src="__STATIC__/js/jquery-1.9.1.min.js"></script>
+    <script src="__STATIC__/js/jquery-2.1.0.min.js"></script>
 </head>
+<style>
+    .pagination {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .pagination li {
+        display: inline;
+
+    }
+    .pagination li a{
+        color: #333;
+        padding: 3px 7px;
+        border: 1px solid #CCC;
+        font-size: 12px;
+        line-height: 23px;
+        margin: 3px 2px;
+    }
+
+    .pagination  span{
+        padding: 3px 7px;
+        border: 1px solid #CCC;
+        font-size: 12px;
+        line-height: 23px;
+        margin: 3px 2px;
+    }
+    .pagination .active span{
+        background-color: #333;
+        color: #fff;
+    }
+
+</style>
 <body style="background:#F4F4F2; margin:0; padding:0;">
 <!--头部ing-->
 <div style="width:100%; height:auto;float:left;">
@@ -18,7 +54,7 @@
         <ul class="nav">
             <li><a href="{:url('index/index/index')}" >琢玉界</a></li>
             <li><a href="{:url('world/index')}" >巡展首页</a></li>
-            <li><a href="{:url('world/zuoping')}" >参展作品</a></li>
+            <li><a href="{:url('world/zuopin')}" >参展作品</a></li>
             <li><a href="{:url('world/mjjy')}" >名家寄语</a></li>
             <li><a href="{:url('world/xianchang')}" >现场花絮</a></li>
             <form method="GET" action="/index.php" class="ssf">
@@ -94,12 +130,14 @@
      */
     function navActive() {
         var path=location.pathname;
-        console.log('path='+path);
         $('.nav li a').each(function (i,item) {
             var item=$(item);
             var href=item.attr('href');
-            console.log(href)
-            if(path===href){
+            if(href!=undefined){
+                //去掉 .html
+                href=href.substring(0,href.length-5)
+            }
+            if(path.indexOf(href)>-1){
                 item.addClass('current');
             }
 

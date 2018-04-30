@@ -21,8 +21,13 @@ class Graver extends Controller
     }
 
     public function index()
-    {
-        $authList=$this->grand_model->field('id,name,thumb')->select();
+    {   //每页30
+        $authList=$this->grand_model->field('id,name,thumb')->paginate(2);
+
+        $page=$authList->render();
+
+        $this->assign('page',$page);
+
         $this->assign('authList',$authList);
         return $this->fetch('graver');
     }

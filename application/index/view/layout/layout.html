@@ -11,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="__CSS__/css/ssy.css">
     <link rel="stylesheet" type="text/css" href="__CSS__/css/nzdc.css">
     <link rel="stylesheet" type="text/css" href="__CSS__/css/about.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-    <script type="text/javascript" src="__JS__/js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__CSS__/font/iconfont.css">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script type="text/javascript" src="__JS__/js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="__JS__/js/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="__JS__/js/jquery.mousewheel.min.js"></script>
 </head>
@@ -261,17 +262,25 @@
     <div class="topnavw topnavwb">
         <div class="count">
             <span class="welws">琢玉界——致力于守护中华民族的玉魂</span>
+             {if condition="$Think.session.name !=''"}
+            <div class="user" >
+                欢迎  <a href="{:url('index/user/index')}" title="用户详情"><img src="__STATIC__/picture/yudiaoshi.jpg" alt=""><span class="name">王小二</span></a> 光临！
+                <a href="{:url('index/login/logout')}" class="logout">退出登录</a>
+            </div>
+            {/if}
+
             <div class="clear"></div>
         </div>
     </div>
     <div class="clear"></div>
     <div class="count">
         <div class="loright">
+            {if condition="$Think.session.name ==''"}
             <div class="log-box">
-                <a href="{:url('index/user/login')}">登录</a>
-                <a href="{:url('index/user/register')}">注册</a>
-
+                <a href="{:url('index/login/login')}">登录</a>
+                <a href="{:url('index/login/register')}">注册</a>
             </div>
+            {/if}
         </div>
         <div class="clear"></div>
     </div>
@@ -285,7 +294,7 @@
                 <li><a href="{:url('index/goods/index')}" target="_blank">最新作品</a></li>
                 <li><a href="{:url('index/yuanliao/index')}" target="_blank">玉石原料</a></li>
                 <li><a href="{:url('index/mjqj/index')}" target="_blank">民间巨匠</a></li>
-                <li><a href="/index/xx" target="_blank">精品拍卖</a></li>
+                <li><a >精品拍卖</a></li>
                 <li><a href="{:url('index/siren/index')}" target="_blank">私人定制</a></li>
                 <li><a href="{:url('index/collect/index')}" target="_blank">收藏推荐</a></li>
             </ul>
@@ -322,15 +331,15 @@
     <div class="footer">
         <div class="count">
             <ul class="footnav">
-                <li><a href="http://www.zhuoyujie.com/Help/about.html" target="_blank">关于我们</a></li>
+                <li><a href="{:url('index/about/index')}" target="_blank">关于我们</a></li>
                 <span>|</span>
-                <li><a href="http://www.zhuoyujie.com/Help/contactus.html" target="_blank">联系我们</a></li>
+                <li><a href="{:url('index/about/contact')}" target="_blank">联系我们</a></li>
                 <span>|</span>
-                <li><a href="http://www.zhuoyujie.com/Help/sale_service.html" target="_blank">售后服务</a></li>
+                <li><a href="{:url('index/about/aftersale')}" target="_blank">售后服务</a></li>
                 <span>|</span>
-                <li><a href="http://www.zhuoyujie.com/Help/howbuy.html" target="_blank">如何购买</a></li>
+                <li><a href="{:url('index/about/howbuy')}" target="_blank">如何购买</a></li>
                 <span>|</span>
-                <li><a href="http://www.zhuoyujie.com/ArticleCat/" target="_blank">最新动态</a></li>
+                <li><a href="{:url('index/about/dongtai')}" target="_blank">最新动态</a></li>
                 <span>|</span>
                 <li>
                     <a href="http://www.zhuoyujie.com"
@@ -401,7 +410,7 @@
 
         .max-kf {
             float: left;
-            width: 140px;
+            width: 160px;
             position: relative;
         }
 
@@ -444,13 +453,16 @@
 
         .kf_list .list {
             float: left;
-            width: 94%;
-            margin: 3%;
+            width: 92%;
+            /*margin: 3%;*/
+            font-size: 0;
         }
 
         .kf_list .list a {
-            float: left;
-            width: 49%;
+            /*float: left;*/
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
             margin: 2% 0 0 2%;
             height: 26px;
             line-height: 26px;
@@ -463,6 +475,8 @@
 
         .kf_list .list a.kf-on {
             color: #000000;
+            background-color: #aaa;
+
         }
 
         .kf_list .list a.kf-off {
@@ -470,7 +484,6 @@
         }
 
         .kf_list .list a i {
-            float: left;
             width: 26px;
             height: 30px;
             float: left;
@@ -521,6 +534,13 @@
             font-size: 12px;
             line-height: 1.6;
         }
+        .contact{
+            box-sizing: border-box;
+            width: 50%;
+            padding:2px 1px;
+            display: inline-block;
+
+        }
     </style>
 
     <!--客服 start-->
@@ -533,17 +553,19 @@
             </div>
             <div class="list">
                 <!-- 把uin后面的QQ号，替换为对应的QQ号码, data-name后面是微信二维码图片 -->
-
-                <a class="kf-on" target="_blank" data-name="yabo.jpg"
-                   href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔</a>
-                <a class="kf-on" target="_blank" data-name="yabo.jpg"
-                   href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>波仔</a>
-                <a class="kf-on" target="_blank" data-name="yabo.jpg"
-                   href="http://wpa.qq.com/msgrd?v=3&uin=384877146&site=qq&menu=yes"><i></i>小秦</a>
-                <div class="wxcode">
-                    <img src="__STATIC__/images/yabo.jpg" alt="" width="140px">
-                    <p>加微信联系他</p>
+                <div class="contact">
+                    <a class="kf-on" target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔 </a>
+                    <img src="__STATIC__/images/yabo.jpg" alt="" width="100%">
                 </div>
+                <div class="contact">
+                    <a class="kf-on" target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔 </a>
+                    <img src="__STATIC__/images/yabo.jpg" alt="" width="100%">
+                </div>
+                <div class="contact">
+                    <a class="kf-on" target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=229601195&site=qq&menu=yes"><i></i>荣仔 </a>
+                    <img src="__STATIC__/images/yabo.jpg" alt="" width="100%">
+                </div>
+
             </div>
             <div class="text">
                 <h3>投诉与建议</h3>
@@ -564,7 +586,7 @@
     $(function () {
         lazyload();
         navActive();
-        changeCode();
+//        changeCode();
     });
     // hover 名字切换微信二维码
     function changeCode() {
@@ -588,7 +610,11 @@
         $('.ydjnavw li a').each(function (i,item) {
             var item=$(item);
             var href=item.attr('href');
-            if(path===href){
+            if(href!=undefined){
+                href=href.substring(0,href.length-11)
+            }
+
+            if(path.indexOf(href)>-1){
                 item.parent().addClass('navActive');
             }
 
@@ -713,8 +739,5 @@
     })();
 </script>
 <!--cnzz统计-->
-<script>
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cspan id='cnzz_stat_icon_1273007180'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D1273007180' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 </html>

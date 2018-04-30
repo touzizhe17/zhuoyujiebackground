@@ -1,4 +1,6 @@
-﻿@charset "utf-8";
+﻿
+
+@charset "utf-8";
 * {
     margin: 0;
     padding: 0;
@@ -41,6 +43,7 @@ a {
     width: 1200px;
     height: auto;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .topinfo {
@@ -720,13 +723,34 @@ a {
 
 .welws {
     width: auto;
-    float: left;
     color: #797979;
     font-size: 12px;
     line-height: 30px;
-    float: left;
 }
-
+.user{
+    position: relative;
+    display:inline-block;
+    line-height: 30px;
+    float: right;
+    font-size: 12px;
+    color: #797979;
+}
+.user img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.user .name{
+    color: #00b7ee;
+}
+.user .logout{
+    color: #797979;
+}
+.user .logout:hover{
+    text-decoration: underline;
+    color: #FF0000;
+}
 .ydjoutgz {
     width: auto;
     float: right;
@@ -2011,7 +2035,7 @@ h4.timeboxs, div.arlock {
     background: url(../images/hsjtdasc.png) center left no-repeat;
 }
 
-.cplispage {
+.pagination {
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -2020,27 +2044,29 @@ h4.timeboxs, div.arlock {
     color: #333;
 }
 
-.cplispage a {
-    display: inline-block;
-    padding: 0px 5px;
-    border: 1px solid #CCC;
+.pagination li {
+     display: inline;
+
+ }
+.pagination li a{
     color: #333;
+    padding: 3px 7px;
+    border: 1px solid #CCC;
     font-size: 12px;
-    height: 23px;
     line-height: 23px;
     margin: 3px 2px;
 }
 
-.cplispage .current {
-    display: inline-block;
-    padding: 0px 7px;
+.pagination  span{
+    padding: 3px 7px;
     border: 1px solid #CCC;
     font-size: 12px;
-    height: 23px;
     line-height: 23px;
     margin: 3px 2px;
-    background: none repeat scroll 0% 0% #1E0904;
-    color: #FFF;
+}
+.pagination .active span{
+    background-color: #333;
+    color: #fff;
 }
 
 .cplzulzcz li {
@@ -2485,3 +2511,29 @@ h4.timeboxs, div.arlock {
     background: none repeat scroll 0% 0% #1E0904;
     color: #FFF;
 }
+/*点赞start*/
+.yybut .icon-box{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+.yybut .icon-box .iconfont{
+    font-size: 18px;
+}
+.yybut .icon-box .iconfont.active{
+    color: #f00;
+}
+.yybut .detail{
+    display: inline-block;
+    height: 40px;
+    color: #fff;
+    margin-right: 1px;
+    font-size: 14px;
+}
+
+/*点赞end*/
+
