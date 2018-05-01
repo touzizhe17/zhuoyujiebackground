@@ -1,0 +1,59 @@
+﻿<style>
+        .intro{float:right;width:880px;}
+        .shiydsw li a{ width:100%;
+                height: 289px;background:url(/public/index/images/load.gif) center no-repeat;}
+        .shiydsw li a img{
+                vertical-align: top;
+                width: 289px;
+                height: 289px;
+        }
+
+        .leftrow{width:300px;float:left;}
+        .leftrow .zzheimg{border:1px solid #ccc;width:298px;}
+        .leftrow .zzheimg img{width:298px;}
+        .position{margin:20px auto;border-bottom:1px solid #ccc;line-height:30px;}
+
+        .rightrow{width:880px;float:right;}
+        .rightrow h3 {
+                border-bottom: 1px solid #ccc;
+                font-size: 30px;
+                font-weight: normal;
+                line-height: 40px;
+                padding-top: 30px;
+                text-indent: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+        }
+        .rightct{
+                text-indent:2em;color:#555;line-height:170%;
+        }
+
+        .rightrow .yishucj  {text-align:left;text-indent:0em; background-color:#FAFAFA;padding:30px;padding-left:40px;}
+        .content{
+                padding:50px;
+                text-align: center;
+        }
+</style>
+<div class="count">
+
+        {if condition="$status != '0' "}
+        <div class="leftrow">
+                <div class="zzheimg"><img src="__UPLOAD__/{$book.head}"/></div>
+        </div>
+        <div class="rightrow"><h3>{$book.name}</h3>
+                <div class="rightct">
+                        {$book.introduction}
+                </div>
+                <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="content">
+                {$book.content}
+        </div>
+        {else if condtion="$status=='0'"}
+        {$book}
+        {/if}
+</div>
+<div class="clear"></div>
+</div>

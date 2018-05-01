@@ -15,6 +15,18 @@
 	<link rel="stylesheet" type="text/css" href="__USER__/common/global.css" media="all">
 	<link rel="stylesheet" type="text/css" href="__USER__/css/personal.css" media="all">
 </head>
+<style>
+	.head-box{
+		display: inline-block;
+		float: left;
+		margin-right: 30px;
+	}
+	#headimg{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+	}
+</style>
 <body>
 <section class="layui-larry-box">
 	<div class="larry-personal">
@@ -51,13 +63,13 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">修改头像</label>
 					<div class="layui-input-inline" hidden>
-						<input type="text" name="file" class="layui-input">
+						<input type="text" name="head_url" class="layui-input" id="head-url">
+					</div>
+					<div class="head-box">
+						<img src="__UPLOAD__/picture/yudiaoshi.jpg" alt=""  id="headimg">
 					</div>
 					<div class="layui-input-inline">
-						<img src="" alt="" width="40px" height="40px" id="headimg">
-					</div>
-					<div class="layui-input-inline">
-						<input type="file"  name="file" class="layui-upload-file" id="headbtn">
+						<input type="file" accept="image/*" name="file" class="layui-upload-file" id="head-btn">
 					</div>
 
 				</div>
@@ -74,17 +86,25 @@
 </section>
 <script type="text/javascript" src="__USER__/common/layui/layui.js"></script>
 <script type="text/javascript">
-	layui.use(['form','upload'],function(){
+	layui.use(['form','upload','jquery'],function(){
          var form = layui.form();
-         layui.upload({
-			 elem:'headbtn',
-             url: "{:url('index/user/uploadhead')}" ,//上传接口
-             done: function(res){
-              //上传成功后的回调 
-              console.log(res) 
+		var $=layui.jquery();
+        layui.upload({
+			elem:'#head-btn',
+			type:'image',
+			ext:'jpg|png',
+             url: "{:url('index/user/uploadHead')}" ,//上传接口
+			before:function (input) {
+				console.log(input.value);
+            },
+             success: function(res){
+              //上传成功后的回调
+				 console.log(res)
+              document.getElementById('headimg').src=res;
+              document.getElementById('headimg').value=res;
             } ,
 			 error:function (res) {
-
+                 console.log(res)
              }
          });
 

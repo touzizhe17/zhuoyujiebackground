@@ -1,0 +1,93 @@
+{extend name="base" /}
+{block name="body"}
+<style>
+    .layui-form-item{
+        margin-bottom:50px;
+    }
+</style>
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/book/index')}">产品管理</a></li>
+            <li class="layui-this">编辑产品证书</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form form-container" action="{:url('admin/book/update',['id'=>$book.id])}" method="post">
+                    <!--修改成下拉框-->
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">作品选择</label>
+                        <div class="layui-input-block">
+                            <select name="goods_id" lay-verify="required" style="max-height: 500px">
+                                <option value=""></option>
+                                {foreach name="goods_list" item="goods"}
+                                <option value="{$goods.id}" {if condition="$goods.id eq $book.goods_id"} selected {/if}>{$goods.title}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">证书编号</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="book_num" value="{$book.book_num}" placeholder="请输入证书编号" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item ">
+                        <label class="layui-form-label">证书内容</label>
+                        <div class="layui-input-block">
+                            <textarea name="content" placeholder="" class="layui-textarea" id="content">
+                               <p>
+                                   <!--此处填写证书内容，格式自己编写-->
+                                   {$book.content}
+
+                                </p>
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script src="__JS__/ueditor/ueditor.config.js"></script>
+<script src="__JS__/ueditor/ueditor.all.min.js"></script>
+{/block}
+{block name="script"}
+<script>
+    $(function() {
+        var ue = UE.getEditor('content'),
+            uploadEditor = UE.getEditor('upload-photo-btn'),
+            photoListItem,
+            uploadImage;
+
+        uploadEditor.ready(function () {
+            uploadEditor.setDisabled();
+            uploadEditor.hide();
+            uploadEditor.addListener('beforeInsertImage', function (t, arg) {
+                $.each(arg, function (index, item) {
+                    photoListItem = '<div class="photo-list"><input type="text" name="photo[]" value="' + item.src + '" class="layui-input layui-input-inline">';
+                    photoListItem += '<button type="button" class="layui-btn layui-btn-danger remove-photo-btn">移除</button></div>';
+
+                    $('#photo-container').append(photoListItem).on('click', '.remove-photo-btn', function () {
+                        $(this).parent('.photo-list').remove();
+                    });
+                });
+            });
+        });
+
+        $('#upload-photo-btn').on('click', function () {
+            uploadImage = uploadEditor.getDialog("insertimage");
+            uploadImage.open();
+        });
+    });
+</script>
+{/block}

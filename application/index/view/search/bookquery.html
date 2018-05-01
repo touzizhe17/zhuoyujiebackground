@@ -1,0 +1,55 @@
+﻿<style>
+    .block{
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 400px;
+        padding-top: 100px;
+        background-color: #e0e0e0;
+    }
+    .query{
+        width: 600px;
+        margin: 0 auto;
+        padding:10px;
+        background-color: #0C0C0C;
+        overflow: hidden;
+        border-radius: 2px;
+    }
+    .form-label{
+        width: 20%;
+        margin-right: 10px;
+        color: #fff;
+    }
+    .input-box{
+        display: inline-block;
+        width: 80%;
+    }
+    .input-box #keyword{
+        width: 80%;
+        padding-left: 10px;
+        line-height: 28px;
+        border-radius: 2px;
+        color: #3c3c3c;
+    }
+    .input-box .btn{
+        border-radius: 2px;
+        padding:5px 15px;
+        margin-left: 10px;
+
+    }
+</style>
+
+<div class="block">
+    <div class="query">
+        <form method="post" action="{:url('index/search/queryresult')}" name="form">
+            <div class="form-item">
+                <label for="keyword" class="form-label">证书查询</label>
+            <div class="input-box">
+                <input type="text" name="book_num" value="" placeholder="请输入证书编号" id="keyword"/>
+                <input class="btn" type="submit" value="查 询"/>
+            </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+

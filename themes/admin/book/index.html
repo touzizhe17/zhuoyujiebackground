@@ -1,0 +1,67 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">证书管理</li>
+            <li class=""><a href="{:url('admin/book/add')}">添加产品证书</a></li>
+        </ul>
+        <div class="layui-tab-content">
+
+            <form class="layui-form layui-form-pane" action="{:url('admin/book/add')}" method="get">
+                <div class="layui-inline">
+                    <label class="layui-form-label">关键词</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="keyword" value="" placeholder="请输入关键词" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn">搜索</button>
+                </div>
+            </form>
+            <hr>
+
+            <form action="" method="post" class="ajax-form">
+                <button type="button" class="layui-btn layui-btn-small ajax-action" data-action="{:url('admin/article/toggle',['type'=>'audit'])}">审核</button>
+                <button type="button" class="layui-btn layui-btn-warm layui-btn-small ajax-action" data-action="{:url('admin/article/toggle',['type'=>'cancel_audit'])}">取消审核</button>
+                <button type="button" class="layui-btn layui-btn-danger layui-btn-small ajax-action" data-action="{:url('admin/article/delete')}">删除</button>
+                <div class="layui-tab-item layui-show">
+                    <table class="layui-table">
+                        <thead>
+                        <tr class="tr">
+                            <th style="width: 15px;"><input type="checkbox" class="check-all"></th>
+                            <th style="width: 30px;">序号</th>
+                            <th >证书编号</th>
+                            <th >作品图片</th>
+                            <th >作品名称</th>
+                            <th >作者头像</th>
+                            <th >作者名字</th>
+                            <th >操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach name='result' item='item' key='key'}
+                            <tr>
+                                <td><input type="checkbox" name="ids[]" value="{$item.id}"></td>
+                                <td>{$key+1}</td>
+                                <td>{$item.book_num}</td>
+                                <td><img src="__UPLOADS__{$item.thumb}" alt="" width="50px"></td>
+                                <td>{$item.title}</td>
+                                <td><img src="__UPLOADS__{$item.head}" alt="" width="50px"></td>
+                                <td>{$item.name}</td>
+                                <td style="min-width: 200px">
+                                    <a href="{:url('admin/book/edit',['id'=>$item['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+                                    <a href="{:url('admin/book/delete',['id'=>$item['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+                                </td>
+                            </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                    <!--分页-->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-04-27 14:39:09
+Date: 2018-05-01 18:58:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,7 +34,7 @@ CREATE TABLE `os_admin_user` (
 -- ----------------------------
 -- Records of os_admin_user
 -- ----------------------------
-INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-04-27 09:52:02', '127.0.0.1');
+INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-05-01 16:42:50', '127.0.0.1');
 INSERT INTO `os_admin_user` VALUES ('2', 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '1', '2018-04-11 13:13:34', '2018-04-11 13:16:06', '127.0.0.1');
 
 -- ----------------------------
@@ -145,7 +145,7 @@ CREATE TABLE `os_auth_rule` (
   `condition` char(100) DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=75 DEFAULT CHARSET=utf8 COMMENT='规则表';
+) ENGINE=MyISAM AUTO_INCREMENT=76 DEFAULT CHARSET=utf8 COMMENT='规则表';
 
 -- ----------------------------
 -- Records of os_auth_rule
@@ -223,6 +223,24 @@ INSERT INTO `os_auth_rule` VALUES ('71', 'admin/Link/update', '更新链接', '1
 INSERT INTO `os_auth_rule` VALUES ('72', 'admin/Link/delete', '删除链接', '1', '0', '57', '', '0', '');
 INSERT INTO `os_auth_rule` VALUES ('73', 'admin/ChangePassword/index', '修改密码', '1', '1', '1', '', '0', '');
 INSERT INTO `os_auth_rule` VALUES ('74', 'admin/ChangePassword/updatePassword', '更新密码', '1', '0', '1', '', '0', '');
+INSERT INTO `os_auth_rule` VALUES ('75', 'admin/book/index', '证书管理', '1', '1', '14', '', '0', '');
+
+-- ----------------------------
+-- Table structure for os_book
+-- ----------------------------
+DROP TABLE IF EXISTS `os_book`;
+CREATE TABLE `os_book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `goods_id` tinyint(11) DEFAULT NULL COMMENT '作品id',
+  `book_num` longtext COMMENT '证书编号',
+  `content` varchar(255) DEFAULT NULL COMMENT '证书内容',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_book
+-- ----------------------------
+INSERT INTO `os_book` VALUES ('2', '12', '0001', '<p><!--此处填写证书内容，格式自己编写--></p><p>王者荣耀，好玩<br/></p>');
 
 -- ----------------------------
 -- Table structure for os_category
@@ -472,7 +490,7 @@ CREATE TABLE `os_user` (
 -- ----------------------------
 -- Records of os_user
 -- ----------------------------
-INSERT INTO `os_user` VALUES ('1', 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '', '', '1', '2018-04-11 13:03:21', null, '');
+INSERT INTO `os_user` VALUES ('1', 'user', 'user', '', '', '1', '2018-04-11 13:03:21', null, '');
 
 -- ----------------------------
 -- Table structure for ot_linkug

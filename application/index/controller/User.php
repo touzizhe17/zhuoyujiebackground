@@ -26,7 +26,7 @@ class User extends Controller{
     }
     public function main(){
 
-        return $this->fetch();
+        return $this->fetch('info');
     }
     // 用户信息显示
     public function info(){
@@ -60,8 +60,24 @@ class User extends Controller{
     }
     //上传头像
     public function uploadHead(){
-        $file=$this->request->file('head');
-        return json('123');
+
+        $file=$this->request->file('file');
+
+
+        if($file){
+
+            $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads/head');
+
+            if($info){
+                // 成功上传后 获取上传信息
+                $result='/public/uploads/head/'.$info->getSaveName();
+
+            }else{
+                // 上传失败获取错误信息
+                $result=$file->getError();
+            }
+        }
+        return json($result);
     }
 
 }
