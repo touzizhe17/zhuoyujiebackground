@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-02 10:58:06
+Date: 2018-05-02 15:02:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,7 +34,7 @@ CREATE TABLE `os_admin_user` (
 -- ----------------------------
 -- Records of os_admin_user
 -- ----------------------------
-INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-05-01 16:42:50', '127.0.0.1');
+INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-05-02 11:22:04', '127.0.0.1');
 INSERT INTO `os_admin_user` VALUES ('2', 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '1', '2018-04-11 13:13:34', '2018-04-11 13:16:06', '127.0.0.1');
 
 -- ----------------------------
@@ -232,15 +232,15 @@ DROP TABLE IF EXISTS `os_book`;
 CREATE TABLE `os_book` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `goods_id` tinyint(11) DEFAULT NULL COMMENT '作品id',
-  `book_num` longtext COMMENT '证书编号',
-  `content` varchar(255) DEFAULT NULL COMMENT '证书内容',
+  `book_num` varchar(255) DEFAULT NULL COMMENT '证书编号',
+  `content` longtext COMMENT '证书内容',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_book
 -- ----------------------------
-INSERT INTO `os_book` VALUES ('2', '12', '0001', '<p><!--此处填写证书内容，格式自己编写--></p><p>王者荣耀，好玩<br/></p>');
+INSERT INTO `os_book` VALUES ('3', '17', '0001', '<p><img src=\"/public/uploads/images/20180423/1524455717708647.jpg\"/></p><p><img src=\"/public/uploads/images/20180423/1524455717484537.jpg\"/></p><p><img src=\"/public/uploads/images/20180423/1524455717435911.jpg\"/></p><p><img src=\"/public/uploads/images/20180423/1524455717141789.jpg\"/></p><p><img src=\"/public/uploads/images/20180423/1524455717131974.jpg\"/></p><p><br/></p>');
 
 -- ----------------------------
 -- Table structure for os_book_record
@@ -252,12 +252,75 @@ CREATE TABLE `os_book_record` (
   `time` datetime DEFAULT NULL COMMENT '查询时间',
   `ip` varchar(255) DEFAULT NULL COMMENT '查询的ip地址',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_book_record
 -- ----------------------------
 INSERT INTO `os_book_record` VALUES ('34', '2', '2018-05-02 10:56:42', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('35', '2', '2018-05-02 11:23:28', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('36', '2', '2018-05-02 11:25:20', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('37', '2', '2018-05-02 11:25:21', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('38', '2', '2018-05-02 11:25:23', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('39', '2', '2018-05-02 11:25:40', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('40', '2', '2018-05-02 11:25:42', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('41', '2', '2018-05-02 11:28:09', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('42', '2', '2018-05-02 11:28:47', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('43', '2', '2018-05-02 11:29:22', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('44', '2', '2018-05-02 11:29:23', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('45', '2', '2018-05-02 11:29:30', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('46', '2', '2018-05-02 11:29:44', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('47', '2', '2018-05-02 11:30:13', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('48', '2', '2018-05-02 11:30:30', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('49', '2', '2018-05-02 11:31:06', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('50', '2', '2018-05-02 11:32:05', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('51', '2', '2018-05-02 11:32:16', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('52', '2', '2018-05-02 11:33:08', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('53', '2', '2018-05-02 11:35:10', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('54', '2', '2018-05-02 11:37:52', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('55', '2', '2018-05-02 11:38:00', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('56', '2', '2018-05-02 11:38:09', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('57', '2', '2018-05-02 11:42:12', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('58', '2', '2018-05-02 11:43:18', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('59', '2', '2018-05-02 11:47:29', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('60', '2', '2018-05-02 11:48:28', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('61', '2', '2018-05-02 11:48:37', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('62', '2', '2018-05-02 11:48:47', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('63', '2', '2018-05-02 11:49:21', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('64', '2', '2018-05-02 11:49:45', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('65', '2', '2018-05-02 11:50:04', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('66', '2', '2018-05-02 11:50:56', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('67', '2', '2018-05-02 11:52:16', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('68', '2', '2018-05-02 11:52:52', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('69', '2', '2018-05-02 11:55:14', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('70', '2', '2018-05-02 12:04:40', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('71', '2', '2018-05-02 14:11:49', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('72', '2', '2018-05-02 14:28:51', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('73', '2', '2018-05-02 14:29:20', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('74', '2', '2018-05-02 14:29:25', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('75', '2', '2018-05-02 14:31:23', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('76', '2', '2018-05-02 14:33:20', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('77', '2', '2018-05-02 14:33:26', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('78', '2', '2018-05-02 14:46:43', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('79', '2', '2018-05-02 14:47:23', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('80', '2', '2018-05-02 14:48:37', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('81', '2', '2018-05-02 14:48:52', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('82', '2', '2018-05-02 14:48:54', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('83', '2', '2018-05-02 14:49:03', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('84', '3', '2018-05-02 14:53:28', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('85', '3', '2018-05-02 14:54:28', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('86', '3', '2018-05-02 14:54:45', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('87', '3', '2018-05-02 14:54:48', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('88', '3', '2018-05-02 14:54:51', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('89', '3', '2018-05-02 14:54:52', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('90', '3', '2018-05-02 14:54:54', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('91', '3', '2018-05-02 14:54:55', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('92', '3', '2018-05-02 14:55:44', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('93', '3', '2018-05-02 14:59:09', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('94', '3', '2018-05-02 14:59:43', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('95', '3', '2018-05-02 14:59:58', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('96', '3', '2018-05-02 15:00:53', '127.0.0.1');
+INSERT INTO `os_book_record` VALUES ('97', '3', '2018-05-02 15:02:20', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for os_category
@@ -304,7 +367,7 @@ CREATE TABLE `os_grand` (
   `create_time` datetime NOT NULL COMMENT '创建时间',
   `publish_time` datetime NOT NULL COMMENT '发布时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='大师用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='大师用户表';
 
 -- ----------------------------
 -- Records of os_grand
@@ -323,6 +386,7 @@ INSERT INTO `os_grand` VALUES ('15', '李牧祥', '李牧祥，广东肇庆人�
 INSERT INTO `os_grand` VALUES ('16', '施宗颖', '施宗颖，广东省雕刻艺术研究会会长、中华玉雕大师、广东省玉石雕刻大师、中国神工价值人物。其艺术风格吸收中国传统道教与佛教精髓，结合现代思潮的玄幻倾向，融合创作出天马行空，大胆巧思的作品。其作品运用魔幻、超现实主义的手法，突破传统又兼具传统，充满了现代线条感与东方神秘色彩，风格独具一格。', '<p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　中华玉雕大师</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　十大杰出青年</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　中国神工价值人物</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　广东省玉石雕刻大师</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　广东省雕刻艺术研究会会长</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　中华玉石专业委员会副主任</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　宗.翡翠艺术工作室艺术总监</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　海派玉雕大师华裔玉石雕刻大师</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　新世纪中国首批20名国家级玉雕大师</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(85, 85, 85); font-family: 微软雅黑; font-size: 14px; white-space: normal;\">　　广东省玉雕文化促进会-常务副会长兼艺术总监</p><p><br/></p>', '1', '/uploads/20180425/e086eb2aee077bfb8f15b1bc20e03f31.jpg', '0', '0', '0', '2018-04-25 10:40:24', '2018-04-25 10:39:56');
 INSERT INTO `os_grand` VALUES ('17', '陈江南', '陈江南，苏派玉雕大师，国家高级玉雕师，苏州玉雕委员会副会长。擅长恢弘写意之风格，作品浑厚大气，雕工精细，尤重意境，不囿于刻板传统，刚柔结合，独具江南情怀。尤精于忠义关公雕刻，以女性视角观察关公文化、历史背景与人物性格，以超脱于传统的俊逸手法，将内心的关公形象呈现出来。既有豪迈大气的洒脱，又有江南婉约的柔美，刚柔兼济，令人叹为观止，堪称关公玉雕第一人。', '', '1', '/uploads/20180425/8f44a3f6ecc2e5bf0f8e5e3c7dedc993.jpg', '0', '0', '0', '2018-04-25 17:01:51', '2018-04-25 17:01:13');
 INSERT INTO `os_grand` VALUES ('18', '加龙', '加龙，本名张钦荣，青年玉雕名家，中级工艺美术师,广东省揭阳职业技术学院外聘教师，广东省雕刻艺术研究会副会长。2006年师从高级工艺美术师、广东省工艺美术大师张炳光，学习传统工艺美术和高端翡翠设计及雕刻，2012年创办个人翡翠雕刻艺术工作室。其作品在业内和藏家均有极高口碑，作品多年来在中国工艺美术“文化创意奖”，中国工艺美术“百花奖”，广东省工艺美术精品展等各类赛事中获奖，金奖七个，银奖十个。', '', '1', '/uploads/20180423/cb7372b8db98e55bbf1673bdfa457bf5.jpg', '0', '0', '0', '2018-04-23 10:03:34', '2018-04-23 10:02:36');
+INSERT INTO `os_grand` VALUES ('21', 'test', '123', '<p><img src=\"/public/uploads/images/20180423/1524455717708647.jpg\" width=\"327\" height=\"293\"/></p><p>123</p><p><img src=\"/public/uploads/images/20180423/1524455717484537.jpg\" width=\"354\" height=\"832\"/></p><p><img src=\"/public/uploads/images/20180423/1524455717435911.jpg\" width=\"271\" height=\"755\"/></p><p><img src=\"/public/uploads/images/20180423/1524455717141789.jpg\" width=\"292\" height=\"729\"/></p><p><img src=\"/public/uploads/images/20180423/1524455717131974.jpg\" width=\"441\" height=\"753\"/></p><p>dfaga gagadga</p><p><br/></p>', '1', '/uploads/20180502/54b62ab7a8bd65e05c386d4aa04889c5.jpg', '0', '0', '0', '2018-05-02 14:42:54', '2018-05-02 14:42:17');
 
 -- ----------------------------
 -- Table structure for os_link

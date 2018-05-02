@@ -36,9 +36,8 @@
                 border-bottom:1px solid #999;
         }
         .book-content{
-                padding:50px;
-                text-align: center;
-                border: 1px solid #e0dfe1;
+                width: 100%;
+                text-align: left;
         }
         .search-record{
                 margin-top: 10px;
@@ -47,19 +46,26 @@
                 padding:10px 0;
                 padding-bottom: 10px;
         }
+        .table-title{
+                width: 100%;
+                padding-bottom: 10px;
+        }
+        .table-title span{
+                display: inline-block;
+                min-width: 200px;
+        }
         .table{
                 width: 100%;
+                max-height: 120px;
+                overflow-y: scroll;
         }
-        .table tr{
-                display: block;
+        .table li{
+                padding-bottom:10px;
                 width: 100%;
-                padding:5px 0;
-                border-bottom:1px solid #999;
-
         }
-        .table tr th,td{
-                text-align: left;
-                min-width:200px;
+        .table li span{
+                display: inline-block;
+                min-width: 200px;
         }
 </style>
 
@@ -86,20 +92,25 @@
         <!--查询历史记录-->
         <div class="search-record">
                 <h3 class="title2">查询历史记录</h3>
-                <table class="table">
-                        <tr>
-                                <th>序号</th>
-                                <th>查询时间</th>
-                                <th>ip地址</th>
-                        </tr>
+                <div class="table-title">
+                        <span>序号</span>
+                        <span>查询时间</span>
+                        <span>ip地址</span>
+                </div>
+                <ul class="table">
                         {foreach name="record_list" item="item" key='key'}
-                        <tr>
-                                <td>{$key+1}</td>
-                                <td>{$item.time}</td>
-                                <td>{$item.ip}</td>
-                        </tr>
+                        <li>
+                                <span>{$key+1}</span>
+                                <span>{$item.time}</span>
+                                <span>{$item.ip}</span>
+                        </li>
                         {/foreach}
-                </table>
+                </ul>
+
+        </div>
+        <!--宣传栏-->
+        <div class="about">
+
         </div>
         {/if}
         {if condition="$status==0"}
