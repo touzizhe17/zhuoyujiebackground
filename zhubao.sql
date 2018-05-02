@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-01 18:58:41
+Date: 2018-05-02 10:58:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -241,6 +241,23 @@ CREATE TABLE `os_book` (
 -- Records of os_book
 -- ----------------------------
 INSERT INTO `os_book` VALUES ('2', '12', '0001', '<p><!--此处填写证书内容，格式自己编写--></p><p>王者荣耀，好玩<br/></p>');
+
+-- ----------------------------
+-- Table structure for os_book_record
+-- ----------------------------
+DROP TABLE IF EXISTS `os_book_record`;
+CREATE TABLE `os_book_record` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `book_id` int(11) DEFAULT NULL,
+  `time` datetime DEFAULT NULL COMMENT '查询时间',
+  `ip` varchar(255) DEFAULT NULL COMMENT '查询的ip地址',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_book_record
+-- ----------------------------
+INSERT INTO `os_book_record` VALUES ('34', '2', '2018-05-02 10:56:42', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for os_category

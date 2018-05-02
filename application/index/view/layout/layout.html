@@ -255,7 +255,7 @@
         padding: 15px 0;
     }
     .content{
-        min-height: 400px;
+        min-height: 600px;
     }
 </style>
 
@@ -607,9 +607,11 @@
         if(path=='/'){
             path+='index/index/index.html'
         }
+        console.log(path)
         $('.ydjnavw li a').each(function (i,item) {
             var item=$(item);
             var href=item.attr('href');
+            console.log(href);
             if(href!=undefined){
                 href=href.substring(0,href.length-11)
             }

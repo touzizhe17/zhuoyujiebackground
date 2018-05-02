@@ -29,14 +29,44 @@
         }
 
         .rightrow .yishucj  {text-align:left;text-indent:0em; background-color:#FAFAFA;padding:30px;padding-left:40px;}
-        .content{
+
+        .title{
+                text-align: center;
+                padding:10px 0;
+                border-bottom:1px solid #999;
+        }
+        .book-content{
                 padding:50px;
                 text-align: center;
+                border: 1px solid #e0dfe1;
+        }
+        .search-record{
+                margin-top: 10px;
+        }
+        .title2{
+                padding:10px 0;
+                padding-bottom: 10px;
+        }
+        .table{
+                width: 100%;
+        }
+        .table tr{
+                display: block;
+                width: 100%;
+                padding:5px 0;
+                border-bottom:1px solid #999;
+
+        }
+        .table tr th,td{
+                text-align: left;
+                min-width:200px;
         }
 </style>
-<div class="count">
 
+<div class="count">
         {if condition="$status != '0' "}
+        <h2 class="title">查询结果</h2>
+        <h3 class="title2">作者简介</h3>
         <div class="leftrow">
                 <div class="zzheimg"><img src="__UPLOAD__/{$book.head}"/></div>
         </div>
@@ -48,10 +78,31 @@
         </div>
 
         <div class="clear"></div>
-        <div class="content">
+        <!--查询证书内容-->
+        <h3 class="title2">查询证书内容</h3>
+        <div class="book-content">
                 {$book.content}
         </div>
-        {else if condtion="$status=='0'"}
+        <!--查询历史记录-->
+        <div class="search-record">
+                <h3 class="title2">查询历史记录</h3>
+                <table class="table">
+                        <tr>
+                                <th>序号</th>
+                                <th>查询时间</th>
+                                <th>ip地址</th>
+                        </tr>
+                        {foreach name="record_list" item="item" key='key'}
+                        <tr>
+                                <td>{$key+1}</td>
+                                <td>{$item.time}</td>
+                                <td>{$item.ip}</td>
+                        </tr>
+                        {/foreach}
+                </table>
+        </div>
+        {/if}
+        {if condition="$status==0"}
         {$book}
         {/if}
 </div>

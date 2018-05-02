@@ -54,7 +54,10 @@ HTML;
         return $this->fetch();
     }
     public function queryResult($book_num=''){
-
+        $recordDb=db('book_record');
+        $record['time']=date('Y-m-d H:i:s');
+        $record['ip']=$this->request->ip();
+        $record_list=null;
         if($book_num==''){
             $status=0;
             $book='请输入证书编号，然后查询';
@@ -72,8 +75,14 @@ HTML;
                 $book='抱歉未找到结果';
             }
         }
+        if($status==1){
+            $record['book_id']=$book['id'];
+            $recordDb->insert($record);
+            $record_list=$recordDb->where('book_id',$book['id'])->select();
+        }
 
 
+        $this->assign('record_list',$record_list);
         $this->assign('book',$book);
         $this->assign('status',$status);
         return $this->fetch();
