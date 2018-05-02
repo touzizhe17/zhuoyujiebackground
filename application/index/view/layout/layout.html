@@ -594,7 +594,7 @@
             var path='__STATIC__/images/';
             var name=$(this).data('name');
             path+=name;
-            console.log(path)
+//            console.log(path)
 
             $('.wxcode img').attr('src',path)
         })
@@ -607,11 +607,11 @@
         if(path=='/'){
             path+='index/index/index.html'
         }
-        console.log(path)
+//        console.log(path)
         $('.ydjnavw li a').each(function (i,item) {
             var item=$(item);
             var href=item.attr('href');
-            console.log(href);
+//            console.log(href);
             if(href!=undefined){
                 href=href.substring(0,href.length-11)
             }

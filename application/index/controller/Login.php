@@ -56,5 +56,12 @@ class Login extends Controller {
 
         return   $this->redirect('index/index/index');
     }
+    public function check(){
+        $name=session('name');
+        if($name==null){
+            return false;
+        }
+        return true;
+    }
 }
 

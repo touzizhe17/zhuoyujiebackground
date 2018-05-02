@@ -73,12 +73,14 @@
             </div>
             <div class="yybut huis">
                 <a target="_blank" href="{:url('index/goods/goodsdetail',['id'=>$vo.id])}" class="detail">作品详情 </a>
-                <a onclick="click_good(this,1)" class="icon-box">
+                <a onclick="click_good(this,'is_good','{$vo.id}')" class="icon-box good" title="点赞">
                    <span class="iconfont icon-zan" ></span>
-                </a>10
-                <a onclick="click_good(this,0)" class="icon-box">
+                </a>
+                <span>0</span>
+                <a onclick="click_good(this,'is_bad','{$vo.id}')" class="icon-box cai" title="踩">
                     <span class="iconfont icon-cai "></span>
-                </a>1000
+                </a>
+                <span>0</span>
             </div>
             <i>{$vo.materials}</i>
         </li>
