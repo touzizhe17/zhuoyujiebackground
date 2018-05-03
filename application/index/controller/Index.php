@@ -22,7 +22,8 @@ class Index extends  Controller
     }
     public function index($page = 1)
     {
-        $user_id=session('userId');
+        $user_id=session(config('USER_ID'));
+
 
         //最多显示12个作品
         $article_list = $this->article_model
@@ -33,7 +34,7 @@ class Index extends  Controller
             ->order(['a.publish_time' => 'DESC'])
             ->limit(12)
             ->select();
-//        dump($article_list);die;
+
         //如果用户已经登录
         if($user_id!=null){
             $userGood=Db::name('user_good_bad');
@@ -54,8 +55,8 @@ class Index extends  Controller
         }
 
         //玉雕大师，最多显示12个大师
-        $field = 'id,name,introduction,thumb,status,publish_time,sort';
         $grand_list  = $this->grand_model
+            ->field('id,name,thumb')
             ->order(['publish_time' => 'DESC'])
             ->paginate(12);
 

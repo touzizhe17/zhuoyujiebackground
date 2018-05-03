@@ -148,12 +148,11 @@ HTML;
 
     /**
      * 赞或者踩
-     * @param null $id 作品id
-     * @param null $action 操作的是good 或者bad
-     * @param null $flag  增加或者是删除
+     * @param  $id 作品id
+     * @param  $action 操作的是good 或者bad
      */
     public function good_bad($id=null,$action=null){
-        $user_id=session('userId');
+        $user_id=session(config('USER_ID'));
 
         //获取当前这个作品已经有的赞和踩的数量
         $res=$this->article_model->field('good_num,bad_num')->find($id);

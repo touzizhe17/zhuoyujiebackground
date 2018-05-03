@@ -74,18 +74,19 @@
             <div class="yybut huis">
                 <a target="_blank" href="{:url('index/goods/goodsdetail',['id'=>$vo.id])}" class="detail">作品详情 </a>
                 <a onclick="click_good(this,'is_good','{$vo.id}')" class="icon-box good" title="点赞">
-                    {if condition="$vo.is_good=='1'"}
-                   <span class="iconfont icon-zan active" ></span>
+                    <!--用户是否登录,并且点过赞-->
+                    {if condition="$Think.session.name!=''&& $vo.is_good==1 "}
+                    <span class="iconfont icon-zan active " ></span>
                     {else /}
-                    <span class="iconfont icon-zan" ></span>
+                    <span class="iconfont icon-zan "></span>
                     {/if}
                 </a>
                 <span>{$vo.good_num}</span>
                 <a onclick="click_good(this,'is_bad','{$vo.id}')" class="icon-box cai" title="踩">
-                    {if condition="$vo.is_bad=='1'"}
-                    <span class="iconfont icon-cai active" ></span>
+                    {if condition="$Think.session.name!=''&& $vo.is_bad==1 "}
+                    <span class="iconfont icon-cai active " ></span>
                     {else /}
-                    <span class="iconfont icon-cai" ></span>
+                    <span class="iconfont icon-cai "></span>
                     {/if}
                 </a>
                 <span>{$vo.bad_num}</span>

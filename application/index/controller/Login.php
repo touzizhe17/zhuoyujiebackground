@@ -19,7 +19,8 @@ class Login extends Controller {
 
     public function login($username='',$password=''){
 
-        if(session('name')!=''){
+
+        if(session(config('USER_NAME'))!=''){
             return   $this->redirect('index/index/index');
         }
 
@@ -31,8 +32,8 @@ class Login extends Controller {
             $res=$user->where('username|email|mobile',$username)->where('password',$password)->find();
             if($res!=null){
                 // 登录成功
-                session('name',$res['username']);
-                session('userId',$res['id']);
+                session(config('USER_NAME'),$res['username']);
+                session(config('USER_ID'),$res['id']);
 
                 return   $this->redirect('index/index/index');
 
@@ -52,12 +53,11 @@ class Login extends Controller {
 
     public function logout(){
 
-        session('name',null);
-
+        session(null);
         return   $this->redirect('index/index/index');
     }
     public function check(){
-        $name=session('name');
+        $name=session(config('USER_NAME'));
         if($name==null){
             return false;
         }
