@@ -1,45 +1,59 @@
 ﻿    <div class="count">
         <div class="glistw" style="width:100%;">
             <ul class="glistul">
-                {foreach name="goods_list" item="vo"}
+                {foreach name="goods_list" item="item"}
                 <!--item-->
-                <li class="" id="goods_32034">
-                    {if condition="$vo.video_url !=''"}
+                <li class="" >
+                    {if condition="$item.video_url !=''"}
                     <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
                     {/if}
-                    <a href="{:url('index/goods/goodsDetail',['id'=>$vo.id])}" target="_blank" class="daaimg" target="_blank">
-                        <img class="lazyimg" src="__UPLOAD__/{$vo.thumb}"
-                             data-original="__UPLOAD__/{$vo.thumb}" />
+                    <a href="{:url('index/goods/goodsDetail',['id'=>$item.id])}" target="_blank" class="daaimg" target="_blank">
+                        <img class="lazyimg" src="__UPLOAD__/{$item.thumb}"
+                             data-original="__UPLOAD__/{$item.thumb}" />
                     </a>
                     <div class="zuozinfo">
                         <!-- 添加一个作者的id，方便跳转到对应的作者详情页面-->
-                        <a href="{:url('index/graver/graverDetail',['id'=>$vo.gid])}" target="_blank" class="zzimgaw">
-                            <img src="__UPLOAD__/{$vo.head}"/>
+                        <a href="{:url('index/graver/graverDetail',['id'=>$item.aid])}" target="_blank" class="zzimgaw">
+                            <img src="__UPLOAD__/{$item.c}"/>
                         </a>
                         <div class="zzzpw">
                             <div class="zzup">
-                                <a href="{:url('index/goods/goodsDetail',['id'=>$vo.id])}" target="_blank">{$vo.title}</a>
-                                <a href="{:url('index/graver/graverDetail',['id'=>$vo.gid])}" target="_blank">作者：{$vo.name}</a>
+                                <a href="{:url('index/goods/goodsDetail',['id'=>$item.id])}" target="_blank">{$item.title}</a>
+                                <a href="{:url('index/graver/graverDetail',['id'=>$item.aid])}" target="_blank">作者：{$item.name}</a>
                             </div>
                             <div class="zzupb">
-                                {if condition="$vo.jmoney!=''"}
-                                <span class="jiage">¥{$vo.jmoney}元</span>
+                                {if condition="$item.jmoney!=''"}
+                                <span class="jiage">¥{$item.jmoney}元</span>
                                 {else /}
                                 <span class="jiage">议价</span>
                                 {/if}
                             </div>
                         </div>
                     </div>
+                    <!--点赞start-->
                     <div class="yybut huis">
-                        <a target="_blank" href="{:url('index/goods/goodsdetail',['id'=>$vo.id])}" class="detail">作品详情 </a>
-                        <a onclick="click_good(this,1)" class="icon-box">
-                            <span class="iconfont icon-zan" ></span>
-                        </a>10
-                        <a onclick="click_good(this,0)" class="icon-box">
+                        <a target="_blank" href="{:url('index/goods/goodsdetail',['id'=>$item.id])}" class="detail">作品详情 </a>
+                        <a onclick="click_good(this,'is_good','{$item.id}')" class="icon-box good" title="点赞">
+                            <!--用户是否登录,并且点过赞-->
+                            {if condition="$Think.session.name!=''&& $item.is_good==1 "}
+                            <span class="iconfont icon-zan active " ></span>
+                            {else /}
+                            <span class="iconfont icon-zan "></span>
+                            {/if}
+                        </a>
+                        <span>{$item.good_num}</span>
+                        <a onclick="click_good(this,'is_bad','{$item.id}')" class="icon-box cai" title="踩">
+                            {if condition="$Think.session.name!=''&& $item.is_bad==1 "}
+                            <span class="iconfont icon-cai active " ></span>
+                            {else /}
                             <span class="iconfont icon-cai "></span>
-                        </a>1000
+                            {/if}
+                        </a>
+                        <span>{$item.bad_num}</span>
                     </div>
-                    <i>{$vo.materials}</i>
+                    <!--点赞end-->
+
+                    <i>{$item.materials}</i>
                 </li>
                 {/foreach}
 
@@ -52,3 +66,4 @@
     </div>
 </div>
 <div style="clear:both;"></div>
+    <script src="__STATIC__/js/me.js"></script>

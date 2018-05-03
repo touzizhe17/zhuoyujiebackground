@@ -1,7 +1,7 @@
 <?php
 namespace app\index\controller;
 use think\Controller;
-use think\Request;
+use think\Db;
 use app\common\model\Grand as GrandModel;
 use app\common\model\Article as ArticleModel;
 use app\common\model\Book as BookModel;
@@ -31,10 +31,26 @@ HTML;
             $res2=$this->article
                 ->alias('a')
                 ->join('grand g','a.author=g.id')
-                ->where('a.title|a.introduction|a.materials|a.jmoney|a.content','like','%'.$keyword.'%')
-                ->field('a.*,g.name name,g.id gid,g.thumb head')
+                ->where('a.title|a.introduction|a.materials|a.jmoney|a.content|g.name','like','%'.$keyword.'%')
+                ->field('a.*,g.name ,g.id aid,g.thumb c')
                 ->paginate(6);
 
+            $userGood=Db::name('user_good_bad');
+            $user_id=session(config('USER_ID'));
+            if($user_id!=null){
+                foreach ($res2 as $k=>$item){
+                    $res=$userGood->where(['goods_id'=>$item['id'],'user_id'=>$user_id])->find();
+                    if($res==null){
+                        $item['is_good']=0;
+                        $item['is_bad']=0;
+
+                    }else{
+                        $item['is_good']=$res['is_good'];
+                        $item['is_bad']=$res['is_bad'];;
+                    }
+
+                }
+            }
             $page=$res2->render();
             if($page==null){
                 $page=<<<HTML
@@ -53,6 +69,7 @@ HTML;
 
         return $this->fetch();
     }
+    //证书查询结果
     public function queryResult($book_num=''){
         $recordDb=db('book_record');
         $record['time']=date('Y-m-d H:i:s');

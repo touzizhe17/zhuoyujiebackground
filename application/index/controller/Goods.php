@@ -95,6 +95,25 @@ class Goods extends Controller
             ->order($or)
             ->paginate(12);
 
+        $user_id=session(config('USER_ID'));
+        if($user_id!=null){
+            $userGood=Db::name('user_good_bad');
+
+            foreach ($zuopin_list as $k=>$item){
+
+                $res=$userGood->where(['goods_id'=>$item['id'],'user_id'=>$user_id])->find();
+                if($res==null){
+                    $item['is_good']=0;
+                    $item['is_bad']=0;
+
+                }else{
+                    $item['is_good']=$res['is_good'];
+                    $item['is_bad']=$res['is_bad'];;
+                }
+
+            }
+        }
+
             $page=$zuopin_list->render();
 
             if($page==null){

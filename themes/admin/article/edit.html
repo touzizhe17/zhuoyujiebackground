@@ -48,7 +48,6 @@
                         <label class="layui-form-label">作品作者</label>
                         <div class="layui-input-block">
                             <select name="author" lay-verify="required">
-
                                 {foreach name="authList" item="auth"}
                                 <option value="{$auth.id}"{if condition="$auth.id eq $article.author"} selected {/if}>{$auth.name}</option>
                                 {/foreach}
