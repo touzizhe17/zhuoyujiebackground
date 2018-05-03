@@ -4,7 +4,7 @@
  */
 namespace app\index\controller;
 use think\Controller;
-use think\Request;
+use think\Db;
 use app\common\model\Article as ArticleModel;
 use app\common\model\Grand as GrandModel;
 class Collect extends Controller
@@ -19,14 +19,11 @@ class Collect extends Controller
     public function index()
     {
         //根据分类ID ,属于作品类,而且是推荐作品20
-        $zuopin_list = $this->article_model
-            ->alias('a')
-            ->where('a.cid',1)
-            ->where('a.is_recommend',1)
-            ->field('a.*,g.thumb c,g.id aid,g.name name')
-            ->join('grand g','a.author=g.id','LEFT')
-            ->order(['a.publish_time' => 'DESC'])
-            ->paginate(2);
+        $userGood=Db::name('user_good_bad');
+        $where=['a.is_recommend'=>1];
+
+        $zuopin_list=getGoodsList($this->article_model,$userGood,$where,12);
+
         $page=$zuopin_list->render();
 
         $this->assign('page',$page);

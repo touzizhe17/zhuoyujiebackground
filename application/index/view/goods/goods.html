@@ -51,24 +51,24 @@
             </div>
         </div>
         <ul class="glistul">
-            {foreach name='$zuopin_list' item='zuopin'}
-            <li class="" id="goods_32049">
-                {if condition="$zuopin.video_url !=''"}
+            {foreach name='$zuopin_list' item='item'}
+            <li class="" >
+                {if condition="$item.video_url !=''"}
                 <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
                 {/if}
-                <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank" class="daaimg" target="_blank">
-                    <img class="lazyimg" src="__STATIC__/picture/imghold.gif"data-original="__UPLOAD__/{$zuopin.thumb}"/></a>
+                <a href="{:url('index/goods/goodsDetail',['id'=>$item.id])}" target="_blank" class="daaimg" target="_blank">
+                    <img class="lazyimg" src="__STATIC__/picture/imghold.gif"data-original="__UPLOAD__/{$item.thumb}"/></a>
                 <div class="zuozinfo">
-                    <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank" class="zzimgaw"><img
-                            src="__UPLOAD__/{$zuopin.c}"/></a>
+                    <a href="{:url('index/graver/graverDetail',['id'=>$item.aid])}" target="_blank" class="zzimgaw"><img
+                            src="__UPLOAD__/{$item.c}"/></a>
                     <div class="zzzpw">
                         <div class="zzup">
-                            <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}" target="_blank">{$zuopin.title}</a>
-                            <a href="{:url('index/graver/graverDetail',['id'=>$zuopin.aid])}" target="_blank">作者：{$zuopin.name}</a>
+                            <a href="{:url('index/goods/goodsDetail',['id'=>$item.id])}" target="_blank">{$item.title}</a>
+                            <a href="{:url('index/graver/graverDetail',['id'=>$item.aid])}" target="_blank">作者：{$item.name}</a>
                         </div>
                         <div class="zzupb">
-                            {if condition="$zuopin.jmoney!=''"}
-                            <span class="jiage">¥{$zuopin.jmoney}元</span>
+                            {if condition="$item.jmoney!=''"}
+                            <span class="jiage">¥{$item.jmoney}元</span>
                             {else /}
                             <span class="jiage">议价</span>
                             {/if}
@@ -76,17 +76,30 @@
                         </div>
                     </div>
                 </div>
+                <!--点赞start-->
                 <div class="yybut huis">
-                    <a target="_blank" href="{:url('index/graver/graverDetail',['id'=>$zuopin.id])}" class="detail">作品详情 </a>
-                    <a onclick="click_good(this,'good','{$zuopin.id}')" class="icon-box">
-                        <span class="iconfont icon-zan" ></span>
-                    </a>10
-                    <a onclick="click_good(this,'bad','{$zuopin.id}')" class="icon-box">
-                        <span class="iconfont icon-cai" ></span>
-                    </a>1000
+                    <a target="_blank" href="{:url('index/goods/goodsdetail',['id'=>$item.id])}" class="detail">作品详情 </a>
+                    <a onclick="click_good(this,'is_good','{$item.id}')" class="icon-box good" title="点赞">
+                        <!--用户是否登录,并且点过赞-->
+                        {if condition="$Think.session.name!=''&& $item.is_good==1 "}
+                        <span class="iconfont icon-zan active " ></span>
+                        {else /}
+                        <span class="iconfont icon-zan "></span>
+                        {/if}
+                    </a>
+                    <span>{$item.good_num}</span>
+                    <a onclick="click_good(this,'is_bad','{$item.id}')" class="icon-box cai" title="踩">
+                        {if condition="$Think.session.name!=''&& $item.is_bad==1 "}
+                        <span class="iconfont icon-cai active " ></span>
+                        {else /}
+                        <span class="iconfont icon-cai "></span>
+                        {/if}
+                    </a>
+                    <span>{$item.bad_num}</span>
                 </div>
+                <!--点赞end-->
 
-                <i>{$zuopin.materials}</i>
+                <i>{$item.materials}</i>
             </li>
             {/foreach}
 
@@ -107,6 +120,7 @@
         priceActive();
         materActive();
     }();
+    //左侧价格条目点击添加active样式
     function priceActive() {
         var p='{$price}';
         var dom=$('#price li a');
@@ -114,6 +128,7 @@
         dom.removeClass('current');
         dom.eq(p).addClass('current')
     }
+    //左侧材料条目点击添加active样式
     function materActive() {
         var mt='{$mt}';
         var dom=$('#mt li a');

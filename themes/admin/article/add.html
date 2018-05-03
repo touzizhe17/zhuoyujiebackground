@@ -13,9 +13,9 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">所属栏目</label>
                         <div class="layui-input-block">
-                            <select name="cid" lay-verify="required">
+                            <select name="cid" lay-verify="required" lay-filter="cid">
                                 {foreach name="category_level_list" item="vo"}
-                                <option value="{$vo.id}">{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</option>
+                                <option value="{$vo.id}"> {$vo.name}</option>
                                 {/foreach}
                             </select>
                         </div>
@@ -46,8 +46,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">作品作者</label>
                         <div class="layui-input-block">
-                            <select name="author" lay-verify="required" style="max-height: 200px">
-                                <option value=""></option>
+                            <select name="author" lay-verify="required" lay-filter="zuozhe" style="max-height: 200px" id="zuozhe">
                                 {foreach name="authList" item="auth"}
                                 <option value="{$auth.id}">{$auth.name}</option>
                                 {/foreach}

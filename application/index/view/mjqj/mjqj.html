@@ -15,27 +15,65 @@
 <div class="banner"></div>
 <div class="clear"></div>
 <div class="count">
-    <ul class="prlist">
-        {foreach name='zuopin_list' item='zuopin'}
-        <li class="list-li">
-            <div class="thumb"><a target="_blank" href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}">
-                <img class="lazyimg"data-original="__UPLOAD__/{$zuopin.thumb}"src="__STATIC__/picture/imghold.gif"></a>
+    <ul class="glistul">
+        {foreach name="zuopin_list" item="item"}
+        <li class="" >
+            {if condition="$item.video_url !=''"}
+            <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
+            {/if}
+            <a href="{:url('index/goods/goodsDetail',['id'=>$item.id])}" target="_blank" class="daaimg" target="_blank">
+                <img class="lazyimg" src="__UPLOAD__/{$item.thumb}"
+                     data-original="__UPLOAD__/{$item.thumb}" />
+            </a>
+            <div class="zuozinfo">
+                <!-- 添加一个作者的id，方便跳转到对应的作者详情页面-->
+                <a href="{:url('index/graver/graverDetail',['id'=>$item.aid])}" target="_blank" class="zzimgaw">
+                    <img src="__UPLOAD__/{$item.c}"/>
+                </a>
+                <div class="zzzpw">
+                    <div class="zzup">
+                        <a href="{:url('index/goods/goodsDetail',['id'=>$item.id])}" target="_blank">{$item.title}</a>
+                        <a href="{:url('index/graver/graverDetail',['id'=>$item.aid])}" target="_blank">作者：{$item.name}</a>
+                    </div>
+                    <div class="zzupb">
+                        {if condition="$item.jmoney!=''"}
+                        <span class="jiage">¥{$item.jmoney}元</span>
+                        {else /}
+                        <span class="jiage">议价</span>
+                        {/if}
+                    </div>
+                </div>
             </div>
-            <div class="title">{$zuopin.title}</div>
-            <div class="aside"><p>【货 号】：{$zuopin.goods_num}</p>
-                {if condition="$zuopin.jmoney!=''"}
-                <P>【结缘价】<b>¥{$zuopin.jmoney}元</b></P>
-                {else /}
-                <P>【结缘价】<b>议价</b></P>
-                {/if}
+            <!--点赞start-->
+            <div class="yybut huis">
+                <a target="_blank" href="{:url('index/goods/goodsdetail',['id'=>$item.id])}" class="detail">作品详情 </a>
+                <a onclick="click_good(this,'is_good','{$item.id}')" class="icon-box good" title="点赞">
+                    <!--用户是否登录,并且点过赞-->
+                    {if condition="$Think.session.name!=''&& $item.is_good==1 "}
+                    <span class="iconfont icon-zan active " ></span>
+                    {else /}
+                    <span class="iconfont icon-zan "></span>
+                    {/if}
+                </a>
+                <span>{$item.good_num}</span>
+                <a onclick="click_good(this,'is_bad','{$item.id}')" class="icon-box cai" title="踩">
+                    {if condition="$Think.session.name!=''&& $item.is_bad==1 "}
+                    <span class="iconfont icon-cai active " ></span>
+                    {else /}
+                    <span class="iconfont icon-cai "></span>
+                    {/if}
+                </a>
+                <span>{$item.bad_num}</span>
             </div>
-            <a class="aside-r" target="_blank" href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}">查看<br>详细</a>
+            <!--点赞end-->
+
+            <i>{$item.materials}</i>
         </li>
         {/foreach}
-
     </ul>
     <div class="clear"></div>
     {$page}
 </div>
 
 </div>
+<script src="__STATIC__/js/me.js"></script>
