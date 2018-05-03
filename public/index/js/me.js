@@ -1,7 +1,7 @@
 /**
  * 点赞
  * @param dom 当前点击dom对象
- * @param flag 1赞，0踩
+ * @param action 点击的是踩 还是赞
  */
 function click_good(dom,action,id) {
     //1检查是否登录
@@ -16,53 +16,28 @@ function click_good(dom,action,id) {
             }else{
                 //---已经登录的用户----
                 //2检测是否已经点赞或者踩
-                var icon=$(dom).children('span');
-                var textDom=$(dom).next();
-                var num=textDom.html();
-                if(icon.hasClass('active')){
-                    //已经点亮的，就取消点亮
-                    icon.removeClass('active')
-                    //获取赞，踩数量
-                    textDom.html(parseInt(num)-1);
+                var parent=$(dom).parent();
+                var cai=parent.children('.cai');
+                var good=parent.children('.good');
+
+                var icon_cai=cai.children('span');
+                var icon_good=good.children('span');
+
+                if(!icon_cai.hasClass('active')&&!icon_good.hasClass('active')){
+                    //之前都没有点亮过
+                    var icon=$(dom).children('span');
+                        icon.addClass('active')
+                    var textDom=$(dom).next()
+                    textDom.html(parseInt(textDom.html())+1);
+
+                // 3发送请求去后台统计用户点赞
+                $.ajax({
+                    url:'/index/goods/good_bad/action/'+action+'/id/'+id,
+                });
+
                 }else{
-                    icon.addClass('active')
-                    textDom.html(parseInt(num)+1);
+                    alert('您已经赞或者踩过了！')
                 }
-
-                if(action=='is_good'){
-                    //是点赞
-                    var parent=$(dom).parent();
-                    var cai=parent.children('.cai');
-                    //取消踩
-                    cai.removeClass('active')
-                }else{
-                    //是踩
-                    var parent=$(dom).parent();
-                    var good=parent.children('.good');
-                    //取消赞
-                    good.removeClass('active')
-                }
-
-                //TODO 发送请求去后台统计用户点赞
-
-
-                // $.ajax({
-                //     url:'/index/goods/good_bad/action/'+action+'/flag/'+ok+'/id/'+id,
-                //     success:function (success) {
-                //         if(success){
-                //             var span=$(dom).next('span');
-                //             var num=span.html();
-                //             if(ok){
-                //                 num=parseInt(num)+ok;
-                //             }else{
-                //                 num=parseInt(num)==0?0:parseInt(num)-1;
-                //             }
-                //             span.html(num);
-                //         }
-                //
-                //     }
-                //
-                // });
             }
         }
     });
