@@ -21,7 +21,7 @@ class Mjqj extends Controller
         $userGood=Db::name('user_good_bad');
         $where=['a.cid'=>3];
         //根据分类ID ,属于作民间巨匠
-        $zuopin_list=getGoodsList($this->article_model,$userGood,$where,12);
+        $zuopin_list=getGoodsList($this->article_model,$userGood,$where,15);
         $page=$zuopin_list->render();
         $this->assign('page',$page);
         $this->assign('zuopin_list',$zuopin_list);

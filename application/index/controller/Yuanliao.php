@@ -24,7 +24,7 @@ class Yuanliao extends Controller
         //最多显示12个作品
         $userGood=Db::name('user_good_bad');
         $where=['a.cid'=>2];
-        $zuopin_list=getGoodsList($this->article_model,$userGood,$where,12);
+        $zuopin_list=getGoodsList($this->article_model,$userGood,$where,15);
         $page=$zuopin_list->render();
         $this->assign('page',$page);
         $this->assign('zuopin_list',$zuopin_list);

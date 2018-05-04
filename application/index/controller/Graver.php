@@ -22,7 +22,7 @@ class Graver extends Controller
 
     public function index()
     {   //每页30
-        $authList=$this->grand_model->field('id,name,thumb')->paginate(2);
+        $authList=$this->grand_model->field('id,name,thumb')->paginate(12);
 
         $page=$authList->render();
 
