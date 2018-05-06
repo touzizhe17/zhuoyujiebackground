@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : bendi
+Source Server         : phpstudy
 Source Server Version : 50553
 Source Host           : localhost:3306
 Source Database       : zhubao
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-05 17:42:30
+Date: 2018-05-06 21:01:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -590,26 +590,56 @@ DROP TABLE IF EXISTS `os_user`;
 CREATE TABLE `os_user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL COMMENT '用户名',
-  `password` varchar(50) NOT NULL COMMENT '密码',
+  `password` varchar(50) NOT NULL DEFAULT '' COMMENT '密码',
   `mobile` varchar(11) DEFAULT '' COMMENT '手机',
   `email` varchar(50) DEFAULT '' COMMENT '邮箱',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '用户状态  1 正常  2 禁止',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `last_login_time` datetime DEFAULT NULL COMMENT '最后登陆时间',
   `last_login_ip` varchar(50) DEFAULT '' COMMENT '最后登录IP',
+  `head_url` varchar(255) DEFAULT NULL COMMENT '头像地址',
+  `qq` varchar(255) DEFAULT NULL,
+  `wx` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 -- ----------------------------
 -- Records of os_user
 -- ----------------------------
-INSERT INTO `os_user` VALUES ('1', 'user', 'user', '', '', '1', '2018-04-11 13:03:21', null, '');
-INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '');
-INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '');
-INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '');
-INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', '1', null, null, '');
-INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', '1', null, null, '');
+INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '123@qq', '1', '2018-04-11 13:03:21', null, '', 'index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', '1', '2018-05-06 15:26:30', null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1', '2018-05-06 16:02:05', null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', 'index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('11', '', '', '123456', '', '1', '2018-05-06 17:28:08', null, '', '', null, null);
+
+-- ----------------------------
+-- Table structure for os_user_comment
+-- ----------------------------
+DROP TABLE IF EXISTS `os_user_comment`;
+CREATE TABLE `os_user_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `comment` longtext COMMENT '评论内容',
+  `goods_id` int(11) DEFAULT NULL COMMENT '商品id',
+  `user_id` int(11) DEFAULT NULL COMMENT '用户id',
+  `date` date DEFAULT NULL COMMENT '当前评论的时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_user_comment
+-- ----------------------------
+INSERT INTO `os_user_comment` VALUES ('1', '这个商品，不错1', '22', '1', null);
+INSERT INTO `os_user_comment` VALUES ('2', '这个商品，不错1', '22', '1', null);
+INSERT INTO `os_user_comment` VALUES ('3', '这个商品，不错1', '9', '1', '2018-05-06');
+INSERT INTO `os_user_comment` VALUES ('4', '垃圾作品', '22', '1', '2018-05-06');
+INSERT INTO `os_user_comment` VALUES ('5', 'good，作品优秀', '22', '1', '2018-05-06');
 
 -- ----------------------------
 -- Table structure for os_user_good_bad
