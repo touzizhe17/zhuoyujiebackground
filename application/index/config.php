@@ -6,6 +6,7 @@ return [
     //用户session保存变量
     "USER_ID"=>'user_id',
     'USER_NAME'=>'name',
+    'USER_HEAD'=>'head_url',
 
     //模板字符替换
     'view_replace_str'      => [

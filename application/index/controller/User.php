@@ -9,15 +9,15 @@ namespace app\index\controller;
 
 use think\Controller;
 use think\Request;
-use app\common\model\Article as ArticleModel;
-use app\common\model\Grand as GrandModel;
+use app\common\model\User as UserModel;
 
 class User extends Controller{
-
+    private $user;
     public function __construct(Request $request = null)
     {
         parent::__construct($request);
         $this->view->engine->layout(false);
+        $this->user=new UserModel();
 
     }
     public function index(){
@@ -26,10 +26,27 @@ class User extends Controller{
     }
     public function main(){
 
-        return $this->fetch('info');
+        return $this->fetch();
+    }
+    //
+    public function logout(){
+      return  $this->redirect('index/login/logout');
+
     }
     // 用户信息显示
     public function info(){
+        $request=$this->request;
+        $id=session(config('USER_ID'));
+        if($request->isPost()){
+            $param=$request->param();
+            $this->user->allowField(true)->save($param,['id'=>$id]);
+            $this->redirect('info');
+
+        }
+            $id=session(config('USER_ID'));
+            $info=$this->user->find($id);
+            $this->assign('info',$info);
+
 
         return $this->fetch();
     }
@@ -70,7 +87,7 @@ class User extends Controller{
 
             if($info){
                 // 成功上传后 获取上传信息
-                $result='/public/uploads/head/'.$info->getSaveName();
+                $result='uploads/head/'.$info->getSaveName();
 
             }else{
                 // 上传失败获取错误信息

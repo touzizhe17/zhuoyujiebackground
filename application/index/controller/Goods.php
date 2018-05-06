@@ -151,16 +151,24 @@ HTML;
         $authinfo=$this->grand->where('id', $auth)->find();
         $this->assign('authinfo',$authinfo);
 
-        if($cid===1){
-
-            // 查找到该作者的其他相关作品
-            $zuopin_list = $this->article_model->where('author', $auth)->paginate(20);
-            $this->assign('zuopin_list',$zuopin_list);
-        }else{
-            $zuopin_list = $this->article_model->where('cid', $cid)->paginate(20);
-            $this->assign('zuopin_list',$zuopin_list);
+        //查找作品
+        $zuopin_list = $this->article_model->where('id',['>',$id],['<',$id+10])->paginate(4);
+        if(count($zuopin_list)<4){
+            $zuopin_list = $this->article_model->where('id',['<',$id],['>',$id-10])->paginate(4);
         }
 
+        $this->assign('zuopin_list',$zuopin_list);
+
+        //查找作品评论
+        $commentDb=Db::name('user_comment');
+
+        $comment_list=$commentDb->alias('a')
+            ->join('user b','a.user_id=b.id')
+            ->where('goods_id',$id)
+            ->field('a.*,b.username,b.head_url')
+            ->select();
+
+        $this->assign('comment_list',$comment_list);
 
         return $this->fetch('goodsdetail');
     }
@@ -194,7 +202,13 @@ HTML;
 
         return true;
 
-
+    }
+    public function comment($comment,$id){
+        $date=date('Y-m-d',time());
+        $commentDb=Db::name('user_comment');
+        $user_id=session(config('USER_ID'));
+        $flag=$commentDb->insert(['goods_id'=>$id,'user_id'=>$user_id,'comment'=>$comment,'date'=>$date]);
+        return $flag;
 
     }
 }

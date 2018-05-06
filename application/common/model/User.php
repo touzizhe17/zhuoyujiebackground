@@ -6,7 +6,6 @@ use think\Model;
 class User extends Model
 {
     protected $insert = ['create_time'];
-
     /**
      * 创建时间
      * @return bool|string
@@ -15,4 +14,5 @@ class User extends Model
     {
         return date('Y-m-d H:i:s');
     }
+
 }
