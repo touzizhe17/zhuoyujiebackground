@@ -18,18 +18,26 @@ class User extends Controller{
         parent::__construct($request);
         $this->view->engine->layout(false);
         $this->user=new UserModel();
+        $id=session(config('USER_ID'));
+        if($id==null){
+            $this->redirect('index/login/login');
+        }
 
     }
+    //整个后台
     public function index(){
 
         return $this->fetch();
     }
+    //后台首页
     public function main(){
 
-        return $this->fetch();
+        return $this->redirect('info');
     }
     //
     public function logout(){
+        session(null);
+
       return  $this->redirect('index/login/logout');
 
     }
@@ -40,14 +48,11 @@ class User extends Controller{
         if($request->isPost()){
             $param=$request->param();
             $this->user->allowField(true)->save($param,['id'=>$id]);
-            $this->redirect('info');
 
-        }
-            $id=session(config('USER_ID'));
+        }else{
             $info=$this->user->find($id);
             $this->assign('info',$info);
-
-
+        }
         return $this->fetch();
     }
     // 安全设置，修改密码等

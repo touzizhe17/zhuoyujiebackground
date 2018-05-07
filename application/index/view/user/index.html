@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta name="author" content="order by dede58.com"/>
     <meta name="author" content="order by dede58.com"/>
-	<title>LarryCMS后台管理</title>
+	<title>琢玉界-用户后台</title>
 	<meta name="renderer" content="webkit">	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="__USER__/common/layui/css/layui.css" media="all">
 	<link rel="stylesheet" type="text/css" href="__USER__/common/global.css" media="all">
 	<link rel="stylesheet" type="text/css" href="__USER__/css/adminstyle.css" media="all">
-	
+
 	
 </head>
 <body>
@@ -25,25 +25,25 @@
 		<div class="layui-main">
 		    <!-- logo区域 -->
 			<div class="admin-logo-box">
-				<a class="logo" href="http://www.kuxuebao.net" title="logo">后台管理系统</a>
+				<a class="logo" href="javascirpt:;" title="logo">后台管理系统</a>
 				<div class="larry-side-menu">
 					<i class="fa fa-bars" aria-hidden="true"></i>
 				</div>
 			</div>
             <!-- 顶级菜单区域 -->
-            <!--<div class="layui-larry-menu">-->
-                 <!--<ul class="layui-nav clearfix">-->
-                       <!--<li class="layui-nav-item layui-this">-->
-                 	   	   <!--<a href="javascirpt:;"><i class="iconfont icon-wangzhanguanli"></i>内容管理</a>-->
-                 	   <!--</li>-->
+            <div class="layui-larry-menu">
+                 <ul class="layui-nav clearfix">
+                       <li class="layui-nav-item ">
+                 	   	   <a href="{:url('index/index/index')}"><i class="iconfont icon-wangzhanguanli"></i>琢玉界首页</a>
+                 	   </li>
                  	   <!--<li class="layui-nav-item">-->
                  	   	   <!--<a href="javascirpt:;"><i class="iconfont icon-weixin3"></i>微信公众</a>-->
                  	   <!--</li>-->
                  	   <!--<li class="layui-nav-item">-->
                  	   	   <!--<a href="javascirpt:;"><i class="iconfont icon-ht_expand"></i>扩展模块</a>-->
                  	   <!--</li>-->
-                 <!--</ul>-->
-            <!--</div>-->
+                 </ul>
+            </div>
             <!-- 右侧导航 -->
             <ul class="layui-nav larry-header-item">
             		<li class="layui-nav-item">
@@ -159,16 +159,16 @@
 				<li class="layui-this" id="admin-home"><i class="iconfont icon-diannao1"></i><em>后台首页</em></li>
 			</ul>
 			<div class="go-right key-press pressKey" id="titleRight" title="滚动至最左侧"><i class="larry-icon larry-right"></i></div> 
-			<ul class="layui-nav closeBox">
-				  <li class="layui-nav-item">
-				    <a href="javascript:;"><i class="iconfont icon-caozuo"></i> 页面操作</a>
-				    <dl class="layui-nav-child">
-					  <dd><a href="javascript:;" class="refresh refreshThis"><i class="layui-icon">&#x1002;</i> 刷新当前</a></dd>
-				      <dd><a href="javascript:;" class="closePageOther"><i class="iconfont icon-prohibit"></i> 关闭其他</a></dd>
-				      <dd><a href="javascript:;" class="closePageAll"><i class="iconfont icon-guanbi"></i> 关闭全部</a></dd>
-				    </dl>
-				  </li>
-				</ul>
+			<!--<ul class="layui-nav closeBox">-->
+				  <!--<li class="layui-nav-item">-->
+				    <!--<a href="javascript:;"><i class="iconfont icon-caozuo"></i> 页面操作</a>-->
+				    <!--<dl class="layui-nav-child">-->
+					  <!--<dd><a href="javascript:;" class="refresh refreshThis" ><i class="layui-icon">&#x1002;</i> 刷新当前</a></dd>-->
+				      <!--<dd><a href="javascript:;" class="closePageOther" ><i class="iconfont icon-prohibit"></i> 关闭其他</a></dd>-->
+				      <!--<dd><a href="javascript:;" class="closePageAll" ><i class="iconfont icon-guanbi"></i> 关闭全部</a></dd>-->
+				    <!--</dl>-->
+				  <!--</li>-->
+				<!--</ul>-->
 			<div class="layui-tab-content" style="min-height: 150px; ">
 				<div class="layui-tab-item layui-show">
 					<iframe class="larry-iframe" data-id='0' src="main.html"></iframe>
@@ -186,7 +186,7 @@
 		</div>
 	</div>
 </div>
-<!-- 加载js文件-->                                                                                                                                                                                           
+<!-- 加载js文件-->
 	<script type="text/javascript" src="__USER__/common/layui/layui.js"></script>
 	<script type="text/javascript" src="__USER__/js/larry.js"></script>
 	<script type="text/javascript" src="__USER__/js/index.js"></script>
