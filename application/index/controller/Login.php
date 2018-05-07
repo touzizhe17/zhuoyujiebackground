@@ -106,9 +106,9 @@ class Login extends Controller {
         $tpl_val=urlencode($tpl_val);
         $param='mobile='.$mobile.'&tpl_id='.$tpl_id.'&tpl_value='.$tpl_val.'&key='.$appkey;
         $url.=$param;
-        $json=file_get_contents('json.txt');
+        $json=file_get_contents($url);
         $json=json_decode($json,true);
-//        dump($json['error_code']);die;
+//        dump($json);die;
         if($json['error_code']==0){
             return json(['error'=>0,'code'=>$code]);
         }
