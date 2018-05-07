@@ -35,6 +35,7 @@
     }
     .right .title{
         font-size: 18px;
+        text-align: center;
     }
     .right .check-tip{
         font-size: 0px;
@@ -46,14 +47,13 @@
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin-right: 5px;
-        margin-top: 4px;
+        margin-right: 2px;
         vertical-align: top;
         background: url(/public/index/images/disabled.png) no-repeat;
     }
     .check-tip .text{
         color: #ff2222;
-        font-size: 16px;
+        font-size: 12px;
         vertical-align: top;
     }
     .form-box{
@@ -68,15 +68,22 @@
         box-sizing: border-box;
         width: 100%;
         line-height: 24px;
-        font-size: 18px;
+        font-size: 16px;
         padding:10px 10px;
     }
     #yzm{
         width: 45%;
         margin-right: 5px;
+        color: #1E9FFF;
     }
     #yzm_btn{
         width: 50%;
+        color: #101010;
+    }
+    #yzm_btn.active{
+        width: 50%;
+        disabled:true;
+        color: #999;
     }
     .tip{
         padding:10px 0;
@@ -116,24 +123,24 @@
                         <span class="text"></span>
                     </div>
                 </div>
-                <form action="" method="post" onsubmit="return check()" >
+                <form action="{:url('index/login/register')}" method="post" onsubmit="return check()" >
                     <div class="form-box">
                         <div class="input-box">
-                            <input type="text" placeholder="用户名" name="user" id="user" autocomplete="off">
+                            <input type="text" placeholder="用户名 4~20个字符" name="username" id="user" autocomplete="off" onchange="queryUser()">
                         </div>
                         <div class="input-box">
-                            <input type="password" placeholder="密码" name="pwd" id="pwd" autocomplete="off" >
+                            <input type="password" placeholder="密码 6~20个字符" name="password" id="pwd" autocomplete="off" >
 
                         </div>
                         <div class="input-box">
-                            <input type="password" placeholder="确认密码" name="pwd" id="pwd2" autocomplete="false" >
+                            <input type="password" placeholder="确认密码" name="password2" id="pwd2" onchange="queryPass()" autocomplete="false" >
                         </div>
                         <div class="input-box">
-                            <input type="password" placeholder="手机号" name="pwd" id="phone" autocomplete="false" >
+                            <input type="text" placeholder="手机号" name="mobile" id="phone" autocomplete="false" >
                         </div>
                         <div class="input-box">
-                            <input type="password" placeholder="验证码" name="pwd" id="yzm" autocomplete="false" >
-                            <input type="button" value="点击发送验证码" id="yzm_btn">
+                            <input type="text" placeholder="验证码" name="verify" id="yzm" autocomplete="false" >
+                            <input type="button" value="发送验证码" id="yzm_btn" onclick="send()">
                         </div>
                         <p class="tip">
                             <span>已有账号</span>
@@ -154,36 +161,135 @@
 <script>
     //登录检查
     function check() {
+        var username=$('#user').val();
         var phone=$('#phone').val();
         var pwd=$('#pwd').val();
-        console.log(phone)
+        var pwd2=$('#pwd2').val();
+        var yzm=$('#yzm').val().trim();
         var reg=/^[1][3,4,5,7,8][0-9]{9}$/;
         var text='';
-        if(phone==''){
-            text='手机号码不能为空';
-            opt(text);
+        if(username==''){
+            text='用户名不能为空';
+            showTip(text);
             return false;
         }
-//        if(!reg.test(phone)){
-//            text='手机号码不合法';
-//            opt(text);
-//            return false;
-//        }
+        if(!username.length>=4 && !username.length<=20){
+            text='用户名需要4~20位';
+            showTip(text);
+            return false;
+        }
         if(pwd==''){
             text='密码不能为空';
-            opt(text);
+            showTip(text);
             return false;
         }
-//        if(pwd.length<6){
-//            text='密码长度小于6位';
-//            opt(text);
-//            return false;
-//        }
+        if(pwd.length<6){
+            text='密码长度小于6位';
+            showTip(text);
+            return false;
+        }
+        if(pwd2!=pwd){
+            text='两次密码不一致';
+            showTip(text);
+            return false;
+        }
+
+        if(phone==''){
+            text='手机号码不能为空';
+            showTip(text);
+            return false;
+        }
+        if(!reg.test(phone)){
+            text='手机号码不合法';
+            showTip(text);
+            return false;
+        }
+        var code=localStorage.getItem('__CODE__');
+        if(yzm!=code){
+            text='验证码不对';
+            showTip(text);
+            return false;
+        }
+
         return true;
     }
-    function opt(text) {
+    function showTip(text) {
         $('.text').html(text);
         $('.title').addClass('hidden');
         $('.check-tip').removeClass('hidden')
+    }
+    function hideTip() {
+        $('.text').html('');
+        $('.title').removeClass('hidden');
+        $('.check-tip').addClass('hidden')
+    }
+    // 确认两次密码不一致
+    function queryPass() {
+        var pwd=$('#pwd').val();
+        var pwd2=$('#pwd2').val();
+        if(pwd!=pwd2){
+            text='两次密码不一致';
+            showTip(text);
+        }else{
+
+            hideTip();
+        }
+    }
+    //查看用户名是否已经被注册
+    function queryUser() {
+        var username=$('#user').val();
+        $.ajax({
+            url:'/index/login/queryUser',
+            data:{user:username},
+            success:function (ok) {
+                if(!ok){
+                    text='用户名已经被注册过了';
+                    showTip(text);
+                    return false;
+                }else{
+                    hideTip();
+                }
+            }
+        })
+    }
+
+    //发送验证码
+    function send() {
+        var yzmBtn=$('#yzm_btn');
+        if(yzmBtn.hasClass('active')){
+            //在60s内不能重复点击
+            return;
+        }
+        var reg=/^[1][3,4,5,7,8][0-9]{9}$/;
+        var mobile=$('#phone').val().trim();
+        if(!reg.test(mobile)){
+            text='手机号码不合法';
+            showTip(text);
+            return false;
+        }else{
+            $.ajax({
+                url:"/index/login/yzm",
+                data:{'mobile':mobile},
+                success:function (data) {
+                    console.log(data)
+                    if(data.error==0){
+                        localStorage.setItem("__CODE__",data.code);
+                    }
+                }
+            })
+        }
+        var t=60;
+        yzmBtn.addClass('active');
+        var timer=setInterval(function () {
+            if(t==0){
+                yzmBtn.removeClass('active');
+                yzmBtn.val('发送验证码');
+                clearInterval(timer);
+            }else{
+                yzmBtn.val(t--+'s');
+            }
+
+        },1000)
+
     }
 </script>

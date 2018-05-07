@@ -53,6 +53,9 @@
                 <p>联系客服询价</p>
                 {/if}
             </div>
+        <!--价格 zone -->
+        <div class="pricebox">
+        </div>
             <!--如果有视频则显示视频，此处后面再调整-->
             {if condition="$zuopin.video_pic_url != ''"}
             <div class="inforbox4">
@@ -79,19 +82,22 @@
     <div class="clear"></div>
         <!--该作品 信息 -->
     <div class="atit" id="btit1" style="margin-top:10px;">
-        <h3><span>{$authinfo.name}简介</span></h3>
+        <h3><span>作者简介</span></h3>
     </div>
 
 
     <div class="dsinw dsinwn" id="artcw1">
         <!-- 如果是作品-->
         {if condition="$zuopin.cid==1"}
+
         <div class="dsimgw">
             <a href="{:url('index/graver/graverDetail',['id'=>$authinfo.id])}"><img src="__UPLOAD__/{$authinfo.thumb}"></a>
         </div>
-
+        <div class="danw">
+            <h3>{$authinfo.name}</h3>
+        </div>
         <div class="dsjj" style="padding:0;">
-            <p>简介：{$authinfo.introduction}</p>
+            <p>{$authinfo.introduction}</p>
         </div>
         {/if}
     </div>
@@ -101,25 +107,25 @@
     <div class="atit" id="btit2"><a href="{:url('index/goods/index',['cid'=>$zuopin.cid])}" style="color: #fff"><h3><span class="showart">更多玉雕作品>></span></h3></a></div>
     <div class="goodslist">
         <ul class="shiydsw">
-            {foreach name='zuopin_list' item='zuopin'}
+            {foreach name='zuopin_list' item='zuop'}
             <li>
                 <!--如果有视频则显示此图片-->
-                {if condition="$zuopin.video_url !=''"}
+                {if condition="$zuop.video_url !=''"}
                 <img style="position:absolute; top:0; left:0;" src="__STATIC__/picture/videotag.png"/>
                 {/if}
 
-                <a href="{:url('index/goods/goodsDetail',['id'=>$zuopin.id])}">
+                <a href="{:url('index/goods/goodsDetail',['id'=>$zuop.id])}">
                     <img class="lazyimg" src="__STATIC__/picture/imghold.gif"
-                      data-original="__UPLOAD__{$zuopin.thumb}" width="289px" height="289px" style="vertical-align: top;"/>
+                      data-original="__UPLOAD__{$zuop.thumb}" width="289px" height="289px" style="vertical-align: top;"/>
                 </a>
                 <div class="infows">
-                    <p class="gname">{$zuopin.title}</p>
+                    <p class="gname">{$zuop.title}</p>
                     <div style="line-height:1.5em;text-align:center;">
                         <!--如果是已经出售了，就显示已结缘，否则显示价格-->
-                        {if condition="$zuopin.isbonds==1"}
+                        {if condition="$zuop.isbonds==1"}
                         <span style="color:#F60" class="jiage">已出售</span>
-                        {elseif condition="$zuopin.jmoney!=''"/}
-                        <span style="color:#fff">¥{$zuopin.jmoney}</span>
+                        {elseif condition="$zuop.jmoney!=''"/}
+                        <span style="color:#fff">¥{$zuop.jmoney}</span>
                         {else/}
                         <span style="color:#fff">议价</span>
                         {/if}
@@ -127,13 +133,149 @@
 
                     </div>
                 </div>
-                <i style="width:60px; height:60px; position:absolute; top:0; right:0;">{$zuopin.materials}</i>
+                <i style="width:60px; height:60px; position:absolute; top:0; right:0;">{$zuop.materials}</i>
             </li>
             {/foreach}
         </ul>
         <div class="clear"></div>
-
         <div class="clear"></div>
+        <style>
+            .comments-block{
+            }
+            .title{
+                background-color: #000;
+                text-align: center;
+                color: #fff;
+                padding:10px 0;
+            }
+            .comment-list{
+                margin-top: 10px;
+             border: 1px solid #ececec;
+            }
+            .comment-list li{
+                max-height: 100px;
+                padding:10px;
+                overflow: hidden;
+                display: flex;
+                border-bottom:1px solid #ececec;
+            }
+            .comment-list li .img-box{
+                flex:0 0 60px;
+            }
+            .comment-list li .img-box img{
+                width: 60px;
+                border-radius: 50%;
+            }
+            .comment-list li .content-box{
+               flex: 1;
+                padding-left: 10px;
+                float: left;
+            }
+            .comment-list .tab {
+                width: 100%;
+            }
+            .tab .name {
+                color: #1E9FFF;
+                margin-right: 15px;
+            }
+            .tab .time{
+                color: #a0a0a0;
+            }
+            .tab .icon-zan{
+                padding: 2px;
+                color: #a0a0a0;
+                margin-right: 5px;
+                float: right;
+            }
+            .tab .icon-zan.active{
+                color: #1E9FFF;
+            }
+            .tab .num{
+                margin-right: 10px;
+                float: right;
+                color: #a0a0a0;
+            }
+            .comment-list .comment{
+                padding-top: 5px;
+
+            }
+            .send-box{
+                padding-top: 10px;
+                width: 100%;
+            }
+            .send-box .my{
+                padding:10px 0;
+                color: #a0a0a0;
+            }
+            .send-box #user-comment{
+                padding:10px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 1px solid  #e0e0e0;
+                width: 100%;
+                color: #a0a0a0;
+                font-size: 16px;
+            }
+            #user-comment:focus{
+                outline: none;
+                border: 1px solid #1E9FFF;
+            }
+            .send-box .btn-box{
+                padding: 15px 0;
+            }
+            .send-box .btn{
+                cursor: pointer;
+                background-color: #5ecfba;
+                border-radius: 5px;
+                padding:10px 20px;
+                color: #fff;
+            }
+            .send-box #tip{
+                display: none;
+                margin-left: 10px;
+                font-size: 12px;
+                color: #ff3300;
+            }
+        </style>
+        <div class="comments-block">
+            <h3 class="title">作品评论</h3>
+                <ul class="comment-list">
+                    {foreach name='comment_list' item='item'}
+                    <li>
+                       <div class="img-box">
+                           <img src="__UPLOAD__/{$item.head_url}" alt="">
+                       </div>
+                        <div class="content-box">
+                            <div class="tab">
+                                <span class="name">{$item.username}</span>
+                                <span class="time">{$item.date}</span>
+                                <!--<span class="num">1000</span>-->
+                                <!--<span class="iconfont icon-zan" title="点赞" onclick="comment_good(this,'{$zuopin.id}')"></span>-->
+
+                            </div>
+                            <div class="comment">
+                                {$item.comment}
+                            </div>
+                        </div>
+                    </li>
+                    {/foreach}
+
+                </ul>
+            <div class="send-box">
+                    <p class="my">我的评论</p>
+                        <textarea name="comment" id="user-comment"  rows="4" placeholder="请输入您的评论"></textarea>
+
+
+                        {if condition="$Think.session.name!=''"}
+                        <p class="btn-box"><a class="btn" onclick="check('{$zuopin.id}')"> 发表评论</a><span id="tip">评论不能为空！</span></p>
+                        {else /}
+                        <p class="btn-box"><a href="{:url('index/login/login')}" class="btn">去登陆</a></p>
+                        {/if}
+
+            </div>
+        </div>
+
+
     </div>
 
 </div>
@@ -172,6 +314,70 @@
 
         })
     }
+
+   /**
+    * 评论点赞
+    * @param dom 当前点击dom对象
+    * @param id 当前作品id
+    */
+   function comment_good(dom,id) {
+       //1检查是否登录
+       $.ajax({
+           url:"/index/login/check.html",
+           type:'post',
+           success:function (isLogin) {
+               if(!isLogin){
+                   if(confirm('检测到您还未登录，请先登录')){
+                       location.href='/index/login/login.html';
+                   }
+               }else{
+                   //---已经登录的用户----
+                   //2检测是否已经点赞或者踩
+                   var icon=$(dom);
+
+                   if(!icon.hasClass('active')){
+                       //之前都没有点亮过
+                       icon.addClass('active')
+                       var textDom=icon.parent().children('.num');
+
+                       textDom.html(parseInt(textDom.html())+1);
+
+                       // 3发送请求去后台统计用户点赞
+                       $.ajax({
+                           url:'/index/goodsDetail/comment_good/id/'+id
+                       });
+
+                   }else{
+                       alert('您已经赞或者踩过了！');
+                   }
+               }
+           }
+       });
+   }
+   //评论提交检查
+   function check(id) {
+
+       var comment=$('#user-comment').val().trim();
+       if(comment==''){
+           $('#tip').show()
+           return false;
+       }else{
+           console.log('zou-----')
+           $.ajax({
+               url:"/index/goods/comment",
+               data:{comment:comment,id:id},
+               success:function (ok) {
+                   if(ok){
+                       //刷新
+                       $('#user-comment').html('');
+                       location.reload();
+                   }
+               }
+           })
+       }
+
+
+   }
 
 </script>
 

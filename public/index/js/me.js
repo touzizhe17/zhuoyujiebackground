@@ -36,7 +36,7 @@ function click_good(dom,action,id) {
                 });
 
                 }else{
-                    alert('您已经赞或者踩过了！')
+                    alert('您已经赞或者踩过了！');
                 }
             }
         }

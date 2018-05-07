@@ -267,7 +267,7 @@
             <span class="welws">琢玉界——致力于守护中华民族的玉魂</span>
              {if condition="$Think.session.name !=''"}
             <div class="user" >
-                欢迎  <a href="{:url('index/user/index')}" title="用户详情"><img src="__STATIC__/picture/yudiaoshi.jpg" style="margin:0 5px"><span class="name">{$Think.session.name}</span></a> 光临！
+                欢迎  <a href="{:url('index/user/index')}" title="用户详情"><img src="__UPLOAD__/{$Think.session.head_url}" style="margin:0 5px"><span class="name">{$Think.session.name}</span></a> 光临！
                 <a href="{:url('index/login/logout')}" class="logout">退出登录</a>
             </div>
             {/if}
@@ -339,8 +339,8 @@
                 <span>|</span>
                 <li><a href="{:url('index/about/howbuy')}" target="_blank">如何购买</a></li>
                 <span>|</span>
-                <li><a href="{:url('index/about/dongtai')}" target="_blank">最新动态</a></li>
-                <span>|</span>
+                <!--<li><a href="{:url('index/about/dongtai')}" target="_blank">最新动态</a></li>-->
+                <!--<span>|</span>-->
                 <li>
                     <a href="http://www.zhuoyujie.com"
                        target="_blank">加入我们</a></li>
