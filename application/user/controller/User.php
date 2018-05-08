@@ -81,7 +81,6 @@ class User extends Base{
 
         $file=$this->request->file('file');
 
-
         if($file){
 
             $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads/head');
@@ -89,6 +88,8 @@ class User extends Base{
             if($info){
                 // 成功上传后 获取上传信息
                 $result='uploads/head/'.$info->getSaveName();
+                //修改session中头像地址
+                session(config('USER_HEAD'),$result);
 
             }else{
                 // 上传失败获取错误信息
