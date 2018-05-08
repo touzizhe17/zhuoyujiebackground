@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-06 21:01:34
+Date: 2018-05-08 17:41:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -607,7 +607,7 @@ CREATE TABLE `os_user` (
 -- ----------------------------
 -- Records of os_user
 -- ----------------------------
-INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '123@qq', '1', '2018-04-11 13:03:21', null, '', 'index/images/head.jpg', null, null);
+INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', 'uploads/head/20180508\\998736654fbd94f346050e2650c483e6.jpg', null, null);
 INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
 INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
 INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
@@ -618,6 +618,23 @@ INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1',
 INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/index/images/head.jpg', null, null);
 INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', 'index/images/head.jpg', null, null);
 INSERT INTO `os_user` VALUES ('11', '', '', '123456', '', '1', '2018-05-06 17:28:08', null, '', '', null, null);
+
+-- ----------------------------
+-- Table structure for os_user_address
+-- ----------------------------
+DROP TABLE IF EXISTS `os_user_address`;
+CREATE TABLE `os_user_address` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_user_address
+-- ----------------------------
+INSERT INTO `os_user_address` VALUES ('1', '1', '广东省深圳市福田区车公庙');
+INSERT INTO `os_user_address` VALUES ('2', '1', '广东省深圳市龙华区民治街道');
 
 -- ----------------------------
 -- Table structure for os_user_comment
