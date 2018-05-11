@@ -1,6 +1,6 @@
 ﻿<style>
-    .inforcont{
-        max-height: 495px;
+    .h500{
+        height: 495px;
     }
     .inforcont-a{
         margin-top: 5px;
@@ -38,7 +38,11 @@
             <!--获奖信息  若无获奖信息，则不显示此段-->
             <div class="inforbox3">
                 <h3>作品介绍：</h3>
-                <div  {if condition="$zuopin.video_pic_url != ''"} class="inforcont-a" {/if}>
+                {if condition="$zuopin.video_pic_url != ''"}
+                  <div class="inforcont-a" >
+                 {else /}
+                      <div class="h500" >
+                 {/if}
                     {$zuopin.content}
                 </div>
                 <div style="float: left; width: 100%; color: #E44841; line-height: 1.4; margin-top: 6px;">
@@ -53,8 +57,24 @@
                 <p>联系客服询价</p>
                 {/if}
             </div>
-        <!--价格 zone -->
+        <!--分享 zone -->
         <div class="pricebox">
+            <!--MOB SHARE BEGIN-->
+            <div class="-mob-share-ui-button -mob-share-open">分享</div>
+            <div class="-mob-share-ui" style="display: none">
+                <ul class="-mob-share-list">
+                    <li class="-mob-share-weibo"><p>新浪微博</p></li>
+                    <li class="-mob-share-qzone"><p>QQ空间</p></li>
+                    <li class="-mob-share-qq"><p>QQ好友</p></li>
+                    <li class="-mob-share-douban"><p>豆瓣</p></li>
+                    <li class="-mob-share-facebook"><p>Facebook</p></li>
+                    <li class="-mob-share-twitter"><p>Twitter</p></li>
+                </ul>
+                <div class="-mob-share-close">取消</div>
+            </div>
+            <div class="-mob-share-ui-bg"></div>
+            <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=25ba90d32ea95"></script>
+            <!--MOB SHARE END-->
         </div>
             <!--如果有视频则显示视频，此处后面再调整-->
             {if condition="$zuopin.video_pic_url != ''"}
@@ -80,12 +100,17 @@
         </div>
     </div>
     <div class="clear"></div>
-        <!--该作品 信息 -->
+    <!--分享和点赞-->
+    <div class="atit"  style="margin-top:10px;">
+        <h3><span>作品创造流程</span></h3>
+    </div>
+    <div class="dsinw dsinwn" >
+
+    </div>
+        <!--该作品 作者信息 -->
     <div class="atit" id="btit1" style="margin-top:10px;">
         <h3><span>作者简介</span></h3>
     </div>
-
-
     <div class="dsinw dsinwn" id="artcw1">
         <!-- 如果是作品-->
         {if condition="$zuopin.cid==1"}
