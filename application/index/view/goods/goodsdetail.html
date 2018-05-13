@@ -121,24 +121,25 @@
         </div>
     </div>
     <div class="clear"></div>
+
+      <!--作品创造流程-->
+     {if condition='$zuopin.liucheng!=null'}
     <div class="atit"  style="margin-top:10px;">
         <h3><span>作品创作流程</span></h3>
     </div>
-        <!--作品创造流程-->
-
-        <div class="focus">
+    <div class="focus">
             <div class="focusbox">
                 <div class="focusimg">
                     <ul class="fimglist">
-                        {foreach name="$zuopin['photo']" item="imgs"}
+                        {foreach name="$zuopin['liucheng']" item="imgs"}
                         <li><img  src="{$imgs}" /></li>
                         {/foreach}
                     </ul>
                 </div>
                 <div class="focustool">
                     <ul class="ftoollist">
-                        {foreach name="$zuopin['photo']" item="imgs"}
-                        <li class="on"><a href="javascript:;"><img  src="{$imgs}"><p class="imgname">流程描述</p></a></li>
+                        {foreach name="$zuopin['liucheng']" item="imgs" key='key'}
+                        <li class="on"><a href="javascript:;"><img  src="{$imgs}"><p class="imgname">流程{$key+1}</p></a></li>
                         {/foreach}
                     </ul>
                 </div>
@@ -178,6 +179,8 @@
 
 
     </div>
+      {/if}
+
         <!--该作品 作者信息 -->
     <div class="atit" id="btit1" style="margin-top:10px;">
         <h3><span>作者简介</span></h3>

@@ -128,13 +128,16 @@ class Article extends AdminBase
      */
     public function update($id)
     {
+
         if ($this->request->isPost()) {
             $data            = $this->request->param();
+            dump($data);
             $validate_result = $this->validate($data, 'Article');
 
             if ($validate_result !== true) {
                 $this->error($validate_result);
             } else {
+
                 if ($this->article_model->allowField(true)->save($data, $id) !== false) {
                     $this->success('更新成功');
                 } else {

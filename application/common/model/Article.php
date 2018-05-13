@@ -48,6 +48,29 @@ class Article extends Model
         return unserialize($value);
     }
 
+
+    /**
+     * 序列化photo图集
+     * @param $value
+     * @return string
+     */
+    protected function setLiuchengAttr($value)
+    {
+        return serialize($value);
+    }
+
+    /**
+     * 反序列化photo图集
+     * @param $value
+     * @return mixed
+     */
+    protected function getLiuchengAttr($value)
+    {
+        return unserialize($value);
+    }
+
+
+
     /**
      * 创建时间
      * @return bool|string

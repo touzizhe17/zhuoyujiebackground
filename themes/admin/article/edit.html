@@ -87,20 +87,21 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">缩略图</label>
+                        <label class="layui-form-label">作品图片</label>
                         <div class="layui-input-block">
                             <input type="text" name="thumb" value="{$article.thumb}" class="layui-input layui-input-inline" id="thumb">
                             <input type="file" name="file" class="layui-upload-file" id="uploadthumb">
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">图集</label>
+                        <label class="layui-form-label">作品图集</label>
                         <div class="layui-input-block">
                             <button type="button" id="upload-photo-btn" class="layui-btn">上传图集</button>
                             <div id="photo-container">
                                 {if condition="!empty($article['photo'])"}
                                 {foreach name="$article['photo']" item="vo"}
-                                <div class="photo-list">
+                                <div class="photo-list ">
+                                    <img src="{$vo}" alt="">
                                     <input type="text" name="photo[]" value="{$vo}" class="layui-input layui-input-inline">
                                     <button type="button" class="layui-btn layui-btn-danger remove-photo-btn">移除</button>
                                 </div>
@@ -109,6 +110,25 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">流程图集</label>
+                        <div class="layui-input-block">
+                            <button type="button" id="upload-liucheng" class="layui-btn">上传流程图集</button>
+                            <div id="photo-container2">
+                                {if condition="!empty($article['liucheng'])"}
+                                {foreach name="$article['liucheng']" item="vo"}
+                                <div class="photo-list ">
+                                    <img src="{$vo}" alt="">
+                                    <input type="text" name="liucheng[]" value="{$vo}" class="layui-input layui-input-inline">
+                                    <button type="button" class="layui-btn layui-btn-danger remove-photo-btn">移除</button>
+                                </div>
+                                {/foreach}
+                                {/if}
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="layui-form-item">
                         <label class="layui-form-label">出售状态</label>
                         <div class="layui-input-block">
@@ -186,7 +206,7 @@
             uploadEditor.hide();
             uploadEditor.addListener('beforeInsertImage', function (t, arg) {
                 $.each(arg, function (index, item) {
-                    photoListItem = '<div class="photo-list"><input type="text" name="photo[]" value="' + item.src + '" class="layui-input layui-input-inline">';
+                    photoListItem = '<div class="photo-list"><img src="'+item.src+'"> <input type="text" name="photo[]" value="' + item.src + '" class="layui-input layui-input-inline">';
                     photoListItem += '<button type="button" class="layui-btn layui-btn-danger remove-photo-btn">移除</button></div>';
 
                     $('#photo-container').append(photoListItem).on('click', '.remove-photo-btn', function () {
@@ -195,10 +215,40 @@
                 });
             });
         });
-
+        //移除图片
+        $('#photo-container').append(photoListItem).on('click', '.remove-photo-btn', function () {
+            $(this).parent('.photo-list').remove();
+        });
+        //上传图片
         $('#upload-photo-btn').on('click', function () {
             uploadImage = uploadEditor.getDialog("insertimage");
             uploadImage.open();
+        });
+        // -------------作品流程图上传---------------
+        var uploadEditor2 = UE.getEditor('upload-liucheng');
+
+        uploadEditor2.ready(function () {
+            uploadEditor2.setDisabled();
+            uploadEditor2.hide();
+            uploadEditor2.addListener('beforeInsertImage', function (t, arg) {
+                $.each(arg, function (index, item) {
+                    photoListItem = '<div class="photo-list"><img src="'+item.src+'"><input type="text" name="liucheng[]" value="' + item.src + '" class="layui-input layui-input-inline">';
+                    photoListItem += '<button type="button" class="layui-btn layui-btn-danger remove-photo-btn">移除</button></div>';
+
+                    $('#photo-container2').append(photoListItem).on('click', '.remove-photo-btn', function () {
+                        $(this).parent('.photo-list').remove();
+                    });
+                });
+            });
+        })
+        //上传图片
+        $('#upload-liucheng').on('click', function () {
+            uploadImage = uploadEditor2.getDialog("insertimage");
+            uploadImage.open();
+        });
+        //移除图片
+        $('#photo-container2').on('click', '.remove-photo-btn', function () {
+            $(this).parent('.photo-list').remove();
         });
     });
 </script>

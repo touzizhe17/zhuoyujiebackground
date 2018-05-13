@@ -33,7 +33,12 @@
 
 .photo-list {margin: 5px 0;}
 
-
+.photo-list img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
 .layui-form-select dl{
     max-height:150px;
 }
