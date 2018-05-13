@@ -9,6 +9,36 @@
         overflow-y: scroll;
     }
 </style>
+<style type="text/css">
+    button{
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-size:contain;
+    }
+    button:focus{
+        outline: none;
+    }
+    /* 新浪微博 */
+    .-mob-share-weibo {
+        background-image: url( http://f1.webshare.mob.com/code/res/icon/sns_icon_1@2x_b.png )!important;
+
+    }
+    /* 腾讯微博 */
+    .-mob-share-weixin {
+        background-image: url(http://f1.webshare.mob.com/code/res/icon/sns_icon_22@2x_b.png )!important;
+    }
+    /* QQ空间 */
+    .-mob-share-qzone {
+        background-image: url(http://f1.webshare.mob.com/code/res/icon/sns_icon_6@2x_b.png)!important;
+    }
+    /* QQ */
+    .-mob-share-qq{
+        background-image: url(http://f1.webshare.mob.com/code/res/icon/sns_icon_24@2x_b.png)!important;
+    }
+</style>
+<link href="__STATIC__/css/jq22.css" type="text/css" rel="stylesheet" />
 <div class="count">
     <!--该作品 信息 -->
     <div class="azpw" style="margin-top:10px;">
@@ -57,23 +87,16 @@
                 <p>联系客服询价</p>
                 {/if}
             </div>
-        <!--分享 zone -->
-        <div class="pricebox">
-            <!--MOB SHARE BEGIN-->
-            <div class="-mob-share-ui-button -mob-share-open">分享</div>
-            <div class="-mob-share-ui" style="display: none">
-                <ul class="-mob-share-list">
-                    <li class="-mob-share-weibo"><p>新浪微博</p></li>
-                    <li class="-mob-share-weixin"><p>微信</p></li>
-                    <li class="-mob-share-qzone"><p>QQ空间</p></li>
-                    <li class="-mob-share-qq"><p>QQ好友</p></li>
-                </ul>
-                <div class="-mob-share-close">取消</div>
-            </div>
-            <div class="-mob-share-ui-bg"></div>
-            <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=25ba90d32ea95"></script>
-            <!--MOB SHARE END-->
-        </div>
+             <div class="pricebox">
+                    <p style="height: 30px">
+                        <button class="-mob-share-weibo" title="新浪"></button>
+                        <button class="-mob-share-qzone" title="QQ空间"></button>
+                        <button class="-mob-share-weixin" title="微信"></button>
+                        <button class="-mob-share-qq" title="QQ"></button>
+                        <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=25ba90d32ea95"></script>
+                    </p>
+             </div>
+
             <!--如果有视频则显示视频，此处后面再调整-->
             {if condition="$zuopin.video_pic_url != ''"}
             <div class="inforbox4">
@@ -98,11 +121,61 @@
         </div>
     </div>
     <div class="clear"></div>
-    <!--分享和点赞-->
     <div class="atit"  style="margin-top:10px;">
-        <h3><span>作品创造流程</span></h3>
+        <h3><span>作品创作流程</span></h3>
     </div>
-    <div class="dsinw dsinwn" >
+        <!--作品创造流程-->
+
+        <div class="focus">
+            <div class="focusbox">
+                <div class="focusimg">
+                    <ul class="fimglist">
+                        {foreach name="$zuopin['photo']" item="imgs"}
+                        <li><img  src="{$imgs}" /></li>
+                        {/foreach}
+                    </ul>
+                </div>
+                <div class="focustool">
+                    <ul class="ftoollist">
+                        {foreach name="$zuopin['photo']" item="imgs"}
+                        <li class="on"><a href="javascript:;"><img  src="{$imgs}"><p class="imgname">流程描述</p></a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+
+        <script>
+
+            $(function(){
+
+                var num=$('.fimglist').children().length;
+                $('.fimglist').width(1200*num*2);
+                $(".ftoollist li").hover(function(){
+
+                    var $this = $(this);
+
+                    $this.addClass("on").siblings().removeClass("on");
+
+                    var $preNumber = $this.index();
+
+                    $(".fimglist li").removeClass("onpre");
+
+                    $(".fimglist li:eq($preNumber)").addClass("onpre");
+
+                    var distance = 1200;
+
+                    distance = distance * $preNumber;
+
+                    distance = distance * -1;
+
+                    $(".fimglist").stop().animate({marginLeft: distance + "px"}, {duration: 500});
+
+                });
+
+            });
+
+        </script>
+
 
     </div>
         <!--该作品 作者信息 -->
