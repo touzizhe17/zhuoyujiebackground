@@ -31,4 +31,8 @@ class About extends Controller{
     {
         return $this->fetch();
     }
+    public function changguan()
+    {
+        return $this->fetch();
+    }
 }
