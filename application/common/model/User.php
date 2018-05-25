@@ -14,5 +14,4 @@ class User extends Model
     {
         return date('Y-m-d H:i:s');
     }
-
 }

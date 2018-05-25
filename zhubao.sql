@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-13 15:58:38
+Date: 2018-05-25 18:26:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -600,7 +600,11 @@ CREATE TABLE `os_user` (
   `last_login_ip` varchar(50) DEFAULT '' COMMENT '最后登录IP',
   `head_url` varchar(255) DEFAULT NULL COMMENT '头像地址',
   `qq` varchar(255) DEFAULT NULL,
-  `wx` varchar(255) DEFAULT NULL,
+  `wx_nick` varchar(255) DEFAULT NULL COMMENT '微信昵称',
+  `sex` varchar(255) DEFAULT NULL COMMENT '性别',
+  `province` varchar(255) DEFAULT NULL COMMENT '省份',
+  `city` varchar(255) DEFAULT NULL COMMENT '城市信息',
+  `country` varchar(255) DEFAULT NULL COMMENT '国家信息',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='用户表';
@@ -608,17 +612,16 @@ CREATE TABLE `os_user` (
 -- ----------------------------
 -- Records of os_user
 -- ----------------------------
-INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', 'uploads/head/20180508\\998736654fbd94f346050e2650c483e6.jpg', null, null);
-INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', '1', null, null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', '1', '2018-05-06 15:26:30', null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1', '2018-05-06 16:02:05', null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', 'index/images/head.jpg', null, null);
-INSERT INTO `os_user` VALUES ('11', '', '', '123456', '', '1', '2018-05-06 17:28:08', null, '', '', null, null);
+INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', 'uploads/head/20180508\\998736654fbd94f346050e2650c483e6.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', '1', '2018-05-06 15:26:30', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1', '2018-05-06 16:02:05', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', 'index/images/head.jpg', null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for os_user_address

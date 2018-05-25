@@ -114,5 +114,82 @@ class Login extends Controller {
         }
         return json(['error'=>1]);
     }
+    //微信登录步骤一,获取code
+    public function wxlogin(){
+        $red_url='http://www.zhuoyujie.com/index/index/wxinfo';
+
+        $url='https://open.weixin.qq.com/connect/qrconnect?';
+        $params['appid']='wx15841791eb74949f';
+        $params['redirect_uri']=urlencode($red_url);
+        $params['response_type']='code';
+        $params['scope']='snsapi_login';
+        $params['state']=rand(9999,99999).'#wxchat';
+
+        $url.=$this->getparamsUrl($params);
+
+       return $this->redirect($url);
+
+    }
+    //微信登录步骤二,获取token
+    public function wxinfo($code='',$state=''){
+        dump('zou----');die;
+        if($code==''){
+            //用户没有授权
+            return $this->redirect(url('index/index/index'));
+        }
+
+        $url='https://api.weixin.qq.com/sns/oauth2/access_token?';
+
+        $params['appid']='wx15841791eb74949f';
+        $params['secret']='3ade2085e7fee07ed886cbd2376c52d2';
+        $params['code']=$code;
+        $params['grant_type']='authorization_code';
+
+        $url.=$this->getparamsUrl($params);
+
+        $result=file_get_contents($url);
+
+        $json=json_decode($result,true);
+
+        //步骤三通过token获取用户信息
+        $temp['access_token']=$json['access_token'];
+        $temp['openid']=$json['openid'];
+
+        $info_url='https://api.weixin.qq.com/sns/userinfo?';
+
+        $result2=$info_url.$this->getparamsUrl($temp);
+
+        file_put_contents('info.txt',$result2);
+        $json_info=json_decode($result2,true);
+
+        //用户信息
+        $info['wx_nick']=$json_info['nickname'];
+        $info['sex']=$json_info['sex'];
+        $info['province']=$json_info['province'];
+        $info['city']=$json_info['city'];
+        $info['country']=$json_info['country'];
+        $info['head_url']=$json_info['headimgurl'];
+
+        $this->user-save($info);
+        //保存到session
+        session(config('USER_NAME'),$info['wx_nick']);
+        session(config('USER_ID'),$this->user->id);
+        session(config('USER_HEAD'),$info['head_url']);
+
+        return $this->redirect('index/index/index');
+
+
+
+
+    }
+    // 拼接参数并返回拼接好 params部分的url
+    function getparamsUrl($params){
+        $str='';
+        foreach ($params as $k=>$v){
+            $str.=$k.'='.$v.'&';
+        }
+        $p=substr($str,0,strlen($str)-1);
+        return $p;
+    }
 }
 
