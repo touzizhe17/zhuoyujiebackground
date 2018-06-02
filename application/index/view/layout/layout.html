@@ -267,7 +267,17 @@
             <span class="welws">琢玉界——致力于守护中华民族的玉魂  </span>
              {if condition="$Think.session.name !=''"}
             <div class="user" >
-                欢迎  <a href="{:url('user/index/index')}" title="用户详情"><img src="__UPLOAD__/{$Think.session.head_url}" style="margin:0 5px"><span class="name">{$Think.session.name}</span></a> 光临！
+
+                欢迎  <a href="{:url('user/index/index')}" title="用户详情">
+
+                {if condition="{:strpos($Think.session.head_url,'http')} ===false"}
+                <img src="__UPLOAD__/{$Think.session.head_url}" style="margin:0 5px">
+                {else /}
+
+                <img src="{$Think.session.head_url}" style="margin:0 5px">
+                {/if}
+
+                <span class="name">{$Think.session.name}</span></a> 光临！
                 <a href="{:url('index/login/logout')}" class="logout">退出登录</a>
             </div>
             {/if}
