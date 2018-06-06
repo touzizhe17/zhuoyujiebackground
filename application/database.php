@@ -18,9 +18,10 @@ return [
     'database'        => 'zhubao',
     // 用户名
     'username'        => 'root',
-    // 密码
-    'password'        => 'root',
-//    'password'        => 'f3c25ebaba',
+    // 本地密码
+//   'password'        => 'root',
+	//服务器密码
+	'password'        => 'zhuoyujie',
     // 端口
     'hostport'        => '3306',
     // 连接dsn

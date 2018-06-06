@@ -27,7 +27,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
     //视频截图
     layui.upload({
         elem:"#videopicurl",
-        url: "/index.php/api/upload/upload",
+        url: "/admin/upload/upload",
         type: 'image',
         ext: 'jpg|png|gif|bmp',
         success: function (data) {
@@ -42,7 +42,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
     //头像
     layui.upload({
         elem:$("#uploadthumb"),
-        url: "/index.php/api/upload/upload",
+        url: "/admin/upload/upload",
         type: 'image',
         ext: 'jpg|png|gif|bmp',
         success: function (data) {
@@ -56,7 +56,7 @@ $('.layui-nav-tree').find('a[href*="' + GV.current_controller + '"]').parent().a
     //视频
     layui.upload({
         elem:'#videourl',
-        url: "/index.php/api/upload/uploadVideo",
+        url: "/admin/upload/uploadVideo",
         method:'post',
         before:function (input) {
             console.log('--------')
@@ -188,34 +188,3 @@ $('#clear-cache').on('click', function () {
 
     return false;
 });
-// $('#photo-container').on('click', '.remove-photo-btn', function () {
-//     // $(this).parent('.photo-list').remove();
-//     var _href = "/index.php/api/ueditor/actionAjaxDel";
-//     var _this=this;
-//
-//     var path=$(_this).prev('input[type="text"]').val();
-//     layer.open({
-//         shade: false,
-//         content: '确定删除？',
-//         btn: ['确定', '取消'],
-//         yes: function (index) {
-//             $.ajax({
-//                 url: _href,
-//                 type: "post",
-//                 data:{"path":path,"name":'','id':$("input[name='id']").val()},
-//                 success: function (info) {
-//                     if (info.code === 1) {
-//                         setTimeout(function () {
-//                             $(_this).parent('.photo-list').remove();
-//                         }, 1000);
-//                     }
-//                     console.log(info.message);
-//                     layer.msg(info.message);
-//                 }
-//             });
-//             layer.close(index);
-//         }
-//     });
-//
-//     return false;
-// });

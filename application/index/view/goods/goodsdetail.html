@@ -93,7 +93,7 @@
                         <button class="-mob-share-qzone" title="QQ空间"></button>
                         <button class="-mob-share-weixin" title="微信"></button>
                         <button class="-mob-share-qq" title="QQ"></button>
-                        <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=25ba90d32ea95"></script>
+                        <script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=25ba90d32ea95"></script>
                     </p>
              </div>
 
@@ -342,14 +342,16 @@
                     {foreach name='comment_list' item='item'}
                     <li>
                        <div class="img-box">
+                           {if condition="{:strpos($Think.session.head_url,'http')} ===false"}
                            <img src="__UPLOAD__/{$item.head_url}" alt="">
+                           {else /}
+                           <img src="{$Think.session.head_url}" >
+                           {/if}
                        </div>
                         <div class="content-box">
                             <div class="tab">
                                 <span class="name">{$item.username}</span>
                                 <span class="time">{$item.date}</span>
-                                <!--<span class="num">1000</span>-->
-                                <!--<span class="iconfont icon-zan" title="点赞" onclick="comment_good(this,'{$zuopin.id}')"></span>-->
 
                             </div>
                             <div class="comment">

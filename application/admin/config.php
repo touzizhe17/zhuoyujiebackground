@@ -266,8 +266,5 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
-    'template' => [
-        // 模板路径
-        'view_path' => './themes/admin/'
-    ],
+
 ];

@@ -1,5 +1,5 @@
 <?php
-namespace app\api\controller;
+namespace app\admin\controller;
 
 use think\Controller;
 use org\UeditorUpload;

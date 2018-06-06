@@ -114,9 +114,11 @@ class Login extends Controller {
         }
         return json(['error'=>1]);
     }
+
+
     //微信登录步骤一,获取code
     public function wxlogin(){
-        $red_url='http://www.zhuoyujie.com/index/index/wxinfo';
+        $red_url='https://www.zhuoyujie.com/index/login/wxinfo';
 
         $url='https://open.weixin.qq.com/connect/qrconnect?';
         $params['appid']='wx15841791eb74949f';
@@ -132,7 +134,7 @@ class Login extends Controller {
     }
     //微信登录步骤二,获取token
     public function wxinfo($code='',$state=''){
-        dump('zou----');die;
+//        dump('zou----');die;
         if($code==''){
             //用户没有授权
             return $this->redirect(url('index/index/index'));
@@ -146,7 +148,7 @@ class Login extends Controller {
         $params['grant_type']='authorization_code';
 
         $url.=$this->getparamsUrl($params);
-
+        //获取token
         $result=file_get_contents($url);
 
         $json=json_decode($result,true);
@@ -158,28 +160,38 @@ class Login extends Controller {
         $info_url='https://api.weixin.qq.com/sns/userinfo?';
 
         $result2=$info_url.$this->getparamsUrl($temp);
+        //获取用户信息
+        $result_info=file_get_contents($result2);
 
-        file_put_contents('info.txt',$result2);
-        $json_info=json_decode($result2,true);
+        file_put_contents('info.txt',$result_info);
 
-        //用户信息
-        $info['wx_nick']=$json_info['nickname'];
-        $info['sex']=$json_info['sex'];
-        $info['province']=$json_info['province'];
-        $info['city']=$json_info['city'];
-        $info['country']=$json_info['country'];
-        $info['head_url']=$json_info['headimgurl'];
+        $json_info=json_decode($result_info,true);
 
-        $this->user-save($info);
-        //保存到session
-        session(config('USER_NAME'),$info['wx_nick']);
-        session(config('USER_ID'),$this->user->id);
-        session(config('USER_HEAD'),$info['head_url']);
+        $res=$this->user->where('username',$json_info['openid'])->find();
+
+        if($res==null){
+            //用户信息
+            $info['username']=$json_info['openid'];
+            $info['wx_nick']=$json_info['nickname'];
+            $info['sex']=$json_info['sex'];
+            $info['province']=$json_info['province'];
+            $info['city']=$json_info['city'];
+            $info['country']=$json_info['country'];
+            $info['head_url']=$json_info['headimgurl'];
+            $this->user->save($info);
+
+            //保存到session
+            session(config('USER_NAME'),$info['wx_nick']);
+            session(config('USER_ID'),$this->user->id);
+            session(config('USER_HEAD'),$info['head_url']);
+        }else{
+            //保存到session
+            session(config('USER_NAME'),$res['wx_nick']);
+            session(config('USER_ID'),$res['id']);
+            session(config('USER_HEAD'),$res['head_url']);
+        }
 
         return $this->redirect('index/index/index');
-
-
-
 
     }
     // 拼接参数并返回拼接好 params部分的url
