@@ -19,9 +19,9 @@ return [
     // 用户名
     'username'        => 'root',
     // 本地密码
-//   'password'        => 'root',
+   'password'        => 'root',
 	//服务器密码
-	'password'        => 'zhuoyujie',
+//	'password'        => 'zhuoyujie',
     // 端口
     'hostport'        => '3306',
     // 连接dsn

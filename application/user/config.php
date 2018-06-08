@@ -10,11 +10,11 @@ return [
 
     //模板字符替换
     'view_replace_str'      => [
-        '__UPLOAD__' => '/public',
-        '__STATIC__' => '/public/index',
-        '__IMAGES__' => '/public/index',
-        '__JS__'     => '/public/index',
-        '__CSS__'    => '/public/index',
         '__USER__'=>'/public/user'
+    ],
+    'template'               => [
+        // 模板引擎类型 支持 php think 支持扩展
+        'layout_on'=>true,
+        'layout_name'=>'layout/layout'
     ],
 ];

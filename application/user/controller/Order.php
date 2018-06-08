@@ -13,9 +13,9 @@ use app\common\model\User as UserModel;
 class Order extends Base{
 
     //订单
-    public function order(){
+    public function index(){
 
-        return $this->fetch();
+        return $this->fetch('order-list');
     }
     //收藏
     public function favorite(){

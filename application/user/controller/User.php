@@ -7,93 +7,108 @@
  */
 namespace app\user\controller;
 
+use app\common\model\UserAddress;
 use think\Request;
-use think\Db;
 use app\common\model\User as UserModel;
 
 class User extends Base{
     private $user;
+    private $userAddress;
     public function __construct(Request $request = null)
     {
         parent::__construct($request);
         $this->user=new UserModel();
+        $this->userAddress=new UserAddress();
     }
-
-    // 用户信息显示
-    public function info(){
+    //修改账户信息
+    public function setAccount(){
         $request=$this->request;
-        $id=session(config('USER_ID'));
+        $id=$this->id;
+
         if($request->isPost()){
             //执行修改逻辑
             $param=$request->param();
             $this->user->allowField(true)->save($param,['id'=>$id]);
-
+            return $this->redirect('setAccount');
         }
-            $info=$this->user->find($id);
-            $this->assign('info',$info);
+        $address_list=$this->userAddress->where('user_id',$this->id)->select();
+        $this->assign('address_list',$address_list);
 
-        return $this->fetch();
+        $info=$this->user->find($id);
+        $this->assign('info',$info);
+        return $this->fetch('set-account');
     }
+
+    //账户信息
+    public function account(){
+        $request=$this->request;
+        $id=$this->id;
+        $info=$this->user->find($id);
+        $this->assign('info',$info);
+        return $this->fetch('account');
+    }
+
+
     // 安全设置，修改密码等
     public function changepwd(){
-        $error='';
-        $success='';
         $request=$this->request;
-        $id=session(config('USER_ID'));
+        $code='0';
+
         if($request->isPost()){
+            $code='100';
             //执行修改逻辑
             $param=$request->param();
-            $old=$param['old'];
-            $res=$this->user->field('password')->find($id);
-
+            $old=$param['old_password'];
+            $res=$this->user->field('password')->find($this->id);
             if($old==$res['password']){
                 //旧密码正确，更新密码
-                $this->user->allowField(true)->save($param,['id'=>$id]);
-                $success='修改成功';
-            }else{
-                $error='旧密码不正确';
-            }
+                $this->user->where('id',$this->id)->setField(['password'=>$param['new_password']]);
+                $code='200';
 
+            }
         }
-        $this->assign('success',$success);
-        $this->assign('error',$error);
+        //返回一个错误码，如果是200则修改成功
+        $this->assign('code',$code);
         return $this->fetch();
     }
     // 收货地址
-    public function address(){
-        $id=session(config('USER_ID'));
+    public function addAddress(){
+
         $request=$this->request;
-        $user_address=Db::name('user_address');
 
         if($request->isPost()){
-
             $param=$request->param();
-            $param['user_id']=$id;
-            $user_address->insert($param);
-
+            $param['user_id']=$this->id;
+            $this->userAddress->save($param);
+            return $this->redirect('addAddress');
         }
-        $address_list=$user_address->where('user_id',$id)->select();
+        $address_list=$this->userAddress->where('user_id',$this->id)->select();
         $this->assign('address_list',$address_list);
-        return $this->fetch();
+
+        return $this->fetch('add-address');
     }
+    //删除收货地址
+    public function delAddress($id){
+        $this->userAddress->destroy($id);
+        return $this->redirect('addAddress');
+    }
+
     //上传头像
-    public function uploadHead(){
+    public function upload(){
 
         $file=$this->request->file('file');
 
         if($file){
-
             $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads/head');
-
             if($info){
                 // 成功上传后 获取上传信息
-                $result='uploads/head/'.$info->getSaveName();
-                //修改session中头像地址
-                session(config('USER_HEAD'),$result);
-
+                $result['url']='uploads/'.$info->getSaveName();
+                $result['code']=200;
             }else{
                 // 上传失败获取错误信息
-                $result=$file->getError();
+                $result['msg']=$file->getError();
+                $result['code']=100;
+
             }
         }
         return json($result);

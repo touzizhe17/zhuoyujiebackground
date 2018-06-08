@@ -1,0 +1,66 @@
+<style>
+    .mr10{
+        margin-right: 10px;
+    }
+    .info-list li{
+        padding:10px 0;
+
+    }
+    .info-list li span{
+        width: 100px;
+        display: inline-block;
+    }
+    .info-list li span:first-child{
+        margin-right: 30px;
+    }
+    .info-list li span:last-child{
+        width: 80%;
+        margin-right: 0px;
+        color: #19a7f0;
+        padding:5px 0px;
+        border-bottom:1px solid #e6e6e6;
+    }
+</style>
+<!-- 内容区域 -->
+<div class="tpl-content-wrapper">
+
+    <div class="row-content am-cf">
+
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl"><h4>个人信息</h4></div>
+                        <div class="widget-function am-fr">
+                            <a href="{:url('setAccount')}" class="am-text-success mr10">修改个人信息</a>
+                            <a href="{:url('addAddress')}" class="am-icon-address mr10">添加收货地址</a>
+                            <a href="{:url('changepwd')}" class="am-icon-cog">修改密码</a>
+                        </div>
+                    </div>
+                    <div class="widget-body am-fr">
+                        <ul class="info-list">
+                            <li >
+                                <span>用户名</span>
+                                <span> {$info.username}</span>
+                            </li>
+                            <li>
+                                <span>手机号码</span>
+                                <span> {$info.mobile}</span>
+                            </li>
+                            <li>
+                                <span>邮箱</span>
+                                <span> {$info.email}</span>
+                            </li>
+                            <li>
+                                <span>默认收货地址</span>
+                                <span> {$info.email}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

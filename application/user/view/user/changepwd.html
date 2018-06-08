@@ -1,80 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-    <meta name="author" content="order by dede58.com"/>
-	<title>个人信息</title>
-	<meta name="renderer" content="webkit">	
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
-	<meta name="apple-mobile-web-app-capable" content="yes">	
-	<meta name="format-detection" content="telephone=no">	
-	<link rel="stylesheet" type="text/css" href="__USER__/common/layui/css/layui.css" media="all">
-	<link rel="stylesheet" type="text/css" href="__USER__/common/bootstrap/css/bootstrap.css" media="all">
-	<link rel="stylesheet" type="text/css" href="__USER__/common/global.css" media="all">
-	<link rel="stylesheet" type="text/css" href="__USER__/css/personal.css" media="all">
-</head>
-<body>
-<section class="layui-larry-box">
-	<div class="larry-personal">
-		<header class="larry-personal-tit">
-			<span>修改密码</span>
-			<span style="color:#1E9FFF;">{$success}</span>
-		</header><!-- /header -->
-		<div class="larry-personal-body clearfix changepwd">
-			<form class="layui-form col-lg-4" method="post" action="{:url('user/user/changepwd')}">
-			 	<div class="layui-form-item">
-					<label class="layui-form-label">用户名</label>
-					<div class="layui-input-block">  
-					  	<input type="text" name="username"  autocomplete="off"  class="layui-input layui-disabled" value="{$Think.session.name}" disabled="disabled" >
-					</div>
-				</div>
-				<div class="layui-form-item">
-					<label class="layui-form-label">旧密码</label>
-					<div class="layui-input-inline">
-					  	<input type="password" name="old"  autocomplete="off"  class="layui-input" value="" placeholder="请输入旧密码" lay-verify="required">
-					</div>
-					<div class="layui-form-mid layui-word-aux" style="color:#ff2222;">{$error}</div>
-				</div>
 
-				<div class="layui-form-item">
-					<label class="layui-form-label">新密码</label>
-					<div class="layui-input-block">  
-					  	<input type="password" name="password"  autocomplete="off" id="pwd1" class="layui-input" value="" placeholder="请输入新密码" lay-verify="required">
-					</div>
-				</div>
-				<div class="layui-form-item">
-					<label class="layui-form-label">确认密码</label>
-					<div class="layui-input-block">  
-					  	<input type="password" id="pwd2"  autocomplete="off"  class="layui-input" value="" placeholder="请输入确认新密码" lay-verify="required" >
-					</div>
-				</div>
-				<div class="layui-form-item change-submit">
-					<div class="layui-input-block">
-						<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-</section>
-<script type="text/javascript" src="__USER__/common/layui/layui.js"></script>
-<script type="text/javascript">
-	layui.use(['form','layer'],function(){
-	    var layer=layui.layer;
-         var form = layui.form();
-         form.on('submit(demo1)',function () {
-			 var val1=document.getElementById('pwd1').value;
-			 var val2=document.getElementById('pwd2').value;
-			 if(val1!=val2){
-                 layer.msg('两次密码不一致');
-				return false;
-			 }
-			 return true;
+<!-- 内容区域 -->
+<div class="tpl-content-wrapper">
 
-         })
-	});
+    <div class="row-content am-cf">
+
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl">修改密码</div>
+                        <div class="widget-function am-fr">
+                            <a onclick="history.back()" class="am-icon-reply">返回</a>
+                        </div>
+                    </div>
+                    <div class="widget-body am-fr">
+
+                        <div class="am-alert am-alert-success am-hide" id="sucess">
+                            <p>密码修改成功！</p>
+                        </div>
+
+                        <form class="am-form tpl-form-line-form" data-am-validator method="post" action="">
+
+                            <div class="am-form-group">
+                                <label  class="am-u-sm-3 am-form-label">旧密码 <span class="tpl-form-line-small-title">old-password</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" name="old_password" required id="old_password">
+
+                                    <div class="am-alert am-alert-danger am-hide" id="fail" data-am-alert>
+                                        <button type="button" class="am-close">&times;</button>
+                                        <p>旧密码不正确</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label  class="am-u-sm-3 am-form-label">新密码 <span class="tpl-form-line-small-title">new-password</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="password" name="new_password"  required minlength="6" id="new-password" placeholder="至少6个字符">
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label  class="am-u-sm-3 am-form-label">确认密码 <span class="tpl-form-line-small-title">query-password</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="password" required minlength="6" data-equal-to="#new-password" placeholder="至少6个字符">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <input type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var code="{$code}"
+
+        if(code==100){
+            $('#fail').removeClass('am-hide');
+        }
+        if(code==200){
+            $('#sucess').removeClass('am-hide');
+        }
+    });
 </script>
-</body>
-</html>

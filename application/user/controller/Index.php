@@ -12,20 +12,14 @@ use app\common\model\User as UserModel;
 
 class Index extends Base{
 
-    //订单
+    //
     public function index(){
 
-        return $this->fetch(':index');
-    }
-    //收藏
-    public function main(){
-
-        return $this->fetch();
+        return $this->fetch('index');
     }
     public function logout(){
         session(null);
-
-        return  $this->redirect('index/login/logout');
-
+        return $this->redirect('index/index/index');
     }
+
 }
