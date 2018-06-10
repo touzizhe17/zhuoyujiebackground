@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-25 18:26:25
+Date: 2018-06-10 15:50:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,7 +34,7 @@ CREATE TABLE `os_admin_user` (
 -- ----------------------------
 -- Records of os_admin_user
 -- ----------------------------
-INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-05-13 15:57:14', '127.0.0.1');
+INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-06-02 20:52:28', '127.0.0.1');
 INSERT INTO `os_admin_user` VALUES ('2', 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '1', '2018-04-11 13:13:34', '2018-04-11 13:16:06', '127.0.0.1');
 
 -- ----------------------------
@@ -607,12 +607,12 @@ CREATE TABLE `os_user` (
   `country` varchar(255) DEFAULT NULL COMMENT '国家信息',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 -- ----------------------------
 -- Records of os_user
 -- ----------------------------
-INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', 'uploads/head/20180508\\998736654fbd94f346050e2650c483e6.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123466', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', '/public/uploads/20180610\\112cddf92b2e22e13d5086abe7b655e1.jpg', null, null, null, null, null, null);
 INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
 INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
 INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
@@ -622,6 +622,7 @@ INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', '1',
 INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1', '2018-05-06 16:02:05', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
 INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
 INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', 'index/images/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('12', '', '', '', '', '1', '2018-06-10 12:00:20', null, '', null, null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for os_user_address
@@ -631,14 +632,32 @@ CREATE TABLE `os_user_address` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
+  `is_def` tinyint(255) DEFAULT '0' COMMENT '是否是默认地址',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_address
 -- ----------------------------
-INSERT INTO `os_user_address` VALUES ('1', '1', '广东省深圳市福田区车公庙');
-INSERT INTO `os_user_address` VALUES ('2', '1', '广东省深圳市龙华区民治街道');
+INSERT INTO `os_user_address` VALUES ('1', '1', '广东省深圳市福田区车公庙', '0');
+INSERT INTO `os_user_address` VALUES ('2', '1', '广东省深圳市龙华区民治街道', '1');
+INSERT INTO `os_user_address` VALUES ('3', '1', '湖南怀化', '0');
+
+-- ----------------------------
+-- Table structure for os_user_cart
+-- ----------------------------
+DROP TABLE IF EXISTS `os_user_cart`;
+CREATE TABLE `os_user_cart` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `goods_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_user_cart
+-- ----------------------------
+INSERT INTO `os_user_cart` VALUES ('1', '1', '25');
 
 -- ----------------------------
 -- Table structure for os_user_comment
