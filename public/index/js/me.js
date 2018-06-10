@@ -10,8 +10,9 @@ function click_good(dom,action,id) {
         type:'post',
         success:function (isLogin) {
             if(!isLogin){
-                if(confirm('检测到您还未登录，请先登录')){
-                    location.href='/index/login/login.html';
+                if(window.confirm('检测到您还未登录，请先登录')){
+                    var url=location.pathname;
+                    location.href='/index/login/login/url/'+url;
                 }
             }else{
                 //---已经登录的用户----

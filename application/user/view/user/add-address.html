@@ -2,6 +2,10 @@
     [class*=am-u-]+[class*=am-u-]:last-child {
          float: left;
     }
+    .def-box{
+        margin-left: 10px;
+        display: inline-block;
+    }
 </style>
 <!-- 内容区域 -->
 <div class="tpl-content-wrapper">
@@ -9,11 +13,21 @@
     <div class="row-content am-cf">
         <div class="row  am-cf">
             <!--收货地址显示-->
-            {foreach name='$address_list' item='item'}
+            {foreach name='$address_list' item='item' key='key'}
             <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
                 <div class="widget am-cf">
                     <div class="widget-head am-cf">
                         <div class="widget-title am-fl">收货地址
+                            <!--设置一个默认地址的开关-->
+                            <div class="def-box">
+                                <label class="am-checkbox am-text-success">
+                                    <input type="checkbox" value=""  data-am-ucheck onchange="check('{$item.id}',this)"
+                                    {if condition="$item.is_def==1"} checked {/if}
+                                    > 默认
+                                </label>
+                            </div>
+
+
                         </div>
                         <div class="widget-function am-fr">
                             <a href="{:url('delAddress',['id'=>$item.id])}" class="tpl-table-black-operation-del">
@@ -71,3 +85,15 @@
 
     </div>
 </div>
+<script>
+    function check(id,obj) {
+        var flag=$(obj).prop('checked');
+        flag=flag?1:0;
+        $.ajax({
+            url:'/user/User/setDefaultAddress/id/'+id+'/flag/'+flag,
+
+        })
+
+    }
+
+</script>

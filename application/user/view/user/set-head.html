@@ -1,0 +1,71 @@
+
+<!-- 内容区域 -->
+<div class="tpl-content-wrapper">
+
+    <div class="row-content am-cf">
+
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl">修改头像</div>
+                        <div class="widget-function am-fr">
+                            <a onclick="history.back()" class="am-icon-reply">返回</a>
+                        </div>
+                    </div>
+                    <div class="widget-body am-fr">
+                        <form class="am-form tpl-form-line-form" method="post" action="" data-am-validator>
+
+                            <div class="am-form-group ">
+                                <label  class="am-u-sm-3 am-form-label">头像 <span class="tpl-form-line-small-title">head</span></label>
+                                <div class="am-u-sm-9 am-form-file">
+                                    <button type="button" class="am-btn am-btn-default am-btn-sm">
+                                        <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+                                    <input type="file" multiple id="file" name="file" style="width: 100px;height: 40px" >
+                                    <img src="{$info.head_url}" alt="" id="img" class="am-circle" width="40px">
+                                    <input type="text" class="am-hide" name="head_url" id="head_url" value="" required>
+
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function() {
+        $('#file').on('change', function() {
+            var imageForm = new FormData();
+            imageForm.append("file", $("#file").get(0).files[0]);
+            var url = '/user/User/upload';
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: imageForm,
+                processData: false,  // 告诉jQuery不要去处理发送的数据
+                contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+                success: function (data) {
+                    if(data.code==200){
+                        $('#img').attr('src',data.url)
+                        $('#head_url').val(data.url)
+                    }
+
+                },
+                error: function () {
+                }
+            });
+
+        });
+    });
+</script>

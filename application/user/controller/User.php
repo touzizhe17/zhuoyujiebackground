@@ -23,17 +23,15 @@ class User extends Base{
     //修改账户信息
     public function setAccount(){
         $request=$this->request;
+        //获取自身id
         $id=$this->id;
 
         if($request->isPost()){
             //执行修改逻辑
             $param=$request->param();
             $this->user->allowField(true)->save($param,['id'=>$id]);
-            return $this->redirect('setAccount');
+            return $this->redirect('account');
         }
-        $address_list=$this->userAddress->where('user_id',$this->id)->select();
-        $this->assign('address_list',$address_list);
-
         $info=$this->user->find($id);
         $this->assign('info',$info);
         return $this->fetch('set-account');
@@ -45,6 +43,8 @@ class User extends Base{
         $id=$this->id;
         $info=$this->user->find($id);
         $this->assign('info',$info);
+        $address=$this->userAddress->where('user_id',$this->id)->where('is_def',1)->find();
+        $this->assign('address',$address);
         return $this->fetch('account');
     }
 
@@ -87,22 +87,36 @@ class User extends Base{
 
         return $this->fetch('add-address');
     }
+    public function setDefaultAddress($id,$flag){
+        $this->userAddress->where('id',$id)->setField('is_def',$flag);
+    }
     //删除收货地址
     public function delAddress($id){
         $this->userAddress->destroy($id);
         return $this->redirect('addAddress');
     }
-
-    //上传头像
+    public function setHead(){
+        if($this->request->isPost()){
+            $param=$this->request->param();
+            $this->user->allowField(true)->save($param,['id'=>$this->id]);
+            //更新session
+            session('head_url',$param['head_url']);
+            $this->redirect('index/index');
+        }
+        $info=$this->user->field('head_url')->find($this->id);
+        $this->assign('info',$info);
+        return $this->fetch('set-head');
+    }
+    //ajax上传头像,做上传预览
     public function upload(){
 
         $file=$this->request->file('file');
 
         if($file){
-            $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads/head');
+            $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
             if($info){
                 // 成功上传后 获取上传信息
-                $result['url']='uploads/'.$info->getSaveName();
+                $result['url']='/public/uploads/'.$info->getSaveName();
                 $result['code']=200;
             }else{
                 // 上传失败获取错误信息

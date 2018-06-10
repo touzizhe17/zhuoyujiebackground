@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
-    <meta name="description" content="这是一个 index 页面">
+    <title>琢玉界用户</title>
+    <meta name="description" content="">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="__USER__/i/favicon.png">
+    <link rel="icon" type="image/png" href="__USER__/img/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="__USER__/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <script src="__USER__/js/echarts.min.js"></script>
@@ -189,7 +189,7 @@
             <div class="tpl-sidebar-user-panel">
                 <div class="tpl-user-panel-slide-toggleable">
                     <div class="tpl-user-panel-profile-picture">
-                        <img src="{$Think.session.head_url}" alt=""  >
+                        <a href="{:url('user/setHead')}"><img src="{$Think.session.head_url}" width="80px"></a>
                     </div>
                     <span class="user-panel-logged-in-text">
               <i class="am-icon-mars am-text-success tpl-user-panel-status-icon"></i>
@@ -223,7 +223,7 @@
                 <!--私人定制管理-->
                 <li class="sidebar-nav-link">
                     <a href="javascript:;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 私人定制管理
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 私人定制
                         <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">

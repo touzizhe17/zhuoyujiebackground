@@ -37,6 +37,10 @@
     .-mob-share-qq{
         background-image: url(http://f1.webshare.mob.com/code/res/icon/sns_icon_24@2x_b.png)!important;
     }
+    .cart{
+        display: inline-block;
+        float: right;
+    }
 </style>
 <link href="__STATIC__/css/jq22.css" type="text/css" rel="stylesheet" />
 <div class="count">
@@ -57,7 +61,11 @@
         </div>
         <div class="azimw-r" id="goods_32191">
             <div class="inforbox1">
-                <h3>{$zuopin.title}</h3>
+                <h3>
+                    {$zuopin.title}
+                    <a onclick="addCart()" class="cart" title="加入购物车"><img src="/public/index/images/cart.png" alt="" width="26px"></a>
+
+                </h3>
                 {if condition="$authinfo !=''"}
                 <p>作者：{$authinfo.name}</p>
                 {/if}
@@ -381,6 +389,7 @@
 
 </div>
 </div>
+</div>
 <script>
    $(function () {
        imgShow();
@@ -429,7 +438,8 @@
            success:function (isLogin) {
                if(!isLogin){
                    if(confirm('检测到您还未登录，请先登录')){
-                       location.href='/index/login/login.html';
+                      var  url=location.pathname;
+                       location.href='/index/login/login/url/'+url;
                    }
                }else{
                    //---已经登录的用户----
@@ -477,7 +487,23 @@
            })
        }
 
+   }
 
+   function addCart() {
+       //1检查是否登录
+       $.ajax({
+           url: "/index/login/check.html",
+           type: 'post',
+           success: function (isLogin) {
+               if (!isLogin) {
+                   if (confirm('检测到您还未登录，请先登录')) {
+                       location.href = '/index/login/login.html';
+                   }
+               }else{
+                   location.href = '/user/order/index/id/'+'{$zuopin.id}';
+               }
+           }
+       });
    }
 
 </script>

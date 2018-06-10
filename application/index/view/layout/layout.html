@@ -268,7 +268,7 @@
              {if condition="$Think.session.name !=''"}
             <div class="user" >
 
-                欢迎  <a href="{:url('user/index/index')}" title="用户详情">
+                欢迎  <a href="{:url('user/index/index')}" title="用户详情" target="_blank">
 
                 {if condition="{:strpos($Think.session.head_url,'http')} ===false"}
                 <img src="__UPLOAD__/{$Think.session.head_url}" style="margin:0 5px">

@@ -20,7 +20,7 @@ class Login extends Controller {
 
     }
 
-    public function login($username='',$password=''){
+    public function login($username='',$password='',$url=''){
 
 
         if(session(config('USER_NAME'))!=''){
@@ -38,8 +38,12 @@ class Login extends Controller {
                 session(config('USER_NAME'),$res['username']);
                 session(config('USER_ID'),$res['id']);
                 session(config('USER_HEAD'),$res['head_url']);
+                if($url!=''){
+                    return   $this->redirect($url);
+                }else{
+                    return   $this->redirect('index/index/index');
+                }
 
-                return   $this->redirect('index/index/index');
 
             }else{
                 $error='用户名或密码错误';
