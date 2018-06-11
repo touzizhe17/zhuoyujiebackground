@@ -3,7 +3,7 @@ namespace app\common\model;
 
 use think\Model;
 
-class UserCart extends Model
+class UserOrder extends Model
 {
     //字段自动完成新增
     protected $insert = ['add_time'];

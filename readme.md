@@ -21,4 +21,10 @@ $.ajax({
             });
 
 ```
+
+# thinkphp5 
+
+1. 修改分页模板
+* 找到thinkphp/library/paginate/bootstrap.php ,复制到extend 下，修改代码
+
  

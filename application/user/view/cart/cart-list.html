@@ -5,7 +5,7 @@
             <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                 <div class="widget am-cf">
                     <div class="widget-head am-cf">
-                        <div class="widget-title  am-cf">订单列表</div>
+                        <div class="widget-title  am-cf">购物车</div>
 
 
                     </div>
@@ -25,20 +25,20 @@
                         </div>
                         <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                             <div class="am-form-group tpl-table-list-select">
-                                <select data-am-selected="{btnSize: 'sm'}">
-                                    <option value="option1">订单状态</option>
-                                    <option value="option2">已完成</option>
-                                    <option value="option3">发送中</option>
-                                    <option value="option4">退货</option>
-                                </select>
+                                <!--<select data-am-selected="{btnSize: 'sm'}">-->
+                                    <!--<option value="option1">所有类别</option>-->
+                                    <!--<option value="option2">玉雕作品</option>-->
+                                    <!--<option value="option3">民间巨匠</option>-->
+                                    <!--<option value="option4">原石玉料</option>-->
+                                <!--</select>-->
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
                             <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
                                 <input type="text" class="am-form-field ">
                                 <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
-          </span>
+                                <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
+                                 </span>
                             </div>
                         </div>
 
@@ -46,12 +46,11 @@
                             <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
                                 <thead>
                                 <tr>
+                                    <th>选择购买</th>
                                     <th>图片</th>
                                     <th>商品</th>
                                     <th>材质</th>
                                     <th>价格</th>
-                                    <th>下单时间</th>
-                                    <th>订单状态</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
@@ -59,39 +58,48 @@
                                 {foreach name='result' item='item'}
                                 <tr class="gradeX">
                                     <td>
-                                        <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank">
+                                        <label class="am-checkbox">
+                                        <input type="checkbox" value="" data-am-ucheck onchange="buy('{$item.id}',this)"
+                                        {if condition="$item.is_buy==1"} checked {/if}
+                                        > 购买
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank" title="商品详情">
                                         <img src="/public/{$item.thumb}" class="tpl-table-line-img" alt="">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">{$item.title}</td>
                                     <td class="am-text-middle">{$item.materials}</td>
                                     <td class="am-text-middle">￥{$item.jmoney}</td>
-                                    <td class="am-text-middle">{$item.add_time}</td>
-                                    <td class="am-text-middle">{$item.order_status}</td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank">
-                                                <i class="am-icon-ellipsis-v"></i> 商品详情
+                                            <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank" title="商品详情">
+                                                <i class="am-icon-pencil"></i> 商品详情
                                             </a>
-                                            <a href="javascript:;" class="tpl-table-black-operation-succ">
-                                                <i class="am-icon-check"></i> 确认货
-                                            </a>
-                                            <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                <i class="am-icon-reply"></i> 退货
+                                            <a  onclick="removeCart('$item.id')" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除商品
                                             </a>
                                         </div>
                                     </td>
                                 </tr>
                                 {/foreach}
-
                                 <!-- more data -->
                                 </tbody>
                             </table>
                         </div>
-                        <div class="am-u-lg-12 am-cf">
+                        <div class="am-cf am-u-lg-12">
+                            {$result->render()}
 
                             <div class="am-fr">
-                                {$result->render()}
+                                总计：
+                                <span class="am-text-primary">￥</span>
+                                <span class="am-text-primary" id="money" style="margin-right:10px;"></span>
+
+                                <a class="am-btn am-btn-warning" onclick="jiesuan()">
+                                    <i class="am-icon-shopping-cart"></i>
+                                    结算
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -100,3 +108,45 @@
         </div>
     </div>
 </div>
+<script>
+$(function () {
+    totalMoney();
+})
+//从购物车中移除
+function removeCart(id) {
+    if(confirm('您确定移除此商品？')){
+        location.href="/user/Cart/remove/id/"+id;
+    }
+}
+//统计要买的商品总金额
+function totalMoney() {
+    $.ajax({
+        url:'/user/Cart/isBuyMoney',
+        success:function (data) {
+//            console.log(data);
+            $('#money').html(data)
+        }
+    });
+}
+//设置改商品要买
+function buy(id,obj) {
+    var flag=$(obj).prop('checked')?1:0 ;
+//    console.log(flag)
+    //统计要买
+    $.ajax({
+        url:'/user/Cart/isBuy/id/'+id+'/flag/'+flag,
+
+    });
+    totalMoney();
+
+}
+//购物车结算
+function jiesuan() {
+    var str=$('#money').html();
+    if(str==0){
+        confirm('请选择要购买的商品');
+    }else{
+        //TODO 结算逻辑
+    }
+}
+</script>

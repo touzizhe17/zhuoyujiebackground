@@ -10,11 +10,17 @@ return [
 
     //模板字符替换
     'view_replace_str'      => [
-        '__USER__'=>'/public/user'
+        '__USER__'=>'/public/user',
     ],
     'template'               => [
         // 模板引擎类型 支持 php think 支持扩展
         'layout_on'=>true,
         'layout_name'=>'layout/layout'
+    ],
+    //分页配置
+    'paginate'               => [
+        'type'      => '\page\Page',
+        'var_page'  => 'page',
+        'list_rows' => 15,
     ],
 ];
