@@ -1,49 +1,17 @@
 <!-- 内容区域 -->
 <div class="tpl-content-wrapper">
     <div class="row-content am-cf">
+
+
         <div class="row">
             <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                 <div class="widget am-cf">
                     <div class="widget-head am-cf">
-                        <div class="widget-title  am-cf">订单列表</div>
-
-
+                        <div class="widget-title  am-cf">{$title}</div>
                     </div>
-                    <div class="widget-body  am-fr">
-
-                        <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
-                            <div class="am-form-group">
-                                <div class="am-btn-toolbar">
-                                    <div class="am-btn-group am-btn-group-xs">
-                                        <!--<button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>-->
-                                        <!--<button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>-->
-                                        <!--<button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>-->
-                                        <!--<button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-                            <div class="am-form-group tpl-table-list-select">
-                                <select data-am-selected="{btnSize: 'sm'}">
-                                    <option value="option1">订单状态</option>
-                                    <option value="option2">已完成</option>
-                                    <option value="option3">发送中</option>
-                                    <option value="option4">退货</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
-                            <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-                                <input type="text" class="am-form-field ">
-                                <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
-          </span>
-                            </div>
-                        </div>
-
-                        <div class="am-u-sm-12">
-                            <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
+                    <div class="widget-body widget-body-lg am-fr">
+                        <div class="am-scrollable-horizontal">
+                            <table width="100%" class="am-table am-table-compact am-text-nowrap tpl-table-black ">
                                 <thead>
                                 <tr>
                                     <th>图片</th>
@@ -51,7 +19,9 @@
                                     <th>材质</th>
                                     <th>价格</th>
                                     <th>下单时间</th>
-                                    <th>订单状态</th>
+                                    <th>物流信息</th>
+                                    <th>收货/退货</th>
+                                    <th>收货/退货时间</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
@@ -59,7 +29,7 @@
                                 {foreach name='result' item='item'}
                                 <tr class="gradeX">
                                     <td>
-                                        <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank">
+                                        <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.goods_id}.html" target="_blank">
                                         <img src="/public/{$item.thumb}" class="tpl-table-line-img" alt="">
                                         </a>
                                     </td>
@@ -68,17 +38,36 @@
                                     <td class="am-text-middle">￥{$item.jmoney}</td>
                                     <td class="am-text-middle">{$item.add_time}</td>
                                     <td class="am-text-middle">{$item.order_status}</td>
+                                    <!--确认收货，和退货颜色状态显示-->
+
+                                    {switch name='$item.complete_status'}
+                                    {case value='确认收货'}
+                                    <td class="am-text-middle am-text-success">{$item.complete_status}</td>
+                                    {/case}
+                                    {case value='退货'}
+                                    <td class="am-text-middle am-text-danger">{$item.complete_status}</td>
+                                    {/case}
+                                    {default/}
+                                    <td class="am-text-middle am-text-warning">{$item.complete_status}</td>
+                                    {/switch}
+
+                                    <td class="am-text-middle">{$item.complete_time}</td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
                                             <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank">
                                                 <i class="am-icon-ellipsis-v"></i> 商品详情
                                             </a>
-                                            <a href="javascript:;" class="tpl-table-black-operation-succ">
-                                                <i class="am-icon-check"></i> 确认货
+                                            {if condition="$item.complete_status!='确认收货'"}
+                                            <a onclick="shou_huo('{$item.goods_id}','shou')" class="tpl-table-black-operation-succ" >
+                                                <i class="am-icon-check"></i> 确认收货
                                             </a>
-                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                            {/if}
+
+                                            {if condition="$item.complete_status!='退货'"}
+                                            <a onclick="shou_huo('{$item.goods_id}','tui')" class="tpl-table-black-operation-del">
                                                 <i class="am-icon-reply"></i> 退货
                                             </a>
+                                            {/if}
                                         </div>
                                     </td>
                                 </tr>
@@ -100,3 +89,30 @@
         </div>
     </div>
 </div>
+<script>
+    function shou_huo(id,flag) {
+        var msg='';
+        var status=''
+        if(flag=='shou'){
+            msg='是否确认收货';
+            status='确认收货'
+        }else{
+            msg='请您与卖家联系，确认是否可以退货';
+            status='退货'
+        }
+        if(confirm(msg)){
+            var url='/user/Order/setCompleteStatus/id/'+id+'/status/'+status;
+            $.ajax({
+                url:url,
+                success:function (data) {
+                    if(data=='ok'){
+                        location.reload(true);
+                    }
+                }
+            })
+
+        }
+        
+    }
+
+</script>

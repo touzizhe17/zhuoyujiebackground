@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-06-10 15:50:21
+Date: 2018-06-12 17:46:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,7 +34,7 @@ CREATE TABLE `os_admin_user` (
 -- ----------------------------
 -- Records of os_admin_user
 -- ----------------------------
-INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-06-02 20:52:28', '127.0.0.1');
+INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-06-06 10:19:05', '127.0.0.1');
 INSERT INTO `os_admin_user` VALUES ('2', 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '1', '2018-04-11 13:13:34', '2018-04-11 13:16:06', '127.0.0.1');
 
 -- ----------------------------
@@ -119,7 +119,7 @@ INSERT INTO `os_article` VALUES ('46', '3', '0', '莲韵（一对）', 'YDJ03548
 INSERT INTO `os_article` VALUES ('47', '3', '0', '悟者禅思', 'YDJ035461', '', '翡翠', '16800', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">尺　寸：带底座高：198mm；裸石尺寸（树）高：118mm 宽：32.3mm 厚：7.8mm；（悟者）高：43.5mm 宽：8mm 厚：10mm；</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">重 &nbsp; &nbsp;量：裸石（总重）约：35.9g</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">描　述：糯冰种黄翡略飘花翡翠摆件——悟者禅思。质地温润细腻，黄色明媚，巧色雕刻成树木，略有飘花灵动自然；采用立体圆雕进行塑造，以色取意巧雕菩提树以及凝神静思的无相佛，细节修饰到位，工艺细腻；悟者禅心，固守一种平淡，即使身居闹市，也能独享“采菊东篱下”的恬淡与超然，把世俗与喧嚣过虑，心灵的天空就能如雨后初晴的树林，纯净而美丽。可见天然细小石纹，但瑕不掩瑜。玉雕界签约玉雕师全守鑫作品，提供亲笔签名收藏证书。&nbsp;</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">售后承诺：签收之时起7日内自由退换货，提供完美售后服务。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180503/615b32b830a38be09be566ea37749236.jpg', null, 'a:8:{i:0;s:52:\"/public/uploads/images/20180503/1525348526981813.jpg\";i:1;s:52:\"/public/uploads/images/20180503/1525348526125670.jpg\";i:2;s:52:\"/public/uploads/images/20180503/1525348526902849.jpg\";i:3;s:52:\"/public/uploads/images/20180503/1525348526110841.jpg\";i:4;s:52:\"/public/uploads/images/20180503/1525348526115333.jpg\";i:5;s:52:\"/public/uploads/images/20180503/1525348526242139.jpg\";i:6;s:52:\"/public/uploads/images/20180503/1525348526113793.jpg\";i:7;s:52:\"/public/uploads/images/20180503/1525348526302943.jpg\";}', '0', '0', '0', '0', '2018-05-03 19:55:31', '2018-05-03 19:54:38', '0', '0');
 INSERT INTO `os_article` VALUES ('48', '3', '0', '心“鹿”历程· 认定', 'YDJ035458', '', '翡翠', '18800', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">尺　寸：带镶嵌高：47.4mm 宽：23.8mm 厚：9mm；裸石尺寸：高：43mm 宽：10mm 厚：9mm；</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">重 &nbsp; &nbsp;量：（总重约）7.7g</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">描　述：镶黄18K金钻石冰种晴水色翡翠挂件——心“鹿”历程· 认定。玉质温润细腻，颜色清新雅致。作品整体设计得精湛巧妙，将传统的玉雕和镶嵌工艺结合得新颖独特、精妙绝伦。作品裸石部分立体雕刻一只高傲自信的鹿，其回望的姿态活灵活现，搭配K金钻石镶嵌出云卷的形态，细节雕刻到位，工艺细腻，整体搭配具有别致的韵味。<span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">一握香萸，休说相思；</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">相思不抵意浓，</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">溺与心海，</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">花芬有信，把心寄给你。</span><span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">深林不及你眉眼，恒河不及你侧脸</span>。略微有杂色，但完全不影响整体美观。提供玉雕界民间巧匠收藏证书。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">售后承诺：签收之时起7日内自由退换货，提供完美售后服务。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180503/39a2ff8f9a23f60138892bd928509518.jpg', null, 'a:7:{i:0;s:52:\"/public/uploads/images/20180503/1525348647476361.jpg\";i:1;s:52:\"/public/uploads/images/20180503/1525348647492025.jpg\";i:2;s:52:\"/public/uploads/images/20180503/1525348647304535.jpg\";i:3;s:52:\"/public/uploads/images/20180503/1525348648340639.jpg\";i:4;s:52:\"/public/uploads/images/20180503/1525348648487119.jpg\";i:5;s:52:\"/public/uploads/images/20180503/1525348648519608.jpg\";i:6;s:52:\"/public/uploads/images/20180503/1525348648675168.jpg\";}', '0', '0', '0', '0', '2018-05-03 19:57:30', '2018-05-03 19:55:32', '0', '0');
 INSERT INTO `os_article` VALUES ('49', '3', '0', '心“鹿”历程· 欣喜', 'YDJ035455', '', '翡翠', '15800', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">尺　寸：带镶嵌高：43.6mm 宽：17.8mm 厚：9.2mm；裸石尺寸：高：37.2mm 宽：13mm 厚：6mm；</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">重 &nbsp; &nbsp;量：（总重约）4.9g</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">描　述：镶黄18K金钻石彩宝冰种晴水色翡翠挂件——心“鹿”历程· 欣喜。玉质温润细腻，颜色清新雅致。作品整体设计得精湛巧妙，将传统的玉雕和镶嵌工艺结合得新颖独特、精妙绝伦。作品裸石部分立体雕刻一只高傲自信的鹿，其回望的姿态活灵活现，搭配K金钻石镶嵌出云卷的形态，细节雕刻到位，工艺细腻，整体搭配具有别致的韵味。站立在云卷，<span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">&nbsp;翘首期盼；</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">一对灵角翩翩立起，</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">似那懵懂的少女，企尝爱的滋意，</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">此间少年温如言</span><span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">初见豆蔻亦暖如玉</span>。略微有杂色，但完全不影响整体美观。提供玉雕界民间巧匠收藏证书。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">售后承诺：签收之时起7日内自由退换货，提供完美售后服务。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180503/2430202b70f33af551c5f5d2af87419b.jpg', null, 'a:7:{i:0;s:52:\"/public/uploads/images/20180503/1525348776308968.jpg\";i:1;s:52:\"/public/uploads/images/20180503/1525348776116177.jpg\";i:2;s:52:\"/public/uploads/images/20180503/1525348776269249.jpg\";i:3;s:52:\"/public/uploads/images/20180503/1525348776874836.jpg\";i:4;s:52:\"/public/uploads/images/20180503/1525348776924150.jpg\";i:5;s:52:\"/public/uploads/images/20180503/1525348776251606.jpg\";i:6;s:52:\"/public/uploads/images/20180503/1525348776120041.jpg\";}', '0', '0', '0', '0', '2018-05-03 19:59:39', '2018-05-03 19:57:31', '0', '0');
-INSERT INTO `os_article` VALUES ('50', '3', '0', '心“鹿”历程· 守候', 'YDJ035449', '', '翡翠', '12800', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">尺　寸：带镶嵌高：35.7mm 宽：24.6mm 厚：7.3mm；裸石尺寸：高：26.4mm 宽：18.5mm 厚：6.8mm；</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">重 &nbsp; &nbsp;量：（总重约）6.7g</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">描　述：镶黄18K金钻石彩宝糯冰种晴水色翡翠挂件——心“鹿”历程· 守候。玉质温润细腻，颜色清新雅致。作品整体设计得精湛巧妙，将传统的玉雕和镶嵌工艺结合得新颖独特、精妙绝伦。作品裸石部分立体雕刻一直静静等待的鹿，长有长长的鹿角，搭配K金钻石镶嵌出云上花的形态，配以紫水晶点缀，细节雕刻到位，工艺细腻，整体搭配具有别致的韵味。<span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">一盏铃花垂放，花枝绕身；</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">裹挟了足足香味，</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">时光不休，情思不褪。</span><span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">千山万水是伏笔 只愿与你共余生</span><span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">。</span>略微有棉，但完全不影响整体美观。提供玉雕界民间巧匠收藏证书。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">售后承诺：签收之时起7日内自由退换货，提供完美售后服务。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180503/9b8d9944819d47626bf589d25ca002cd.jpg', null, 'a:7:{i:0;s:52:\"/public/uploads/images/20180503/1525348911822638.jpg\";i:1;s:52:\"/public/uploads/images/20180503/1525348911132426.jpg\";i:2;s:52:\"/public/uploads/images/20180503/1525348911429715.jpg\";i:3;s:52:\"/public/uploads/images/20180503/1525348911809126.jpg\";i:4;s:52:\"/public/uploads/images/20180503/1525348911106460.jpg\";i:5;s:52:\"/public/uploads/images/20180503/1525348911818636.jpg\";i:6;s:52:\"/public/uploads/images/20180503/1525348911110888.jpg\";}', '0', '0', '0', '0', '2018-05-03 20:01:54', '2018-05-03 19:59:41', '0', '0');
+INSERT INTO `os_article` VALUES ('50', '3', '0', '心“鹿”历程· 守候', 'YDJ035449', '', '翡翠', '12800', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">尺　寸：带镶嵌高：35.7mm 宽：24.6mm 厚：7.3mm；裸石尺寸：高：26.4mm 宽：18.5mm 厚：6.8mm；</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">重 &nbsp; &nbsp;量：（总重约）6.7g</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">描　述：镶黄18K金钻石彩宝糯冰种晴水色翡翠挂件——心“鹿”历程· 守候。玉质温润细腻，颜色清新雅致。作品整体设计得精湛巧妙，将传统的玉雕和镶嵌工艺结合得新颖独特、精妙绝伦。作品裸石部分立体雕刻一直静静等待的鹿，长有长长的鹿角，搭配K金钻石镶嵌出云上花的形态，配以紫水晶点缀，细节雕刻到位，工艺细腻，整体搭配具有别致的韵味。<span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">一盏铃花垂放，花枝绕身；</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">裹挟了足足香味，</span><span style=\"margin: 0px; padding: 0px; font-size: 13px;\">时光不休，情思不褪。</span><span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">千山万水是伏笔 只愿与你共余生</span><span style=\"margin: 0px; padding: 0px; text-align: center; widows: 1;\">。</span>略微有棉，但完全不影响整体美观。提供玉雕界民间巧匠收藏证书。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \">售后承诺：签收之时起7日内自由退换货，提供完美售后服务。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180503/9b8d9944819d47626bf589d25ca002cd.jpg', 'a:3:{i:0;s:52:\"/public/uploads/images/20180413/1523590920119499.jpg\";i:1;s:52:\"/public/uploads/images/20180413/1523590920118582.jpg\";i:2;s:52:\"/public/uploads/images/20180413/1523590920106921.jpg\";}', 'a:7:{i:0;s:52:\"/public/uploads/images/20180503/1525348911822638.jpg\";i:1;s:52:\"/public/uploads/images/20180503/1525348911132426.jpg\";i:2;s:52:\"/public/uploads/images/20180503/1525348911429715.jpg\";i:3;s:52:\"/public/uploads/images/20180503/1525348911809126.jpg\";i:4;s:52:\"/public/uploads/images/20180503/1525348911106460.jpg\";i:5;s:52:\"/public/uploads/images/20180503/1525348911818636.jpg\";i:6;s:52:\"/public/uploads/images/20180503/1525348911110888.jpg\";}', '0', '0', '0', '0', '2018-05-03 20:01:54', '2018-05-03 19:59:41', '0', '0');
 INSERT INTO `os_article` VALUES ('51', '3', '0', '花好月圆', 'YDJ035695', '', '翡翠', '140000', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">尺　　寸：高：152mm 宽：78mm 厚：32mm；高：151mm 宽：72.5mm 厚：29mm</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">重　　量：约342.5g、278.8g</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">描　　述：糯冰种飘花翡翠摆件——花好月圆。玉料结晶细腻，质感温润怡人，飘花色泽浓郁自然，为整体增添了生机与趣味，独具特色。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">作品用料厚实大气，采用立体雕刻，并且将镂空技法运用得淋漓尽致，整体线条深入细腻，刀法老练，可见深厚的雕刻功底，树干纹理清晰，苍劲有力，树叶自由生长，朝气蓬勃，两只喜鹊小憩于枝头，身形圆润、羽翼丰盈，敏锐活泼，巧妙而形象，“叽叽喳喳“似在报晓着春天的来临，一幅吉祥喜乐的美好画面，欢快无比。肉眼可见轻微石纹，但瑕不掩瑜。提供玉雕界民间巧匠收藏证书。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">售后承诺：签收之时起7日内自由退换货，提供完美售后服务。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180504/954bc93631dee61c41d290f931934ee0.jpg', null, 'a:7:{i:0;s:52:\"/public/uploads/images/20180504/1525431923808265.jpg\";i:1;s:52:\"/public/uploads/images/20180504/1525431923403982.jpg\";i:2;s:52:\"/public/uploads/images/20180504/1525431923138824.jpg\";i:3;s:52:\"/public/uploads/images/20180504/1525431923320801.jpg\";i:4;s:52:\"/public/uploads/images/20180504/1525431923275833.jpg\";i:5;s:52:\"/public/uploads/images/20180504/1525431923799143.jpg\";i:6;s:52:\"/public/uploads/images/20180504/1525431923509022.jpg\";}', '0', '0', '0', '0', '2018-05-04 19:05:27', '2018-05-04 19:04:17', '0', '0');
 INSERT INTO `os_article` VALUES ('52', '3', '0', '不负如来不负卿', 'YDJ035674', '', '翡翠', '33800', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">尺　　寸：高：71.2mm 宽：24mm 厚：6mm</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">重量：（约）25.2g</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">描　　述：冰种淡晴水翡翠挂件——不负如来不负卿。玉质莹润，晴水色素净淡雅，清透而灵动。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">“曾虑多情损梵行， 入山又恐别倾城，世间安得双全法，不负如来不负卿。”作品以仓央嘉措的故事及诗词为原型，雕刻为僧侣与佳人为主题，笔笔勾勒简单明快，却透露着细腻与柔情，人物均半闭双目、安之若素，形象更是清新俊逸，郎才女貌。整体主题突出，且富含深意，极其耐人寻味。又选用黄18k金镶嵌为法轮修饰，更显别致。二分之一透明，肉眼可见雪花棉通体遍布，灵韵十足。玉雕界签约玉雕名家子游作品，提供玉雕师亲笔签名收藏证书。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">配送时间：付款之时起72小时内发货，正常3-5天到达，特殊情况适当顺延。</div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">售后承诺：签收之时起7日内自由退换货，提供完美售后服务。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180504/3b31c49032f66a7676a8e47bacfd58a3.jpg', null, 'a:7:{i:0;s:52:\"/public/uploads/images/20180504/1525432097930390.jpg\";i:1;s:52:\"/public/uploads/images/20180504/1525432097129443.jpg\";i:2;s:52:\"/public/uploads/images/20180504/1525432097119228.jpg\";i:3;s:52:\"/public/uploads/images/20180504/1525432097313744.jpg\";i:4;s:52:\"/public/uploads/images/20180504/1525432097108401.jpg\";i:5;s:52:\"/public/uploads/images/20180504/1525432097132955.jpg\";i:6;s:52:\"/public/uploads/images/20180504/1525432097737435.jpg\";}', '0', '0', '0', '0', '2018-05-04 19:08:22', '2018-05-04 19:05:28', '0', '0');
 INSERT INTO `os_article` VALUES ('53', '3', '0', '护佑心轮·阿弥陀佛', 'YDJ035545', '', '翡翠', '78000', '<div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\"><div style=\"margin: 0px; padding: 0px;\">尺　　寸：高: 65.8mm 宽：40.2mm 厚:12.6mm 裸石直径:40mm 厚:11.7mm&nbsp;</div><div style=\"margin: 0px; padding: 0px;\">重量：（含绳约）58.0 g</div></div><div style=\"margin: 0px; padding: 0px; color: rgb(74, 73, 73); font-family: \"microsoft yahei\"; font-size: 14px; white-space: normal;\">描　　述：冰种无色翡翠镶嵌挂件——护佑心轮·阿弥陀佛。冰种翡翠水润莹糯，无色纯洁白净。作品依据传统美意“圆满”，设计以圆牌结构，选自晶莹剔透的翡翠，采用立体传统高浮雕手法精细雕琢，八大守护神端庄慈祥，手印法器均有考究。梵文心咒与吉祥八宝的简洁组图由浅及深加持心灵的力量。环绕式镂空手法精雕缠枝莲纹开窗设计，镶以绿松天眼，使作品画龙点睛。同时更巧妙的利用镶嵌手法，设计多重机关，合二为一，匠心独运。金镶部分一流工艺及手法，细微之处均可见设计用心之处，玩味无穷。阿弥陀佛：生肖猪和狗的本命佛，又名无量佛、无量光佛、无量寿佛等。阿弥陀佛为西方极乐净土世界的教主，以无尽愿力誓渡一切众生，阿弥陀佛代表光明无量，能够默默守护你，一生顺利，逢凶化吉，摆脱烦恼，与社会与家庭共创幸福人生。玉雕界签约玉雕名家廖慧斌作品，提供玉雕师亲笔签名收藏证书。</div><p><br/></p>', '5', '0', '1', '0', '', '', '/uploads/20180504/a6c9d0436e2bdbdd0f8b96cd9adbf632.jpg', null, 'a:7:{i:0;s:52:\"/public/uploads/images/20180504/1525432296267313.jpg\";i:1;s:52:\"/public/uploads/images/20180504/1525432296105307.jpg\";i:2;s:52:\"/public/uploads/images/20180504/1525432296115381.jpg\";i:3;s:52:\"/public/uploads/images/20180504/1525432297126005.jpg\";i:4;s:52:\"/public/uploads/images/20180504/1525432297659160.jpg\";i:5;s:52:\"/public/uploads/images/20180504/1525432297683129.jpg\";i:6;s:52:\"/public/uploads/images/20180504/1525432297128544.jpg\";}', '0', '0', '0', '0', '2018-05-04 19:11:39', '2018-05-04 19:08:23', '0', '0');
@@ -288,74 +288,6 @@ CREATE TABLE `os_book_record` (
 -- ----------------------------
 -- Records of os_book_record
 -- ----------------------------
-INSERT INTO `os_book_record` VALUES ('34', '2', '2018-05-02 10:56:42', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('35', '2', '2018-05-02 11:23:28', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('36', '2', '2018-05-02 11:25:20', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('37', '2', '2018-05-02 11:25:21', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('38', '2', '2018-05-02 11:25:23', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('39', '2', '2018-05-02 11:25:40', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('40', '2', '2018-05-02 11:25:42', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('41', '2', '2018-05-02 11:28:09', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('42', '2', '2018-05-02 11:28:47', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('43', '2', '2018-05-02 11:29:22', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('44', '2', '2018-05-02 11:29:23', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('45', '2', '2018-05-02 11:29:30', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('46', '2', '2018-05-02 11:29:44', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('47', '2', '2018-05-02 11:30:13', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('48', '2', '2018-05-02 11:30:30', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('49', '2', '2018-05-02 11:31:06', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('50', '2', '2018-05-02 11:32:05', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('51', '2', '2018-05-02 11:32:16', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('52', '2', '2018-05-02 11:33:08', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('53', '2', '2018-05-02 11:35:10', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('54', '2', '2018-05-02 11:37:52', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('55', '2', '2018-05-02 11:38:00', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('56', '2', '2018-05-02 11:38:09', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('57', '2', '2018-05-02 11:42:12', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('58', '2', '2018-05-02 11:43:18', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('59', '2', '2018-05-02 11:47:29', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('60', '2', '2018-05-02 11:48:28', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('61', '2', '2018-05-02 11:48:37', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('62', '2', '2018-05-02 11:48:47', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('63', '2', '2018-05-02 11:49:21', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('64', '2', '2018-05-02 11:49:45', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('65', '2', '2018-05-02 11:50:04', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('66', '2', '2018-05-02 11:50:56', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('67', '2', '2018-05-02 11:52:16', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('68', '2', '2018-05-02 11:52:52', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('69', '2', '2018-05-02 11:55:14', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('70', '2', '2018-05-02 12:04:40', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('71', '2', '2018-05-02 14:11:49', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('72', '2', '2018-05-02 14:28:51', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('73', '2', '2018-05-02 14:29:20', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('74', '2', '2018-05-02 14:29:25', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('75', '2', '2018-05-02 14:31:23', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('76', '2', '2018-05-02 14:33:20', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('77', '2', '2018-05-02 14:33:26', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('78', '2', '2018-05-02 14:46:43', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('79', '2', '2018-05-02 14:47:23', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('80', '2', '2018-05-02 14:48:37', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('81', '2', '2018-05-02 14:48:52', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('82', '2', '2018-05-02 14:48:54', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('83', '2', '2018-05-02 14:49:03', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('84', '3', '2018-05-02 14:53:28', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('85', '3', '2018-05-02 14:54:28', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('86', '3', '2018-05-02 14:54:45', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('87', '3', '2018-05-02 14:54:48', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('88', '3', '2018-05-02 14:54:51', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('89', '3', '2018-05-02 14:54:52', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('90', '3', '2018-05-02 14:54:54', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('91', '3', '2018-05-02 14:54:55', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('92', '3', '2018-05-02 14:55:44', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('93', '3', '2018-05-02 14:59:09', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('94', '3', '2018-05-02 14:59:43', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('95', '3', '2018-05-02 14:59:58', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('96', '3', '2018-05-02 15:00:53', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('97', '3', '2018-05-02 15:02:20', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('98', '3', '2018-05-02 15:14:46', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('99', '3', '2018-05-03 15:37:29', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('100', '3', '2018-05-03 18:18:31', '127.0.0.1');
-INSERT INTO `os_book_record` VALUES ('101', '3', '2018-05-04 19:12:13', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for os_category
@@ -612,17 +544,17 @@ CREATE TABLE `os_user` (
 -- ----------------------------
 -- Records of os_user
 -- ----------------------------
-INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123466', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', '/public/uploads/20180610\\112cddf92b2e22e13d5086abe7b655e1.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', '1', null, null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', '1', '2018-05-06 15:26:30', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1', '2018-05-06 16:02:05', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', 'index/images/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('12', '', '', '', '', '1', '2018-06-10 12:00:20', null, '', null, null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', '/public/uploads/20180611\\30facd9ee0d52dc4a6feb2c40ca2a9ea.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', '1', '2018-05-06 15:26:30', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1', '2018-05-06 16:02:05', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('12', '', '', '', '', '1', '2018-06-08 18:04:25', null, '', null, null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for os_user_address
@@ -632,16 +564,16 @@ CREATE TABLE `os_user_address` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
-  `is_def` tinyint(255) DEFAULT '0' COMMENT '是否是默认地址',
+  `is_def` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_address
 -- ----------------------------
 INSERT INTO `os_user_address` VALUES ('1', '1', '广东省深圳市福田区车公庙', '0');
 INSERT INTO `os_user_address` VALUES ('2', '1', '广东省深圳市龙华区民治街道', '1');
-INSERT INTO `os_user_address` VALUES ('3', '1', '湖南怀化', '0');
+INSERT INTO `os_user_address` VALUES ('12', '1', '华南张琪收', '0');
 
 -- ----------------------------
 -- Table structure for os_user_cart
@@ -651,13 +583,32 @@ CREATE TABLE `os_user_cart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `goods_id` int(11) DEFAULT NULL,
+  `is_buy` tinyint(255) DEFAULT '0' COMMENT '标记为要购物商品',
+  `add_time` datetime DEFAULT NULL COMMENT '添加到购物车的时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_cart
 -- ----------------------------
-INSERT INTO `os_user_cart` VALUES ('1', '1', '25');
+INSERT INTO `os_user_cart` VALUES ('2', '1', '6', '0', null);
+INSERT INTO `os_user_cart` VALUES ('4', '1', '8', '0', null);
+INSERT INTO `os_user_cart` VALUES ('5', '1', '9', '0', null);
+INSERT INTO `os_user_cart` VALUES ('6', '1', '10', '0', null);
+INSERT INTO `os_user_cart` VALUES ('7', '1', '11', '0', null);
+INSERT INTO `os_user_cart` VALUES ('8', '1', '12', '0', null);
+INSERT INTO `os_user_cart` VALUES ('9', '1', '13', '0', null);
+INSERT INTO `os_user_cart` VALUES ('10', '1', '14', '0', null);
+INSERT INTO `os_user_cart` VALUES ('11', '1', '15', '0', null);
+INSERT INTO `os_user_cart` VALUES ('12', '1', '16', '0', null);
+INSERT INTO `os_user_cart` VALUES ('13', '1', '17', '0', null);
+INSERT INTO `os_user_cart` VALUES ('14', '1', '18', '0', null);
+INSERT INTO `os_user_cart` VALUES ('15', '1', '19', '0', null);
+INSERT INTO `os_user_cart` VALUES ('16', '1', '20', '0', null);
+INSERT INTO `os_user_cart` VALUES ('17', '1', '21', '0', null);
+INSERT INTO `os_user_cart` VALUES ('18', '1', '22', '0', null);
+INSERT INTO `os_user_cart` VALUES ('19', '1', '23', '0', null);
+INSERT INTO `os_user_cart` VALUES ('20', '1', '24', '0', null);
 
 -- ----------------------------
 -- Table structure for os_user_comment
@@ -729,6 +680,56 @@ INSERT INTO `os_user_good_bad` VALUES ('32', '5', '1', '1', '0');
 INSERT INTO `os_user_good_bad` VALUES ('33', '6', '1', '0', '1');
 INSERT INTO `os_user_good_bad` VALUES ('34', '10', '1', '1', '0');
 INSERT INTO `os_user_good_bad` VALUES ('35', '16', '1', '1', '0');
+
+-- ----------------------------
+-- Table structure for os_user_order
+-- ----------------------------
+DROP TABLE IF EXISTS `os_user_order`;
+CREATE TABLE `os_user_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `goods_id` int(11) DEFAULT NULL,
+  `add_time` datetime DEFAULT NULL COMMENT '下单时间',
+  `order_status` varchar(255) DEFAULT '' COMMENT '我方对订单状态/完成/发送中/',
+  `complete_time` datetime DEFAULT NULL COMMENT '订单完成时间',
+  `complete_status` varchar(255) DEFAULT '未完成' COMMENT '订单完成状态',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_user_order
+-- ----------------------------
+INSERT INTO `os_user_order` VALUES ('1', '1', '6', '2018-06-01 17:43:39', '正在备货', '2018-06-12 15:53:33', '未完成');
+INSERT INTO `os_user_order` VALUES ('2', '1', '16', '2018-06-04 17:43:58', '发送中', null, '未完成');
+INSERT INTO `os_user_order` VALUES ('3', '1', '26', '2018-06-11 17:44:15', '即将发送', '2018-06-12 16:39:52', '确认收货');
+INSERT INTO `os_user_order` VALUES ('4', '1', '7', '2018-06-11 18:16:01', '商品已经接收', '2018-06-12 16:28:21', '确认收货');
+INSERT INTO `os_user_order` VALUES ('5', '1', '8', '2018-06-06 18:16:14', '', null, '未完成');
+INSERT INTO `os_user_order` VALUES ('6', '1', '9', '2018-06-01 18:16:26', '', '2018-06-12 15:58:03', '未完成');
+INSERT INTO `os_user_order` VALUES ('7', '1', '10', '2018-06-02 18:16:39', '', null, '未完成');
+INSERT INTO `os_user_order` VALUES ('8', '1', '11', '2018-06-12 16:24:17', '', '2018-06-12 16:40:40', '退货');
+
+-- ----------------------------
+-- Table structure for os_user_person
+-- ----------------------------
+DROP TABLE IF EXISTS `os_user_person`;
+CREATE TABLE `os_user_person` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `goods_name` varchar(255) DEFAULT NULL,
+  `img_list` varchar(255) DEFAULT NULL COMMENT '私人定制流程图',
+  `money` varchar(255) DEFAULT NULL COMMENT '金额',
+  `materials` varchar(255) DEFAULT NULL COMMENT '材质',
+  `add_time` datetime DEFAULT NULL COMMENT '开始时间',
+  `complete_time` datetime DEFAULT NULL COMMENT '完成时间',
+  `author` varchar(255) DEFAULT NULL COMMENT '作者',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_user_person
+-- ----------------------------
+INSERT INTO `os_user_person` VALUES ('1', '1', '传国玉玺', null, '100000', '玉', '2018-06-12 17:09:03', null, '李斯');
+INSERT INTO `os_user_person` VALUES ('2', '1', '方天画戟', null, '200000', '钢铁', '2018-06-11 17:10:21', null, '吕布');
 
 -- ----------------------------
 -- Table structure for ot_linkug

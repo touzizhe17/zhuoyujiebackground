@@ -9,8 +9,6 @@ namespace app\user\controller;
 
 use app\common\model\Article;
 use app\common\model\UserOrder;
-use think\Request;
-use app\common\model\User as UserModel;
 
 class Order extends Base{
     public $article;
@@ -23,21 +21,34 @@ class Order extends Base{
 
     }
 
-
-    //订单
+    //全部订单
     public function index($id=''){
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->field('b.*,a.add_time,a.order_status')->order('add_time')->paginate(5);
+        $this->assign('title','全部订单');
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }
-    //收藏
-    public function favorite(){
-
-        return $this->fetch();
+    //已经完成订单
+    public function complete($id=''){
+        $this->assign('title','已经完成订单');
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'确认收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $this->assign('result',$result);
+        return $this->fetch('order-list');
     }
-    //优惠劵
-    public function coupons(){
-
-        return $this->fetch();
+    //未完成订单
+    public function unfinished($id=''){
+        $this->assign('title','未完成订单');
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'未完成')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $this->assign('result',$result);
+        return $this->fetch('order-list');
     }
+
+
+    //ajax买家修改订单完成后的状态，收货或者退货
+    public function setCompleteStatus($id,$status){
+        $this->userOrder->save(['complete_status'=>$status,'complete_time'=>date('Y-m-d H:i:s')],['user_id'=>$this->id,'goods_id'=>$id]);
+        return 'ok';
+
+    }
+
 }
