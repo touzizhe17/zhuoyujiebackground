@@ -11,7 +11,10 @@
 
 return [
     '__domain__' => [
-        'admin'=>'admin'
+        //管理产品后台
+        'admin'=>'admin',
+        //交易后台
+        'trade'=>'trade'
     ],
 
 ];

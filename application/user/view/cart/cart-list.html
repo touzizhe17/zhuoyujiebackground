@@ -135,9 +135,14 @@ function buy(id,obj) {
     //统计要买
     $.ajax({
         url:'/user/Cart/isBuy/id/'+id+'/flag/'+flag,
+        success:function (data) {
+            if(data=='ok'){
+                totalMoney();
+            }
+        }
 
     });
-    totalMoney();
+
 
 }
 //购物车结算

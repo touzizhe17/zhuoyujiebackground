@@ -33,6 +33,7 @@
                                         <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.goods_id}.html" target="_blank">
                                         <img src="/public/{$item.thumb}" class="tpl-table-line-img" alt="">
                                         </a>
+
                                     </td>
                                     <td class="am-text-middle">{$item.order_number}</td>
                                     <td class="am-text-middle">{$item.title}</td>
@@ -41,7 +42,6 @@
                                     <td class="am-text-middle">{$item.add_time}</td>
                                     <td class="am-text-middle">{$item.order_status}</td>
                                     <!--确认收货，和退货颜色状态显示-->
-
                                     {switch name='$item.complete_status'}
                                     {case value='确认收货'}
                                     <td class="am-text-middle am-text-success">{$item.complete_status}</td>
@@ -58,18 +58,15 @@
                                     <td class="am-text-middle">{$item.complete_time}</td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank">
-                                                <i class="am-icon-ellipsis-v"></i> 商品详情
+                                            <a href="/trade/Order/orderStauts/id/{$item.id}.html" target="_blank">
+                                                <i class="am-icon-pencil"></i> 修改物流信息
                                             </a>
-                                            {if condition="$item.complete_status!='确认收货'"}
-                                            <a onclick="shou_huo('{$item.goods_id}','shou')" class="tpl-table-black-operation-succ" >
-                                                <i class="am-icon-check"></i> 确认收货
+                                            {if condition="$item.complete_status=='退货请求'"}
+                                            <a onclick="sell_order_status('{$item.goods_id}','ok')" href="javascript:;" class="tpl-table-black-operation-del" >
+                                                <i class="am-icon-check"></i>接受退货
                                             </a>
-                                            {/if}
-
-                                            {if condition="$item.complete_status!='退货请求'"}
-                                            <a onclick="shou_huo('{$item.goods_id}','tui')" class="tpl-table-black-operation-del">
-                                                <i class="am-icon-reply"></i> 退货
+                                            <a onclick="sell_order_status('{$item.goods_id}','err')" href="javascript:;" class="tpl-table-black-operation-del" >
+                                                <i class="am-icon-times"></i>拒绝退货
                                             </a>
                                             {/if}
                                         </div>
@@ -94,29 +91,32 @@
     </div>
 </div>
 <script>
-    function shou_huo(id,flag) {
-        var msg='';
-        var status=''
-        if(flag=='shou'){
-            msg='是否确认收货';
-            status='确认收货'
-        }else{
-            msg='请您与卖家联系，确认是否可以退货';
-            status='退货请求'
+
+    //商家是否接受退货
+    function sell_order_status(id,flag) {
+        var msg = '';
+        var status = ''
+        if (flag == 'ok') {
+            msg = '是否接受退货';
+            status = '商家同意退货'
+
+        } else {
+            msg = '是否拒绝收货';
+            status = '商家拒绝退货'
         }
-        if(confirm(msg)){
-            var url='/user/Order/setCompleteStatus/id/'+id+'/status/'+status;
+        if (confirm(msg)) {
+            var url = '/Order/setSellOrderStatus/id/' + id + '/status/' + status;
             $.ajax({
-                url:url,
-                success:function (data) {
-                    if(data=='ok'){
+                url: url,
+                success: function (data) {
+                    if (data == 'ok') {
                         location.reload(true);
                     }
                 }
             })
 
         }
-        
     }
+
 
 </script>

@@ -22,7 +22,6 @@ class Cart extends Base{
         $this->userCart=new UserCart();
 
     }
-
     //购物车
     public function index($id=''){
         $result=$this->userCart->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->field('b.*,a.is_buy')->order('add_time')->paginate(5);
@@ -37,6 +36,7 @@ class Cart extends Base{
     //标记为要买
     public function isBuy($id,$flag){
         $this->userCart->where(['goods_id'=>$id,'user_id'=>$this->id])->setField('is_buy',$flag);
+        return 'ok';
     }
     //统计要买商品的总金额
     public function isBuyMoney(){

@@ -1,0 +1,75 @@
+
+<!-- 内容区域 -->
+<div class="tpl-content-wrapper">
+
+    <div class="row-content am-cf">
+
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl">修改密码</div>
+                        <div class="widget-function am-fr">
+                            <a onclick="history.back()" class="am-icon-reply">返回</a>
+                        </div>
+                    </div>
+                    <div class="widget-body am-fr">
+
+                        <div class="am-alert am-alert-success am-hide" id="sucess">
+                            <p>密码修改成功！</p>
+                        </div>
+
+                        <form class="am-form tpl-form-line-form" data-am-validator method="post" action="">
+
+                            <div class="am-form-group">
+                                <label  class="am-u-sm-3 am-form-label">旧密码 <span class="tpl-form-line-small-title">old-password</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" name="old_password" required id="old_password">
+
+                                    <div class="am-alert am-alert-danger am-hide" id="fail" data-am-alert>
+                                        <button type="button" class="am-close">&times;</button>
+                                        <p>旧密码不正确</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label  class="am-u-sm-3 am-form-label">新密码 <span class="tpl-form-line-small-title">new-password</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="password" name="new_password"  required minlength="6" id="new-password" placeholder="至少6个字符">
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label  class="am-u-sm-3 am-form-label">确认密码 <span class="tpl-form-line-small-title">query-password</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="password" required minlength="6" data-equal-to="#new-password" placeholder="至少6个字符">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <input type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var code="{$code}"
+
+        if(code==100){
+            $('#fail').removeClass('am-hide');
+        }
+        if(code==200){
+            $('#sucess').removeClass('am-hide');
+        }
+    });
+</script>
