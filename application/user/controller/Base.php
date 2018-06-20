@@ -7,6 +7,7 @@
  */
 namespace app\user\controller;
 
+use app\common\model\TradeNotice;
 use think\Controller;
 use think\Request;
 
@@ -14,6 +15,7 @@ class Base extends Controller{
     public $id;
     public $name;
     public $headUrl;
+
     public function __construct(Request $request = null)
     {
         parent::__construct($request);
@@ -24,6 +26,14 @@ class Base extends Controller{
         if($this->id==null){
             $this->redirect('index/login/login');
         }
+        $this->getNotice();
+
 
     }
+    function getNotice(){
+        $notice=new TradeNotice();
+        $result=$notice->limit(5)->select();
+        $this->assign('notice',$result);
+    }
+
 }

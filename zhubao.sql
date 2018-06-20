@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-06-20 12:18:22
+Date: 2018-06-20 16:10:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -534,6 +534,23 @@ CREATE TABLE `os_trade_admin` (
 INSERT INTO `os_trade_admin` VALUES ('1', 'admin', 'admin123', '/public/uploads/20180619\\8c2862102f45f164faf7e9cc127fab76.jpg');
 
 -- ----------------------------
+-- Table structure for os_trade_notice
+-- ----------------------------
+DROP TABLE IF EXISTS `os_trade_notice`;
+CREATE TABLE `os_trade_notice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `notice` text,
+  `add_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_trade_notice
+-- ----------------------------
+INSERT INTO `os_trade_notice` VALUES ('1', '我们618有重大优惠活动，欢迎您的光临！', '2018-06-20 15:23:25');
+INSERT INTO `os_trade_notice` VALUES ('2', '近期我方平台调整，请各位老板注意，更新完成后，将有优惠活动！', '2018-06-20 15:31:56');
+
+-- ----------------------------
 -- Table structure for os_user
 -- ----------------------------
 DROP TABLE IF EXISTS `os_user`;
@@ -601,29 +618,30 @@ CREATE TABLE `os_user_cart` (
   `goods_id` int(11) DEFAULT NULL,
   `is_buy` tinyint(255) DEFAULT '0' COMMENT '标记为要购物商品',
   `add_time` datetime DEFAULT NULL COMMENT '添加到购物车的时间',
+  `is_pay` tinyint(255) DEFAULT '0' COMMENT '是否支付，如果支付了，就不再购物车中显示',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_cart
 -- ----------------------------
-INSERT INTO `os_user_cart` VALUES ('4', '1', '8', '1', null);
-INSERT INTO `os_user_cart` VALUES ('5', '1', '9', '0', null);
-INSERT INTO `os_user_cart` VALUES ('6', '1', '10', '0', null);
-INSERT INTO `os_user_cart` VALUES ('7', '1', '11', '0', null);
-INSERT INTO `os_user_cart` VALUES ('8', '1', '12', '0', null);
-INSERT INTO `os_user_cart` VALUES ('9', '1', '13', '0', null);
-INSERT INTO `os_user_cart` VALUES ('10', '1', '14', '0', null);
-INSERT INTO `os_user_cart` VALUES ('11', '1', '15', '0', null);
-INSERT INTO `os_user_cart` VALUES ('12', '1', '16', '0', null);
-INSERT INTO `os_user_cart` VALUES ('13', '1', '17', '0', null);
-INSERT INTO `os_user_cart` VALUES ('14', '1', '18', '0', null);
-INSERT INTO `os_user_cart` VALUES ('15', '1', '19', '0', null);
-INSERT INTO `os_user_cart` VALUES ('16', '1', '20', '0', null);
-INSERT INTO `os_user_cart` VALUES ('17', '1', '21', '0', null);
-INSERT INTO `os_user_cart` VALUES ('18', '1', '22', '1', null);
-INSERT INTO `os_user_cart` VALUES ('19', '1', '23', '0', null);
-INSERT INTO `os_user_cart` VALUES ('20', '1', '24', '0', null);
+INSERT INTO `os_user_cart` VALUES ('4', '1', '8', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('5', '1', '9', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('6', '1', '10', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('7', '1', '11', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('8', '1', '12', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('9', '1', '13', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('10', '1', '14', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('11', '1', '15', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('12', '1', '16', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('13', '1', '17', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('14', '1', '18', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('15', '1', '19', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('16', '1', '20', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('17', '1', '21', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('18', '1', '22', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('19', '1', '23', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('20', '1', '24', '0', null, null);
 
 -- ----------------------------
 -- Table structure for os_user_comment
