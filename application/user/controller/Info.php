@@ -11,7 +11,7 @@ use app\common\model\UserAddress;
 use think\Request;
 use app\common\model\User as UserModel;
 
-class User extends Base{
+class Info extends Base{
     private $user;
     private $userAddress;
     public function __construct(Request $request = null)
@@ -39,12 +39,10 @@ class User extends Base{
 
     //账户信息
     public function account(){
-        $request=$this->request;
-        $id=$this->id;
-        $info=$this->user->find($id);
-        $this->assign('info',$info);
-        $address=$this->userAddress->where('user_id',$this->id)->where('is_def',1)->find();
-        $this->assign('address',$address);
+
+        $info=$this->user->alias('a')->join('user_address d','a.def_address_id=d.id','LEFT')->field('a.*,d.address')->find($this->id);
+
+        $this->assign('result',$info);
         return $this->fetch('account');
     }
 
@@ -71,7 +69,7 @@ class User extends Base{
         $this->assign('code',$code);
         return $this->fetch();
     }
-    // 收货地址
+    // 添加收货地址
     public function addAddress(){
 
         $request=$this->request;
@@ -83,18 +81,25 @@ class User extends Base{
             return $this->redirect('addAddress');
         }
         $address_list=$this->userAddress->where('user_id',$this->id)->select();
+        $def_address=$this->user->where('id',$this->id)->field('def_address_id')->find();
+        $def_address_id=$def_address['def_address_id'];
+
+        $this->assign('def_address_id',$def_address_id);
         $this->assign('address_list',$address_list);
 
         return $this->fetch('add-address');
     }
-    public function setDefaultAddress($id,$flag){
-        $this->userAddress->where('id',$id)->setField('is_def',$flag);
+    //设置默认收货地址
+    public function setDefaultAddress($id){
+        $this->user->where('id',$this->id)->setField('def_address_id',$id);
+        return 'ok';
     }
     //删除收货地址
     public function delAddress($id){
         $this->userAddress->destroy($id);
         return $this->redirect('addAddress');
     }
+    //修改头像
     public function setHead(){
         if($this->request->isPost()){
             $param=$this->request->param();
@@ -106,26 +111,6 @@ class User extends Base{
         $info=$this->user->field('head_url')->find($this->id);
         $this->assign('info',$info);
         return $this->fetch('set-head');
-    }
-    //ajax上传头像,做上传预览
-    public function upload(){
-
-        $file=$this->request->file('file');
-
-        if($file){
-            $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
-            if($info){
-                // 成功上传后 获取上传信息
-                $result['url']='/public/uploads/'.$info->getSaveName();
-                $result['code']=200;
-            }else{
-                // 上传失败获取错误信息
-                $result['msg']=$file->getError();
-                $result['code']=100;
-
-            }
-        }
-        return json($result);
     }
 
 }

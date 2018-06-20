@@ -5,42 +5,33 @@
             <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                 <div class="widget am-cf">
                     <div class="widget-head am-cf">
-                        <div class="widget-title  am-cf">私人定制列表</div>
+                        <div class="widget-title  am-cf">财务列表</div>
                     </div>
                     <div class="widget-body  am-fr">
-
-                        <div class="am-u-sm-12">
-                            <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
+                        <div class="am-scrollable-horizontal">
+                            <table width="100%" class="am-table am-table-compact am-text-nowrap tpl-table-black " >
                                 <thead>
                                 <tr>
-                                    <th>定制商品名</th>
-                                    <th>定制价钱</th>
-                                    <th>材质</th>
-                                    <th>作者</th>
+                                    <th>订单号</th>
                                     <th>下单时间</th>
-                                    <th>操作</th>
+                                    <th>完成订单时间</th>
+                                    <th>金额</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {foreach name='result' item='item'}
                                 <tr class="gradeX">
-                                    <td>{$item.goods_name}</td>
-                                    <td>￥{$item.money}</td>
-                                    <td>{$item.materials}</td>
-                                    <td>{$item.author}</td>
+                                    <td>{$item.order_number}</td>
                                     <td>{$item.add_time}</td>
-                                    <td class="am-text-middle">
-                                        <div class="tpl-table-black-operation">
-                                            <a href="/Person/updPerson/id/{$item.id}" class="am-icon-pencil" title="定制进展">
-                                                修改定制信息
-                                            </a>
-                                        </div>
-                                    </td>
+                                    <td>{$item.complete_time}</td>
+                                    <td class="am-text-warning am-text-middle">￥{:number_format($item.jmoney)}</td>
                                 </tr>
                                 {/foreach}
                                 <!-- more data -->
+
                                 </tbody>
                             </table>
+                            <p class="am-text-success ">成交总金额：￥{:number_format($sum)}</p>
                         </div>
                         <div class="am-u-lg-12 am-cf">
 

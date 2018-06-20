@@ -8,8 +8,16 @@
                         <div class="widget-title  am-cf">私人定制列表</div>
                     </div>
                     <div class="widget-body  am-fr">
-
-
+                        <!--添加私人定制-->
+                        <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
+                            <div class="am-form-group">
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <a href="/user/Person/addPerson" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="am-u-sm-12">
                             <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
                                 <thead>
@@ -32,7 +40,7 @@
                                     <td>{$item.add_time}</td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <a href="/user/Person/detail/id/{$item.id}" target="_blank" title="定制进展">
+                                            <a href="/user/Person/detail/id/{$item.id}"  title="定制进展">
                                                定制进展
                                             </a>
                                         </div>

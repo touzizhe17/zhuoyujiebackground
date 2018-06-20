@@ -23,31 +23,39 @@ class Order extends Base{
     //全部订单
     public function index($id=''){
         $this->assign('title','全部订单');
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }
     //已经完成订单
     public function complete($id=''){
         $this->assign('title','已经完成订单');
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'确认收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where("complete_status",'确认收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }
     //未完成订单
     public function unfinished($id=''){
         $this->assign('title','未完成订单');
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'未完成')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where("complete_status",'未完成')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }
-
-
-    //ajax买家修改订单完成后的状态，收货或者退货
+    //订单详情
+    public function orderDetail($id){
+        $result=$this->userOrder->alias('a')->join('user u','a.user_id=u.id')->join('user_address d','a.address_id=d.id')->where('a.id',$id)->field('a.order_number,d.address,u.*')->find();
+        $this->assign('result',$result);
+        return $this->fetch('order-detail');
+    }
+    //是否同意退货
     public function setSellOrderStatus($id,$status){
-        $this->userOrder->save(['sell_order_status'=>$status],['user_id'=>$this->id,'goods_id'=>$id]);
+        $this->userOrder->where('id',$id)->setField('sell_order_status',$status);
         return 'ok';
-
+    }
+    //修改物流信息
+    public function setWuliu($id,$msg){
+        $this->userOrder->where('id',$id)->setField('wuliu',$msg);
+        return 'ok';
     }
 
 }

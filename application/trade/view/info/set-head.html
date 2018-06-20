@@ -48,7 +48,7 @@
         $('#file').on('change', function() {
             var imageForm = new FormData();
             imageForm.append("file", $("#file").get(0).files[0]);
-            var url = '/user/User/upload';
+            var url = '/Info/upload';
             $.ajax({
                 type: 'POST',
                 url: url,

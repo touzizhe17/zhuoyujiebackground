@@ -1,0 +1,55 @@
+<!-- 内容区域 -->
+<div class="tpl-content-wrapper">
+
+    <div class="row-content am-cf">
+
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl">个人信息</div>
+
+                        <div class="widget-title am-fr">
+                            <a href="{:url('setAccount')}" class="am-icon-pencil btn">修改个人信息</a>
+                            <a href="{:url('addAddress')}" class="am-icon-plus-square btn">添加收货地址</a>
+                            <a href="{:url('changepwd')}" class="am-icon-cog btn">修改密码</a>
+                        </div>
+                    </div>
+
+                    <div class="widget-body am-cf">
+                        <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
+                            <table width="100%" class="am-table am-table-compact tpl-table-black " >
+                                <thead>
+                                <tr>
+                                    <th>内容</th>
+                                    <th>详情</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>用户名</td>
+                                    <td>{$result.username}</td>
+                                </tr>
+                                <tr>
+                                    <td>联系电话</td>
+                                    <td>{$result.mobile}</td>
+                                </tr>
+                                <tr>
+                                    <td>联系邮箱</td>
+                                    <td>{$result.email}</td>
+                                </tr>
+                                <tr>
+                                    <td>配送地址</td>
+                                    <td>{$result.address}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

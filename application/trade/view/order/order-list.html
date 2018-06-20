@@ -15,7 +15,7 @@
                                 <thead>
                                 <tr>
                                     <th>图片</th>
-                                    <th>订单号</th>
+                                    <th>订单号（查看详情）</th>
                                     <th>商品</th>
                                     <th>材质</th>
                                     <th>价格</th>
@@ -30,25 +30,25 @@
                                 {foreach name='result' item='item'}
                                 <tr class="gradeX">
                                     <td>
-                                        <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.goods_id}.html" target="_blank">
+                                        <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.goods_id}.html" target="_blank"title="查看商品详情">
                                         <img src="/public/{$item.thumb}" class="tpl-table-line-img" alt="">
                                         </a>
 
                                     </td>
-                                    <td class="am-text-middle">{$item.order_number}</td>
+                                    <td class="am-text-middle"><a href="/Order/orderDetail/id/{$item.id}" title="查看订单详情">{$item.order_number}</a></td>
                                     <td class="am-text-middle">{$item.title}</td>
                                     <td class="am-text-middle">{$item.materials}</td>
                                     <td class="am-text-middle">￥{$item.jmoney}</td>
                                     <td class="am-text-middle">{$item.add_time}</td>
-                                    <td class="am-text-middle">{$item.order_status}</td>
+                                    <td class="am-text-middle">{$item.wuliu}</td>
                                     <!--确认收货，和退货颜色状态显示-->
                                     {switch name='$item.complete_status'}
                                     {case value='确认收货'}
                                     <td class="am-text-middle am-text-success">{$item.complete_status}</td>
                                     {/case}
                                     {case value='退货请求'}
-                                    <td class="am-text-middle am-text-danger">
-                                        <span>{$item.complete_status}</span><br/>
+                                    <td class="am-text-middle">
+                                        <span class="">{$item.complete_status}</span><br/>
                                         <span>{$item.sell_order_status}</span></td>
                                     {/case}
                                     {default/}
@@ -58,15 +58,13 @@
                                     <td class="am-text-middle">{$item.complete_time}</td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <a href="/trade/Order/orderStauts/id/{$item.id}.html" target="_blank">
+                                            <a href="javascript:wuliu('{$item.id}');" target="_blank">
                                                 <i class="am-icon-pencil"></i> 修改物流信息
                                             </a>
+                                            <!--当用户退货时可见-->
                                             {if condition="$item.complete_status=='退货请求'"}
-                                            <a onclick="sell_order_status('{$item.goods_id}','ok')" href="javascript:;" class="tpl-table-black-operation-del" >
+                                            <a onclick="sell_order_status('{$item.id}','ok')" href="javascript:;" class="tpl-table-black-operation-del" >
                                                 <i class="am-icon-check"></i>接受退货
-                                            </a>
-                                            <a onclick="sell_order_status('{$item.goods_id}','err')" href="javascript:;" class="tpl-table-black-operation-del" >
-                                                <i class="am-icon-times"></i>拒绝退货
                                             </a>
                                             {/if}
                                         </div>
@@ -90,32 +88,77 @@
         </div>
     </div>
 </div>
+
+<!--修改物流弹窗-->
+<div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">订单跟踪</div>
+        <div class="am-modal-bd">
+            修改物流信息
+            <input type="text" class="am-modal-prompt-input">
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+        </div>
+    </div>
+</div>
+
+<!--同意退货-->
+<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">订单跟踪</div>
+        <div class="am-modal-bd">
+            你，是否同意退货？
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+        </div>
+    </div>
+</div>
+
 <script>
 
     //商家是否接受退货
     function sell_order_status(id,flag) {
-        var msg = '';
-        var status = ''
-        if (flag == 'ok') {
-            msg = '是否接受退货';
-            status = '商家同意退货'
-
-        } else {
-            msg = '是否拒绝收货';
-            status = '商家拒绝退货'
-        }
-        if (confirm(msg)) {
-            var url = '/Order/setSellOrderStatus/id/' + id + '/status/' + status;
-            $.ajax({
-                url: url,
-                success: function (data) {
-                    if (data == 'ok') {
-                        location.reload(true);
+        var status = '商家同意退货'
+        $('#my-confirm').modal({
+            relatedTarget: this,
+            onConfirm: function(options) {
+                var url = '/Order/setSellOrderStatus/id/' + id + '/status/' + status;
+                $.ajax({
+                    url: url,
+                    success: function (data) {
+                        if (data == 'ok') {
+                            location.reload(true);
+                        }
                     }
-                }
-            })
+                })
+            },
+            onCancel:function () {
+                
+            }
 
-        }
+        });
+    }
+
+    //商家修改物流信息
+    function wuliu(id) {
+        $('#my-prompt').modal({
+            relatedTarget: this,
+            onConfirm: function(e) {
+               $.ajax({
+                   url:'/Order/setWuliu/id/'+id+'/msg/'+e.data,
+                   success:function (data) {
+                       if (data == 'ok') {
+                           location.reload(true);
+                       }
+                   }
+               })
+            }
+
+        });
     }
 
 

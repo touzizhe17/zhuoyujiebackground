@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-06-12 17:46:51
+Date: 2018-06-20 12:18:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,7 +34,7 @@ CREATE TABLE `os_admin_user` (
 -- ----------------------------
 -- Records of os_admin_user
 -- ----------------------------
-INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-06-06 10:19:05', '127.0.0.1');
+INSERT INTO `os_admin_user` VALUES ('1', 'admin', '0dfc7612f607db6c17fd99388e9e5f9c', '1', '2016-10-18 15:28:37', '2018-06-13 14:15:34', '127.0.0.1');
 INSERT INTO `os_admin_user` VALUES ('2', 'admin1', '768c3212c5c4afd45fdf2b4663bd2ba5', '1', '2018-04-11 13:13:34', '2018-04-11 13:16:06', '127.0.0.1');
 
 -- ----------------------------
@@ -517,6 +517,23 @@ CREATE TABLE `os_system` (
 INSERT INTO `os_system` VALUES ('1', 'site_config', 'a:7:{s:10:\"site_title\";s:27:\"琢玉界后台管理系统\";s:9:\"seo_title\";s:0:\"\";s:11:\"seo_keyword\";s:0:\"\";s:15:\"seo_description\";s:0:\"\";s:14:\"site_copyright\";s:0:\"\";s:8:\"site_icp\";s:0:\"\";s:11:\"site_tongji\";s:0:\"\";}');
 
 -- ----------------------------
+-- Table structure for os_trade_admin
+-- ----------------------------
+DROP TABLE IF EXISTS `os_trade_admin`;
+CREATE TABLE `os_trade_admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `head_url` varchar(255) DEFAULT '/public/user/img/head.jpg' COMMENT '头像地址',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of os_trade_admin
+-- ----------------------------
+INSERT INTO `os_trade_admin` VALUES ('1', 'admin', 'admin123', '/public/uploads/20180619\\8c2862102f45f164faf7e9cc127fab76.jpg');
+
+-- ----------------------------
 -- Table structure for os_user
 -- ----------------------------
 DROP TABLE IF EXISTS `os_user`;
@@ -526,6 +543,7 @@ CREATE TABLE `os_user` (
   `password` varchar(50) NOT NULL DEFAULT '' COMMENT '密码',
   `mobile` varchar(11) DEFAULT '' COMMENT '手机',
   `email` varchar(50) DEFAULT '' COMMENT '邮箱',
+  `def_address_id` tinyint(4) DEFAULT NULL COMMENT '用户的默认地址id',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '用户状态  1 正常  2 禁止',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `last_login_time` datetime DEFAULT NULL COMMENT '最后登陆时间',
@@ -544,17 +562,16 @@ CREATE TABLE `os_user` (
 -- ----------------------------
 -- Records of os_user
 -- ----------------------------
-INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '1970664102@qq.com', '1', '2018-04-11 13:03:21', null, '', '/public/uploads/20180611\\30facd9ee0d52dc4a6feb2c40ca2a9ea.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', '1', '2018-05-06 15:26:30', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', '1', '2018-05-06 16:02:05', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', '1', '2018-05-06 16:11:14', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', '1', '2018-05-06 17:01:49', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
-INSERT INTO `os_user` VALUES ('12', '', '', '', '', '1', '2018-06-08 18:04:25', null, '', null, null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('1', 'user', 'user', '123', '1970664102@qq.com', '2', '1', '2018-04-11 13:03:21', null, '', '/public/uploads/20180611\\30facd9ee0d52dc4a6feb2c40ca2a9ea.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('2', 'user1', 'user1', '', '', null, '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('3', 'user3', 'user3', '', '', null, '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('4', 'user4', 'user4', '', '', null, '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('5', 'user5', 'user5', '', '', null, '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('6', 'user2', 'user2', '', '', null, '1', null, null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('7', 'liping', '016553li', '13423882680', '', null, '1', '2018-05-06 15:26:30', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('8', 'liping2', 'liping2', '13423882680', '', null, '1', '2018-05-06 16:02:05', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('9', 'zhangsan', 'zhangsan', '13423882680', '', null, '1', '2018-05-06 16:11:14', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
+INSERT INTO `os_user` VALUES ('10', 'lisi', '016553li', '13423882680', '', null, '1', '2018-05-06 17:01:49', null, '', '/public/user/head.jpg', null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for os_user_address
@@ -564,16 +581,15 @@ CREATE TABLE `os_user_address` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
-  `is_def` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_address
 -- ----------------------------
-INSERT INTO `os_user_address` VALUES ('1', '1', '广东省深圳市福田区车公庙', '0');
-INSERT INTO `os_user_address` VALUES ('2', '1', '广东省深圳市龙华区民治街道', '1');
-INSERT INTO `os_user_address` VALUES ('12', '1', '华南张琪收', '0');
+INSERT INTO `os_user_address` VALUES ('1', '1', '广东省深圳市福田区车公庙');
+INSERT INTO `os_user_address` VALUES ('2', '1', '广东省深圳市龙华区民治街道');
+INSERT INTO `os_user_address` VALUES ('12', '1', '华南张琪收');
 
 -- ----------------------------
 -- Table structure for os_user_cart
@@ -591,8 +607,7 @@ CREATE TABLE `os_user_cart` (
 -- ----------------------------
 -- Records of os_user_cart
 -- ----------------------------
-INSERT INTO `os_user_cart` VALUES ('2', '1', '6', '0', null);
-INSERT INTO `os_user_cart` VALUES ('4', '1', '8', '0', null);
+INSERT INTO `os_user_cart` VALUES ('4', '1', '8', '1', null);
 INSERT INTO `os_user_cart` VALUES ('5', '1', '9', '0', null);
 INSERT INTO `os_user_cart` VALUES ('6', '1', '10', '0', null);
 INSERT INTO `os_user_cart` VALUES ('7', '1', '11', '0', null);
@@ -606,7 +621,7 @@ INSERT INTO `os_user_cart` VALUES ('14', '1', '18', '0', null);
 INSERT INTO `os_user_cart` VALUES ('15', '1', '19', '0', null);
 INSERT INTO `os_user_cart` VALUES ('16', '1', '20', '0', null);
 INSERT INTO `os_user_cart` VALUES ('17', '1', '21', '0', null);
-INSERT INTO `os_user_cart` VALUES ('18', '1', '22', '0', null);
+INSERT INTO `os_user_cart` VALUES ('18', '1', '22', '1', null);
 INSERT INTO `os_user_cart` VALUES ('19', '1', '23', '0', null);
 INSERT INTO `os_user_cart` VALUES ('20', '1', '24', '0', null);
 
@@ -690,23 +705,26 @@ CREATE TABLE `os_user_order` (
   `user_id` int(11) DEFAULT NULL,
   `goods_id` int(11) DEFAULT NULL,
   `add_time` datetime DEFAULT NULL COMMENT '下单时间',
-  `order_status` varchar(255) DEFAULT '' COMMENT '我方对订单状态/完成/发送中/',
+  `wuliu` varchar(255) DEFAULT '' COMMENT '物流信息',
   `complete_time` datetime DEFAULT NULL COMMENT '订单完成时间',
-  `complete_status` varchar(255) DEFAULT '未完成' COMMENT '订单完成状态',
+  `complete_status` varchar(255) DEFAULT '待收货' COMMENT '订单完成状态',
+  `order_number` varchar(255) DEFAULT NULL COMMENT '订单号',
+  `sell_order_status` varchar(255) DEFAULT NULL COMMENT '卖家是否同意、退货',
+  `address_id` tinyint(255) DEFAULT NULL COMMENT '订单收货地址id',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_order
 -- ----------------------------
-INSERT INTO `os_user_order` VALUES ('1', '1', '6', '2018-06-01 17:43:39', '正在备货', '2018-06-12 15:53:33', '未完成');
-INSERT INTO `os_user_order` VALUES ('2', '1', '16', '2018-06-04 17:43:58', '发送中', null, '未完成');
-INSERT INTO `os_user_order` VALUES ('3', '1', '26', '2018-06-11 17:44:15', '即将发送', '2018-06-12 16:39:52', '确认收货');
-INSERT INTO `os_user_order` VALUES ('4', '1', '7', '2018-06-11 18:16:01', '商品已经接收', '2018-06-12 16:28:21', '确认收货');
-INSERT INTO `os_user_order` VALUES ('5', '1', '8', '2018-06-06 18:16:14', '', null, '未完成');
-INSERT INTO `os_user_order` VALUES ('6', '1', '9', '2018-06-01 18:16:26', '', '2018-06-12 15:58:03', '未完成');
-INSERT INTO `os_user_order` VALUES ('7', '1', '10', '2018-06-02 18:16:39', '', null, '未完成');
-INSERT INTO `os_user_order` VALUES ('8', '1', '11', '2018-06-12 16:24:17', '', '2018-06-12 16:40:40', '退货');
+INSERT INTO `os_user_order` VALUES ('1', '1', '6', '2018-06-01 17:43:39', '正在备货', '2018-06-12 15:53:33', '待收货', '168907169181278230', null, '1');
+INSERT INTO `os_user_order` VALUES ('2', '1', '16', '2018-06-04 17:43:58', '发送中', '2018-06-20 12:16:35', '确认收货', '168907169181278231', null, '1');
+INSERT INTO `os_user_order` VALUES ('3', '1', '26', '2018-06-11 17:44:15', '即将发送', '2018-06-13 17:26:27', '确认收货', '168907169181278233', '同意退货', '1');
+INSERT INTO `os_user_order` VALUES ('4', '1', '7', '2018-06-11 18:16:01', '商品已经接收', '2018-06-13 16:52:06', '确认收货', '168907169181278234', '', '1');
+INSERT INTO `os_user_order` VALUES ('5', '1', '8', '2018-06-06 18:16:14', '发送中', '2018-06-20 11:34:33', '退货请求', '168907169181278235', null, '1');
+INSERT INTO `os_user_order` VALUES ('6', '1', '9', '2018-06-01 18:16:26', '', '2018-06-12 15:58:03', '待收货', '168907169181278236', null, '1');
+INSERT INTO `os_user_order` VALUES ('7', '1', '10', '2018-06-02 18:16:39', '', null, '待收货', '168907169181278237', null, '1');
+INSERT INTO `os_user_order` VALUES ('8', '1', '11', '2018-06-12 16:24:17', '已经接收', '2018-06-20 11:34:15', '退货请求', '168907169181278238', '商家同意退货', '1');
 
 -- ----------------------------
 -- Table structure for os_user_person
@@ -716,20 +734,22 @@ CREATE TABLE `os_user_person` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `goods_name` varchar(255) DEFAULT NULL,
-  `img_list` varchar(255) DEFAULT NULL COMMENT '私人定制流程图',
+  `img_list` text COMMENT '私人定制流程图',
   `money` varchar(255) DEFAULT NULL COMMENT '金额',
   `materials` varchar(255) DEFAULT NULL COMMENT '材质',
   `add_time` datetime DEFAULT NULL COMMENT '开始时间',
   `complete_time` datetime DEFAULT NULL COMMENT '完成时间',
   `author` varchar(255) DEFAULT NULL COMMENT '作者',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_person
 -- ----------------------------
-INSERT INTO `os_user_person` VALUES ('1', '1', '传国玉玺', null, '100000', '玉', '2018-06-12 17:09:03', null, '李斯');
+INSERT INTO `os_user_person` VALUES ('1', '1', '传国玉玺', '[\"\\/public\\/uploads\\/20180619\\\\72e4b32cce74b152a23f2d135f84386f.jpg\",\"\\/public\\/uploads\\/20180619\\\\2d252c2cb43ad94146ce0161f8749109.jpg\",\"\\/public\\/uploads\\/20180619\\\\ee3bccae4384ba4ba9b16be7fa3c3fd9.jpg\",\"\\/public\\/uploads\\/20180619\\\\51514d77985f8db2e81595e3153884b5.jpg\",\"\\/public\\/uploads\\/20180619\\\\ac20900a1fba121e27a4729c0f2f7f36.jpg\"]', '', '玉', '2018-06-12 17:09:03', null, '');
 INSERT INTO `os_user_person` VALUES ('2', '1', '方天画戟', null, '200000', '钢铁', '2018-06-11 17:10:21', null, '吕布');
+INSERT INTO `os_user_person` VALUES ('3', '1', '八丈蛇矛', null, '100', '铁', '2018-06-19 15:33:33', null, '张飞');
+INSERT INTO `os_user_person` VALUES ('4', '1', '商品1', null, null, '玉', '2018-06-19 15:37:02', null, null);
 
 -- ----------------------------
 -- Table structure for ot_linkug

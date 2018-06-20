@@ -38,7 +38,7 @@ class Order extends Base{
     //未完成订单
     public function unfinished($id=''){
         $this->assign('title','未完成订单');
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'未完成')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'待收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }

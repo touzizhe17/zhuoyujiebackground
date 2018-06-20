@@ -1,0 +1,116 @@
+<style>
+    #img-box{
+        display: inline-block;
+    }
+    #img-box>img{
+        margin:5px;
+        width: 100px;
+        height:80px;
+    }
+    #img-box>input{
+        display: none;
+    }
+</style>
+<!-- 内容区域 -->
+<div class="tpl-content-wrapper">
+
+    <div class="row-content am-cf">
+
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl">修改私人定制</div>
+                        <div class="widget-function am-fr">
+                            <a onclick="history.back()" class="am-icon-reply">返回</a>
+                        </div>
+                    </div>
+                    <div class="widget-body am-fr">
+                        <form class="am-form tpl-form-line-form" method="post" action="" data-am-validator>
+                            <input type="text" id="{$result.id}" hidden>
+                            <div class="am-form-group ">
+                                <label  class="am-u-sm-3 am-form-label">定制商品 </label>
+                                <div class="am-u-sm-9 am-form-file">
+                                    <input type="text" class="" name="goods_name"  value="{$result.goods_name}" readonly>
+                                </div>
+                            </div>
+                            <div class="am-form-group ">
+                                <label  class="am-u-sm-3 am-form-label">材料 </label>
+                                <div class="am-u-sm-9 am-form-file">
+                                    <input type="text" class="" name="materials"  value="{$result.materials}" readonly >
+                                </div>
+                            </div>
+                            <div class="am-form-group ">
+                                <label  class="am-u-sm-3 am-form-label">定制金额 </label>
+                                <div class="am-u-sm-9 am-form-file">
+                                    <input type="text" class="" name="money"  value=""  >
+                                </div>
+                            </div>
+                            <div class="am-form-group ">
+                                <label  class="am-u-sm-3 am-form-label">作品作者 </label>
+                                <div class="am-u-sm-9 am-form-file">
+                                    <input type="text" class="" name="author"  value=""  >
+                                </div>
+                            </div>
+                            <div class="am-form-group ">
+                                <label  class="am-u-sm-3 am-form-label">定制进展 </label>
+                                <div class="am-u-sm-9 am-form-file">
+                                    <!--定制图片盒子-->
+                                    <div id="img-box">
+                                        {foreach name="result.img_list" item='item'}
+                                        <img src="{$item}" alt="">
+                                        <input type="text" name="img_list[]" value="{$item}">
+                                        {/foreach}
+                                    </div>
+                                    <!--上传图片按钮-->
+                                     <div class="am-form-group am-form-file">
+                                         <button type="button" class="am-btn am-btn-default am-btn-sm">
+                                             <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+                                         <input type="file" id="file" multiple>
+                                     </div>
+
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function() {
+        $('#file').on('change', function() {
+            var imageForm = new FormData();
+            imageForm.append("file", $("#file").get(0).files[0]);
+            var url = '/User/upload';
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: imageForm,
+                processData: false,  // 告诉jQuery不要去处理发送的数据
+                contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+                success: function (data) {
+                    if(data.code==200){
+                        //创建一个img标签，并且添加到img-box
+                        var dom="<img src="+data.url+">"
+                        var ipt="<input type='text'  value="+data.url+" name='img_list[]'>";
+                        $('#img-box').append($(dom))
+                        $('#img-box').append($(ipt))
+                    }
+
+                },
+            });
+
+        });
+    });
+</script>

@@ -25,7 +25,19 @@ class Person extends Base
         $this->assign('result',$result);
         return $this->fetch('person-list');
     }
+    //添加
+    public function addPerson(){
+        if($this->request->isPost()){
+            $param=$this->request->param();
+            $param['user_id']=$this->id;
+            $this->userPerson->save($param);
+            return $this->redirect('index');
+        }
+        return $this->fetch('add-person');
+    }
     public function detail($id){
+        $result=$this->userPerson->field('img_list')->find($id);
+        $this->assign('result',$result);
         return $this->fetch('person-detail');
     }
 }

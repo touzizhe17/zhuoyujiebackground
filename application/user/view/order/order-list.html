@@ -39,7 +39,7 @@
                                     <td class="am-text-middle">{$item.materials}</td>
                                     <td class="am-text-middle">￥{$item.jmoney}</td>
                                     <td class="am-text-middle">{$item.add_time}</td>
-                                    <td class="am-text-middle">{$item.order_status}</td>
+                                    <td class="am-text-middle">{$item.wuliu}</td>
                                     <!--确认收货，和退货颜色状态显示-->
 
                                     {switch name='$item.complete_status'}
@@ -61,7 +61,7 @@
                                             <a href="https://www.zhuoyujie.com/index/goods/goodsdetail/id/{$item.id}.html" target="_blank">
                                                 <i class="am-icon-ellipsis-v"></i> 商品详情
                                             </a>
-                                            {if condition="$item.complete_status!='确认收货'"}
+                                            {if condition="$item.complete_status=='待收货'"}
                                             <a onclick="shou_huo('{$item.goods_id}','shou')" class="tpl-table-black-operation-succ" >
                                                 <i class="am-icon-check"></i> 确认收货
                                             </a>
@@ -93,30 +93,48 @@
         </div>
     </div>
 </div>
+
+<!--删除购物车-->
+<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">商品跟踪</div>
+        <div class="am-modal-bd">
+            您，是否删除此商品？
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+        </div>
+    </div>
+</div>
+
 <script>
     function shou_huo(id,flag) {
         var msg='';
         var status=''
         if(flag=='shou'){
-            msg='是否确认收货';
+            $('.am-modal-bd').html('您，是否确认收货？');
             status='确认收货'
         }else{
-            msg='请您与卖家联系，确认是否可以退货';
+            $('.am-modal-bd').html('请您与卖家联系，确认是否可以退货！');
             status='退货请求'
         }
-        if(confirm(msg)){
-            var url='/user/Order/setCompleteStatus/id/'+id+'/status/'+status;
-            $.ajax({
-                url:url,
-                success:function (data) {
-                    if(data=='ok'){
-                        location.reload(true);
+        $('#my-confirm').modal({
+            relatedTarget: this,
+            onConfirm: function(options) {
+                var url='/user/Order/setCompleteStatus/id/'+id+'/status/'+status;
+                $.ajax({
+                    url:url,
+                    success:function (data) {
+                        if(data=='ok'){
+                            location.reload(true);
+                        }
                     }
-                }
-            })
+                })
+            },
 
-        }
-        
+        });
+
     }
 
 </script>

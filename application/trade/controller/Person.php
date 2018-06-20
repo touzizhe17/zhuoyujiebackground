@@ -20,10 +20,21 @@ class Person extends Base
 
     }
     public function index(){
-
         $result=$this->userPerson->where('user_id',$this->id)->paginate(15);
         $this->assign('result',$result);
         return $this->fetch('person-list');
+    }
+    public function updPerson(){
+        $param=$this->request->param();
+
+        if($this->request->isPost()){
+
+            $this->userPerson->save($param,['id'=>$param['id']]);
+            return $this->redirect('index');
+        }
+        $info=$this->userPerson->where('id',$param['id'])->find();
+        $this->assign('result',$info);
+        return $this->fetch('update-person');
     }
     public function detail($id){
         return $this->fetch('person-detail');

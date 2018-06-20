@@ -11,7 +11,7 @@ use app\common\model\UserAddress;
 use think\Request;
 use app\common\model\TradeAdmin;
 
-class User extends Base{
+class Info extends Base{
     private $tradeAdmin;
     
     public function __construct(Request $request = null)
@@ -55,11 +55,16 @@ class User extends Base{
     }
     //ajax上传头像,做上传预览
     public function upload(){
+        //最大上传图片2M
+        $config = [
+            'size' => 2097152,
+            'ext'  => 'jpg,gif,png,bmp'
+        ];
 
         $file=$this->request->file('file');
 
         if($file){
-            $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+            $info = $file->validate($config)->move(ROOT_PATH . 'public' . DS . 'uploads');
             if($info){
                 // 成功上传后 获取上传信息
                 $result['url']='/public/uploads/'.$info->getSaveName();

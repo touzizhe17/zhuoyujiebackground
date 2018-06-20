@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>琢玉界用户</title>
+    <title>琢玉界财务后台</title>
     <meta name="description" content="">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -189,13 +189,13 @@
             <div class="tpl-sidebar-user-panel">
                 <div class="tpl-user-panel-slide-toggleable">
                     <div class="tpl-user-panel-profile-picture">
-                        <a href="{:url('user/setHead')}"><img src="{$Think.session.head_url}" width="80px"></a>
+                        <a href="{:url('info/setHead')}"><img src="{$Think.session.head_url}" width="80px"></a>
                     </div>
                     <span class="user-panel-logged-in-text">
               <i class="am-icon-mars am-text-success tpl-user-panel-status-icon"></i>
               {$Think.session.name}
           </span>
-                    <a href="{:url('user/changepwd')}" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 密码设置</a>
+                    <a href="{:url('info/changepwd')}" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 密码设置</a>
                 </div>
             </div>
 
@@ -244,72 +244,62 @@
                         </li>
                     </ul>
                 </li>
-                <!--私人定制-->
+                <!--用户管理-->
                 <li class="sidebar-nav-link">
                     <a href="javascript:;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-user sidebar-nav-link-logo"></i> 用户管理
+                        <i class="am-icon-user-plus sidebar-nav-link-logo"></i> 用户管理
                         <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="{:url('person/index')}">
+                            <a href="{:url('customer/index')}">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 全部用户
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <!--私人定制-->
+                <!--财务管理-->
                 <li class="sidebar-nav-link">
                     <a href="javascript:;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-user sidebar-nav-link-logo"></i> 财务管理
+                        <i class="am-icon-money sidebar-nav-link-logo"></i> 财务管理
                         <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="{:url('person/index')}">
+                            <a href="{:url('Financial/index')}">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 成交金额
-                            </a>
-                        </li>
-                        <li class="sidebar-nav-link">
-                            <a href="{:url('person/index')}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 当前进行订单金额
-                            </a>
-                        </li>
-                        <li class="sidebar-nav-link">
-                            <a href="{:url('person/index')}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 退货金额
                             </a>
                         </li>
                     </ul>
                 </li>
+                <!--<li class="sidebar-nav-link">-->
+                    <!--<a href="javascript:;" class="sidebar-nav-sub-title">-->
+                        <!--<i class="am-icon-user sidebar-nav-link-logo"></i> 数据统计-->
+                        <!--<span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>-->
+                    <!--</a>-->
+                    <!--<ul class="sidebar-nav sidebar-nav-sub">-->
+                        <!--<li class="sidebar-nav-link">-->
+                            <!--<a href="{:url('person/index')}">-->
+                                <!--<span class="am-icon-angle-right sidebar-nav-link-logo"></span> 成交金额-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li class="sidebar-nav-link">-->
+                            <!--<a href="{:url('person/index')}">-->
+                                <!--<span class="am-icon-angle-right sidebar-nav-link-logo"></span> 当前进行订单金额-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li class="sidebar-nav-link">-->
+                            <!--<a href="{:url('person/index')}">-->
+                                <!--<span class="am-icon-angle-right sidebar-nav-link-logo"></span> 退货金额-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--系统设置-->
                 <li class="sidebar-nav-link">
                     <a href="javascript:;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-user sidebar-nav-link-logo"></i> 数据统计
-                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
-                    </a>
-                    <ul class="sidebar-nav sidebar-nav-sub">
-                        <li class="sidebar-nav-link">
-                            <a href="{:url('person/index')}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 成交金额
-                            </a>
-                        </li>
-                        <li class="sidebar-nav-link">
-                            <a href="{:url('person/index')}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 当前进行订单金额
-                            </a>
-                        </li>
-                        <li class="sidebar-nav-link">
-                            <a href="{:url('person/index')}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 退货金额
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!--私人定制-->
-                <li class="sidebar-nav-link">
-                    <a href="javascript:;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-user sidebar-nav-link-logo"></i> 系统设置
+                        <i class="am-icon-cog sidebar-nav-link-logo"></i> 系统设置
                         <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">

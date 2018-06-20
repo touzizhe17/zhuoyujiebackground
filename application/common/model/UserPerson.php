@@ -15,4 +15,13 @@ class UserPerson extends Model
     {
         return date('Y-m-d H:i:s');
     }
+    protected function setImgListAttr($value){
+        return json_encode($value);
+    }
+    protected function getImgListAttr($value){
+//        dump($value);
+//        dump(json_decode($value));
+//        die;
+        return json_decode($value);
+    }
 }
