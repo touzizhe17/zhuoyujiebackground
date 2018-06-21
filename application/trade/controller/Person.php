@@ -29,8 +29,16 @@ class Person extends Base
         $param=$this->request->param();
 
         if($this->request->isPost()){
+            $temp1=$param['img'];
+            $temp2=$param['date'];
 
-            $this->userPerson->save($param,['id'=>$param['id']]);
+            for($i=0;$i<count($temp1);$i++){
+                $temp3[$i]['img']=$temp1[$i];
+                $temp3[$i]['date']=$temp2[$i];
+            }
+            $param['img_list']=$temp3;
+
+            $this->userPerson->allowField(true)->save($param,['id'=>$param['id']]);
             return $this->redirect('index');
         }
         $info=$this->userPerson->where('id',$param['id'])->find();
@@ -58,6 +66,7 @@ class Person extends Base
                 // 成功上传后 获取上传信息
                 $result['url']='/public/uploads/'.$info->getSaveName();
                 $result['code']=200;
+                $result['date']=date('Y-m-d');
             }else{
                 // 上传失败获取错误信息
                 $result['msg']=$file->getError();

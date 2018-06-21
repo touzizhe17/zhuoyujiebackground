@@ -3,6 +3,21 @@
     .am-control-thumbs li {
         width: 25%; /* n 为轮播图数量 */
     }
+    .am-slider-default .am-control-thumbs li{
+        position: relative;
+    }
+    .time{
+        position: absolute;
+        text-align: center;
+        font-style: italic;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        margin:0;
+        background-color: rgba(0,0,0,0.3);
+        color: #fff;
+
+    }
 </style>
 <div class="tpl-content-wrapper">
     <div class="row-content am-cf">
@@ -25,8 +40,10 @@
                                     data-am-flexslider="{controlNav: 'thumbnails', directionNav: false, slideshow: false}">
                                 <ul class="am-slides">
                                     {foreach name='result.img_list' item='item'}
-                                    <li data-thumb="{$item}">
-                                        <img src="{$item}" /></li>
+                                    <li data-thumb="{$item.img}">
+                                        <img src="{$item.img}" />
+                                        <p class="time">{$item.date}</p>
+                                    </li>
                                     {/foreach}
                                 </ul>
                             </div>
@@ -38,3 +55,21 @@
         </div>
     </div>
 </div>
+<script>
+    window.onload=function () {
+        var arr={$result};
+        var img_list=arr.img_list;
+        console.log(img_list)
+        var dateList=[];
+        for(var i=0;i<img_list.length;i++){
+            dateList[i]=img_list[i]['date'];
+        }
+        console.log(dateList)
+
+        $('.am-control-thumbs li').each(function (i,item) {
+            var tpl='<p class="time">'+dateList[i]+'</p>';
+            console.log(item)
+            $(item).append($(tpl))
+        })
+    }
+</script>

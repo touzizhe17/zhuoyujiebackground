@@ -19,6 +19,6 @@ class UserPerson extends Model
         return json_encode($value);
     }
     protected function getImgListAttr($value){
-        return json_decode($value);
+        return json_decode($value,true);
     }
 }

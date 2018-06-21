@@ -14,6 +14,11 @@
         height:80px;
     }
     .img-box input{
+        padding:0 5px !important;
+        width: 100px !important;;
+        border-bottom:none !important;
+    }
+    .img-box .path{
         display: none !important;
     }
 </style>
@@ -66,8 +71,9 @@
                                         {foreach name="result.img_list" item='item'}
                                         <div class="img-box">
                                             <a onclick="removeDom(this)" class="am-close am-close-alt am-icon-times" title="删除"></a>
-                                            <img src="{$item}" alt="">
-                                            <input type="text" name="img_list[]" value="{$item}" hidden>
+                                            <img src="{$item.img}" alt="">
+                                            <input type="text" name="img[]"  class="path" value="{$item.img}" hidden>
+                                            <input type="text" name="date[]" value="{$item.date}" >
                                         </div>
                                         {/foreach}
                                     </div>
@@ -112,12 +118,14 @@
                     if(data.code==200){
                         //创建一个img标签，并且添加到img-list
                         var div='<div class="img-box"></div>';
-                        var a='<a href="javascript:removeDom(this);" class="am-close am-close-alt am-icon-times" title="删除"></a>';
+                        var a='<a onclick="removeDom(this)" class="am-close am-close-alt am-icon-times" title="删除"></a>';
                         var img="<img src="+data.url+">"
-                        var ipt="<input type='text'  value="+data.url+" name='img_list[]'>";
+                        var ipt="<input type='text' class='path'  value="+data.url+" name='img[]'>";
+                        var date='<input type="text"  name="date[]" value="'+data.date+'">';
                         div=$(div).append($(a));
                         div=$(div).append($(img));
                         div=$(div).append($(ipt));
+                        div=$(div).append($(date));
 
                         $('#img-list').append(div);
                     }
