@@ -1,14 +1,20 @@
 <style>
-    #img-box{
+    .img-box{
         display: inline-block;
+        position: relative;
     }
-    #img-box>img{
+    .img-box a{
+        position: absolute;
+        right: 0;
+
+    }
+    .img-box img{
         margin:5px;
         width: 100px;
         height:80px;
     }
-    #img-box>input{
-        display: none;
+    .img-box input{
+        display: none !important;
     }
 </style>
 <!-- 内容区域 -->
@@ -56,10 +62,13 @@
                                 <label  class="am-u-sm-3 am-form-label">定制进展 </label>
                                 <div class="am-u-sm-9 am-form-file">
                                     <!--定制图片盒子-->
-                                    <div id="img-box">
+                                    <div id="img-list">
                                         {foreach name="result.img_list" item='item'}
-                                        <img src="{$item}" alt="">
-                                        <input type="text" name="img_list[]" value="{$item}">
+                                        <div class="img-box">
+                                            <a onclick="removeDom(this)" class="am-close am-close-alt am-icon-times" title="删除"></a>
+                                            <img src="{$item}" alt="">
+                                            <input type="text" name="img_list[]" value="{$item}" hidden>
+                                        </div>
                                         {/foreach}
                                     </div>
                                     <!--上传图片按钮-->
@@ -92,7 +101,7 @@
         $('#file').on('change', function() {
             var imageForm = new FormData();
             imageForm.append("file", $("#file").get(0).files[0]);
-            var url = '/User/upload';
+            var url = '/Person/upload';
             $.ajax({
                 type: 'POST',
                 url: url,
@@ -101,11 +110,16 @@
                 contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
                 success: function (data) {
                     if(data.code==200){
-                        //创建一个img标签，并且添加到img-box
-                        var dom="<img src="+data.url+">"
+                        //创建一个img标签，并且添加到img-list
+                        var div='<div class="img-box"></div>';
+                        var a='<a href="javascript:removeDom(this);" class="am-close am-close-alt am-icon-times" title="删除"></a>';
+                        var img="<img src="+data.url+">"
                         var ipt="<input type='text'  value="+data.url+" name='img_list[]'>";
-                        $('#img-box').append($(dom))
-                        $('#img-box').append($(ipt))
+                        div=$(div).append($(a));
+                        div=$(div).append($(img));
+                        div=$(div).append($(ipt));
+
+                        $('#img-list').append(div);
                     }
 
                 },
@@ -113,4 +127,9 @@
 
         });
     });
+    //删除图片
+    function removeDom(obj) {
+        console.log('zou=--')
+        $(obj).parent().remove();
+    }
 </script>

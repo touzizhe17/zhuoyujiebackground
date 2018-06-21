@@ -24,6 +24,7 @@ class Person extends Base
         $this->assign('result',$result);
         return $this->fetch('person-list');
     }
+    //修改私人定制信息
     public function updPerson(){
         $param=$this->request->param();
 
@@ -36,7 +37,34 @@ class Person extends Base
         $this->assign('result',$info);
         return $this->fetch('update-person');
     }
+    //私人定制详情
     public function detail($id){
         return $this->fetch('person-detail');
+    }
+
+    //ajax上传头像,做上传预览
+    public function upload(){
+        //最大上传图片2M
+        $config = [
+            'size' => 2097152,
+            'ext'  => 'jpg,gif,png,bmp'
+        ];
+
+        $file=$this->request->file('file');
+
+        if($file){
+            $info = $file->validate($config)->move(ROOT_PATH . 'public' . DS . 'uploads');
+            if($info){
+                // 成功上传后 获取上传信息
+                $result['url']='/public/uploads/'.$info->getSaveName();
+                $result['code']=200;
+            }else{
+                // 上传失败获取错误信息
+                $result['msg']=$file->getError();
+                $result['code']=100;
+
+            }
+        }
+        return json($result);
     }
 }
