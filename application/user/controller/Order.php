@@ -24,21 +24,21 @@ class Order extends Base{
     //全部订单
     public function index($id=''){
         $this->assign('title','全部订单');
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where('a.is_pay',1)->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }
     //已经完成订单
     public function complete($id=''){
         $this->assign('title','已经完成订单');
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'确认收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where('a.is_pay',1)->where("complete_status",'确认收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }
     //未完成订单
     public function unfinished($id=''){
         $this->assign('title','未完成订单');
-        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where("complete_status",'待收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
+        $result=$this->userOrder->alias('a')->join('article b','a.goods_id=b.id')->where('a.user_id',$this->id)->where('a.is_pay',1)->where("complete_status",'待收货')->field('a.*,b.thumb,b.title,b.materials,b.jmoney')->order('add_time desc')->paginate(5);
         $this->assign('result',$result);
         return $this->fetch('order-list');
     }

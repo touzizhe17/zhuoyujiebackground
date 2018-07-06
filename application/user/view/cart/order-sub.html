@@ -19,7 +19,7 @@
                                         选择收货地址
                                         {foreach name='address' item='item'}
                                         <label class="am-radio">
-                                            <input type="radio" name="address_id" value="" data-am-ucheck {if condition="$addressId==$item.id"}checked{/if}>
+                                            <input type="radio" name="address_id" value="{$item.id}" data-am-ucheck {if condition="$addressId==$item.id"}checked{/if}>
                                             {$item.address}
                                         </label>
                                         {/foreach}
@@ -85,46 +85,12 @@
     </div>
 </div>
 
-<!--删除购物车-->
-<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
-    <div class="am-modal-dialog">
-        <div class="am-modal-hd">订单跟踪</div>
-        <div class="am-modal-bd">
-            你，是否删除此商品？
-        </div>
-        <div class="am-modal-footer">
-            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
-            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
-        </div>
-    </div>
-</div>
+
 <script>
 $(function () {
     totalMoney();
 })
-//从购物车中移除 id 是商品id
-function removeCart(id) {
 
-//    console.log(id)
-
-    $('#my-confirm').modal({
-        relatedTarget: this,
-        onConfirm: function(options) {
-            var url = "/user/Cart/remove/id/"+id;
-
-            $.ajax({
-                url: url,
-                success: function (data) {
-                    if (data == 'ok') {
-                        location.reload(true);
-                    }
-                }
-            })
-        },
-
-    });
-
-}
 //统计要买的商品总金额
 function totalMoney() {
     $.ajax({
@@ -135,30 +101,25 @@ function totalMoney() {
         }
     });
 }
-//设置改商品要买
-function buy(id,obj) {
-    var flag=$(obj).prop('checked')?1:0 ;
-//    console.log(flag)
-    //统计要买
-    $.ajax({
-        url:'/user/Cart/isBuy/id/'+id+'/flag/'+flag,
-        success:function (data) {
-            if(data=='ok'){
-                totalMoney();
-            }
-        }
-
-    });
-
-
-}
 //购物车结算
 function jiesuan() {
     var str=$('#money').html();
     if(str==0){
         confirm('请选择要购买的商品');
     }else{
-        //TODO 结算逻辑
+        //获取选中的地址
+        var val='';
+        $(".am-radio input").each(function (i,item) {
+            var chked=$(item).prop('checked');
+            if(chked){
+                val=$(item).val();
+            }
+        })
+        console.log(val);
+        //去支付页面
+        location.href='/user/Cart/pay/id/'+val;
+
+
     }
 }
 </script>

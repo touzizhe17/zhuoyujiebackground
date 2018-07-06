@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-06-20 16:10:15
+Date: 2018-07-06 16:19:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -618,30 +618,30 @@ CREATE TABLE `os_user_cart` (
   `goods_id` int(11) DEFAULT NULL,
   `is_buy` tinyint(255) DEFAULT '0' COMMENT '标记为要购物商品',
   `add_time` datetime DEFAULT NULL COMMENT '添加到购物车的时间',
-  `is_pay` tinyint(255) DEFAULT '0' COMMENT '是否支付，如果支付了，就不再购物车中显示',
+  `is_order` tinyint(255) DEFAULT '0' COMMENT '是否提交到订单系统中',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_cart
 -- ----------------------------
-INSERT INTO `os_user_cart` VALUES ('4', '1', '8', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('5', '1', '9', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('6', '1', '10', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('7', '1', '11', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('8', '1', '12', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('9', '1', '13', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('10', '1', '14', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('11', '1', '15', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('12', '1', '16', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('13', '1', '17', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('14', '1', '18', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('15', '1', '19', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('16', '1', '20', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('17', '1', '21', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('18', '1', '22', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('19', '1', '23', '0', null, null);
-INSERT INTO `os_user_cart` VALUES ('20', '1', '24', '0', null, null);
+INSERT INTO `os_user_cart` VALUES ('4', '1', '8', '1', null, '1');
+INSERT INTO `os_user_cart` VALUES ('5', '1', '9', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('6', '1', '10', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('7', '1', '11', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('8', '1', '12', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('9', '1', '13', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('10', '1', '14', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('11', '1', '15', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('12', '1', '16', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('13', '1', '17', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('14', '1', '18', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('15', '1', '19', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('16', '1', '20', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('17', '1', '21', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('18', '1', '22', '0', null, '0');
+INSERT INTO `os_user_cart` VALUES ('19', '1', '23', '1', null, '1');
+INSERT INTO `os_user_cart` VALUES ('20', '1', '24', '0', null, '0');
 
 -- ----------------------------
 -- Table structure for os_user_comment
@@ -729,20 +729,26 @@ CREATE TABLE `os_user_order` (
   `order_number` varchar(255) DEFAULT NULL COMMENT '订单号',
   `sell_order_status` varchar(255) DEFAULT NULL COMMENT '卖家是否同意、退货',
   `address_id` tinyint(255) DEFAULT NULL COMMENT '订单收货地址id',
+  `is_pay` tinyint(4) DEFAULT '0' COMMENT '订单是否支付',
+  `money` decimal(10,0) DEFAULT NULL COMMENT '该条订单的金额',
+  `sign` varchar(255) DEFAULT NULL COMMENT '签名',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_user_order
 -- ----------------------------
-INSERT INTO `os_user_order` VALUES ('1', '1', '6', '2018-06-01 17:43:39', '正在备货', '2018-06-12 15:53:33', '待收货', '168907169181278230', null, '1');
-INSERT INTO `os_user_order` VALUES ('2', '1', '16', '2018-06-04 17:43:58', '发送中', '2018-06-20 12:16:35', '确认收货', '168907169181278231', null, '1');
-INSERT INTO `os_user_order` VALUES ('3', '1', '26', '2018-06-11 17:44:15', '即将发送', '2018-06-13 17:26:27', '确认收货', '168907169181278233', '同意退货', '1');
-INSERT INTO `os_user_order` VALUES ('4', '1', '7', '2018-06-11 18:16:01', '商品已经接收', '2018-06-13 16:52:06', '确认收货', '168907169181278234', '', '1');
-INSERT INTO `os_user_order` VALUES ('5', '1', '8', '2018-06-06 18:16:14', '发送中', '2018-06-20 11:34:33', '退货请求', '168907169181278235', null, '1');
-INSERT INTO `os_user_order` VALUES ('6', '1', '9', '2018-06-01 18:16:26', '', '2018-06-12 15:58:03', '待收货', '168907169181278236', null, '1');
-INSERT INTO `os_user_order` VALUES ('7', '1', '10', '2018-06-02 18:16:39', '', null, '待收货', '168907169181278237', null, '1');
-INSERT INTO `os_user_order` VALUES ('8', '1', '11', '2018-06-12 16:24:17', '已经接收', '2018-06-20 11:34:15', '退货请求', '168907169181278238', '商家同意退货', '1');
+INSERT INTO `os_user_order` VALUES ('1', '1', '6', '2018-06-01 17:43:39', '正在备货', '2018-06-12 15:53:33', '待收货', '168907169181278230', null, '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('2', '1', '16', '2018-06-04 17:43:58', '发送中', '2018-06-20 12:16:35', '确认收货', '168907169181278231', null, '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('3', '1', '26', '2018-06-11 17:44:15', '即将发送', '2018-06-13 17:26:27', '确认收货', '168907169181278233', '同意退货', '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('4', '1', '7', '2018-06-11 18:16:01', '商品已经接收', '2018-06-13 16:52:06', '确认收货', '168907169181278234', '', '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('5', '1', '8', '2018-06-06 18:16:14', '发送中', '2018-06-20 11:34:33', '退货请求', '168907169181278235', null, '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('6', '1', '9', '2018-06-01 18:16:26', '', '2018-06-12 15:58:03', '待收货', '168907169181278236', null, '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('7', '1', '10', '2018-06-02 18:16:39', '', null, '待收货', '168907169181278237', null, '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('8', '1', '11', '2018-06-12 16:24:17', '已经接收', '2018-06-20 11:34:15', '退货请求', '168907169181278238', '商家同意退货', '1', null, null, null);
+INSERT INTO `os_user_order` VALUES ('29', '1', '8', '2018-07-05 17:19:42', '', null, '待收货', '153078238295464', null, '2', '0', null, null);
+INSERT INTO `os_user_order` VALUES ('32', '1', '8', '2018-07-05 17:53:32', '', null, '待收货', '153078441210851', null, '2', '1', '50000', null);
+INSERT INTO `os_user_order` VALUES ('33', '1', '23', '2018-07-05 17:53:32', '', null, '待收货', '153078441210851', null, '2', '1', '54400', null);
 
 -- ----------------------------
 -- Table structure for os_user_person
@@ -764,8 +770,8 @@ CREATE TABLE `os_user_person` (
 -- ----------------------------
 -- Records of os_user_person
 -- ----------------------------
-INSERT INTO `os_user_person` VALUES ('1', '1', '传国玉玺', '[\"\\/public\\/uploads\\/20180619\\\\72e4b32cce74b152a23f2d135f84386f.jpg\",\"\\/public\\/uploads\\/20180619\\\\2d252c2cb43ad94146ce0161f8749109.jpg\",\"\\/public\\/uploads\\/20180619\\\\ee3bccae4384ba4ba9b16be7fa3c3fd9.jpg\",\"\\/public\\/uploads\\/20180619\\\\51514d77985f8db2e81595e3153884b5.jpg\",\"\\/public\\/uploads\\/20180619\\\\ac20900a1fba121e27a4729c0f2f7f36.jpg\"]', '', '玉', '2018-06-12 17:09:03', null, '');
-INSERT INTO `os_user_person` VALUES ('2', '1', '方天画戟', null, '200000', '钢铁', '2018-06-11 17:10:21', null, '吕布');
+INSERT INTO `os_user_person` VALUES ('1', '1', '传国玉玺', '', '', '玉', '2018-06-12 17:09:03', null, '');
+INSERT INTO `os_user_person` VALUES ('2', '1', '方天画戟', '[{\"img\":\"\\/public\\/uploads\\/20180621\\\\e322ec3321a227ab66d510081571dfa2.jpg\",\"date\":\"2018-06-21\"},{\"img\":\"\\/public\\/uploads\\/20180621\\\\a571ee6968e88c06433e51b4984982cd.jpg\",\"date\":\"2018-06-22\"},{\"img\":\"\\/public\\/uploads\\/20180621\\\\cb42efc1e55efa235c0725fb6a0ffa81.jpg\",\"date\":\"2018-06-23\"},{\"img\":\"\\/public\\/uploads\\/20180621\\\\a711017178bac22d917aaea855d8006f.jpg\",\"date\":\"2018-06-27\"},{\"img\":\"\\/public\\/uploads\\/20180621\\\\a8c5aa2ea787cb49c023184e95744837.jpg\",\"date\":\"2018-06-21\"},{\"img\":\"\\/public\\/uploads\\/20180621\\\\b1b48b7583f12f40155f4e607ea9b833.jpg\",\"date\":\"2018-06-21\"}]', '', '钢铁', '2018-06-11 17:10:21', null, '');
 INSERT INTO `os_user_person` VALUES ('3', '1', '八丈蛇矛', null, '100', '铁', '2018-06-19 15:33:33', null, '张飞');
 INSERT INTO `os_user_person` VALUES ('4', '1', '商品1', null, null, '玉', '2018-06-19 15:37:02', null, null);
 
