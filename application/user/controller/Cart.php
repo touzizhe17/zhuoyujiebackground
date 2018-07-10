@@ -73,7 +73,7 @@ class Cart extends Base{
         //TODO 将购买的商品，生成一条商品订单号
 
         //购物车里商品，被提交到订单系统中了
-        $this->userCart->where('is_buy',1)->setField('is_order',1);
+//        $this->userCart->where('is_buy',1)->setField('is_order',1);
 
         //一次购买多个商品，则商品订单号相同
         $result=$this->userCart
@@ -81,78 +81,47 @@ class Cart extends Base{
             ->join('article b','a.goods_id=b.id')
             ->where('a.user_id',$this->id)
             ->where('a.is_buy',1)
-            ->field('b.jmoney,a.goods_id')
+            ->where('a.is_order',0)
+            ->field('a.goods_id')
             ->select();
 
         $order_number=time().mt_rand(10000,99999);
-
+        //查找出所有要购买的id
+        $temp=null;
         foreach($result as $k=>$v){
-
-            $order[$k]['goods_id']=$v['goods_id'];
-
-            $order[$k]['money']=$v['jmoney'];
-            //用户id
-            $order[$k]['user_id']=$this->id;
-            //地址id
-            $order[$k]['address_id']=$id;
-            //生成15位订单号
-            $order[$k]['order_number']=$order_number;
+            $temp.=$v['goods_id'].',';
         }
-        $this->userOrder->saveAll($order);
+        $temp=trim($temp,',');
+
+//        dump($temp);
+        $order['goods_id']=$temp;
+        //用户id
+        $order['user_id']=$this->id;
+        //地址id
+        $order['address_id']=$id;
+        //生成15位订单号
+        $order['order_number']=$order_number;
+
+        $money=$this->isBuyMoney();
+
+        $order['money']=$money;
+        $this->userOrder->save($order);
         //TODO 发起微信扫码支付
         $payUrl='http://pay.zhuoyujie.com/example/native.php';
         //这次购买的金额
-//        $money=$this->isBuyMoney();
-//        $money=intval($money)*100;
+        //$money=intval($money)*100;
 
         $conf['body']='琢玉界商品';
         $conf['attach']='深圳分店';
         $conf['out_trade_no']=$order_number;
+
         // 总金额，单位分
         $conf['total_fee']='1';
+        $pay=new Pay();
+        $pay->wxpay($conf);
 
-
-        $imgUrl=$this->curl_get_https($payUrl,$conf);
-//        dump($imgUrl);die;
-        $this->assign('imgUrl',$imgUrl);
 
         return $this->fetch('pay');
     }
-    //使用post
-    function curl_get_https($url,$post_data){
-        //初始化
-        $curl = curl_init();
-        //设置抓取的url
-        curl_setopt($curl, CURLOPT_URL, $url);
-        //设置获取的信息以文件流的形式返回，而不是直接输出。
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        //设置post方式提交
-        curl_setopt($curl, CURLOPT_POST, 1);
-        //设置post数据
 
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
-        //执行命令
-        $data = curl_exec($curl);
-        //关闭URL请求
-        curl_close($curl);
-        //显示获得的数据
-       return $data;
-    }
-    //下单时，保存签名
-    public function saveSign($sign,$order_number){
-        $this->userOrder->where('order_number',$order_number)->setField('sign',$sign);
-
-    }
-    //支付完成后，回调通知
-    public function  notify($order,$sign,$money){
-        $res=$this->userOrder->where('order_number',$order)->field('sign,money')->find();
-
-        if($res['sign']===$sign && intval($res['money'])*100===$money){
-            //订单成功,处理界面显示
-            return "SUCCESS";
-        }else{
-            //订单有问题
-            return 'FAIL';
-        }
-    }
 }
